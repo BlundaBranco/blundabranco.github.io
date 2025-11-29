@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Branco Blunda - Software Engineer especializado en Full Stack, IA y Automatización. Transformo ideas en software escalable.">
+    <meta name="keywords" content="Software Engineer, Full Stack, Inteligencia Artificial, Freelance, Desarrollo Web">
+    <title>Branco Blunda | Software Engineer & AI Specialist</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.ico">
+
+    <!-- SEO Meta Tags -->
+    <meta name="author" content="Branco Blunda">
+    <meta name="theme-color" content="#10b981">
+    <link rel="canonical" href="https://blundabranco.github.io/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://blundabranco.github.io/">
+    <meta property="og:title" content="Branco Blunda | Software Engineer & AI Specialist">
+    <meta property="og:description"
+        content="Software Engineer especializado en Full Stack, IA y Automatización. Transformo ideas en software escalable.">
+    <meta property="og:image" content="https://blundabranco.github.io/assets/images/profile.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://blundabranco.github.io/">
+    <meta property="twitter:title" content="Branco Blunda | Software Engineer & AI Specialist">
+    <meta property="twitter:description"
+        content="Software Engineer especializado en Full Stack, IA y Automatización. Transformo ideas en software escalable.">
+    <meta property="twitter:image" content="https://blundabranco.github.io/assets/images/profile.jpg">
+
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900 bg-opacity-95 backdrop-blur-md z-50 border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <span class="text-xl font-bold">Branco Blunda</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                    <a href="#portafolio" class="nav-link">Portafolio</a>
+                    <a href="#tecnologias" class="nav-link">Stack</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-4">
+                <a href="#inicio" class="block nav-link-mobile">Inicio</a>
+                <a href="#servicios" class="block nav-link-mobile">Servicios</a>
+                <a href="#portafolio" class="block nav-link-mobile">Portafolio</a>
+                <a href="#tecnologias" class="block nav-link-mobile">Stack</a>
+                <a href="#contacto" class="block nav-link-mobile">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="min-h-screen flex items-center justify-center pt-20">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <!-- Text Content -->
+                <div class="flex-1 text-center md:text-left">
+                    <div class="inline-block mb-4">
+                        <span
+                            class="px-4 py-2 bg-green-500 bg-opacity-10 border border-green-500 rounded-full text-green-400 text-sm font-mono">
+                            🚀 Disponible para Proyectos
+                        </span>
+                    </div>
+
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                        <span class="gradient-text">Branco </span>Blunda
+                    </h1>
+
+                    <h2 class="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
+                        Software Engineer | Full Stack & AI Specialist
+                    </h2>
+
+                    <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl">
+                        Diseño sistemas escalables, soluciones con <span class="text-green-400 font-semibold">Automatizaciones Robustas</span>
+                        e <span class="text-blue-400 font-semibold">Inteligencia Artificial</span> aplicadas a casos reales.
+                    </p>
+
+                    <p class="text-gray-500 mb-10 max-w-2xl">
+                        Estudiante avanzado de Cs. de la Computación y Tecnicatura en IA.
+                        Especialista en crear soluciones que combinan ingeniería de software robusta
+                        con el poder de la Inteligencia Artificial Generativa.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#portafolio" class="btn-primary">
+                            <i class="fas fa-folder-open mr-2"></i>
+                            Ver Proyectos
+                        </a>
+                        <a href="#contacto" class="btn-secondary">
+                            <i class="fas fa-comments mr-2"></i>
+                            Hablemos
+                        </a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex gap-6 mt-10 justify-center md:justify-start">
+                        <a href="https://github.com/BlundaBranco" target="_blank" rel="noopener noreferrer"
+                            class="social-icon" aria-label="GitHub Profile">
+                            <i class="fab fa-github text-2xl" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/branco-blunda-830449328/" target="_blank"
+                            rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin text-2xl" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://instagram.com/brancorc" target="_blank" rel="noopener noreferrer"
+                            class="social-icon" aria-label="Instagram Profile">
+                            <i class="fab fa-instagram text-2xl" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:brancoadrianblunda@gmail.com" class="social-icon" aria-label="Email Contact">
+                            <i class="fas fa-envelope text-2xl" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile Image -->
+                <div class="flex-1 flex justify-center">
+                    <div class="profile-container">
+                        <img src="assets/images/profile.jpg"
+                            alt="Branco Adrian Blunda - Software Engineer and AI Specialist" class="profile-image"
+                            loading="eager">
+                        <div class="profile-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 px-6 bg-gray-800 bg-opacity-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Mis Servicios</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Soluciones tecnológicas de alto impacto para hacer crecer tu negocio
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon bg-gradient-to-br from-blue-500 to-purple-600">
+                        <i class="fas fa-code text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Desarrollo Full Stack & SaaS</h3>
+                    <p class="text-gray-400 mb-6">
+                        Creación de plataformas web escalables, arquitecturas multi-tenant
+                        y APIs complejas. Del MVP a producción con la mejor arquitectura.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Aplicaciones Web Empresariales</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>APIs RESTful & GraphQL</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Sistemas Multi-tenant</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Integraciones de Terceros</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon bg-gradient-to-br from-green-400 to-cyan-500">
+                        <i class="fas fa-robot text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Automatización & IA</h3>
+                    <p class="text-gray-400 mb-6">
+                        Integración de LLMs (Gemini/GPT), Bots de automatización y generación
+                        de contenido autónomo para optimizar procesos de negocio.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Chatbots Inteligentes</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Generación de Contenido IA</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Automatización de Workflows</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Análisis Predictivo</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon bg-gradient-to-br from-yellow-400 to-orange-500">
+                        <i class="fas fa-chart-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Sistemas Financieros & Trading</h3>
+                    <p class="text-gray-400 mb-6">
+                        Bots algorítmicos, dashboards en tiempo real y sistemas de gestión
+                        contable. Soluciones fintech robustas y seguras.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Bots de Trading Algorítmico</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Dashboards Financieros</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Sistemas Contables ERP</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Análisis de Mercados</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portafolio" class="py-20 px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Proyectos Destacados</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Soluciones reales que generan impacto y resultados medibles
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Project 1: BTC Trader -->
+                <div class="project-card">
+                    <a href="https://github.com/BlundaBranco/Bot_BTC" target="_blank" rel="noopener noreferrer"
+                        class="project-image-container">
+                        <img src="assets/images/bot_btc.png" alt="Screenshot of Gemini BTC Trader bot interface"
+                            class="project-image" loading="lazy" decoding="async">
+                        <div class="project-overlay">
+                            <i class="fas fa-external-link-alt text-3xl" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Gemini BTC Trader</h3>
+                        <p class="text-gray-400 mb-4">
+                            Bot de trading algorítmico para Bitcoin con estrategias avanzadas,
+                            gestión de riesgo y análisis técnico en tiempo real. Notificaciones al Telegram.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Asyncio</span>
+                            <span class="tech-tag">WebSockets</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://github.com/BlundaBranco/Bot_BTC"
+                                class="text-blue-400 hover:text-blue-300 transition">
+                                <i class="fas fa-code mr-1"></i> Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Comanda Central -->
+                <div class="project-card">
+                    <a href="https://github.com/BlundaBranco/Comanda-Central" target="_blank" rel="noopener noreferrer"
+                        class="project-image-container">
+                        <img src="assets/images/comandacentral.png"
+                            alt="Comanda Central SaaS platform dashboard screenshot" class="project-image"
+                            loading="lazy" decoding="async">
+                        <div class="project-overlay">
+                            <i class="fas fa-external-link-alt text-3xl" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Comanda Central - SaaS Gastronómico</h3>
+                        <p class="text-gray-400 mb-4">
+                            Plataforma multi-tenant para gestión de restaurantes. Sistema de
+                            pedidos, inventario, facturación y análisis de ventas.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Multi-tenant</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://github.com/BlundaBranco/Comanda-Central"
+                                class="text-blue-400 hover:text-blue-300 transition">
+                                <i class="fas fa-code mr-1"></i> Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Gestión Inmobiliaria -->
+                <div class="project-card">
+                    <a href="https://github.com/BlundaBranco" target="_blank" rel="noopener noreferrer"
+                        class="project-image-container">
+                        <img src="assets/images/inmobiliaria.png"
+                            alt="Real estate management ERP system interface screenshot" class="project-image"
+                            loading="lazy" decoding="async">
+                        <div class="project-overlay">
+                            <i class="fas fa-external-link-alt text-3xl" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Gestión Inmobiliaria - ERP Financiero</h3>
+                        <p class="text-gray-400 mb-4">
+                            Sistema completo de gestión inmobiliaria con motor financiero avanzado,
+                            contratos, pagos y reportería contable.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Finanzas</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://github.com/BlundaBranco" target="_blank" rel="noopener noreferrer"
+                                class="text-blue-400 hover:text-blue-300 transition">
+                                <i class="fas fa-code mr-1"></i> Ver GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: SweetCookies -->
+                <div class="project-card">
+                    <a href="https://github.com/BlundaBranco/SweetCookies-Manager" target="_blank"
+                        rel="noopener noreferrer" class="project-image-container">
+                        <img src="assets/images/sweetcookies.png"
+                            alt="SweetCookies bakery order management system dashboard" class="project-image"
+                            loading="lazy" decoding="async">
+                        <div class="project-overlay">
+                            <i class="fas fa-external-link-alt text-3xl" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">SweetCookies - ERP de Pedidos</h3>
+                        <p class="text-gray-400 mb-4">
+                            Sistema de gestión de pedidos para panadería con dashboards en tiempo
+                            real, control de stock y módulo de producción.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">Dashboards</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://github.com/BlundaBranco/SweetCookies-Manager"
+                                class="text-blue-400 hover:text-blue-300 transition">
+                                <i class="fas fa-code mr-1"></i> Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Tymonyz -->
+                <div class="project-card">
+                    <a href="https://github.com/BlundaBranco/Tymonyz" target="_blank" rel="noopener noreferrer"
+                        class="project-image-container">
+                        <img src="assets/images/tymonyz.png"
+                            alt="Tymonyz AI video generator bot interface and sample output" class="project-image"
+                            loading="lazy" decoding="async">
+                        <div class="project-overlay">
+                            <i class="fas fa-external-link-alt text-3xl" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Tymonyz - Generador de Videos con IA</h3>
+                        <p class="text-gray-400 mb-4">
+                            Bot 100% automatizado que sube videos de las 5 noticias mas importantes de argentina, todos
+                            los dias.
+                            Genera guiones, voces y edita videos automáticamente.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Gemini AI</span>
+                            <span class="tech-tag">FFmpeg</span>
+                            <span class="tech-tag">Automatización</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://github.com/BlundaBranco/Tymonyz"
+                                class="text-blue-400 hover:text-blue-300 transition">
+                                <i class="fas fa-code mr-1"></i> Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- More Projects Card -->
+                <div
+                    class="project-card bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center min-h-[300px]">
+                    <div class="text-center p-8">
+                        <i class="fas fa-plus-circle text-6xl mb-4 opacity-80"></i>
+                        <h3 class="text-3xl font-bold mb-4">Más Proyectos</h3>
+                        <p class="text-lg mb-6 opacity-90">
+                            Explora mi GitHub para ver más de 20+ proyectos open source
+                        </p>
+                        <a href="https://github.com/BlundaBranco" target="_blank"
+                            class="inline-block px-8 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition">
+                            <i class="fab fa-github mr-2"></i> Ver GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tecnologias" class="py-20 px-6 bg-gray-800 bg-opacity-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Stack Tecnológico</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Herramientas y tecnologías que domino para crear soluciones robustas
+                </p>
+            </div>
+
+            <!-- Languages -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-center text-green-400">Lenguajes</h3>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="tech-card">
+                        <i class="fab fa-python text-5xl text-blue-400 mb-3"></i>
+                        <p class="font-semibold">Python</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fab fa-js text-5xl text-yellow-400 mb-3"></i>
+                        <p class="font-semibold">JavaScript</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fab fa-php text-5xl text-purple-400 mb-3"></i>
+                        <p class="font-semibold">PHP</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-database text-5xl text-green-400 mb-3"></i>
+                        <p class="font-semibold">SQL</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-code text-5xl text-blue-300 mb-3"></i>
+                        <p class="font-semibold">C++</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frameworks -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-center text-blue-400">Frameworks & Librerías</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="tech-badge">FastAPI</span>
+                    <span class="tech-badge">Flask</span>
+                    <span class="tech-badge">Django</span>
+                    <span class="tech-badge">Laravel</span>
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">Express</span>
+                    <span class="tech-badge">React</span>
+                    <span class="tech-badge">TailwindCSS</span>
+                    <span class="tech-badge">Bootstrap</span>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div>
+                <h3 class="text-2xl font-bold mb-6 text-center text-purple-400">Herramientas & DevOps</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="tech-badge">Docker</span>
+                    <span class="tech-badge">AWS</span>
+                    <span class="tech-badge">VPS</span>
+                    <span class="tech-badge">Git & GitHub</span>
+                    <span class="tech-badge">PostgreSQL</span>
+                    <span class="tech-badge">MySQL</span>
+                    <span class="tech-badge">MongoDB</span>
+                    <span class="tech-badge">Redis</span>
+                    <span class="tech-badge">Nginx</span>
+                    <span class="tech-badge">CI/CD</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Hablemos de tu Proyecto</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Si tenes una idea y queres convertirla en realidad, estoy aca para ayudarte.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    <div class="glass-card p-6">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-green-500 bg-opacity-20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-envelope text-green-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Email</p>
+                                <a href="mailto:brancoadrianblunda@gmail.com"
+                                    class="text-lg font-semibold hover:text-green-400 transition">
+                                    brancoadrianblunda@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-blue-500 bg-opacity-20 rounded-lg flex items-center justify-center">
+                                <i class="fab fa-whatsapp text-blue-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">WhatsApp</p>
+                                <a href="https://wa.me/5493412714751" target="_blank"
+                                    class="text-lg font-semibold hover:text-blue-400 transition">
+                                    +54 341 271-4751
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-purple-500 bg-opacity-20 rounded-lg flex items-center justify-center">
+                                <i class="fab fa-linkedin text-purple-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">LinkedIn</p>
+                                <a href="https://www.linkedin.com/in/branco-blunda-830449328/" target="_blank"
+                                    class="text-lg font-semibold hover:text-purple-400 transition">
+                                    linkedin.com/in/brancoblunda
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Card -->
+                <div class="glass-card p-8 bg-gradient-to-br from-green-500 to-blue-600 bg-opacity-10">
+                    <h3 class="text-2xl font-bold mb-4">Estas listo?</h3>
+                    <p class="text-gray-300 mb-6">
+                        Contame sobre tu proyecto y te doy una propuesta personalizada en menos de 24 horas.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-green-400"></i>
+                            <span>Consulta inicial gratuita</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-green-400"></i>
+                            <span>Propuesta técnica detallada</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-green-400"></i>
+                            <span>Presupuesto sin compromiso</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5493412714751?text=Hola%20Branco,%20me%20interesa%20trabajar%20contigo"
+                        target="_blank"
+                        class="inline-block w-full text-center px-8 py-4 bg-white text-gray-900 rounded-lg font-bold hover:bg-gray-100 transition">
+                        <i class="fab fa-whatsapp mr-2"></i> Contactar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 bg-gray-800 bg-opacity-50 border-t border-gray-800">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                        <div
+                            class="w-8 h-8 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center font-bold">
+                            B
+                        </div>
+                        <span class="text-lg font-bold">Branco Blunda</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Software Engineer & AI Specialist</p>
+                </div>
+
+                <div class="flex gap-6">
+                    <a href="https://github.com/BlundaBranco" target="_blank" rel="noopener noreferrer"
+                        class="social-icon-footer" aria-label="GitHub Profile">
+                        <i class="fab fa-github text-xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/branco-blunda-830449328" target="_blank"
+                        rel="noopener noreferrer" class="social-icon-footer" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin text-xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://instagram.com/brancorc" target="_blank" rel="noopener noreferrer"
+                        class="social-icon-footer" aria-label="Instagram Profile">
+                        <i class="fab fa-instagram text-xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="mailto:brancoadrianblunda@gmail.com" class="social-icon-footer" aria-label="Email Contact">
+                        <i class="fas fa-envelope text-xl" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <p class="text-gray-500 text-sm">
+                        © <span id="current-year">2025</span> Branco Blunda. Todos los derechos reservados.
+                    </p>
+                    <p class="text-gray-600 text-xs mt-1">
+                        Hecho con <i class="fas fa-heart text-red-500" aria-hidden="true"></i> y mucho código
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="scroll-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
