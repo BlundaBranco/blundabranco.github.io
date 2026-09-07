@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Comanda Central — Branco Blunda</title>
+<meta name="description" content="Nació para resolver el problema de mi propia pizzería y terminó siendo un SaaS con gestión centralizada de sucursales: toma de comandas, inventario, anális">
+<link rel="canonical" href="https://blundabranco.github.io/proyectos/comanda-central.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Comanda Central — Branco Blunda">
+<meta property="og:description" content="Nació para resolver el problema de mi propia pizzería y terminó siendo un SaaS con gestión centralizada de sucursales: toma de comandas, inventario, anális">
+<meta property="og:url" content="https://blundabranco.github.io/proyectos/comanda-central.html">
+<meta property="og:image" content="'+SITE+'/assets/images/profile.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FBFAF8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#100F0D" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../index.html"><b>Branco Blunda</b></a>
+<nav class="site">
+<a href="../index.html#trabajo">Trabajo</a>
+<a href="../index.html#metodo">Método</a>
+<a href="../index.html#stack">Stack</a>
+<a href="../index.html#contacto">Contacto</a>
+</nav>
+</div></header>
+<div class="wrap">
+<div class="crumb"><a href="../index.html">← Todo el trabajo</a></div>
+<section class="p-hero">
+<div class="mono" style="margin-bottom:20px">SaaS gastronómico · Node.js + PostgreSQL</div>
+<h1>Comanda Central</h1>
+<p class="lede">Nació para resolver el problema de mi propia pizzería y terminó siendo un SaaS con gestión centralizada de sucursales: toma de comandas, inventario, análisis de ventas y costeo real por producto con recetas anidadas.</p>
+<div class="p-meta">
+<div><span>Cliente</span><b>Producto propio</b></div>
+<div><span>País</span><b>Argentina</b></div>
+<div><span>Rol</span><b>Producto, arquitectura y operación</b></div>
+<div><span>Estado</span><b>En producción en 8 negocios y 3 cadenas</b></div>
+</div>
+</section>
+<section class="block"><h2>El problema</h2><p class="lede">Un negocio gastronómico sabe cuánto vendió, pero casi nunca cuánto ganó: el costo real de un plato depende de sub-recetas cuyos insumos cambian de precio todo el tiempo.</p></section>
+<section class="block"><h2>Lo que construí</h2><ul><li>Punto de venta de tres paneles, operable por completo con el teclado, con impresión de ticket.</li><li>Costeo con consultas recursivas en PostgreSQL, que resuelve recetas dentro de recetas.</li><li>Tablero de análisis: ventas, ticket promedio, ganancia bruta y neta, comparativas, horario pico y productos más vendidos.</li><li>Inventario y compras: el stock se descuenta con la venta y el alta de una compra genera el gasto e impacta el inventario en una sola transacción.</li><li>Editor de menú con categorías, adicionales y combos.</li><li>Editor del sitio público de cada negocio, con vista previa en vivo.</li></ul></section>
+<section class="block"><h2>Resultado</h2><ul class="result" style="margin-top:6px"><li><b>8</b>negocios</li><li><b>3</b>cadenas</li><li><b>15</b>sucursales</li></ul></section>
+<section class="block"><h2>Capturas</h2><div class="gallery"><figure class="shot"><img src="../assets/proyectos/comanda-central/01-pos.png" alt="Comanda Central — captura" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/comanda-central/01-pos.png</figcaption></figure><figure class="shot"><img src="../assets/proyectos/comanda-central/02-dashboard-bi.png" alt="Comanda Central — captura" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/comanda-central/02-dashboard-bi.png</figcaption></figure><figure class="shot"><img src="../assets/proyectos/comanda-central/03-costeo-receta.png" alt="Comanda Central — captura" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/comanda-central/03-costeo-receta.png</figcaption></figure><figure class="shot"><img src="../assets/proyectos/comanda-central/08-sitio-publico.png" alt="Comanda Central — captura" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/comanda-central/08-sitio-publico.png</figcaption></figure></div></section>
+<section class="block"><h2>Stack</h2>
+<p class="mono" style="text-transform:none;letter-spacing:0;font-size:.86rem;line-height:2;color:var(--muted)">Node.js · Express · PostgreSQL · JavaScript · Chart.js · Cloudinary · Render · Vercel</p>
+<div class="case-links" style="margin-top:26px"><a href="https://github.com/BlundaBranco/Comanda-Central" target="_blank" rel="noopener">Código</a><a href="https://monat.ar" target="_blank" rel="noopener">Sitio de ejemplo</a></div>
+</section>
+<section style="padding:56px 0"><a class="btn" href="../index.html">← Volver a todo el trabajo</a></section>
+</div><footer class="site"><div class="wrap" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;width:100%">
+<span class="mono">© 2026 Branco Blunda · Rosario, Argentina</span>
+<span class="links-row"><a href="https://linkedin.com/in/brancoblunda">LinkedIn</a><a href="https://github.com/BlundaBranco">GitHub</a><a href="mailto:brancoadrianblunda@gmail.com">Email</a></span>
+</div></footer>
+<script src="../js/site.js"></script>
+</body></html>

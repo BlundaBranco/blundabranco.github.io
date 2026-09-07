@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BLC One — Branco Blunda</title>
+<meta name="description" content="Plataforma de gestión para el área de servicios de un grupo de energía renovable que opera remotamente cerca del 17% de la generación renovable del país. C">
+<link rel="canonical" href="https://blundabranco.github.io/proyectos/blc-one.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BLC One — Branco Blunda">
+<meta property="og:description" content="Plataforma de gestión para el área de servicios de un grupo de energía renovable que opera remotamente cerca del 17% de la generación renovable del país. C">
+<meta property="og:url" content="https://blundabranco.github.io/proyectos/blc-one.html">
+<meta property="og:image" content="'+SITE+'/assets/images/profile.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FBFAF8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#100F0D" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../index.html"><b>Branco Blunda</b></a>
+<nav class="site">
+<a href="../index.html#trabajo">Trabajo</a>
+<a href="../index.html#metodo">Método</a>
+<a href="../index.html#stack">Stack</a>
+<a href="../index.html#contacto">Contacto</a>
+</nav>
+</div></header>
+<div class="wrap">
+<div class="crumb"><a href="../index.html">← Todo el trabajo</a></div>
+<section class="p-hero">
+<div class="mono" style="margin-bottom:20px">Python · Flet · MySQL · Escritorio</div>
+<h1>BLC One</h1>
+<p class="lede">Plataforma de gestión para el área de servicios de un grupo de energía renovable que opera remotamente cerca del 17% de la generación renovable del país. Centraliza plantas, contratos y compromisos regulatorios que vivían en planillas.</p>
+<div class="p-meta">
+<div><span>Cliente</span><b>BLC Power Generation</b></div>
+<div><span>País</span><b>Argentina</b></div>
+<div><span>Rol</span><b>Diseño y construcción desde cero</b></div>
+<div><span>Estado</span><b>v0.3.4 entregada · aplicación interna</b></div>
+</div>
+</section>
+<section class="block"><h2>El problema</h2><p class="lede">Clientes, plantas, cronogramas de reportes ante el organismo regulador y agendas se manejaban en Excel y scripts sueltos. No había trazabilidad ni control de quién podía ver o modificar qué.</p></section>
+<section class="block"><h2>Lo que construí</h2><ul><li>Ingreso y control de acceso por rol: tres roles sobre quince pantallas, permisos por ruta, modo de solo lectura y menú filtrado.</li><li>Alta, baja y modificación de clientes, plantas con versionado histórico de configuraciones, y usuarios internos y externos.</li><li>Gestor de reportes con cronograma anual, asignación de procesador y aprobador, seguimiento y matriz de servicios.</li><li>Vista cruzada de plantas por tipo de reporte, con filtros por rango de fechas.</li><li>Módulo de agenda con exportación a Excel en el formato exacto del cliente.</li><li>Vista integrada de soporte sobre 216 agentes y pantalla de contratos.</li><li>Ejecutable con asistente de primer arranque, datos de prueba y registro rotativo.</li></ul></section>
+<section class="block"><h2>Resultado</h2><ul class="result" style="margin-top:6px"><li><b>237</b>plantas</li><li><b>2.555</b>compromisos regulatorios</li><li><b>2.709</b>tests automatizados</li><li><b>82</b>decisiones de arquitectura documentadas</li></ul><div class="note">Aplicación interna sobre red privada. Las capturas se toman sobre datos de prueba.</div></section>
+<section class="block"><h2>Capturas</h2><div class="gallery"><figure class="shot"><img src="../assets/proyectos/blc-one/02-dashboard.png" alt="BLC One — captura" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/blc-one/02-dashboard.png</figcaption></figure><figure class="shot"><img src="../assets/proyectos/blc-one/03-cronograma-anual.png" alt="BLC One — captura" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/blc-one/03-cronograma-anual.png</figcaption></figure><figure class="shot"><img src="../assets/proyectos/blc-one/04-matriz-servicios.png" alt="BLC One — captura" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/blc-one/04-matriz-servicios.png</figcaption></figure><figure class="shot"><img src="../assets/proyectos/blc-one/09-rbac.png" alt="BLC One — captura" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/blc-one/09-rbac.png</figcaption></figure></div></section>
+<section class="block"><h2>Stack</h2>
+<p class="mono" style="text-transform:none;letter-spacing:0;font-size:.86rem;line-height:2;color:var(--muted)">Python 3.13 · Flet · SQLAlchemy 2 · MySQL 8 · PyInstaller · desarrollo dirigido por especificación</p>
+
+</section>
+<section style="padding:56px 0"><a class="btn" href="../index.html">← Volver a todo el trabajo</a></section>
+</div><footer class="site"><div class="wrap" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;width:100%">
+<span class="mono">© 2026 Branco Blunda · Rosario, Argentina</span>
+<span class="links-row"><a href="https://linkedin.com/in/brancoblunda">LinkedIn</a><a href="https://github.com/BlundaBranco">GitHub</a><a href="mailto:brancoadrianblunda@gmail.com">Email</a></span>
+</div></footer>
+<script src="../js/site.js"></script>
+</body></html>

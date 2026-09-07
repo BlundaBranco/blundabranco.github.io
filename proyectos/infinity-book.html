@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Infinity Book — Branco Blunda</title>
+<meta name="description" content="App de escaneo de cuadernos reutilizables con OCR e IA. La heredé de otro proveedor —sin control de versiones, con credenciales expuestas y todo a nombre d">
+<link rel="canonical" href="https://blundabranco.github.io/proyectos/infinity-book.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Infinity Book — Branco Blunda">
+<meta property="og:description" content="App de escaneo de cuadernos reutilizables con OCR e IA. La heredé de otro proveedor —sin control de versiones, con credenciales expuestas y todo a nombre d">
+<meta property="og:url" content="https://blundabranco.github.io/proyectos/infinity-book.html">
+<meta property="og:image" content="'+SITE+'/assets/images/profile.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FBFAF8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#100F0D" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="../index.html"><b>Branco Blunda</b></a>
+<nav class="site">
+<a href="../index.html#trabajo">Trabajo</a>
+<a href="../index.html#metodo">Método</a>
+<a href="../index.html#stack">Stack</a>
+<a href="../index.html#contacto">Contacto</a>
+</nav>
+</div></header>
+<div class="wrap">
+<div class="crumb"><a href="../index.html">← Todo el trabajo</a></div>
+<section class="p-hero">
+<div class="mono" style="margin-bottom:20px">Flutter · ASP.NET Core · OCR</div>
+<h1>Infinity Book</h1>
+<p class="lede">App de escaneo de cuadernos reutilizables con OCR e IA. La heredé de otro proveedor —sin control de versiones, con credenciales expuestas y todo a nombre de terceros— y desarrollé y publiqué la versión que está hoy en las tiendas.</p>
+<div class="p-meta">
+<div><span>Cliente</span><b>Elfinbook S.R.L.</b></div>
+<div><span>País</span><b>Argentina</b></div>
+<div><span>Rol</span><b>Desarrollo y publicación de la versión actual</b></div>
+<div><span>Estado</span><b>En producción · mantenimiento mensual</b></div>
+</div>
+</section>
+<section class="block"><h2>El problema</h2><p class="lede">El producto funcionaba pero no era del cliente: el backend, las cuentas de tienda y las integraciones estaban a nombre del proveedor anterior. La cámara de Android era inestable y había una fecha límite de Google para actualizar la app.</p></section>
+<section class="block"><h2>Lo que construí</h2><ul><li>Refactor del pipeline de cámara en Android y corrección del procesamiento que truncaba las capturas.</li><li>Migración completa del backend a infraestructura propia del cliente, con TLS.</li><li>Migración de datos entre bases desacopladas sin modificar un solo registro de usuario real.</li><li>Módulo de IA para edición libre del texto reconocido y funnel de registro con segmentación.</li><li>Reconfiguración de las cinco integraciones en la nube bajo cuentas del cliente.</li><li>Endurecimiento de seguridad: cierre de endpoints, eliminación de credenciales expuestas, bloqueo de las cuentas del proveedor anterior, firewall y backups verificados.</li><li>Publicación en Google Play y App Store bajo cuentas del cliente, incluida la transferencia de la ficha de iOS.</li></ul></section>
+<section class="block"><h2>Resultado</h2><ul class="result" style="margin-top:6px"><li><b>8.900+</b>usuarios registrados</li><li><b>177</b>países</li><li><b>0</b>registros perdidos en la migración</li></ul></section>
+<section class="block"><h2>Capturas</h2><div class="gallery"><figure class="shot"><img src="../assets/proyectos/infinity-book/03-app-escaneo.png" alt="Infinity Book — captura" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/infinity-book/03-app-escaneo.png</figcaption></figure><figure class="shot"><img src="../assets/proyectos/infinity-book/04-app-resultado-ocr.png" alt="Infinity Book — captura" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/infinity-book/04-app-resultado-ocr.png</figcaption></figure><figure class="shot"><img src="../assets/proyectos/infinity-book/05-app-editor-libre.png" alt="Infinity Book — captura" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/infinity-book/05-app-editor-libre.png</figcaption></figure><figure class="shot"><img src="../assets/proyectos/infinity-book/01-play-ficha.png" alt="Infinity Book — captura" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/infinity-book/01-play-ficha.png</figcaption></figure></div></section>
+<section class="block"><h2>Stack</h2>
+<p class="mono" style="text-transform:none;letter-spacing:0;font-size:.86rem;line-height:2;color:var(--muted)">Flutter / Dart · Kotlin con OpenCV y ML Kit · ASP.NET Core · SQL Server · Azure Document Intelligence · OpenAI · DigitalOcean · Docker · Codemagic</p>
+<div class="case-links" style="margin-top:26px"><a href="https://play.google.com/store/apps/details?id=com.infinitybook.infinitybook" target="_blank" rel="noopener">Google Play</a></div>
+</section>
+<section style="padding:56px 0"><a class="btn" href="../index.html">← Volver a todo el trabajo</a></section>
+</div><footer class="site"><div class="wrap" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;width:100%">
+<span class="mono">© 2026 Branco Blunda · Rosario, Argentina</span>
+<span class="links-row"><a href="https://linkedin.com/in/brancoblunda">LinkedIn</a><a href="https://github.com/BlundaBranco">GitHub</a><a href="mailto:brancoadrianblunda@gmail.com">Email</a></span>
+</div></footer>
+<script src="../js/site.js"></script>
+</body></html>
