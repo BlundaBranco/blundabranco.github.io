@@ -24,7 +24,7 @@ const PROJECTS=[
  tech:'Node.js · Fastify · tRPC · PostgreSQL · Kysely · Asterisk / FreePBX · Docker · Traefik · Whisper · TTS · Google Maps · Twilio',
  links:[['Sitio','https://taxiai.com.co'],['App pasajero','https://play.google.com/store/apps/details?id=co.com.taxiai.pasajero'],['App conductor','https://play.google.com/store/apps/details?id=co.com.taxiai.conductor']],
  cover:'08-panel-despacho.png',
- shots:['08-panel-despacho.png','01-landing-hero.png','02-landing-tres-formas.png','06-app-seguimiento.png','05-app-solicitar.png','07-app-historial.png','03-play-pasajero.png','04-play-conductor.png'],
+ shots:[['08-panel-despacho.png','Panel de despacho: llamadas y viajes del día, solicitudes activas, la flota en el mapa y el detalle del viaje en curso.'],['01-landing-hero.png','La landing pública del servicio.'],['02-landing-tres-formas.png','Los tres canales de pedido: WhatsApp, llamada telefónica y app.'],['06-app-seguimiento.png','Seguimiento del viaje en tiempo real, con la ruta y el chat con el conductor.'],['05-app-solicitar.png','Pedido desde la app. El círculo es el radio de búsqueda de conductores en hora pico.'],['07-app-historial.png','Historial de viajes del pasajero, con el estado de cada uno.'],['03-play-pasajero.png','La app de pasajero, publicada en Google Play.'],['04-play-conductor.png','La app de conductor, publicada en Google Play.']],
  nota:'Las cifras de operación son datos informados por el cliente.'},
 
 {slug:'tu-proximo-horizonte',title:'Tu Próximo Horizonte',cliente:'Leo Cerdeira',pais:'Argentina',
@@ -43,7 +43,7 @@ const PROJECTS=[
  tech:'Next.js 15 · TypeScript · Supabase · Vercel · Make.com · Brevo · Facebook Lead Ads · GitHub Actions',
  links:[['Onboarding','https://onboarding.tuproximohorizonte.com'],['Agenda','https://agenda.tuproximohorizonte.com'],['Demo','https://demo.tuproximohorizonte.com']],
  cover:'01-onboarding-inicio.png',
- shots:['01-onboarding-inicio.png','02-onboarding-paso.png','06-agenda-publica.png','08-make-escenario.png'],
+ shots:[['01-onboarding-inicio.png','El onboarding público de afiliados: un solo link, sin registro.'],['02-onboarding-paso.png','Un paso con sus recursos: video, PDF y enlaces.'],['06-agenda-publica.png','La agenda semanal de capacitaciones, con inscripción abierta.'],['08-make-escenario.png','La automatización que captura los leads de Facebook y dispara la secuencia de correos.']],
  nota:''},
 
 {slug:'infinity-book',title:'Infinity Book',cliente:'Elfinbook S.R.L.',pais:'Argentina',
@@ -62,7 +62,7 @@ const PROJECTS=[
  tech:'Flutter / Dart · Kotlin con OpenCV y ML Kit · ASP.NET Core · SQL Server · Azure Document Intelligence · OpenAI · DigitalOcean · Docker · Codemagic',
  links:[['Google Play','https://play.google.com/store/apps/details?id=com.infinitybook.infinitybook']],
  cover:'03-app-escaneo.png',
- shots:['03-app-escaneo.png','04-app-resultado-ocr.png','05-app-editor-libre.png','01-play-ficha.png'],
+ shots:[['03-app-escaneo.png','La cámara escaneando una página del cuaderno.'],['04-app-resultado-ocr.png','El texto reconocido por OCR sobre la página escaneada.'],['05-app-editor-libre.png','El módulo de IA para editar el texto reconocido.'],['01-play-ficha.png','La app publicada en Google Play, bajo la cuenta del cliente.']],
  nota:''},
 
 {slug:'signfloow',title:'SignFloow',cliente:'Cliente directo',pais:'España',
@@ -81,7 +81,7 @@ const PROJECTS=[
  tech:'TypeScript · React 19 · Vite · Tailwind · NestJS 11 · PostgreSQL 16 · Prisma · Turborepo · AWS ECS Fargate y Aurora · Terraform · Vercel',
  links:[['Aplicación','https://app.signfloow.ai']],
  cover:'01-floow-kanban.png',
- shots:['01-floow-kanban.png','03-quote-engine.png','06-catalogo-bom.png','07-floowy-chat.png'],
+ shots:[['01-floow-kanban.png','El tablero de producción con las cinco fases del proyecto.'],['03-quote-engine.png','El presupuestador: capítulos, líneas y fórmulas de cálculo.'],['06-catalogo-bom.png','Un producto del catálogo con su lista de materiales por dimensión.'],['07-floowy-chat.png','El asistente de IA respondiendo con datos reales de la empresa.']],
  nota:''}
 ];
 
@@ -101,7 +101,7 @@ PROJECTS.push(
  stats:[['237','plantas'],['2.555','compromisos regulatorios'],['2.709','tests automatizados'],['82','decisiones de arquitectura documentadas']],
  tech:'Python 3.13 · Flet · SQLAlchemy 2 · MySQL 8 · PyInstaller · desarrollo dirigido por especificación',
  links:[],cover:'03-cronograma-anual.png',
- shots:['02-dashboard.png','03-cronograma-anual.png','04-matriz-servicios.png','09-rbac.png'],
+ shots:[['02-dashboard.png','El tablero del gestor de reportes.'],['03-cronograma-anual.png','El cronograma anual de compromisos regulatorios.'],['04-matriz-servicios.png','La matriz de plantas por tipo de reporte.'],['09-rbac.png','La misma pantalla vista con un rol restringido: menú filtrado y solo lectura.']],
  nota:'Aplicación interna sobre red privada. Las capturas se toman sobre datos de prueba.'},
 
 {slug:'comanda-central',title:'Comanda Central',cliente:'Producto propio',pais:'Argentina',
@@ -119,7 +119,7 @@ PROJECTS.push(
  tech:'Node.js · Express · PostgreSQL · JavaScript · Chart.js · Cloudinary · Render · Vercel',
  links:[['Código','https://github.com/BlundaBranco/Comanda-Central'],['Sitio de ejemplo','https://monat.ar']],
  cover:'01-pos.png',
- shots:['01-pos.png','02-dashboard-bi.png','03-costeo-receta.png','08-sitio-publico.png'],
+ shots:[['01-pos.png','El punto de venta de tres paneles, operable por completo con el teclado.'],['02-dashboard-bi.png','El tablero de ventas, ganancia y horario pico.'],['03-costeo-receta.png','El costeo de un producto, resolviendo las recetas anidadas.'],['08-sitio-publico.png','El sitio público que genera la plataforma para cada negocio.']],
  nota:''},
 
 {slug:'vertical',title:'Vertical',cliente:'Producto propio',pais:'Argentina',
@@ -136,7 +136,7 @@ PROJECTS.push(
  tech:'Meta WhatsApp Cloud API · modelos de lenguaje con uso de herramientas · Python',
  links:[['Sitio','https://somosvertical.ar']],
  cover:'03-chat-mati.png',
- shots:['01-web-home.png','03-chat-mati.png','02-meta-verificado.png','04-crm-leads.png'],
+ shots:[['01-web-home.png','El sitio de Vertical.'],['03-chat-mati.png','El agente calificando un contacto por WhatsApp.'],['02-meta-verificado.png','El estado de proveedor de tecnología verificado por Meta.'],['04-crm-leads.png','El CRM con los contactos y su estado.']],
  nota:''},
 
 {slug:'deltan-scan',title:'Deltan Scan IA',cliente:'Carlos Vargas',pais:'Latinoamérica',
@@ -151,7 +151,7 @@ PROJECTS.push(
  tech:'Python · OpenCV · Streamlit',
  links:[['Código','https://github.com/BlundaBranco/Deltan-Scan-AI']],
  cover:'03-app-analisis.png',
- shots:['03-app-analisis.png','02-app-carga.png'],
+ shots:[['03-app-analisis.png','La radiografía procesada, con las mediciones sobre la imagen.'],['02-app-carga.png','La carga del estudio.']],
  nota:''});
 
 const OTHERS=[
@@ -228,6 +228,8 @@ const head=(title,desc,canonical,depth)=>{const r=depth?'../':'';return `<!DOCTY
 
 const shot=(slug,file,alt,depth)=>{const r=depth?'../':'';
 return `<figure class="shot"><img src="${r}assets/proyectos/${slug}/${file}" alt="${esc(alt)}" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/${slug}/${file}</figcaption></figure>`;};
+const gitem=(slug,pair,depth)=>{const f=Array.isArray(pair)?pair[0]:pair, c=Array.isArray(pair)?pair[1]:'';
+return `<div class="gitem">${shot(slug,f,c||'captura',depth)}${c?`<p class="cap">${esc(c)}</p>`:''}</div>`;};
 
 const foot=depth=>{const r=depth?'../':'';return `<footer class="site"><div class="wrap" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;width:100%">
 <span class="mono">© ${new Date().getFullYear()} Branco Blunda · Rosario, Argentina</span>
@@ -324,7 +326,7 @@ h+=`
 <section class="block"><h2>El problema</h2><p class="lede">${esc(p.problema)}</p></section>
 <section class="block"><h2>Lo que construí</h2><ul>${p.construido.map(c=>`<li>${esc(c)}</li>`).join('')}</ul></section>
 ${p.stats.length?`<section class="block"><h2>Resultado</h2><ul class="result" style="margin-top:6px">${p.stats.map(s=>`<li><b>${esc(s[0])}</b>${esc(s[1])}</li>`).join('')}</ul>${p.nota?`<div class="note">${esc(p.nota)}</div>`:''}</section>`:''}
-<section class="block"><h2>Capturas</h2><div class="gallery">${p.shots.map(s=>shot(p.slug,s,p.title+' — captura',1)).join('')}</div></section>
+<section class="block"><h2>Capturas</h2><div class="gallery">${p.shots.map(s=>gitem(p.slug,s,1)).join('')}</div></section>
 <section class="block"><h2>Stack</h2>
 <p class="mono" style="text-transform:none;letter-spacing:0;font-size:.86rem;line-height:2;color:var(--muted)">${esc(p.tech)}</p>
 ${p.links.length?`<div class="case-links" style="margin-top:26px">${p.links.map(l=>`<a href="${l[1]}" target="_blank" rel="noopener">${esc(l[0])}</a>`).join('')}</div>`:''}
