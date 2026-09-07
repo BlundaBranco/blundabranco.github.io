@@ -24,7 +24,7 @@ const PROJECTS=[
  tech:'Node.js · Fastify · tRPC · PostgreSQL · Kysely · Asterisk / FreePBX · Docker · Traefik · Whisper · TTS · Google Maps · Twilio',
  links:[['Sitio','https://taxiai.com.co'],['App pasajero','https://play.google.com/store/apps/details?id=co.com.taxiai.pasajero'],['App conductor','https://play.google.com/store/apps/details?id=co.com.taxiai.conductor']],
  cover:'08-panel-despacho.png',
- shots:['08-panel-despacho.png','01-landing-hero.png','02-landing-tres-formas.png','06-app-mapa.png','07-app-historial.png','03-play-pasajero.png','04-play-conductor.png'],
+ shots:['08-panel-despacho.png','01-landing-hero.png','02-landing-tres-formas.png','06-app-seguimiento.png','05-app-solicitar.png','07-app-historial.png','03-play-pasajero.png','04-play-conductor.png'],
  nota:'Las cifras de operación son datos informados por el cliente.'},
 
 {slug:'tu-proximo-horizonte',title:'Tu Próximo Horizonte',cliente:'Leo Cerdeira',pais:'Argentina',
