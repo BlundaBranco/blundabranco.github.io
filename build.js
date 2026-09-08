@@ -1,5 +1,8 @@
 /* Generador estático del portafolio. Editar datos y correr: node build.js */
-const fs = require('fs'), path = require('path');
+const fs = require('fs'), path = require('path'), crypto = require('crypto');
+/* huella corta del archivo: al cambiar, el navegador deja de servir la version vieja */
+const v=f=>{try{return crypto.createHash('md5').update(fs.readFileSync(f)).digest('hex').slice(0,8);}catch(e){return Date.now().toString(36);}};
+const VCSS=v('css/styles.css'), VJS=v('js/main.js');
 const SITE='https://blundabranco.github.io';
 const MAIL='brancoadrianblunda@gmail.com';
 const LINKEDIN='https://linkedin.com/in/brancoblunda';
@@ -243,7 +246,7 @@ const head=(title,desc,canonical,depth)=>{const r=depth?'../':'';const h=depth?'
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="${r}css/styles.css">
+<link rel="stylesheet" href="${r}css/styles.css?v=${VCSS}">
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans">
 
@@ -298,7 +301,7 @@ const foot=depth=>{const r=depth?'../':'';return `
   </div>
 </footer>
 <button id="scroll-top" class="scroll-top-btn" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
-<script src="${r}js/main.js"></script>
+<script src="${r}js/main.js?v=${VJS}"></script>
 </body>
 </html>`;};
 
