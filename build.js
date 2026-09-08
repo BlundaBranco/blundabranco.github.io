@@ -101,7 +101,7 @@ PROJECTS.push(
  stats:[['237','plantas'],['2.555','compromisos regulatorios'],['2.709','tests automatizados'],['82','decisiones de arquitectura documentadas']],
  tech:'Python 3.13 · Flet · SQLAlchemy 2 · MySQL 8 · PyInstaller · desarrollo dirigido por especificación',
  links:[],cover:'03-cronograma-anual.png',
- shots:[['03-cronograma-anual.png','El cronograma anual de compromisos regulatorios: 2.555 filas, filtrables por planta, tipo de reporte y estado.'],['04-matriz-servicios.png','La matriz de servicios: qué paquetes, módulos y submódulos aplican a cada planta.'],['01-planta-detalle.png','La ficha de una planta, con su información contractual, de gestión de activos y de soporte.'],['09-usuarios-roles.png','Usuarios internos con su rol y sus permisos de emisión y aprobación. El acceso se controla por rol sobre quince pantallas.']],
+ shots:[['03-cronograma-anual.png','El cronograma anual de compromisos regulatorios: 2.555 filas, filtrables por planta, tipo de reporte y estado.'],['10-roles-permisos.png','El control de acceso: nivel de permiso de cada rol sobre cada pantalla, de lectura y escritura a sin visibilidad.'],['04-matriz-servicios.png','La matriz de servicios: qué paquetes, módulos y submódulos aplican a cada planta.'],['01-planta-detalle.png','La ficha de una planta, con su información contractual, de gestión de activos y de soporte.'],['09-usuarios-roles.png','Usuarios internos con su rol y sus permisos de emisión y aprobación.']],
  nota:'Aplicación interna sobre red privada. Los datos de clientes, plantas y personas están difuminados en las capturas.'},
 
 {slug:'comanda-central',title:'Comanda Central',cliente:'Producto propio',pais:'Argentina',
