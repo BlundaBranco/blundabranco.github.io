@@ -43,7 +43,7 @@ const PROJECTS=[
  tech:'Next.js 15 · TypeScript · Supabase · Vercel · Make.com · Brevo · Facebook Lead Ads · GitHub Actions',
  links:[['Onboarding','https://onboarding.tuproximohorizonte.com'],['Agenda','https://agenda.tuproximohorizonte.com'],['Demo','https://demo.tuproximohorizonte.com']],
  cover:'01-onboarding-inicio.png',
- shots:[['01-onboarding-inicio.png','El onboarding público de afiliados: un solo link, sin registro.'],['02-onboarding-paso.png','Un paso con sus recursos: video, PDF y enlaces.'],['06-agenda-publica.png','La agenda semanal de capacitaciones, con inscripción abierta.'],['08-make-escenario.png','La automatización que captura los leads de Facebook y dispara la secuencia de correos.']],
+ shots:[['01-onboarding-inicio.png','El onboarding de afiliados: el plan de siete pasos, el paso en curso con su video y la agenda de capacitaciones al costado. Un solo link, sin registro.'],['08-make-escenario.png','La automatización que captura los leads de Facebook y dispara la secuencia de cuatro correos.']],
  nota:''},
 
 {slug:'infinity-book',title:'Infinity Book',cliente:'Elfinbook S.R.L.',pais:'Argentina',
@@ -117,11 +117,11 @@ PROJECTS.push(
  'Reportes de ingresos y de morosidad, con filtros y exportación a PDF.',
  'Comando de migración desde las planillas de Excel existentes, transaccional y con registro de errores.',
  'Avisos automáticos por WhatsApp: recordatorio de vencimiento y confirmación de pago, con su panel de configuración.'],
- stats:[],
+ stats:[['289','clientes'],['345','lotes'],['0','planillas de Excel']],
  tech:'PHP 8.1 · Laravel 11 · Blade · Alpine.js · Tailwind · MySQL 8 · dompdf · PhpSpreadsheet · Twilio · Chart.js',
  links:[],
- cover:'02-plan-de-pagos.png',
- shots:[['02-plan-de-pagos.png','Un plan de pago con sus cuotas generadas automáticamente.'],['01-clientes-lotes.png','Clientes y lotes, con el estado de cada lote.'],['03-recibo-pdf.png','El recibo con folio que emite el sistema.'],['04-reporte-morosidad.png','El reporte de morosidad, con la deuda y los días de atraso de cada cliente.']],
+ cover:'01-dashboard.png',
+ shots:[['01-dashboard.png','El tablero del sistema: clientes, lotes por estado, cuotas vencidas y accesos rápidos a las operaciones del día.'],['02-plan-de-pagos.png','Un plan de pago con sus cuotas generadas automáticamente.'],['03-recibo-pdf.png','El recibo con folio que emite el sistema.'],['04-reporte-morosidad.png','El reporte de morosidad, con la deuda y los días de atraso de cada cliente.']],
  nota:'Sistema privado del cliente. Las capturas se toman sobre datos de prueba.'},
 
 {slug:'comanda-central',title:'Comanda Central',cliente:'Producto propio',pais:'Argentina',
