@@ -155,8 +155,8 @@ PROJECTS.push(
  stats:[['Meta','proveedor verificado'],['24/7','atención']],
  tech:'Meta WhatsApp Cloud API · modelos de lenguaje con uso de herramientas · Python',
  links:[['Sitio','https://somosvertical.ar']],
- cover:'03-chat-mati.png',
- shots:[['01-web-home.png','El sitio de Vertical.'],['03-chat-mati.png','El agente calificando un contacto por WhatsApp.'],['02-meta-verificado.png','El estado de proveedor de tecnología verificado por Meta.'],['04-crm-leads.png','El CRM con los contactos y su estado.']],
+ cover:'02-bandeja-chat.png',
+ shots:[['02-bandeja-chat.png','La bandeja: el agente conversa por WhatsApp y va dejando arriba lo que averiguó — intención, presupuesto, zona y, si se cae, el motivo.'],['03-etapas-crm.png','El CRM por etapas, de lead frío a cerrado. Cada contacto se mueve solo según cómo va la conversación.'],['04-ficha-contacto.png','La ficha del contacto: lo que contó, cuántas veces se lo siguió, cómo terminó y la nota del vendedor.'],['05-seguimiento.png','El seguimiento automático: a las 20 horas, al día 3 y al día 6, con plantillas aprobadas por WhatsApp. Si contesta, se corta solo.'],['06-reactivacion.png','La reactivación de contactos viejos, con tope diario y baja automática. Si WhatsApp baja la calidad del número, se frena sola.'],['01-web-home.png','El sitio de Vertical.']],
  nota:''},
 
 {slug:'deltan-scan',title:'Deltan Scan IA',cliente:'Carlos Vargas',pais:'Latinoamérica',
