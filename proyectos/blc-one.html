@@ -15,17 +15,17 @@
 <meta property="og:url" content="https://brancoblunda.github.io/proyectos/blc-one.html">
 <meta property="og:title" content="BLC One | Branco Blunda">
 <meta property="og:description" content="Plataforma de gestión para el área de servicios de un grupo de energía renovable que opera remotamente cerca del 17% de la generación renovable del país. C">
-<meta property="og:image" content="https://brancoblunda.github.io/assets/images/foto.jpg">
+<meta property="og:image" content="https://brancoblunda.github.io/assets/images/foto.webp">
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:title" content="BLC One | Branco Blunda">
 <meta property="twitter:description" content="Plataforma de gestión para el área de servicios de un grupo de energía renovable que opera remotamente cerca del 17% de la generación renovable del país. C">
-<meta property="twitter:image" content="https://brancoblunda.github.io/assets/images/foto.jpg">
+<meta property="twitter:image" content="https://brancoblunda.github.io/assets/images/foto.webp">
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/styles.css?v=841c1fea">
+<link rel="stylesheet" href="../css/styles.css?v=c048044a">
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans">
 
@@ -36,26 +36,24 @@
         <img src="../assets/images/logo-dark.svg" alt="Branco Blunda" class="brand-logo" width="178" height="225">
       </a>
       <div class="hidden md:flex space-x-8">
-        <a href="../index.html#inicio" class="nav-link">Inicio</a>
-        <a href="../index.html#servicios" class="nav-link">Servicios</a>
-        <a href="../index.html#portafolio" class="nav-link">Portafolio</a>
-        <a href="../index.html#tecnologias" class="nav-link">Stack</a>
-        <a href="../index.html#contacto" class="nav-link">Contacto</a>
+        <a href="../index.html#portafolio" class="nav-link">Proyectos</a>
+        <a href="../index.html#servicios" class="nav-link">Qué hago</a>
+        <a href="../index.html#opiniones" class="nav-link">Opiniones</a>
+        <a href="../index.html#contacto" class="nav-link nav-cta">Contame tu proyecto</a>
       </div>
       <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none" aria-label="Menu"><i class="fas fa-bars"></i></button>
     </div>
     <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-4">
-      <a href="../index.html#inicio" class="block nav-link-mobile">Inicio</a>
-      <a href="../index.html#servicios" class="block nav-link-mobile">Servicios</a>
-      <a href="../index.html#portafolio" class="block nav-link-mobile">Portafolio</a>
-      <a href="../index.html#tecnologias" class="block nav-link-mobile">Stack</a>
-      <a href="../index.html#contacto" class="block nav-link-mobile">Contacto</a>
+      <a href="../index.html#portafolio" class="block nav-link-mobile">Proyectos</a>
+      <a href="../index.html#servicios" class="block nav-link-mobile">Qué hago</a>
+      <a href="../index.html#opiniones" class="block nav-link-mobile">Opiniones</a>
+      <a href="../index.html#contacto" class="block nav-link-mobile">Contame tu proyecto</a>
     </div>
   </div>
 </nav>
 <section class="case-hero px-6">
   <div class="container mx-auto max-w-5xl">
-    <a href="../index.html#portafolio" class="volver"><i class="fas fa-arrow-left mr-2"></i>Todo el trabajo</a>
+    <a href="../index.html#portafolio" class="volver"><i class="fas fa-arrow-left mr-2"></i>Todos los proyectos</a>
     <span class="case-tag">Python · Flet · MySQL · Escritorio</span>
     <h1 class="case-title"><span class="gradient-text">BLC One</span></h1>
     <p class="case-lede">Plataforma de gestión para el área de servicios de un grupo de energía renovable que opera remotamente cerca del 17% de la generación renovable del país. Centraliza plantas, contratos y compromisos regulatorios que vivían en planillas.</p>
@@ -65,19 +63,39 @@
       <li><span>Rol</span><b>Diseño y construcción desde cero</b></li>
       <li><span>Estado</span><b>v0.3.4 entregada · aplicación interna</b></li>
     </ul>
+    <ul class="case-kpis"><li><b>237</b><span>plantas</span></li><li><b>2.555</b><span>compromisos regulatorios</span></li><li><b>2.709</b><span>tests automatizados</span></li><li><b>82</b><span>decisiones de arquitectura documentadas</span></li></ul><p class="case-nota">Aplicación interna sobre red privada. Los datos de clientes, plantas y personas están difuminados en las capturas.</p>
   </div>
 </section>
 
-<section class="px-6 pb-4">
+<section class="px-6 pb-6">
   <div class="container mx-auto max-w-6xl">
-    <figure class="case-cover">
-      <div class="gitem-img"><img src="../assets/proyectos/blc-one/03-cronograma-anual.png" alt="BLC One" class="" width="1920" height="1032" loading="lazy" decoding="async" data-zoom="1" data-file="assets/proyectos/blc-one/03-cronograma-anual.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div>
-      <figcaption>El cronograma anual de compromisos regulatorios: 2.555 filas, filtrables por planta, tipo de reporte y estado.</figcaption>
-    </figure>
+    <div class="carousel" data-carousel aria-roledescription="carrusel" aria-label="Capturas de BLC One">
+      <div class="carousel-stage">
+        <figure class="carousel-slide is-active" data-i="0">
+          <img src="../assets/proyectos/blc-one/03-cronograma-anual.webp" alt="El cronograma anual de compromisos regulatorios: 2.555 filas, filtrables por planta, tipo de reporte y estado." class="" width="1920" height="1032" loading="lazy" decoding="async" data-zoom="1" data-file="assets/proyectos/blc-one/03-cronograma-anual.webp" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">
+        </figure><figure class="carousel-slide" data-i="1">
+          <img src="../assets/proyectos/blc-one/10-roles-permisos.webp" alt="El control de acceso: nivel de permiso de cada rol sobre cada pantalla, de lectura y escritura a sin visibilidad." class="" width="1920" height="1032" loading="lazy" decoding="async" data-zoom="1" data-file="assets/proyectos/blc-one/10-roles-permisos.webp" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">
+        </figure><figure class="carousel-slide" data-i="2">
+          <img src="../assets/proyectos/blc-one/04-matriz-servicios.webp" alt="La matriz de servicios: qué paquetes, módulos y submódulos aplican a cada planta." class="" width="1920" height="1032" loading="lazy" decoding="async" data-zoom="1" data-file="assets/proyectos/blc-one/04-matriz-servicios.webp" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">
+        </figure><figure class="carousel-slide" data-i="3">
+          <img src="../assets/proyectos/blc-one/01-planta-detalle.webp" alt="La ficha de una planta, con su información contractual, de gestión de activos y de soporte." class="" width="1920" height="1032" loading="lazy" decoding="async" data-zoom="1" data-file="assets/proyectos/blc-one/01-planta-detalle.webp" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">
+        </figure><figure class="carousel-slide" data-i="4">
+          <img src="../assets/proyectos/blc-one/09-usuarios-roles.webp" alt="Usuarios internos con su rol y sus permisos de emisión y aprobación." class="" width="1920" height="1032" loading="lazy" decoding="async" data-zoom="1" data-file="assets/proyectos/blc-one/09-usuarios-roles.webp" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">
+        </figure>
+        <button class="carousel-btn prev" type="button" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-btn next" type="button" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+        <span class="carousel-count"><b>1</b> / 5</span>
+      </div>
+      <div class="carousel-caption">
+        <p class="carousel-cap is-active" data-i="0">El cronograma anual de compromisos regulatorios: 2.555 filas, filtrables por planta, tipo de reporte y estado.</p><p class="carousel-cap" data-i="1">El control de acceso: nivel de permiso de cada rol sobre cada pantalla, de lectura y escritura a sin visibilidad.</p><p class="carousel-cap" data-i="2">La matriz de servicios: qué paquetes, módulos y submódulos aplican a cada planta.</p><p class="carousel-cap" data-i="3">La ficha de una planta, con su información contractual, de gestión de activos y de soporte.</p><p class="carousel-cap" data-i="4">Usuarios internos con su rol y sus permisos de emisión y aprobación.</p>
+      </div>
+      <div class="carousel-dots" role="tablist"></div>
+    </div>
+    <p class="carousel-hint"><i class="fas fa-search-plus"></i> Tocá una captura para verla grande</p>
   </div>
 </section>
 
-<section class="py-14 px-6">
+<section class="py-12 px-6">
   <div class="container mx-auto max-w-5xl">
     <div class="case-split">
       <div>
@@ -85,45 +103,23 @@
         <p class="case-p">Clientes, plantas, cronogramas de reportes ante el organismo regulador y agendas se manejaban en Excel y scripts sueltos. No había trazabilidad ni control de quién podía ver o modificar qué.</p>
       </div>
       <div>
-        <h2 class="case-h2 text-purple-400">Resultado</h2>
-        <ul class="case-stats"><li><b>237</b><span>plantas</span></li><li><b>2.555</b><span>compromisos regulatorios</span></li><li><b>2.709</b><span>tests automatizados</span></li><li><b>82</b><span>decisiones de arquitectura documentadas</span></li></ul>
-        <p class="case-nota">Aplicación interna sobre red privada. Los datos de clientes, plantas y personas están difuminados en las capturas.</p>
+        <h2 class="case-h2 text-blue-400">Lo que construí</h2>
+        <ul class="case-list one"><li>Ingreso y control de acceso por rol: tres roles sobre quince pantallas, permisos por ruta, modo de solo lectura y menú filtrado.</li><li>Alta, baja y modificación de clientes, plantas con versionado histórico de configuraciones, y usuarios internos y externos.</li><li>Gestor de reportes con cronograma anual, asignación de procesador y aprobador, seguimiento y matriz de servicios.</li><li>Vista cruzada de plantas por tipo de reporte, con filtros por rango de fechas.</li><li class="more" hidden>Módulo de agenda con exportación a Excel en el formato exacto del cliente.</li><li class="more" hidden>Vista integrada de soporte sobre 216 agentes y pantalla de contratos.</li><li class="more" hidden>Ejecutable con asistente de primer arranque, datos de prueba y registro rotativo.</li></ul>
+        <button class="ver-mas" type="button" data-more>Ver los 7 puntos <i class="fas fa-chevron-down"></i></button>
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-14 px-6 bg-gray-800 bg-opacity-50">
+<section class="py-12 px-6 bg-gray-800 bg-opacity-50">
   <div class="container mx-auto max-w-5xl">
-    <h2 class="case-h2 text-blue-400 mb-8">Lo que construí</h2>
-    <ul class="case-list"><li>Ingreso y control de acceso por rol: tres roles sobre quince pantallas, permisos por ruta, modo de solo lectura y menú filtrado.</li><li>Alta, baja y modificación de clientes, plantas con versionado histórico de configuraciones, y usuarios internos y externos.</li><li>Gestor de reportes con cronograma anual, asignación de procesador y aprobador, seguimiento y matriz de servicios.</li><li>Vista cruzada de plantas por tipo de reporte, con filtros por rango de fechas.</li><li>Módulo de agenda con exportación a Excel en el formato exacto del cliente.</li><li>Vista integrada de soporte sobre 216 agentes y pantalla de contratos.</li><li>Ejecutable con asistente de primer arranque, datos de prueba y registro rotativo.</li></ul>
-  </div>
-</section>
-
-<section class="py-14 px-6">
-  <div class="container mx-auto max-w-6xl">
-    <h2 class="case-h2 mb-10">Cómo se ve</h2>
-    <figure class="case-row">
-      <div class="gitem-img"><img src="../assets/proyectos/blc-one/10-roles-permisos.png" alt="El control de acceso: nivel de permiso de cada rol sobre cada pantalla, de lectura y escritura a sin visibilidad." class="" width="1920" height="1032" loading="lazy" decoding="async" data-zoom="1" data-file="assets/proyectos/blc-one/10-roles-permisos.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div>
-      <figcaption><span class="num">01</span>El control de acceso: nivel de permiso de cada rol sobre cada pantalla, de lectura y escritura a sin visibilidad.</figcaption>
-    </figure><figure class="case-row alt">
-      <div class="gitem-img"><img src="../assets/proyectos/blc-one/04-matriz-servicios.png" alt="La matriz de servicios: qué paquetes, módulos y submódulos aplican a cada planta." class="" width="1920" height="1032" loading="lazy" decoding="async" data-zoom="1" data-file="assets/proyectos/blc-one/04-matriz-servicios.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div>
-      <figcaption><span class="num">02</span>La matriz de servicios: qué paquetes, módulos y submódulos aplican a cada planta.</figcaption>
-    </figure><figure class="case-row">
-      <div class="gitem-img"><img src="../assets/proyectos/blc-one/01-planta-detalle.png" alt="La ficha de una planta, con su información contractual, de gestión de activos y de soporte." class="" width="1920" height="1032" loading="lazy" decoding="async" data-zoom="1" data-file="assets/proyectos/blc-one/01-planta-detalle.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div>
-      <figcaption><span class="num">03</span>La ficha de una planta, con su información contractual, de gestión de activos y de soporte.</figcaption>
-    </figure><figure class="case-row alt">
-      <div class="gitem-img"><img src="../assets/proyectos/blc-one/09-usuarios-roles.png" alt="Usuarios internos con su rol y sus permisos de emisión y aprobación." class="" width="1920" height="1032" loading="lazy" decoding="async" data-zoom="1" data-file="assets/proyectos/blc-one/09-usuarios-roles.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div>
-      <figcaption><span class="num">04</span>Usuarios internos con su rol y sus permisos de emisión y aprobación.</figcaption>
-    </figure>
-  </div>
-</section>
-
-<section class="py-14 px-6 bg-gray-800 bg-opacity-50">
-  <div class="container mx-auto max-w-5xl">
-    <h2 class="case-h2 mb-6">Con qué está hecho</h2>
-    <div class="flex flex-wrap gap-3"><span class="tech-badge">Python 3.13</span><span class="tech-badge">Flet</span><span class="tech-badge">SQLAlchemy 2</span><span class="tech-badge">MySQL 8</span><span class="tech-badge">PyInstaller</span><span class="tech-badge">desarrollo dirigido por especificación</span></div>
-    
+    <div class="case-split">
+      <div>
+        <h2 class="case-h2 mb-5">Con qué está hecho</h2>
+        <div class="flex flex-wrap gap-2"><span class="tech-badge sm">Python 3.13</span><span class="tech-badge sm">Flet</span><span class="tech-badge sm">SQLAlchemy 2</span><span class="tech-badge sm">MySQL 8</span><span class="tech-badge sm">PyInstaller</span><span class="tech-badge sm">desarrollo dirigido por especificación</span></div>
+      </div>
+      
+    </div>
   </div>
 </section>
 
@@ -164,6 +160,6 @@
   <i class="fab fa-whatsapp"></i><span>Escribime</span>
 </a>
 <button id="scroll-top" class="scroll-top-btn" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
-<script src="../js/main.js?v=0ba0dfc7"></script>
+<script src="../js/main.js?v=713badb0"></script>
 </body>
 </html>

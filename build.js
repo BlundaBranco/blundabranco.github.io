@@ -26,8 +26,8 @@ const PROJECTS=[
  stats:[['500+','conductores'],['50.000+','llamadas por mes'],['35.000+','reservas por mes'],['~70%','menos trabajo manual']],
  tech:'Node.js · Fastify · tRPC · PostgreSQL · Kysely · Asterisk / FreePBX · Docker · Traefik · Whisper · TTS · Google Maps · Twilio',
  links:[['Sitio','https://taxiai.com.co'],['App pasajero','https://play.google.com/store/apps/details?id=co.com.taxiai.pasajero'],['App conductor','https://play.google.com/store/apps/details?id=co.com.taxiai.conductor']],
- cover:'08-panel-despacho.png',
- shots:[['08-panel-despacho.png','Panel de despacho: llamadas y viajes del día, solicitudes activas, la flota en el mapa y el detalle del viaje en curso.'],['01-landing-hero.png','La landing pública del servicio.'],['02-landing-tres-formas.png','Los tres canales de pedido: WhatsApp, llamada telefónica y app.'],['06-app-seguimiento.png','Seguimiento del viaje en tiempo real, con la ruta y el chat con el conductor.'],['05-app-solicitar.png','Pedido desde la app. El círculo es el radio de búsqueda de conductores en hora pico.'],['07-app-historial.png','Historial de viajes del pasajero, con el estado de cada uno.'],['03-play-pasajero.png','La app de pasajero, publicada en Google Play.'],['04-play-conductor.png','La app de conductor, publicada en Google Play.']],
+ cover:'08-panel-despacho.webp',
+ shots:[['08-panel-despacho.webp','Panel de despacho: llamadas y viajes del día, solicitudes activas, la flota en el mapa y el detalle del viaje en curso.'],['01-landing-hero.webp','La landing pública del servicio.'],['02-landing-tres-formas.webp','Los tres canales de pedido: WhatsApp, llamada telefónica y app.'],['06-app-seguimiento.webp','Seguimiento del viaje en tiempo real, con la ruta y el chat con el conductor.'],['05-app-solicitar.webp','Pedido desde la app. El círculo es el radio de búsqueda de conductores en hora pico.'],['07-app-historial.webp','Historial de viajes del pasajero, con el estado de cada uno.'],['03-play-pasajero.webp','La app de pasajero, publicada en Google Play.'],['04-play-conductor.webp','La app de conductor, publicada en Google Play.']],
  nota:'Las cifras de operación son datos informados por el cliente.'},
 
 {slug:'signfloow',title:'SignFloow',cliente:'RotulMarket',pais:'España',
@@ -45,8 +45,8 @@ const PROJECTS=[
  stats:[['1.551+','tests automatizados'],['~90%','de cobertura'],['~130','pull requests']],
  tech:'TypeScript · React 19 · Vite · Tailwind · NestJS 11 · PostgreSQL 16 · Prisma · Turborepo · AWS ECS Fargate y Aurora · Terraform · Vercel',
  links:[['Aplicación','https://app.signfloow.ai']],
- cover:'01-floow-kanban.png',
- shots:[['01-floow-kanban.png','El tablero de producción: cinco fases, una tarjeta por proyecto y el avance de cada tarea.'],['02-panel.png','El panel de inicio: proyectos por fase, prioridades del día y presupuestos pendientes de enviar.'],['03-quote-engine.png','Detalle de un presupuesto: líneas, impuestos y análisis interno de costes y margen.'],['08-detalle-proyecto.png','Ficha de proyecto: tareas de producción, archivos, notas internas y un resumen generado por IA.'],['06-catalogo.png','El catálogo: familias, subfamilias y productos con herencia de materiales y reglas. Cada producto puede ser de precio fijo o calculable.'],['04-crm-pipeline.png','El embudo comercial, desde la consulta nueva hasta el cobro pendiente.'],['05-presupuestos-lista.png','El listado de presupuestos, con el estado y el margen de cada uno.'],['07-floowy-chat.png','Floowy, el asistente de IA: propone acciones concretas sobre los datos del taller.']],
+ cover:'01-floow-kanban.webp',
+ shots:[['01-floow-kanban.webp','El tablero de producción: cinco fases, una tarjeta por proyecto y el avance de cada tarea.'],['02-panel.webp','El panel de inicio: proyectos por fase, prioridades del día y presupuestos pendientes de enviar.'],['03-quote-engine.webp','Detalle de un presupuesto: líneas, impuestos y análisis interno de costes y margen.'],['08-detalle-proyecto.webp','Ficha de proyecto: tareas de producción, archivos, notas internas y un resumen generado por IA.'],['06-catalogo.webp','El catálogo: familias, subfamilias y productos con herencia de materiales y reglas. Cada producto puede ser de precio fijo o calculable.'],['04-crm-pipeline.webp','El embudo comercial, desde la consulta nueva hasta el cobro pendiente.'],['05-presupuestos-lista.webp','El listado de presupuestos, con el estado y el margen de cada uno.'],['07-floowy-chat.webp','Floowy, el asistente de IA: propone acciones concretas sobre los datos del taller.']],
  nota:''},
 
 {slug:'blc-one',title:'BLC One',cliente:'BLC Power Generation',pais:'Argentina y Colombia',
@@ -63,8 +63,8 @@ const PROJECTS=[
  'Ejecutable con asistente de primer arranque, datos de prueba y registro rotativo.'],
  stats:[['237','plantas'],['2.555','compromisos regulatorios'],['2.709','tests automatizados'],['82','decisiones de arquitectura documentadas']],
  tech:'Python 3.13 · Flet · SQLAlchemy 2 · MySQL 8 · PyInstaller · desarrollo dirigido por especificación',
- links:[],cover:'03-cronograma-anual.png',
- shots:[['03-cronograma-anual.png','El cronograma anual de compromisos regulatorios: 2.555 filas, filtrables por planta, tipo de reporte y estado.'],['10-roles-permisos.png','El control de acceso: nivel de permiso de cada rol sobre cada pantalla, de lectura y escritura a sin visibilidad.'],['04-matriz-servicios.png','La matriz de servicios: qué paquetes, módulos y submódulos aplican a cada planta.'],['01-planta-detalle.png','La ficha de una planta, con su información contractual, de gestión de activos y de soporte.'],['09-usuarios-roles.png','Usuarios internos con su rol y sus permisos de emisión y aprobación.']],
+ links:[],cover:'03-cronograma-anual.webp',
+ shots:[['03-cronograma-anual.webp','El cronograma anual de compromisos regulatorios: 2.555 filas, filtrables por planta, tipo de reporte y estado.'],['10-roles-permisos.webp','El control de acceso: nivel de permiso de cada rol sobre cada pantalla, de lectura y escritura a sin visibilidad.'],['04-matriz-servicios.webp','La matriz de servicios: qué paquetes, módulos y submódulos aplican a cada planta.'],['01-planta-detalle.webp','La ficha de una planta, con su información contractual, de gestión de activos y de soporte.'],['09-usuarios-roles.webp','Usuarios internos con su rol y sus permisos de emisión y aprobación.']],
  nota:'Aplicación interna sobre red privada. Los datos de clientes, plantas y personas están difuminados en las capturas.'},
 
 {slug:'infinity-book',title:'Infinity Book',cliente:'Elfinbook S.R.L.',pais:'Argentina',
@@ -82,8 +82,8 @@ const PROJECTS=[
  stats:[['8.900+','usuarios registrados'],['177','países'],['0','registros perdidos en la migración']],
  tech:'Flutter / Dart · Kotlin con OpenCV y ML Kit · ASP.NET Core · SQL Server · Azure Document Intelligence · OpenAI · DigitalOcean · Docker · Codemagic',
  links:[['Google Play','https://play.google.com/store/apps/details?id=com.infinitybook.infinitybook']],
- cover:'05-app-store.png',
- shots:[['01-app-escaneo.png','La cámara detectando la hoja del cuaderno para escanearla.'],['02-app-nuevo-escaneo.png','El escaneo listo, con el módulo de IA: transcripción del documento, resumen inteligente y resolución de matemática.'],['03-cloud-destinos.png','Las integraciones en la nube: Google Drive, Dropbox, OneNote, OneDrive, correo y Trello.'],['04-cloud-configurado.png','Cada uno de los seis íconos impresos en la hoja se asocia a un destino: el usuario marca el ícono y el escaneo se guarda solo donde corresponde.'],['05-app-store.png','La app publicada en la App Store bajo la cuenta del cliente.']],
+ cover:'05-app-store.webp',
+ shots:[['01-app-escaneo.webp','La cámara detectando la hoja del cuaderno para escanearla.'],['02-app-nuevo-escaneo.webp','El escaneo listo, con el módulo de IA: transcripción del documento, resumen inteligente y resolución de matemática.'],['03-cloud-destinos.webp','Las integraciones en la nube: Google Drive, Dropbox, OneNote, OneDrive, correo y Trello.'],['04-cloud-configurado.webp','Cada uno de los seis íconos impresos en la hoja se asocia a un destino: el usuario marca el ícono y el escaneo se guarda solo donde corresponde.'],['05-app-store.webp','La app publicada en la App Store bajo la cuenta del cliente.']],
  nota:''},
 
 {slug:'vertical',title:'Vertical',cliente:'Producto propio',pais:'Argentina',
@@ -99,8 +99,8 @@ const PROJECTS=[
  stats:[['Meta','proveedor de tecnología verificado'],['24/7','atención']],
  tech:'Meta WhatsApp Cloud API · modelos de lenguaje con uso de herramientas · Python',
  links:[['Sitio','https://somosvertical.ar']],
- cover:'02-bandeja-chat.png',
- shots:[['02-bandeja-chat.png','La bandeja: el agente conversa por WhatsApp y va dejando arriba lo que averiguó — intención, presupuesto, zona y, si se cae, el motivo.'],['03-etapas-crm.png','El CRM por etapas, de lead frío a cerrado. Cada contacto se mueve solo según cómo va la conversación.'],['04-ficha-contacto.png','La ficha del contacto: lo que contó, cuántas veces se lo siguió, cómo terminó y la nota del vendedor.'],['05-seguimiento.png','El seguimiento automático: a las 20 horas, al día 3 y al día 6, con plantillas aprobadas por WhatsApp. Si contesta, se corta solo.'],['06-reactivacion.png','La reactivación de contactos viejos, con tope diario y baja automática. Si WhatsApp baja la calidad del número, se frena sola.'],['07-meta-verificado.png','El estado en Meta: negocio verificado y verificación de acceso como proveedor de tecnología (Tech Provider), que es lo que habilita a operar sobre las cuentas de WhatsApp de otras empresas.'],['01-web-home.png','El sitio de Vertical.']],
+ cover:'02-bandeja-chat.webp',
+ shots:[['02-bandeja-chat.webp','La bandeja: el agente conversa por WhatsApp y va dejando arriba lo que averiguó — intención, presupuesto, zona y, si se cae, el motivo.'],['03-etapas-crm.webp','El CRM por etapas, de lead frío a cerrado. Cada contacto se mueve solo según cómo va la conversación.'],['04-ficha-contacto.webp','La ficha del contacto: lo que contó, cuántas veces se lo siguió, cómo terminó y la nota del vendedor.'],['05-seguimiento.webp','El seguimiento automático: a las 20 horas, al día 3 y al día 6, con plantillas aprobadas por WhatsApp. Si contesta, se corta solo.'],['06-reactivacion.webp','La reactivación de contactos viejos, con tope diario y baja automática. Si WhatsApp baja la calidad del número, se frena sola.'],['07-meta-verificado.webp','El estado en Meta: negocio verificado y verificación de acceso como proveedor de tecnología (Tech Provider), que es lo que habilita a operar sobre las cuentas de WhatsApp de otras empresas.'],['01-web-home.webp','El sitio de Vertical.']],
  nota:''},
 
 {slug:'comanda-central',title:'Comanda Central',cliente:'Producto propio',pais:'Argentina',
@@ -117,8 +117,8 @@ const PROJECTS=[
  stats:[['8','negocios'],['3','cadenas'],['15','sucursales']],
  tech:'Node.js · Express · PostgreSQL · JavaScript · Chart.js · Cloudinary · Render · Vercel',
  links:[['Código','https://github.com/BrancoBlunda/Comanda-Central'],['Sitio de ejemplo','https://monat.ar']],
- cover:'01-pos.png',
- shots:[['01-pos.png','El punto de venta de tres paneles: menú, datos del pedido y la comanda en curso. Se opera entero con el teclado.'],['02-dashboard-bi.png','El tablero del negocio: ventas por día, pedidos, alertas de stock bajo y actividad reciente. Los importes están difuminados.'],['08-sitio-publico.png','El sitio público que la plataforma genera para cada negocio, con su menú y su marca.']],
+ cover:'01-pos.webp',
+ shots:[['01-pos.webp','El punto de venta de tres paneles: menú, datos del pedido y la comanda en curso. Se opera entero con el teclado.'],['02-dashboard-bi.webp','El tablero del negocio: ventas por día, pedidos, alertas de stock bajo y actividad reciente. Los importes están difuminados.'],['08-sitio-publico.webp','El sitio público que la plataforma genera para cada negocio, con su menú y su marca.']],
  nota:''},
 
 {slug:'tu-proximo-horizonte',title:'Tu Próximo Horizonte',cliente:'Leo Cerdeira',pais:'Argentina',
@@ -136,8 +136,8 @@ const PROJECTS=[
  stats:[['3','sistemas en producción'],['0','dependencia del dev para editar']],
  tech:'Next.js 15 · TypeScript · Supabase · Vercel · Make.com · Brevo · Facebook Lead Ads · GitHub Actions',
  links:[['Onboarding','https://onboarding.tuproximohorizonte.com'],['Agenda','https://agenda.tuproximohorizonte.com'],['Demo','https://demo.tuproximohorizonte.com']],
- cover:'01-onboarding-inicio.png',
- shots:[['01-onboarding-inicio.png','El onboarding de afiliados: el plan de siete pasos, el paso en curso con su video y la agenda de capacitaciones al costado. Un solo link, sin registro.'],['02-onboarding-paso.png','Un paso abierto: video, PDFs descargables y enlaces a herramientas. El cliente edita todo esto desde su panel, sin tocar código.'],['06-agenda-publica.png','La agenda semanal de capacitaciones, con inscripción abierta. El selector de zona horaria convierte los horarios al país de cada inscripto.'],['08-make-escenario.png','La automatización que captura los leads de Facebook y dispara la secuencia de cuatro correos.']],
+ cover:'01-onboarding-inicio.webp',
+ shots:[['01-onboarding-inicio.webp','El onboarding de afiliados: el plan de siete pasos, el paso en curso con su video y la agenda de capacitaciones al costado. Un solo link, sin registro.'],['02-onboarding-paso.webp','Un paso abierto: video, PDFs descargables y enlaces a herramientas. El cliente edita todo esto desde su panel, sin tocar código.'],['06-agenda-publica.webp','La agenda semanal de capacitaciones, con inscripción abierta. El selector de zona horaria convierte los horarios al país de cada inscripto.'],['08-make-escenario.webp','La automatización que captura los leads de Facebook y dispara la secuencia de cuatro correos.']],
  nota:''},
 
 {slug:'lomas-del-pacifico',title:'Cobranza de lotes',cliente:'Lomas del Pacífico',pais:'México',
@@ -156,8 +156,8 @@ const PROJECTS=[
  stats:[['289','clientes'],['345','lotes'],['0','planillas de Excel']],
  tech:'PHP 8.1 · Laravel 11 · Blade · Alpine.js · Tailwind · MySQL 8 · dompdf · PhpSpreadsheet · Twilio · Chart.js',
  links:[],
- cover:'01-dashboard.png',
- shots:[['01-dashboard.png','El tablero del sistema: clientes, lotes por estado, cuotas vencidas y accesos rápidos a las operaciones del día.'],['02-plan-de-pagos.png','Un plan de pago con sus doce cuotas generadas automáticamente, cada una con su vencimiento, su interés y su aviso por WhatsApp.'],['03-recibo-pdf.png','El recibo con folio único que emite el sistema, con el número de cuota sobre el total del plan.'],['05-lote-detalle.png','La ficha de un lote: socio propietario, estado y cliente asignado, con sus planes de pago debajo.']],
+ cover:'01-dashboard.webp',
+ shots:[['01-dashboard.webp','El tablero del sistema: clientes, lotes por estado, cuotas vencidas y accesos rápidos a las operaciones del día.'],['02-plan-de-pagos.webp','Un plan de pago con sus doce cuotas generadas automáticamente, cada una con su vencimiento, su interés y su aviso por WhatsApp.'],['03-recibo-pdf.webp','El recibo con folio único que emite el sistema, con el número de cuota sobre el total del plan.'],['05-lote-detalle.webp','La ficha de un lote: socio propietario, estado y cliente asignado, con sus planes de pago debajo.']],
  nota:'Sistema privado del cliente. Las capturas se toman sobre datos de prueba.'},
 
 {slug:'deltan-scan',title:'Deltan Scan IA',cliente:'Carlos Vargas',pais:'Latinoamérica',
@@ -174,8 +174,8 @@ const PROJECTS=[
  stats:[],
  tech:'Python · OpenCV · YOLOv8 · Streamlit',
  links:[['Código','https://github.com/BrancoBlunda/Deltan-Scan-AI']],
- cover:'03-resultados.png',
- shots:[['03-resultados.png','El resultado del análisis: las piezas detectadas, los reparos anatómicos y las mediciones en milímetros sobre la propia radiografía.'],['02-analizar.png','La radiografía cargada, lista para procesar. El flujo va guiado en cuatro pasos.'],['04-historial.png','El historial de análisis, para volver a abrir o descargar cualquier estudio anterior.'],['01-inicio.png','La pantalla de inicio: se arrastra la radiografía y el análisis arranca solo.']],
+ cover:'03-resultados.webp',
+ shots:[['03-resultados.webp','El resultado del análisis: las piezas detectadas, los reparos anatómicos y las mediciones en milímetros sobre la propia radiografía.'],['02-analizar.webp','La radiografía cargada, lista para procesar. El flujo va guiado en cuatro pasos.'],['04-historial.webp','El historial de análisis, para volver a abrir o descargar cualquier estudio anterior.'],['01-inicio.webp','La pantalla de inicio: se arrastra la radiografía y el análisis arranca solo.']],
  nota:''}
 ];
 
@@ -187,7 +187,7 @@ const OTHERS=[
 ['The Argentino y Mosto','Canadá / EE.UU.','Dos tiendas de exportación creadas desde cero. Shopify.'],
 ['Tymonyz','Producto propio','Pipeline autónomo de noticias a video: guion, voz, edición y publicación. Python.'],
 ['Expert Advisor MetaTrader 5','Cliente vía Workana','Robot de trading construido según la especificación del cliente. MQL5.'],
-['30+ trabajos con reseña pública','Varios países','Bots de WhatsApp, aulas virtuales, tiendas, tableros y frontends. Verificables en Workana.']];
+['25 trabajos con reseña pública','Varios países','Bots de WhatsApp, aulas virtuales, tiendas, tableros y frontends. Verificables en Workana.']];
 
 const METHOD=[
 ['Arquitectura primero','Defino qué se construye y qué no antes de escribir código.'],
@@ -201,6 +201,11 @@ const STACK=[
 ['Datos e infraestructura','PostgreSQL|MySQL|SQL Server|Supabase|Prisma|AWS|Terraform|Docker|Vercel|CI/CD'],
 ['IA e integraciones','LLMs con herramientas|Agentes en producción|Whisper|TTS|OpenCV|WhatsApp Cloud API|Google Maps|Mercado Pago|Twilio|Asterisk|n8n']];
 
+
+const WORKANA='https://www.workana.com/freelancer/a47899bad3b852d35ff4ca118b9b2d45';
+const TESTIMONIOS=[
+['Vargasmatos','Buen programador y buena persona, seguiré contratándolo para mis demás proyectos y mantenimientos mensuales. 10/10',5,'Plataforma de video bajo demanda · Latinoamérica'],
+['Alfredo Falcon','Good quality of work in developing deliverables. It was possible to clearly define milestones and deliverables, communication was clear and all the milestones were met.',4,'Interfaces de plataforma web · Angular']];
 
 const SHORT={
 'taxi-ai':'Atiende la llamada, entiende la dirección hablada y despacha el taxi sin operador.',
@@ -237,11 +242,11 @@ const head=(title,desc,canonical,depth)=>{const r=depth?'../':'';const h=depth?'
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
-<meta property="og:image" content="${SITE}/assets/images/foto.jpg">
+<meta property="og:image" content="${SITE}/assets/images/foto.webp">
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:title" content="${esc(title)}">
 <meta property="twitter:description" content="${esc(desc)}">
-<meta property="twitter:image" content="${SITE}/assets/images/foto.jpg">
+<meta property="twitter:image" content="${SITE}/assets/images/foto.webp">
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -258,20 +263,18 @@ const head=(title,desc,canonical,depth)=>{const r=depth?'../':'';const h=depth?'
         <img src="${r}assets/images/logo-dark.svg" alt="Branco Blunda" class="brand-logo" width="178" height="225">
       </a>
       <div class="hidden md:flex space-x-8">
-        <a href="${h}#inicio" class="nav-link">Inicio</a>
-        <a href="${h}#servicios" class="nav-link">Servicios</a>
-        <a href="${h}#portafolio" class="nav-link">Portafolio</a>
-        <a href="${h}#tecnologias" class="nav-link">Stack</a>
-        <a href="${h}#contacto" class="nav-link">Contacto</a>
+        <a href="${h}#portafolio" class="nav-link">Proyectos</a>
+        <a href="${h}#servicios" class="nav-link">Qué hago</a>
+        <a href="${h}#opiniones" class="nav-link">Opiniones</a>
+        <a href="${h}#contacto" class="nav-link nav-cta">Contame tu proyecto</a>
       </div>
       <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none" aria-label="Menu"><i class="fas fa-bars"></i></button>
     </div>
     <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-4">
-      <a href="${h}#inicio" class="block nav-link-mobile">Inicio</a>
-      <a href="${h}#servicios" class="block nav-link-mobile">Servicios</a>
-      <a href="${h}#portafolio" class="block nav-link-mobile">Portafolio</a>
-      <a href="${h}#tecnologias" class="block nav-link-mobile">Stack</a>
-      <a href="${h}#contacto" class="block nav-link-mobile">Contacto</a>
+      <a href="${h}#portafolio" class="block nav-link-mobile">Proyectos</a>
+      <a href="${h}#servicios" class="block nav-link-mobile">Qué hago</a>
+      <a href="${h}#opiniones" class="block nav-link-mobile">Opiniones</a>
+      <a href="${h}#contacto" class="block nav-link-mobile">Contame tu proyecto</a>
     </div>
   </div>
 </nav>`;};
@@ -309,8 +312,9 @@ const foot=depth=>{const r=depth?'../':'';return `
 </html>`;};
 
 
-/* lee ancho/alto de PNG y JPEG sin dependencias, para reservar el espacio de cada imagen */
-const imgSize=f=>{try{const b=fs.readFileSync(f);
+/* dimensiones: dims.json para webp; lector propio para png/jpg */
+const DIMS=(()=>{try{return JSON.parse(fs.readFileSync('assets/proyectos/dims.json','utf8'));}catch(e){return {};}})();
+const imgSize=f=>{const k=f.replace(/\\/g,'/');if(DIMS[k])return DIMS[k];try{const b=fs.readFileSync(f);
  if(b[0]===0x89&&b[1]===0x50)return{w:b.readUInt32BE(16),h:b.readUInt32BE(20)};
  if(b[0]===0xFF&&b[1]===0xD8){let i=2;while(i<b.length-9){if(b[i]!==0xFF){i++;continue;}const m=b[i+1];
   if(m>=0xC0&&m<=0xCF&&m!==0xC4&&m!==0xC8&&m!==0xCC)return{h:b.readUInt16BE(i+5),w:b.readUInt16BE(i+7)};
@@ -350,16 +354,17 @@ idx+=`
           <span class="px-4 py-2 bg-green-500 bg-opacity-10 border border-green-500 rounded-full text-green-400 text-sm font-mono">🚀 Disponible para proyectos</span>
         </div>
         <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight"><span class="gradient-text">Branco </span>Blunda</h1>
-        <h2 class="text-2xl md:text-3xl text-gray-300 mb-6 font-light">Software Engineer | Full Stack &amp; IA</h2>
+        <h2 class="text-2xl md:text-3xl text-gray-300 mb-6 font-light">Software Engineer · Full Stack &amp; IA</h2>
         <p class="text-lg md:text-xl text-gray-400 mb-6 max-w-2xl">
           Construyo sistemas que <span class="text-green-400 font-semibold">llegan a producción</span> y usa gente real:
           agentes de voz y de <span class="text-blue-400 font-semibold">WhatsApp</span>, SaaS multi-empresa y apps publicadas.
         </p>
-        <p class="text-gray-500 mb-10 max-w-2xl">Desarrollo software desde 2017. Rosario, Argentina · Trabajo remoto.</p>
+        <p class="text-gray-500 mb-8 max-w-2xl">Desarrollo software desde 2017. Rosario, Argentina · Trabajo remoto.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-          <a href="#portafolio" class="btn-primary"><i class="fas fa-folder-open mr-2"></i>Ver proyectos</a>
-          <a href="${WA}?text=Hola%20Branco,%20te%20escribo%20por%20un%20proyecto" target="_blank" rel="noopener" class="btn-secondary"><i class="fab fa-whatsapp mr-2"></i>Hablemos por WhatsApp</a>
+          <a href="#portafolio" class="btn-primary"><i class="fas fa-folder-open mr-2"></i>Ver lo que construí</a>
+          <a href="${WA}?text=Hola%20Branco,%20te%20escribo%20por%20un%20proyecto" target="_blank" rel="noopener" class="btn-secondary"><i class="fab fa-whatsapp mr-2"></i>Contame tu proyecto</a>
         </div>
+        <p class="trust-line"><i class="fas fa-star"></i> 25 reseñas en Workana · #1 en Argentina · 55+ proyectos</p>
         <div class="flex gap-6 mt-10 justify-center md:justify-start">
           <a href="${GITHUB}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fab fa-github text-2xl"></i></a>
           <a href="${LINKEDIN}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin text-2xl"></i></a>
@@ -369,7 +374,7 @@ idx+=`
       </div>
       <div class="hero-foto">
         <div class="profile-container">
-          <img src="assets/images/foto.jpg" alt="Branco Blunda - Software Engineer" class="profile-image" loading="eager" width="800" height="800">
+          <img src="assets/images/foto.webp" alt="Branco Blunda - Software Engineer" class="profile-image" loading="eager" width="800" height="800">
           <div class="profile-glow"></div>
         </div>
       </div>
@@ -381,28 +386,11 @@ idx+=`
   <div class="container mx-auto">
     <div class="proof-bar">
       <div><strong>55+</strong><span>proyectos entregados</span></div>
-      <div><strong>30+</strong><span>reseñas de clientes en Workana</span></div>
+      <div><strong>25</strong><span>reseñas de clientes en Workana</span></div>
       <div><strong>#1</strong><span>Workana Argentina 2026</span></div>
       <div><strong>4</strong><span>apps publicadas en tiendas</span></div>
       <div><strong>8.900+</strong><span>usuarios de una sola app</span></div>
       <div><strong>Meta</strong><span>proveedor de tecnología verificado</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="servicios" class="py-20 px-6 bg-gray-800 bg-opacity-50">
-  <div class="container mx-auto">
-    <div class="text-center mb-16">
-      <h2 class="section-title">Qué hago</h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Software que resuelve un problema concreto del negocio y queda funcionando.</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      ${SERVICIOS.map(s=>`<div class="service-card">
-        <div class="service-icon bg-gradient-to-br ${s[1]}"><i class="${s[0]} text-3xl"></i></div>
-        <h3 class="text-2xl font-bold mb-4">${esc(s[2])}</h3>
-        <p class="text-gray-400 mb-6">${esc(s[3])}</p>
-        <ul class="space-y-2 text-sm text-gray-500">${s[4].map(i=>`<li><i class="fas fa-check text-green-400 mr-2"></i>${esc(i)}</li>`).join('')}</ul>
-      </div>`).join('')}
     </div>
   </div>
 </section>
@@ -439,7 +427,45 @@ idx+=`
       </div>
     </div>
   </div>
-</section>`;
+</section>
+
+<section id="servicios" class="py-20 px-6 bg-gray-800 bg-opacity-50">
+  <div class="container mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="section-title">Qué hago</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Para negocios que viven del WhatsApp o del teléfono, empresas que todavía operan en Excel y equipos que necesitan una app publicada. Software que resuelve un problema concreto y queda funcionando.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      ${SERVICIOS.map(s=>`<div class="service-card">
+        <div class="service-icon bg-gradient-to-br ${s[1]}"><i class="${s[0]} text-3xl"></i></div>
+        <h3 class="text-2xl font-bold mb-4">${esc(s[2])}</h3>
+        <p class="text-gray-400 mb-6">${esc(s[3])}</p>
+        <ul class="space-y-2 text-sm text-gray-500">${s[4].map(i=>`<li><i class="fas fa-check text-green-400 mr-2"></i>${esc(i)}</li>`).join('')}</ul>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+
+<section id="opiniones" class="py-20 px-6">
+  <div class="container mx-auto max-w-5xl">
+    <div class="text-center mb-12">
+      <h2 class="section-title">Lo que dicen los clientes</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Reseñas públicas en Workana. Tres de esos clientes me volvieron a contratar.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      ${TESTIMONIOS.map(t=>`<figure class="testi glass-card">
+        <div class="stars" aria-label="${t[2]} de 5">${'<i class="fas fa-star"></i>'.repeat(Math.round(t[2]))}</div>
+        <blockquote>“${esc(t[1])}”</blockquote>
+        <figcaption><b>${esc(t[0])}</b><span>${esc(t[3])}</span></figcaption>
+      </figure>`).join('')}
+    </div>
+    <div class="text-center mt-10">
+      <a href="${WORKANA}" target="_blank" rel="noopener" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>Ver las 25 reseñas en Workana</a>
+    </div>
+  </div>
+</section>
+`;
 
 idx+=`
 <section id="metodo" class="py-20 px-6 bg-gray-800 bg-opacity-50">
@@ -528,7 +554,7 @@ let h=head(p.title+' | Branco Blunda',p.desc.slice(0,155),SITE+'/proyectos/'+p.s
 h+=`
 <section class="case-hero px-6">
   <div class="container mx-auto max-w-5xl">
-    <a href="../index.html#portafolio" class="volver"><i class="fas fa-arrow-left mr-2"></i>Todo el trabajo</a>
+    <a href="../index.html#portafolio" class="volver"><i class="fas fa-arrow-left mr-2"></i>Todos los proyectos</a>
     <span class="case-tag">${esc(p.tag)}</span>
     <h1 class="case-title"><span class="gradient-text">${esc(p.title)}</span></h1>
     <p class="case-lede">${esc(p.desc)}</p>
@@ -538,56 +564,59 @@ h+=`
       <li><span>Rol</span><b>${esc(p.rol)}</b></li>
       <li><span>Estado</span><b>${esc(p.estado)}</b></li>
     </ul>
+    ${p.stats.length?`<ul class="case-kpis">${p.stats.map(st=>`<li><b>${esc(st[0])}</b><span>${esc(st[1])}</span></li>`).join('')}</ul>${p.nota?`<p class="case-nota">${esc(p.nota)}</p>`:''}`:''}
   </div>
 </section>
 
-<section class="px-6 pb-4">
+<section class="px-6 pb-6">
   <div class="container mx-auto max-w-6xl">
-    <figure class="case-cover">
-      <div class="gitem-img">${shot(p.slug,p.cover,p.title,1,'',true)}</div>
-      <figcaption>${esc((p.shots.find(x=>x[0]===p.cover)||['',''])[1]||p.title)}</figcaption>
-    </figure>
+    <div class="carousel" data-carousel aria-roledescription="carrusel" aria-label="Capturas de ${esc(p.title)}">
+      <div class="carousel-stage">
+        ${[[p.cover,(p.shots.find(x=>x[0]===p.cover)||['',''])[1]||p.title]].concat(p.shots.filter(x=>x[0]!==p.cover)).map((sh,i)=>`<figure class="carousel-slide${i===0?' is-active':''}" data-i="${i}">
+          ${shot(p.slug,sh[0],sh[1]||p.title,1,'',true)}
+        </figure>`).join('')}
+        <button class="carousel-btn prev" type="button" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-btn next" type="button" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+        <span class="carousel-count"><b>1</b> / ${1+p.shots.filter(x=>x[0]!==p.cover).length}</span>
+      </div>
+      <div class="carousel-caption">
+        ${[[p.cover,(p.shots.find(x=>x[0]===p.cover)||['',''])[1]||p.title]].concat(p.shots.filter(x=>x[0]!==p.cover)).map((sh,i)=>`<p class="carousel-cap${i===0?' is-active':''}" data-i="${i}">${esc(sh[1]||'')}</p>`).join('')}
+      </div>
+      <div class="carousel-dots" role="tablist"></div>
+    </div>
+    <p class="carousel-hint"><i class="fas fa-search-plus"></i> Tocá una captura para verla grande</p>
   </div>
 </section>
 
-<section class="py-14 px-6">
+<section class="py-12 px-6">
   <div class="container mx-auto max-w-5xl">
     <div class="case-split">
       <div>
         <h2 class="case-h2 text-green-400">El problema</h2>
         <p class="case-p">${esc(p.problema)}</p>
       </div>
-      ${p.stats.length?`<div>
-        <h2 class="case-h2 text-purple-400">Resultado</h2>
-        <ul class="case-stats">${p.stats.map(st=>`<li><b>${esc(st[0])}</b><span>${esc(st[1])}</span></li>`).join('')}</ul>
-        ${p.nota?`<p class="case-nota">${esc(p.nota)}</p>`:''}
-      </div>`:''}
+      <div>
+        <h2 class="case-h2 text-blue-400">Lo que construí</h2>
+        <ul class="case-list one">${p.construido.map((c,i)=>`<li${i>=4?' class="more" hidden':''}>${esc(c)}</li>`).join('')}</ul>
+        ${p.construido.length>4?`<button class="ver-mas" type="button" data-more>Ver los ${p.construido.length} puntos <i class="fas fa-chevron-down"></i></button>`:''}
+      </div>
     </div>
   </div>
 </section>
 
-<section class="py-14 px-6 bg-gray-800 bg-opacity-50">
+<section class="py-12 px-6 bg-gray-800 bg-opacity-50">
   <div class="container mx-auto max-w-5xl">
-    <h2 class="case-h2 text-blue-400 mb-8">Lo que construí</h2>
-    <ul class="case-list">${p.construido.map(c=>`<li>${esc(c)}</li>`).join('')}</ul>
-  </div>
-</section>
-
-${p.shots.filter(x=>x[0]!==p.cover).length?`<section class="py-14 px-6">
-  <div class="container mx-auto max-w-6xl">
-    <h2 class="case-h2 mb-10">Cómo se ve</h2>
-    ${p.shots.filter(x=>x[0]!==p.cover).map((sh,i)=>`<figure class="case-row${i%2?' alt':''}">
-      <div class="gitem-img">${shot(p.slug,sh[0],sh[1]||p.title,1,'',true)}</div>
-      <figcaption><span class="num">${String(i+1).padStart(2,'0')}</span>${esc(sh[1]||'')}</figcaption>
-    </figure>`).join('')}
-  </div>
-</section>`:''}
-
-<section class="py-14 px-6 bg-gray-800 bg-opacity-50">
-  <div class="container mx-auto max-w-5xl">
-    <h2 class="case-h2 mb-6">Con qué está hecho</h2>
-    <div class="flex flex-wrap gap-3">${p.tech.split(' · ').map(t=>`<span class="tech-badge">${esc(t)}</span>`).join('')}</div>
-    ${p.links.length?`<div class="flex flex-wrap gap-4 mt-10">${p.links.map(l=>`<a href="${l[1]}" target="_blank" rel="noopener" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>${esc(l[0])}</a>`).join('')}</div>`:''}
+    <div class="case-split">
+      <div>
+        <h2 class="case-h2 mb-5">Con qué está hecho</h2>
+        <div class="flex flex-wrap gap-2">${p.tech.split(' · ').map(t=>`<span class="tech-badge sm">${esc(t)}</span>`).join('')}</div>
+      </div>
+      ${p.links.length?`<div>
+        <h2 class="case-h2 mb-5">Verlo en vivo</h2>
+        <div class="flex flex-wrap gap-3">${p.links.map(l=>`<a href="${l[1]}" target="_blank" rel="noopener" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>${esc(l[0])}</a>`).join('')}</div>
+        <p class="case-nota">Los links apuntan al sistema real. Si alguno dejó de existir, las capturas de arriba quedan como registro.</p>
+      </div>`:''}
+    </div>
   </div>
 </section>
 

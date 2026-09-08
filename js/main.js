@@ -117,6 +117,59 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && box.classList.contains('open')) close(); });
   }
 
+  // Carrusel de capturas
+  document.querySelectorAll('[data-carousel]').forEach(function (car) {
+    var slides = car.querySelectorAll('.carousel-slide');
+    var caps = car.querySelectorAll('.carousel-cap');
+    var dotsBox = car.querySelector('.carousel-dots');
+    var count = car.querySelector('.carousel-count b');
+    var n = slides.length, i = 0;
+    if (n < 2) { car.querySelectorAll('.carousel-btn').forEach(function (b) { b.hidden = true; }); if (dotsBox) dotsBox.hidden = true; return; }
+    var dots = [];
+    for (var k = 0; k < n; k++) {
+      var d = document.createElement('button');
+      d.type = 'button'; d.setAttribute('role', 'tab'); d.setAttribute('aria-label', 'Captura ' + (k + 1));
+      (function (idx) { d.addEventListener('click', function () { go(idx); }); })(k);
+      dotsBox.appendChild(d); dots.push(d);
+    }
+    function go(idx) {
+      i = (idx + n) % n;
+      slides.forEach(function (s, k) { s.classList.toggle('is-active', k === i); });
+      caps.forEach(function (c, k) { c.classList.toggle('is-active', k === i); });
+      dots.forEach(function (d, k) { d.classList.toggle('is-active', k === i); });
+      if (count) count.textContent = i + 1;
+      // precarga la siguiente
+      var nx = slides[(i + 1) % n].querySelector('img'); if (nx) nx.loading = 'eager';
+    }
+    car.querySelector('.carousel-btn.prev').addEventListener('click', function () { go(i - 1); });
+    car.querySelector('.carousel-btn.next').addEventListener('click', function () { go(i + 1); });
+    document.addEventListener('keydown', function (e) {
+      if (document.querySelector('.lightbox.open')) return;
+      if (e.key === 'ArrowLeft') go(i - 1);
+      if (e.key === 'ArrowRight') go(i + 1);
+    });
+    var x0 = null;
+    var stage = car.querySelector('.carousel-stage');
+    stage.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    stage.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 40) go(dx < 0 ? i + 1 : i - 1);
+    }, { passive: true });
+    go(0);
+  });
+
+  // Ver los N puntos de lo construido
+  document.querySelectorAll('[data-more]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var list = btn.previousElementSibling;
+      var open = btn.classList.toggle('open');
+      list.querySelectorAll('.more').forEach(function (li) { li.hidden = !open; });
+      btn.innerHTML = (open ? 'Ver menos' : btn.getAttribute('data-label') || 'Ver todo') + ' <i class="fas fa-chevron-down"></i>';
+    });
+    btn.setAttribute('data-label', btn.textContent.trim());
+  });
+
   // Copiar el correo al portapapeles
   document.querySelectorAll('.copy-mail').forEach(function (btn) {
     btn.addEventListener('click', function () {

@@ -15,17 +15,17 @@
 <meta property="og:url" content="https://brancoblunda.github.io/proyectos/comanda-central.html">
 <meta property="og:title" content="Comanda Central | Branco Blunda">
 <meta property="og:description" content="Nació para resolver el problema de mi propia pizzería y terminó siendo un SaaS con gestión centralizada de sucursales: toma de comandas, inventario, anális">
-<meta property="og:image" content="https://brancoblunda.github.io/assets/images/foto.jpg">
+<meta property="og:image" content="https://brancoblunda.github.io/assets/images/foto.webp">
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:title" content="Comanda Central | Branco Blunda">
 <meta property="twitter:description" content="Nació para resolver el problema de mi propia pizzería y terminó siendo un SaaS con gestión centralizada de sucursales: toma de comandas, inventario, anális">
-<meta property="twitter:image" content="https://brancoblunda.github.io/assets/images/foto.jpg">
+<meta property="twitter:image" content="https://brancoblunda.github.io/assets/images/foto.webp">
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/styles.css?v=841c1fea">
+<link rel="stylesheet" href="../css/styles.css?v=c048044a">
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans">
 
@@ -36,26 +36,24 @@
         <img src="../assets/images/logo-dark.svg" alt="Branco Blunda" class="brand-logo" width="178" height="225">
       </a>
       <div class="hidden md:flex space-x-8">
-        <a href="../index.html#inicio" class="nav-link">Inicio</a>
-        <a href="../index.html#servicios" class="nav-link">Servicios</a>
-        <a href="../index.html#portafolio" class="nav-link">Portafolio</a>
-        <a href="../index.html#tecnologias" class="nav-link">Stack</a>
-        <a href="../index.html#contacto" class="nav-link">Contacto</a>
+        <a href="../index.html#portafolio" class="nav-link">Proyectos</a>
+        <a href="../index.html#servicios" class="nav-link">Qué hago</a>
+        <a href="../index.html#opiniones" class="nav-link">Opiniones</a>
+        <a href="../index.html#contacto" class="nav-link nav-cta">Contame tu proyecto</a>
       </div>
       <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none" aria-label="Menu"><i class="fas fa-bars"></i></button>
     </div>
     <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-4">
-      <a href="../index.html#inicio" class="block nav-link-mobile">Inicio</a>
-      <a href="../index.html#servicios" class="block nav-link-mobile">Servicios</a>
-      <a href="../index.html#portafolio" class="block nav-link-mobile">Portafolio</a>
-      <a href="../index.html#tecnologias" class="block nav-link-mobile">Stack</a>
-      <a href="../index.html#contacto" class="block nav-link-mobile">Contacto</a>
+      <a href="../index.html#portafolio" class="block nav-link-mobile">Proyectos</a>
+      <a href="../index.html#servicios" class="block nav-link-mobile">Qué hago</a>
+      <a href="../index.html#opiniones" class="block nav-link-mobile">Opiniones</a>
+      <a href="../index.html#contacto" class="block nav-link-mobile">Contame tu proyecto</a>
     </div>
   </div>
 </nav>
 <section class="case-hero px-6">
   <div class="container mx-auto max-w-5xl">
-    <a href="../index.html#portafolio" class="volver"><i class="fas fa-arrow-left mr-2"></i>Todo el trabajo</a>
+    <a href="../index.html#portafolio" class="volver"><i class="fas fa-arrow-left mr-2"></i>Todos los proyectos</a>
     <span class="case-tag">SaaS gastronómico · Node.js + PostgreSQL</span>
     <h1 class="case-title"><span class="gradient-text">Comanda Central</span></h1>
     <p class="case-lede">Nació para resolver el problema de mi propia pizzería y terminó siendo un SaaS con gestión centralizada de sucursales: toma de comandas, inventario, análisis de ventas y costeo real por producto con recetas anidadas.</p>
@@ -65,19 +63,35 @@
       <li><span>Rol</span><b>Producto, arquitectura y operación</b></li>
       <li><span>Estado</span><b>En producción en 8 negocios y 3 cadenas</b></li>
     </ul>
+    <ul class="case-kpis"><li><b>8</b><span>negocios</span></li><li><b>3</b><span>cadenas</span></li><li><b>15</b><span>sucursales</span></li></ul>
   </div>
 </section>
 
-<section class="px-6 pb-4">
+<section class="px-6 pb-6">
   <div class="container mx-auto max-w-6xl">
-    <figure class="case-cover">
-      <div class="gitem-img"><img src="../assets/proyectos/comanda-central/01-pos.png" alt="Comanda Central" class="" width="1912" height="912" loading="lazy" decoding="async" data-zoom="1" data-file="assets/proyectos/comanda-central/01-pos.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div>
-      <figcaption>El punto de venta de tres paneles: menú, datos del pedido y la comanda en curso. Se opera entero con el teclado.</figcaption>
-    </figure>
+    <div class="carousel" data-carousel aria-roledescription="carrusel" aria-label="Capturas de Comanda Central">
+      <div class="carousel-stage">
+        <figure class="carousel-slide is-active" data-i="0">
+          <img src="../assets/proyectos/comanda-central/01-pos.webp" alt="El punto de venta de tres paneles: menú, datos del pedido y la comanda en curso. Se opera entero con el teclado." class="" width="1912" height="912" loading="lazy" decoding="async" data-zoom="1" data-file="assets/proyectos/comanda-central/01-pos.webp" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">
+        </figure><figure class="carousel-slide" data-i="1">
+          <img src="../assets/proyectos/comanda-central/02-dashboard-bi.webp" alt="El tablero del negocio: ventas por día, pedidos, alertas de stock bajo y actividad reciente. Los importes están difuminados." class="" width="1907" height="917" loading="lazy" decoding="async" data-zoom="1" data-file="assets/proyectos/comanda-central/02-dashboard-bi.webp" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">
+        </figure><figure class="carousel-slide" data-i="2">
+          <img src="../assets/proyectos/comanda-central/08-sitio-publico.webp" alt="El sitio público que la plataforma genera para cada negocio, con su menú y su marca." class="" width="462" height="792" loading="lazy" decoding="async" data-zoom="1" data-file="assets/proyectos/comanda-central/08-sitio-publico.webp" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">
+        </figure>
+        <button class="carousel-btn prev" type="button" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-btn next" type="button" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+        <span class="carousel-count"><b>1</b> / 3</span>
+      </div>
+      <div class="carousel-caption">
+        <p class="carousel-cap is-active" data-i="0">El punto de venta de tres paneles: menú, datos del pedido y la comanda en curso. Se opera entero con el teclado.</p><p class="carousel-cap" data-i="1">El tablero del negocio: ventas por día, pedidos, alertas de stock bajo y actividad reciente. Los importes están difuminados.</p><p class="carousel-cap" data-i="2">El sitio público que la plataforma genera para cada negocio, con su menú y su marca.</p>
+      </div>
+      <div class="carousel-dots" role="tablist"></div>
+    </div>
+    <p class="carousel-hint"><i class="fas fa-search-plus"></i> Tocá una captura para verla grande</p>
   </div>
 </section>
 
-<section class="py-14 px-6">
+<section class="py-12 px-6">
   <div class="container mx-auto max-w-5xl">
     <div class="case-split">
       <div>
@@ -85,39 +99,27 @@
         <p class="case-p">Un negocio gastronómico sabe cuánto vendió, pero casi nunca cuánto ganó: el costo real de un plato depende de sub-recetas cuyos insumos cambian de precio todo el tiempo.</p>
       </div>
       <div>
-        <h2 class="case-h2 text-purple-400">Resultado</h2>
-        <ul class="case-stats"><li><b>8</b><span>negocios</span></li><li><b>3</b><span>cadenas</span></li><li><b>15</b><span>sucursales</span></li></ul>
-        
+        <h2 class="case-h2 text-blue-400">Lo que construí</h2>
+        <ul class="case-list one"><li>Punto de venta de tres paneles, operable por completo con el teclado, con impresión de ticket.</li><li>Costeo con consultas recursivas en PostgreSQL, que resuelve recetas dentro de recetas.</li><li>Tablero de análisis: ventas, ticket promedio, ganancia bruta y neta, comparativas, horario pico y productos más vendidos.</li><li>Inventario y compras: el stock se descuenta con la venta y el alta de una compra genera el gasto e impacta el inventario en una sola transacción.</li><li class="more" hidden>Editor de menú con categorías, adicionales y combos.</li><li class="more" hidden>Editor del sitio público de cada negocio, con vista previa en vivo.</li></ul>
+        <button class="ver-mas" type="button" data-more>Ver los 6 puntos <i class="fas fa-chevron-down"></i></button>
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-14 px-6 bg-gray-800 bg-opacity-50">
+<section class="py-12 px-6 bg-gray-800 bg-opacity-50">
   <div class="container mx-auto max-w-5xl">
-    <h2 class="case-h2 text-blue-400 mb-8">Lo que construí</h2>
-    <ul class="case-list"><li>Punto de venta de tres paneles, operable por completo con el teclado, con impresión de ticket.</li><li>Costeo con consultas recursivas en PostgreSQL, que resuelve recetas dentro de recetas.</li><li>Tablero de análisis: ventas, ticket promedio, ganancia bruta y neta, comparativas, horario pico y productos más vendidos.</li><li>Inventario y compras: el stock se descuenta con la venta y el alta de una compra genera el gasto e impacta el inventario en una sola transacción.</li><li>Editor de menú con categorías, adicionales y combos.</li><li>Editor del sitio público de cada negocio, con vista previa en vivo.</li></ul>
-  </div>
-</section>
-
-<section class="py-14 px-6">
-  <div class="container mx-auto max-w-6xl">
-    <h2 class="case-h2 mb-10">Cómo se ve</h2>
-    <figure class="case-row">
-      <div class="gitem-img"><img src="../assets/proyectos/comanda-central/02-dashboard-bi.png" alt="El tablero del negocio: ventas por día, pedidos, alertas de stock bajo y actividad reciente. Los importes están difuminados." class="" width="1907" height="917" loading="lazy" decoding="async" data-zoom="1" data-file="assets/proyectos/comanda-central/02-dashboard-bi.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div>
-      <figcaption><span class="num">01</span>El tablero del negocio: ventas por día, pedidos, alertas de stock bajo y actividad reciente. Los importes están difuminados.</figcaption>
-    </figure><figure class="case-row alt">
-      <div class="gitem-img"><img src="../assets/proyectos/comanda-central/08-sitio-publico.png" alt="El sitio público que la plataforma genera para cada negocio, con su menú y su marca." class="" width="462" height="792" loading="lazy" decoding="async" data-zoom="1" data-file="assets/proyectos/comanda-central/08-sitio-publico.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div>
-      <figcaption><span class="num">02</span>El sitio público que la plataforma genera para cada negocio, con su menú y su marca.</figcaption>
-    </figure>
-  </div>
-</section>
-
-<section class="py-14 px-6 bg-gray-800 bg-opacity-50">
-  <div class="container mx-auto max-w-5xl">
-    <h2 class="case-h2 mb-6">Con qué está hecho</h2>
-    <div class="flex flex-wrap gap-3"><span class="tech-badge">Node.js</span><span class="tech-badge">Express</span><span class="tech-badge">PostgreSQL</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Chart.js</span><span class="tech-badge">Cloudinary</span><span class="tech-badge">Render</span><span class="tech-badge">Vercel</span></div>
-    <div class="flex flex-wrap gap-4 mt-10"><a href="https://github.com/BrancoBlunda/Comanda-Central" target="_blank" rel="noopener" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>Código</a><a href="https://monat.ar" target="_blank" rel="noopener" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>Sitio de ejemplo</a></div>
+    <div class="case-split">
+      <div>
+        <h2 class="case-h2 mb-5">Con qué está hecho</h2>
+        <div class="flex flex-wrap gap-2"><span class="tech-badge sm">Node.js</span><span class="tech-badge sm">Express</span><span class="tech-badge sm">PostgreSQL</span><span class="tech-badge sm">JavaScript</span><span class="tech-badge sm">Chart.js</span><span class="tech-badge sm">Cloudinary</span><span class="tech-badge sm">Render</span><span class="tech-badge sm">Vercel</span></div>
+      </div>
+      <div>
+        <h2 class="case-h2 mb-5">Verlo en vivo</h2>
+        <div class="flex flex-wrap gap-3"><a href="https://github.com/BrancoBlunda/Comanda-Central" target="_blank" rel="noopener" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>Código</a><a href="https://monat.ar" target="_blank" rel="noopener" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>Sitio de ejemplo</a></div>
+        <p class="case-nota">Los links apuntan al sistema real. Si alguno dejó de existir, las capturas de arriba quedan como registro.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -158,6 +160,6 @@
   <i class="fab fa-whatsapp"></i><span>Escribime</span>
 </a>
 <button id="scroll-top" class="scroll-top-btn" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
-<script src="../js/main.js?v=0ba0dfc7"></script>
+<script src="../js/main.js?v=713badb0"></script>
 </body>
 </html>
