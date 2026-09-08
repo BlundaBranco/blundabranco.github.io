@@ -164,14 +164,17 @@ PROJECTS.push(
  tag:'Visión por computadora · Salud',
  desc:'Análisis biométrico asistido de radiografías dentales panorámicas: medición interactiva de las piezas y procesamiento de imagen para apoyar el diagnóstico.',
  problema:'Medir corona y raíz sobre una radiografía panorámica es manual, lento y poco reproducible entre profesionales.',
- construido:['Procesamiento de la radiografía con visión por computadora.',
- 'Medición interactiva de las piezas dentales sobre la imagen.',
- 'Interfaz web para cargar el estudio y ver los resultados.'],
+ construido:['Detección automática de las piezas dentales sobre la radiografía panorámica con un modelo de visión por computadora.',
+ 'Medición de cada pieza — ancho, alto, corona y raíz — con el nivel de confianza de cada detección.',
+ 'Marcado de reparos anatómicos: cóndilos, senos maxilares y conducto mandibular.',
+ 'Calibración por diente de referencia, para convertir píxeles a milímetros reales.',
+ 'Herramientas de marcado y edición manual, para corregir o completar lo que detecta el modelo.',
+ 'Exportación de la tabla de resultados a CSV.'],
  stats:[],
- tech:'Python · OpenCV · Streamlit',
+ tech:'Python · OpenCV · YOLOv8 · Streamlit',
  links:[['Código','https://github.com/BlundaBranco/Deltan-Scan-AI']],
- cover:'03-app-analisis.png',
- shots:[['03-app-analisis.png','La radiografía procesada, con las mediciones sobre la imagen.'],['02-app-carga.png','La carga del estudio.']],
+ cover:'01-analisis-medicion.png',
+ shots:[['01-analisis-medicion.png','La radiografía analizada: cada pieza detectada y medida, con ancho, alto, corona, raíz y el nivel de confianza de cada medición.'],['02-reparos-anatomicos.png','Los reparos anatómicos marcados sobre la placa: cóndilos, senos maxilares y conducto mandibular.'],['03-app-carga.png','La carga del estudio y las herramientas de marcado manual, para corregir o completar lo que detecta el modelo.']],
  nota:''});
 
 const OTHERS=[
