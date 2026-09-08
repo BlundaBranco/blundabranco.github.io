@@ -43,7 +43,7 @@ const PROJECTS=[
  tech:'Next.js 15 · TypeScript · Supabase · Vercel · Make.com · Brevo · Facebook Lead Ads · GitHub Actions',
  links:[['Onboarding','https://onboarding.tuproximohorizonte.com'],['Agenda','https://agenda.tuproximohorizonte.com'],['Demo','https://demo.tuproximohorizonte.com']],
  cover:'01-onboarding-inicio.png',
- shots:[['01-onboarding-inicio.png','El onboarding de afiliados: el plan de siete pasos, el paso en curso con su video y la agenda de capacitaciones al costado. Un solo link, sin registro.'],['02-onboarding-paso.png','Un paso abierto: video, PDFs descargables y enlaces a herramientas. El cliente edita todo esto desde su panel, sin tocar código.'],['08-make-escenario.png','La automatización que captura los leads de Facebook y dispara la secuencia de cuatro correos.']],
+ shots:[['01-onboarding-inicio.png','El onboarding de afiliados: el plan de siete pasos, el paso en curso con su video y la agenda de capacitaciones al costado. Un solo link, sin registro.'],['02-onboarding-paso.png','Un paso abierto: video, PDFs descargables y enlaces a herramientas. El cliente edita todo esto desde su panel, sin tocar código.'],['06-agenda-publica.png','La agenda semanal de capacitaciones, con inscripción abierta. El selector de zona horaria convierte los horarios al país de cada inscripto.'],['08-make-escenario.png','La automatización que captura los leads de Facebook y dispara la secuencia de cuatro correos.']],
  nota:''},
 
 {slug:'infinity-book',title:'Infinity Book',cliente:'Elfinbook S.R.L.',pais:'Argentina',
