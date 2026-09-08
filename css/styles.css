@@ -804,7 +804,7 @@ body.lightbox-open .scroll-top-btn { display: none; }
     .tech-badge { font-size: .78rem; padding: 6px 12px; }
     .profile-container { width: 210px; height: 210px; }
     #inicio h1 { font-size: 2.75rem; }
-    #inicio h2 { font-size: 1.35rem; }
+    #inicio h2 { font-size: 1.15rem; letter-spacing: .01em; }
     .glass-card .text-3xl { font-size: 1.6rem; }
 }
 
@@ -1145,3 +1145,5 @@ footer .brand-logo { height: 34px; }
 
 .btn-primary, .btn-secondary { white-space: nowrap; }
 @media (max-width: 400px) { .btn-primary, .btn-secondary { white-space: normal; } }
+
+@media (max-width: 768px) { .hero-grid { gap: 1.1rem; } .hero-txt > h1 { margin-bottom: .5rem; } }
