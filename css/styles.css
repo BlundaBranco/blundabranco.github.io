@@ -869,3 +869,136 @@ body.lightbox-open .wa-float { display: none; }
 }
 .copy-mail:hover { color: var(--primary-green); border-color: rgba(16, 185, 129, .5); }
 .copy-mail.copiado { color: var(--primary-green); border-color: var(--primary-green); }
+
+
+/* =========================================
+   PÁGINA DE PROYECTO
+   ========================================= */
+.case-hero { padding-top: 7.5rem; padding-bottom: 2.5rem; }
+.volver {
+    display: block; width: fit-content; padding: 8px 0; margin-bottom: 1.75rem;
+    color: var(--text-gray); font-family: 'JetBrains Mono', monospace; font-size: .82rem;
+    text-decoration: none; transition: color .2s ease;
+}
+.volver:hover { color: var(--primary-green); }
+.case-tag {
+    display: inline-block; padding: 7px 16px;
+    background: rgba(16, 185, 129, .1); border: 1px solid rgba(16, 185, 129, .5);
+    border-radius: 999px; color: var(--primary-green);
+    font-family: 'JetBrains Mono', monospace; font-size: .72rem; letter-spacing: .02em;
+}
+.case-title { font-size: clamp(2.25rem, 6vw, 4rem); font-weight: 800; line-height: 1.05; margin: 1.25rem 0 1.25rem; }
+.case-lede { font-size: clamp(1.02rem, 1.6vw, 1.22rem); line-height: 1.75; color: #cbd5e1; max-width: 62ch; }
+
+.case-meta {
+    display: flex; flex-wrap: wrap; gap: 0 2.5rem;
+    margin: 2.5rem 0 0; padding: 1.25rem 0 0;
+    border-top: 1px solid var(--glass-border);
+    list-style: none;
+}
+.case-meta li { padding: .5rem 0; }
+.case-meta span {
+    display: block; font-family: 'JetBrains Mono', monospace;
+    font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: #64748b; margin-bottom: 4px;
+}
+.case-meta b { font-size: .95rem; font-weight: 600; color: var(--text-light); }
+
+/* portada a lo ancho */
+.case-cover { margin: 0; }
+.case-cover .gitem-img {
+    border-radius: 16px; overflow: hidden;
+    border: 1px solid var(--glass-border); background: var(--glass-bg);
+}
+.case-cover img { width: 100%; height: auto; display: block; max-height: 640px; object-fit: contain; }
+.case-cover figcaption { margin-top: 14px; color: var(--text-gray); font-size: .92rem; line-height: 1.6; }
+
+/* problema + resultado, lado a lado */
+.case-split { display: grid; grid-template-columns: 1.35fr 1fr; gap: 3.5rem; align-items: start; }
+.case-h2 { font-size: clamp(1.4rem, 2.4vw, 1.85rem); font-weight: 700; margin-bottom: 1rem; }
+.case-p { font-size: 1.05rem; line-height: 1.8; color: #cbd5e1; }
+.case-stats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+.case-stats li {
+    padding: 1rem 1.1rem; border-radius: 12px;
+    background: var(--glass-bg); border: 1px solid var(--glass-border);
+}
+.case-stats b {
+    display: block; font-size: 1.55rem; font-weight: 800; line-height: 1.1; margin-bottom: 4px;
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.case-stats span { font-size: .82rem; color: var(--text-gray); line-height: 1.4; }
+.case-nota { margin-top: 1.1rem; font-size: .8rem; color: #64748b; line-height: 1.6; }
+
+/* lo que construí: lista limpia, sin tarjetas */
+.case-list { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 3rem; }
+.case-list li {
+    break-inside: avoid; position: relative;
+    padding: 0 0 1.1rem 1.6rem; margin-bottom: .2rem;
+    color: #cbd5e1; line-height: 1.7; font-size: .98rem;
+}
+.case-list li::before {
+    content: ""; position: absolute; left: 0; top: .62em;
+    width: 7px; height: 7px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
+}
+
+/* capturas: una por fila, alternando lado */
+.case-row {
+    display: grid; grid-template-columns: 1.7fr 1fr; gap: 2.5rem;
+    align-items: center; margin: 0 0 3.5rem;
+}
+.case-row.alt > .gitem-img { order: 2; }
+.case-row.alt > figcaption { order: 1; }
+.case-row .gitem-img {
+    border-radius: 14px; overflow: hidden;
+    border: 1px solid var(--glass-border); background: var(--glass-bg);
+    transition: border-color .3s ease, transform .3s ease;
+}
+.case-row .gitem-img:hover { border-color: rgba(16, 185, 129, .45); transform: translateY(-4px); }
+.case-row img { width: 100%; height: auto; display: block; max-height: 560px; object-fit: contain; }
+.case-row figcaption { color: #cbd5e1; font-size: 1rem; line-height: 1.75; }
+.case-row .num {
+    display: block; font-family: 'JetBrains Mono', monospace;
+    font-size: .72rem; color: var(--primary-green); margin-bottom: .6rem; letter-spacing: .1em;
+}
+
+@media (max-width: 900px) {
+    .case-split { grid-template-columns: 1fr; gap: 2.5rem; }
+    .case-list { columns: 1; }
+    .case-row { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 2.5rem; }
+    .case-row.alt > .gitem-img { order: 0; }
+    .case-row.alt > figcaption { order: 1; }
+    .case-meta { gap: 0 1.75rem; }
+}
+@media (max-width: 640px) {
+    .case-hero { padding-top: 6rem; padding-bottom: 1.5rem; }
+    .case-meta li { width: calc(50% - 1rem); }
+    .case-stats { grid-template-columns: 1fr 1fr; gap: .75rem; }
+    .case-stats b { font-size: 1.3rem; }
+}
+
+
+/* marca del nav: solo el logo */
+.brand { display: inline-flex; align-items: center; }
+nav .brand-logo { height: 44px; }
+footer .brand-logo { height: 34px; }
+@media (max-width: 640px) { nav .brand-logo { height: 38px; } }
+
+/* hero: en celular la foto va entre el subtítulo y la descripción */
+.hero-grid { display: flex; align-items: center; justify-content: space-between; gap: 3rem; }
+.hero-txt { flex: 1; }
+.hero-foto { flex: 1; display: flex; justify-content: center; }
+
+@media (max-width: 768px) {
+    .hero-grid { flex-direction: column; gap: 1.5rem; text-align: center; }
+    .hero-txt { display: contents; }
+    .hero-txt > div:nth-of-type(1) { order: 1; }
+    .hero-txt > h1 { order: 2; }
+    .hero-txt > h2 { order: 3; margin-bottom: 0; }
+    .hero-foto { order: 4; margin: .5rem 0; }
+    .hero-txt > p:nth-of-type(1) { order: 5; }
+    .hero-txt > p:nth-of-type(2) { order: 6; }
+    .hero-txt > div:nth-of-type(2) { order: 7; width: 100%; }
+    .hero-txt > div:nth-of-type(3) { order: 8; }
+    .hero-txt > p { max-width: 100%; }
+}

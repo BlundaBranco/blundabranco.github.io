@@ -3,10 +3,10 @@ const fs = require('fs'), path = require('path'), crypto = require('crypto');
 /* huella corta del archivo: al cambiar, el navegador deja de servir la version vieja */
 const v=f=>{try{return crypto.createHash('md5').update(fs.readFileSync(f)).digest('hex').slice(0,8);}catch(e){return Date.now().toString(36);}};
 const VCSS=v('css/styles.css'), VJS=v('js/main.js');
-const SITE='https://blundabranco.github.io';
+const SITE='https://brancoblunda.github.io';
 const MAIL='brancoadrianblunda@gmail.com';
 const LINKEDIN='https://linkedin.com/in/brancoblunda';
-const GITHUB='https://github.com/BlundaBranco';
+const GITHUB='https://github.com/BrancoBlunda';
 
 const PROJECTS=[
 {slug:'taxi-ai',title:'Taxi AI',cliente:'Taxi Call Group S.A.S.',pais:'Colombia',
@@ -49,7 +49,7 @@ const PROJECTS=[
  shots:[['01-floow-kanban.png','El tablero de producción: cinco fases, una tarjeta por proyecto y el avance de cada tarea.'],['02-panel.png','El panel de inicio: proyectos por fase, prioridades del día y presupuestos pendientes de enviar.'],['03-quote-engine.png','Detalle de un presupuesto: líneas, impuestos y análisis interno de costes y margen.'],['08-detalle-proyecto.png','Ficha de proyecto: tareas de producción, archivos, notas internas y un resumen generado por IA.'],['06-catalogo.png','El catálogo: familias, subfamilias y productos con herencia de materiales y reglas. Cada producto puede ser de precio fijo o calculable.'],['04-crm-pipeline.png','El embudo comercial, desde la consulta nueva hasta el cobro pendiente.'],['05-presupuestos-lista.png','El listado de presupuestos, con el estado y el margen de cada uno.'],['07-floowy-chat.png','Floowy, el asistente de IA: propone acciones concretas sobre los datos del taller.']],
  nota:''},
 
-{slug:'blc-one',title:'BLC One',cliente:'BLC Power Generation',pais:'Argentina',
+{slug:'blc-one',title:'BLC One',cliente:'BLC Power Generation',pais:'Argentina y Colombia',
  rol:'Diseño y construcción desde cero',estado:'v0.3.4 entregada · aplicación interna',
  tag:'Python · Flet · MySQL · Escritorio',
  desc:'Plataforma de gestión para el área de servicios de un grupo de energía renovable que opera remotamente cerca del 17% de la generación renovable del país. Centraliza plantas, contratos y compromisos regulatorios que vivían en planillas.',
@@ -116,7 +116,7 @@ const PROJECTS=[
  'Editor del sitio público de cada negocio, con vista previa en vivo.'],
  stats:[['8','negocios'],['3','cadenas'],['15','sucursales']],
  tech:'Node.js · Express · PostgreSQL · JavaScript · Chart.js · Cloudinary · Render · Vercel',
- links:[['Código','https://github.com/BlundaBranco/Comanda-Central'],['Sitio de ejemplo','https://monat.ar']],
+ links:[['Código','https://github.com/BrancoBlunda/Comanda-Central'],['Sitio de ejemplo','https://monat.ar']],
  cover:'01-pos.png',
  shots:[['01-pos.png','El punto de venta de tres paneles: menú, datos del pedido y la comanda en curso. Se opera entero con el teclado.'],['02-dashboard-bi.png','El tablero del negocio: ventas por día, pedidos, alertas de stock bajo y actividad reciente. Los importes están difuminados.'],['08-sitio-publico.png','El sitio público que la plataforma genera para cada negocio, con su menú y su marca.']],
  nota:''},
@@ -140,7 +140,7 @@ const PROJECTS=[
  shots:[['01-onboarding-inicio.png','El onboarding de afiliados: el plan de siete pasos, el paso en curso con su video y la agenda de capacitaciones al costado. Un solo link, sin registro.'],['02-onboarding-paso.png','Un paso abierto: video, PDFs descargables y enlaces a herramientas. El cliente edita todo esto desde su panel, sin tocar código.'],['06-agenda-publica.png','La agenda semanal de capacitaciones, con inscripción abierta. El selector de zona horaria convierte los horarios al país de cada inscripto.'],['08-make-escenario.png','La automatización que captura los leads de Facebook y dispara la secuencia de cuatro correos.']],
  nota:''},
 
-{slug:'lomas-del-pacifico',title:'Lomas del Pacífico',cliente:'Desarrollador inmobiliario',pais:'México',
+{slug:'lomas-del-pacifico',title:'Cobranza de lotes',cliente:'Lomas del Pacífico',pais:'México',
  rol:'Diseño y construcción desde cero',estado:'En uso · mantenimiento continuo',
  tag:'Laravel · MySQL · Cobranzas',
  desc:'Sistema de cobranza para la venta de lotes en cuotas. Reemplazó planillas de Excel dispersas por un solo lugar donde vive el cliente, su lote, su plan de pago, cada cobro con folio y la mora calculada sola.',
@@ -173,7 +173,7 @@ const PROJECTS=[
  'Exportación de las mediciones a CSV y descarga de la radiografía marcada.'],
  stats:[],
  tech:'Python · OpenCV · YOLOv8 · Streamlit',
- links:[['Código','https://github.com/BlundaBranco/Deltan-Scan-AI']],
+ links:[['Código','https://github.com/BrancoBlunda/Deltan-Scan-AI']],
  cover:'03-resultados.png',
  shots:[['03-resultados.png','El resultado del análisis: las piezas detectadas, los reparos anatómicos y las mediciones en milímetros sobre la propia radiografía.'],['02-analizar.png','La radiografía cargada, lista para procesar. El flujo va guiado en cuatro pasos.'],['04-historial.png','El historial de análisis, para volver a abrir o descargar cualquier estudio anterior.'],['01-inicio.png','La pantalla de inicio: se arrastra la radiografía y el análisis arranca solo.']],
  nota:''}
@@ -187,7 +187,7 @@ const OTHERS=[
 ['The Argentino y Mosto','Canadá / EE.UU.','Dos tiendas de exportación creadas desde cero. Shopify.'],
 ['Tymonyz','Producto propio','Pipeline autónomo de noticias a video: guion, voz, edición y publicación. Python.'],
 ['Expert Advisor MetaTrader 5','Cliente vía Workana','Robot de trading construido según la especificación del cliente. MQL5.'],
-['25+ trabajos con reseña pública','Varios países','Bots de WhatsApp, aulas virtuales, tiendas, tableros y frontends. Verificables en Workana.']];
+['30+ trabajos con reseña pública','Varios países','Bots de WhatsApp, aulas virtuales, tiendas, tableros y frontends. Verificables en Workana.']];
 
 const METHOD=[
 ['Arquitectura primero','Defino qué se construye y qué no antes de escribir código.'],
@@ -207,7 +207,7 @@ const SHORT={
 'tu-proximo-horizonte':'Tres sistemas en producción que el cliente opera solo: agenda, captación de leads y onboarding.',
 'infinity-book':'App de escaneo con OCR e IA. Rehice y publiqué la versión que está hoy en las tiendas.',
 'signfloow':'SaaS para empresas de rotulación: tablero de producción, presupuestos por fórmulas y asistente de IA.',
-'lomas-del-pacifico':'Cobranza de lotes en cuotas: planes de pago, recibos con folio, mora y morosidad.',
+'lomas-del-pacifico':'Sistema de cobranza de lotes en cuotas: planes de pago, recibos con folio, mora y morosidad.',
 'blc-one':'Centraliza 237 plantas de energía renovable y sus compromisos regulatorios.',
 'comanda-central':'Punto de venta, inventario y costeo real de recetas anidadas para gastronomía.',
 'vertical':'Mi plataforma: agentes de WhatsApp con IA para inmobiliarias. Verificada por Meta.',
@@ -254,9 +254,8 @@ const head=(title,desc,canonical,depth)=>{const r=depth?'../':'';const h=depth?'
 <nav class="fixed top-0 w-full bg-gray-900 bg-opacity-95 backdrop-blur-md z-50 border-b border-gray-800">
   <div class="container mx-auto px-6 py-4">
     <div class="flex justify-between items-center">
-      <a href="${r}index.html" class="flex items-center space-x-2">
-        <img src="${r}assets/images/logo-dark.svg" alt="" class="brand-logo" width="178" height="225">
-        <span class="text-xl font-bold">Branco Blunda</span>
+      <a href="${r}index.html" class="brand" aria-label="Branco Blunda — inicio">
+        <img src="${r}assets/images/logo-dark.svg" alt="Branco Blunda" class="brand-logo" width="178" height="225">
       </a>
       <div class="hidden md:flex space-x-8">
         <a href="${h}#inicio" class="nav-link">Inicio</a>
@@ -282,7 +281,7 @@ const foot=depth=>{const r=depth?'../':'';return `
   <div class="container mx-auto">
     <div class="flex flex-col md:flex-row justify-between items-center gap-6">
       <div class="text-center md:text-left">
-        <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+        <div class="flex items-center justify-center md:justify-start gap-3 mb-2">
           <img src="${r}assets/images/logo-dark.svg" alt="" class="brand-logo" width="178" height="225">
           <span class="text-lg font-bold">Branco Blunda</span>
         </div>
@@ -345,8 +344,8 @@ let idx=head('Branco Blunda | Software Engineer & AI Specialist',
 idx+=`
 <section id="inicio" class="min-h-screen flex items-center justify-center pt-24 pb-16">
   <div class="container mx-auto px-6 md:px-12 lg:px-24">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-12">
-      <div class="flex-1 text-center md:text-left">
+    <div class="hero-grid">
+      <div class="hero-txt">
         <div class="inline-block mb-4">
           <span class="px-4 py-2 bg-green-500 bg-opacity-10 border border-green-500 rounded-full text-green-400 text-sm font-mono">🚀 Disponible para proyectos</span>
         </div>
@@ -354,7 +353,7 @@ idx+=`
         <h2 class="text-2xl md:text-3xl text-gray-300 mb-6 font-light">Software Engineer | Full Stack &amp; IA</h2>
         <p class="text-lg md:text-xl text-gray-400 mb-6 max-w-2xl">
           Construyo sistemas que <span class="text-green-400 font-semibold">llegan a producción</span> y usa gente real:
-          agentes de voz y de <span class="text-blue-400 font-semibold">WhatsApp</span>, SaaS multi-empresa y apps móviles publicadas.
+          agentes de voz y de <span class="text-blue-400 font-semibold">WhatsApp</span>, SaaS multi-empresa y apps publicadas.
         </p>
         <p class="text-gray-500 mb-10 max-w-2xl">Desarrollo software desde 2017. Rosario, Argentina · Trabajo remoto.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -368,7 +367,7 @@ idx+=`
           <a href="mailto:${MAIL}" class="social-icon" aria-label="Email"><i class="fas fa-envelope text-2xl"></i></a>
         </div>
       </div>
-      <div class="flex-1 flex justify-center">
+      <div class="hero-foto">
         <div class="profile-container">
           <img src="assets/images/foto.jpg" alt="Branco Blunda - Software Engineer" class="profile-image" loading="eager" width="800" height="800">
           <div class="profile-glow"></div>
@@ -381,12 +380,12 @@ idx+=`
 <section class="px-6 pb-16">
   <div class="container mx-auto">
     <div class="proof-bar">
-      <div><strong>40+</strong><span>proyectos</span></div>
-      <div><strong>25</strong><span>reseñas de clientes</span></div>
+      <div><strong>55+</strong><span>proyectos entregados</span></div>
+      <div><strong>30+</strong><span>reseñas de clientes en Workana</span></div>
       <div><strong>#1</strong><span>Workana Argentina 2026</span></div>
-      <div><strong>4</strong><span>apps en tiendas</span></div>
-      <div><strong>8.900+</strong><span>usuarios</span></div>
-      <div><strong>Meta</strong><span>proveedor verificado</span></div>
+      <div><strong>4</strong><span>apps publicadas en tiendas</span></div>
+      <div><strong>8.900+</strong><span>usuarios de una sola app</span></div>
+      <div><strong>Meta</strong><span>proveedor de tecnología verificado</span></div>
     </div>
   </div>
 </section>
@@ -412,7 +411,7 @@ idx+=`
   <div class="container mx-auto">
     <div class="text-center mb-16">
       <h2 class="section-title">Proyectos destacados</h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Nueve de más de cuarenta. Entrá a cualquiera y vas a ver qué problema resolvía, qué construí y capturas del sistema andando. Los que son públicos tienen el link.</p>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Nueve de más de cincuenta. Entrá a cualquiera y vas a ver qué problema resolvía, qué construí y capturas del sistema andando. Los que son públicos tienen el link.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
       ${PROJECTS.map(p=>`<div class="project-card">
@@ -527,60 +526,66 @@ if(!fs.existsSync('proyectos'))fs.mkdirSync('proyectos');
 PROJECTS.forEach(p=>{
 let h=head(p.title+' | Branco Blunda',p.desc.slice(0,155),SITE+'/proyectos/'+p.slug+'.html',1);
 h+=`
-<section class="pt-32 pb-12 px-6">
+<section class="case-hero px-6">
   <div class="container mx-auto max-w-5xl">
-    <a href="../index.html#portafolio" class="text-gray-400 hover:text-green-400 transition text-sm font-mono"><i class="fas fa-arrow-left mr-2"></i>Todo el trabajo</a>
-    <div class="mt-8">
-      <span class="px-4 py-2 bg-green-500 bg-opacity-10 border border-green-500 rounded-full text-green-400 text-xs font-mono">${esc(p.tag)}</span>
-      <h1 class="text-4xl md:text-6xl font-bold mt-6 mb-6"><span class="gradient-text">${esc(p.title)}</span></h1>
-      <p class="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">${esc(p.desc)}</p>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
-      ${[['Cliente',p.cliente],['País',p.pais],['Rol',p.rol],['Estado',p.estado]].map(m=>`<div class="glass-card p-5">
-        <p class="text-xs text-gray-500 font-mono uppercase tracking-wider mb-2">${esc(m[0])}</p>
-        <p class="font-semibold text-sm">${esc(m[1])}</p></div>`).join('')}
-    </div>
-  </div>
-</section>
-
-<section class="py-16 px-6 bg-gray-800 bg-opacity-50">
-  <div class="container mx-auto max-w-5xl">
-    <h2 class="text-3xl font-bold mb-6 text-green-400">El problema</h2>
-    <p class="text-lg text-gray-300 leading-relaxed max-w-3xl">${esc(p.problema)}</p>
-  </div>
-</section>
-
-<section class="py-16 px-6">
-  <div class="container mx-auto max-w-5xl">
-    <h2 class="text-3xl font-bold mb-8 text-blue-400">Lo que construí</h2>
-    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      ${p.construido.map(c=>`<li class="glass-card p-5 flex gap-3 items-start"><i class="fas fa-check text-green-400 mt-1"></i><span class="text-gray-300">${esc(c)}</span></li>`).join('')}
+    <a href="../index.html#portafolio" class="volver"><i class="fas fa-arrow-left mr-2"></i>Todo el trabajo</a>
+    <span class="case-tag">${esc(p.tag)}</span>
+    <h1 class="case-title"><span class="gradient-text">${esc(p.title)}</span></h1>
+    <p class="case-lede">${esc(p.desc)}</p>
+    <ul class="case-meta">
+      <li><span>Cliente</span><b>${esc(p.cliente)}</b></li>
+      <li><span>País</span><b>${esc(p.pais)}</b></li>
+      <li><span>Rol</span><b>${esc(p.rol)}</b></li>
+      <li><span>Estado</span><b>${esc(p.estado)}</b></li>
     </ul>
   </div>
 </section>
 
-${p.stats.length?`<section class="py-16 px-6 bg-gray-800 bg-opacity-50">
-  <div class="container mx-auto max-w-5xl">
-    <h2 class="text-3xl font-bold mb-8 text-purple-400">Resultado</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-      ${p.stats.map(s=>`<div class="glass-card p-6 text-center">
-        <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">${esc(s[0])}</div>
-        <p class="text-gray-400 text-sm">${esc(s[1])}</p></div>`).join('')}
-    </div>
-    ${p.nota?`<p class="text-gray-500 text-sm mt-6 font-mono">${esc(p.nota)}</p>`:''}
-  </div>
-</section>`:''}
-
-<section class="py-16 px-6">
-  <div class="container mx-auto max-w-5xl">
-    <h2 class="text-3xl font-bold mb-8">Capturas</h2>
-    <div class="gallery">${p.shots.map(s=>gitem(p.slug,s,1)).join('')}</div>
+<section class="px-6 pb-4">
+  <div class="container mx-auto max-w-6xl">
+    <figure class="case-cover">
+      <div class="gitem-img">${shot(p.slug,p.cover,p.title,1,'',true)}</div>
+      <figcaption>${esc((p.shots.find(x=>x[0]===p.cover)||['',''])[1]||p.title)}</figcaption>
+    </figure>
   </div>
 </section>
 
-<section class="py-16 px-6 bg-gray-800 bg-opacity-50">
+<section class="py-14 px-6">
   <div class="container mx-auto max-w-5xl">
-    <h2 class="text-3xl font-bold mb-8">Stack</h2>
+    <div class="case-split">
+      <div>
+        <h2 class="case-h2 text-green-400">El problema</h2>
+        <p class="case-p">${esc(p.problema)}</p>
+      </div>
+      ${p.stats.length?`<div>
+        <h2 class="case-h2 text-purple-400">Resultado</h2>
+        <ul class="case-stats">${p.stats.map(st=>`<li><b>${esc(st[0])}</b><span>${esc(st[1])}</span></li>`).join('')}</ul>
+        ${p.nota?`<p class="case-nota">${esc(p.nota)}</p>`:''}
+      </div>`:''}
+    </div>
+  </div>
+</section>
+
+<section class="py-14 px-6 bg-gray-800 bg-opacity-50">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="case-h2 text-blue-400 mb-8">Lo que construí</h2>
+    <ul class="case-list">${p.construido.map(c=>`<li>${esc(c)}</li>`).join('')}</ul>
+  </div>
+</section>
+
+${p.shots.filter(x=>x[0]!==p.cover).length?`<section class="py-14 px-6">
+  <div class="container mx-auto max-w-6xl">
+    <h2 class="case-h2 mb-10">Cómo se ve</h2>
+    ${p.shots.filter(x=>x[0]!==p.cover).map((sh,i)=>`<figure class="case-row${i%2?' alt':''}">
+      <div class="gitem-img">${shot(p.slug,sh[0],sh[1]||p.title,1,'',true)}</div>
+      <figcaption><span class="num">${String(i+1).padStart(2,'0')}</span>${esc(sh[1]||'')}</figcaption>
+    </figure>`).join('')}
+  </div>
+</section>`:''}
+
+<section class="py-14 px-6 bg-gray-800 bg-opacity-50">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="case-h2 mb-6">Con qué está hecho</h2>
     <div class="flex flex-wrap gap-3">${p.tech.split(' · ').map(t=>`<span class="tech-badge">${esc(t)}</span>`).join('')}</div>
     ${p.links.length?`<div class="flex flex-wrap gap-4 mt-10">${p.links.map(l=>`<a href="${l[1]}" target="_blank" rel="noopener" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>${esc(l[0])}</a>`).join('')}</div>`:''}
   </div>
