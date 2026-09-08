@@ -27,9 +27,12 @@ const probar = u => new Promise(res => {
   const rotos = [];
   for (const u of [...urls].sort()) {
     const r = await probar(u);
-    const ok = typeof r.code === 'number' && r.code < 400;
-    console.log(`${ok ? '  OK  ' : ' ROTO '} ${String(r.code).padEnd(8)} ${u}${r.msg ? '  (' + r.msg + ')' : ''}`);
+    // 403 en sitios con anti-bot (Workana, LinkedIn) no significa roto
+    const antibot = /workana\.com|linkedin\.com/.test(u) && r.code === 403;
+    const ok = (typeof r.code === 'number' && r.code < 400) || antibot;
+    console.log(`${ok ? '  OK  ' : ' ROTO '} ${String(antibot ? '403*' : r.code).padEnd(8)} ${u}${r.msg ? '  (' + r.msg + ')' : ''}`);
     if (!ok) rotos.push(`${r.code} ${u}`);
   }
   console.log(rotos.length ? `\n>>> ${rotos.length} LINK(S) ROTO(S):\n` + rotos.join('\n') : '\n>>> Todos los links funcionan.');
+  console.log('\n(403* = el sitio bloquea programas automáticos pero el link anda en un navegador)');
 })();

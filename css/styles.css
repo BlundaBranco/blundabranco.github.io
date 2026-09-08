@@ -1294,8 +1294,8 @@ footer .brand-logo { height: 34px; }
 /* ---- carrusel automático horizontal ---- */
 .marquee {
     position: relative; overflow: hidden;
-    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 17%, #000 83%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 17%, #000 83%, transparent 100%);
 }
 .marquee-track {
     display: flex; gap: 1.25rem; width: max-content;
@@ -1328,10 +1328,12 @@ body { position: relative; }
 body::before {
     content: ""; position: fixed; inset: 0; z-index: -2; pointer-events: none;
     background:
-      radial-gradient(46rem 46rem at 12% 8%,  rgba(16, 185, 129, .11), transparent 62%),
-      radial-gradient(40rem 40rem at 88% 22%, rgba(59, 130, 246, .10), transparent 62%),
-      radial-gradient(38rem 38rem at 70% 78%, rgba(34, 179, 162, .085), transparent 62%),
-      radial-gradient(34rem 34rem at 18% 92%, rgba(90, 155, 216, .075), transparent 62%);
+      radial-gradient(44rem 44rem at 10% 6%,   rgba(16, 185, 129, .26), transparent 60%),
+      radial-gradient(40rem 40rem at 90% 20%,  rgba(59, 130, 246, .24), transparent 60%),
+      radial-gradient(36rem 36rem at 72% 74%,  rgba(45, 212, 191, .19), transparent 62%),
+      radial-gradient(34rem 34rem at 16% 88%,  rgba(99, 102, 241, .17), transparent 62%),
+      radial-gradient(26rem 26rem at 50% 45%,  rgba(56, 189, 248, .10), transparent 65%);
+    animation: orbDrift 34s ease-in-out infinite alternate;
 }
 body::after {
     content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .35;
@@ -1348,3 +1350,152 @@ nav { background-color: rgba(17, 24, 39, .82) !important; }
 
 .form-contacto input { color-scheme: dark; }
 .form-contacto input:-webkit-autofill { -webkit-text-fill-color: var(--text-light); -webkit-box-shadow: 0 0 0 40px #0f172a inset; }
+
+
+/* los dos campos de la fila, siempre alineados */
+.form-row { align-items: end; }
+.form-contacto .lbl { display: block; white-space: nowrap; }
+.form-contacto .lbl em { font-style: normal; color: #475569; font-size: .92em; }
+.form-contacto label { min-width: 0; }
+.form-contacto input, .form-contacto select, .form-contacto textarea { min-width: 0; }
+@media (max-width: 560px) { .form-contacto .lbl { white-space: normal; } }
+
+
+/* nada puede empujar la página a lo ancho */
+html { overflow-x: hidden; }
+body { overflow-x: clip; }
+.marquee { max-width: 100%; }
+.marquee-track { will-change: transform; }
+
+
+/* ============ chips de tecnología con color por familia ============ */
+.tech-badge.c-lang,  .stack-rows dd span.c-lang,  .tm.c-lang  { color:#93c5fd; border-color:rgba(59,130,246,.42);  background:rgba(59,130,246,.13); }
+.tech-badge.c-front, .stack-rows dd span.c-front, .tm.c-front { color:#67e8f9; border-color:rgba(34,211,238,.42);  background:rgba(34,211,238,.12); }
+.tech-badge.c-back,  .stack-rows dd span.c-back,  .tm.c-back  { color:#6ee7b7; border-color:rgba(16,185,129,.42);  background:rgba(16,185,129,.13); }
+.tech-badge.c-data,  .stack-rows dd span.c-data,  .tm.c-data  { color:#fcd34d; border-color:rgba(245,158,11,.40);  background:rgba(245,158,11,.12); }
+.tech-badge.c-infra, .stack-rows dd span.c-infra, .tm.c-infra { color:#c4b5fd; border-color:rgba(139,92,246,.42);  background:rgba(139,92,246,.13); }
+.tech-badge.c-ia,    .stack-rows dd span.c-ia,    .tm.c-ia    { color:#f9a8d4; border-color:rgba(236,72,153,.40);  background:rgba(236,72,153,.12); }
+.tech-badge.sm:hover { transform: translateY(-2px); box-shadow: none; }
+.tech-badge.sm.c-lang:hover  { background:rgba(59,130,246,.24);  color:#bfdbfe; border-color:rgba(59,130,246,.7); }
+.tech-badge.sm.c-front:hover { background:rgba(34,211,238,.24);  color:#a5f3fc; border-color:rgba(34,211,238,.7); }
+.tech-badge.sm.c-back:hover  { background:rgba(16,185,129,.24);  color:#a7f3d0; border-color:rgba(16,185,129,.7); }
+.tech-badge.sm.c-data:hover  { background:rgba(245,158,11,.24);  color:#fde68a; border-color:rgba(245,158,11,.7); }
+.tech-badge.sm.c-infra:hover { background:rgba(139,92,246,.24);  color:#ddd6fe; border-color:rgba(139,92,246,.7); }
+.tech-badge.sm.c-ia:hover    { background:rgba(236,72,153,.24);  color:#fbcfe8; border-color:rgba(236,72,153,.7); }
+
+/* ============ cola de la página de caso: stack + verlo en vivo ============ */
+.case-tail { display: grid; grid-template-columns: 1fr 19rem; gap: 2.5rem; align-items: center; }
+.case-tail.solo { grid-template-columns: 1fr; }
+.live-card {
+    background: rgba(17, 24, 39, .55); border: 1px solid var(--glass-border);
+    border-radius: 16px; padding: 1.4rem 1.4rem 1.2rem;
+}
+.live-links { display: flex; flex-direction: column; gap: .6rem; }
+.live-btn {
+    display: flex; align-items: center; gap: .6rem; justify-content: flex-start;
+    padding: .7rem 1rem; border-radius: 10px; font-weight: 600; font-size: .92rem;
+    color: #d1fae5; background: rgba(16,185,129,.12); border: 1px solid rgba(16,185,129,.38);
+    transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+.live-btn:hover { background: rgba(16,185,129,.24); border-color: var(--primary-green); transform: translateX(3px); }
+.live-btn i { font-size: .82rem; opacity: .85; }
+.live-card .case-nota { margin-top: .9rem; }
+@media (max-width: 860px) { .case-tail { grid-template-columns: 1fr; gap: 2rem; } }
+
+/* ============ línea de criterio bajo la barra de datos ============ */
+.criterio {
+    margin: 1.6rem auto 0; max-width: 46rem; text-align: center;
+    color: #94a3b8; font-size: 1.02rem; line-height: 1.65;
+}
+.criterio strong { color: #e2e8f0; font-weight: 600; }
+@media (max-width: 640px) { .criterio { font-size: .92rem; margin-top: 1.2rem; } }
+
+/* ============ barra de progreso de lectura (páginas de caso) ============ */
+.read-progress {
+    position: fixed; top: 0; left: 0; height: 3px; width: 0;
+    background: linear-gradient(90deg, var(--primary-green), var(--primary-blue));
+    z-index: 60; pointer-events: none; transition: width .08s linear;
+}
+
+/* ============ brillo que sigue al mouse en las tarjetas ============ */
+.project-card { position: relative; }
+.project-card::after {
+    content: ""; position: absolute; inset: 0; border-radius: inherit;
+    pointer-events: none; opacity: 0; transition: opacity .3s ease; z-index: 1;
+    background: radial-gradient(16rem 16rem at var(--mx, 50%) var(--my, 50%), rgba(16,185,129,.16), transparent 65%);
+}
+.project-card:hover::after { opacity: 1; }
+.project-card > * { position: relative; z-index: 2; }
+
+/* ============ números que suben ============ */
+.proof-bar strong { font-variant-numeric: tabular-nums; }
+
+@keyframes orbDrift {
+    from { transform: translate3d(0,0,0) scale(1); }
+    to   { transform: translate3d(-2.5%, 2%, 0) scale(1.06); }
+}
+@media (prefers-reduced-motion: reduce) { body::before { animation: none; } }
+
+/* ============ chips de tipo de trabajo, con color ============ */
+.tipo-tag.t-ia  { color:#f9a8d4; background:rgba(236,72,153,.11); border-color:rgba(236,72,153,.34); }
+.tipo-tag.t-app { color:#67e8f9; background:rgba(34,211,238,.11); border-color:rgba(34,211,238,.34); }
+.tipo-tag.t-sys { color:#c4b5fd; background:rgba(139,92,246,.12); border-color:rgba(139,92,246,.34); }
+.tipo-tag.t-ok  { color:#6ee7b7; background:rgba(16,185,129,.11); border-color:rgba(16,185,129,.32); }
+
+/* ============ viñetas de servicios: sangría al cortar línea ============ */
+.service-card ul li { display: flex; align-items: flex-start; gap: .5rem; line-height: 1.55; }
+.service-card ul li i { margin: .3rem 0 0 0 !important; flex: none; }
+
+/* ============ contacto: las 3 tarjetas repartidas, sin huecos ============ */
+.contacto-col { display: flex; flex-direction: column; justify-content: space-between; gap: 1.25rem; }
+.contacto-col > .glass-card { flex: 0 0 auto; }
+
+/* ============ los anclajes no quedan bajo la barra ============ */
+section[id] { scroll-margin-top: 92px; }
+
+/* ============ contacto: bloque de disponibilidad ============ */
+.dispo {
+    display: flex; align-items: flex-start; gap: .8rem;
+    padding: 1.1rem 1.25rem; border-radius: 14px;
+    background: rgba(16,185,129,.07); border: 1px solid rgba(16,185,129,.24);
+}
+.dispo-dot {
+    width: 10px; height: 10px; border-radius: 50%; margin-top: .35rem; flex: none;
+    background: var(--primary-green); box-shadow: 0 0 0 4px rgba(16,185,129,.16);
+}
+.dispo p { margin: 0; font-size: .86rem; color: #94a3b8; line-height: 1.5; }
+.dispo p strong { color: #a7f3d0; font-weight: 600; font-size: .92rem; }
+
+/* el botón flotante se va cuando aparece el pie */
+.wa-float.oculto { opacity: 0; visibility: hidden; transform: translateY(12px); pointer-events: none; }
+.wa-float { transition: opacity .25s ease, transform .25s ease, visibility .25s; }
+
+/* ============ orden del hero en celular (con las 3 líneas nuevas) ============ */
+@media (max-width: 768px) {
+    .hero-txt > div:nth-of-type(1) { order: 1; }
+    .hero-txt > h1 { order: 2; }
+    .hero-txt > h2 { order: 3; }
+    .hero-foto { order: 4; }
+    .hero-txt > p:nth-of-type(1) { order: 5; }
+    .hero-txt > p:nth-of-type(2) { order: 6; }
+    .hero-txt > p:nth-of-type(3) { order: 7; }
+    .hero-txt > div:nth-of-type(2) { order: 8; width: 100%; }
+    .hero-txt > .trust-line { order: 9; }
+    .hero-txt > div:nth-of-type(3) { order: 10; }
+}
+
+/* ============ barra de datos: sin celda huérfana en celular ============ */
+@media (max-width: 700px) {
+    .proof-bar { grid-template-columns: 1fr 1fr; }
+    .proof-bar > div:last-child { grid-column: 1 / -1; }
+    .proof-bar > div { padding: 18px 12px; }
+    .proof-bar strong { font-size: 1.5rem; }
+}
+
+/* ============ contacto en celular: que nada se salga de la tarjeta ============ */
+@media (max-width: 520px) {
+    .contacto-col .glass-card { padding: 1.1rem 1rem; }
+    .contacto-col a { font-size: .95rem !important; line-height: 1.35; word-break: break-word; overflow-wrap: anywhere; }
+    .contacto-col .w-12 { width: 2.5rem; height: 2.5rem; }
+    .contacto-col .w-12 i { font-size: 1rem; }
+}

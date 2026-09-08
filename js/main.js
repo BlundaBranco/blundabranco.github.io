@@ -224,4 +224,71 @@
   // Año actual
   var y = document.getElementById('current-year');
   if (y) y.textContent = new Date().getFullYear();
+
+  // ---- Barra de progreso de lectura (páginas de caso) ----
+  var rp = document.getElementById('read-progress');
+  if (rp) {
+    var pintar = function () {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = h > 0 ? (window.pageYOffset / h) * 100 : 0;
+      rp.style.width = Math.min(100, Math.max(0, pct)) + '%';
+    };
+    window.addEventListener('scroll', pintar, { passive: true });
+    window.addEventListener('resize', pintar);
+    pintar();
+  }
+
+  // ---- Números que suben al entrar en pantalla ----
+  var nums = document.querySelectorAll('.proof-bar strong');
+  if (nums.length && window.IntersectionObserver && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var subir = function (el) {
+      var txt = el.textContent.trim();
+      var m = txt.match(/^([^\d]*)([\d.,]+)(.*)$/);
+      if (!m) return;
+      var crudo = m[2];
+      var destino = parseFloat(crudo.replace(/\./g, '').replace(',', '.'));
+      if (!isFinite(destino) || destino < 4) return;
+      var decimales = crudo.indexOf(',') > -1 ? 1 : 0;
+      var miles = crudo.indexOf('.') > -1;
+      var fmt = function (n) {
+        var v = decimales ? n.toFixed(1).replace('.', ',') : String(Math.round(n));
+        if (miles && !decimales) v = v.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+        return m[1] + v + m[3];
+      };
+      var ini = null, dur = 1100;
+      var paso = function (t) {
+        if (ini === null) ini = t;
+        var k = Math.min(1, (t - ini) / dur);
+        var e = 1 - Math.pow(1 - k, 3);
+        el.textContent = fmt(destino * e);
+        if (k < 1) requestAnimationFrame(paso); else el.textContent = m[1] + crudo + m[3];
+      };
+      requestAnimationFrame(paso);
+    };
+    var obsN = new IntersectionObserver(function (ents) {
+      ents.forEach(function (e) {
+        if (e.isIntersecting) { subir(e.target); obsN.unobserve(e.target); }
+      });
+    }, { threshold: 0.6 });
+    nums.forEach(function (n) { obsN.observe(n); });
+  }
+
+  // ---- Brillo que sigue al mouse en las tarjetas ----
+  if (matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('.project-card').forEach(function (c) {
+      c.addEventListener('mousemove', function (ev) {
+        var r = c.getBoundingClientRect();
+        c.style.setProperty('--mx', (ev.clientX - r.left) + 'px');
+        c.style.setProperty('--my', (ev.clientY - r.top) + 'px');
+      });
+    });
+  }
+
+  // ---- El botón flotante se esconde sobre el pie de página ----
+  var flot = document.querySelector('.wa-float'), pie = document.querySelector('footer');
+  if (flot && pie && window.IntersectionObserver) {
+    new IntersectionObserver(function (e) {
+      flot.classList.toggle('oculto', e[0].isIntersecting);
+    }, { threshold: 0.15 }).observe(pie);
+  }
 })();

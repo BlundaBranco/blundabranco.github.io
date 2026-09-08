@@ -200,10 +200,10 @@ const PROJECTS=[
  'Sitio mellizo de demostración en un esquema separado, con aislamiento verificado.'],
  stats:[['3','sistemas en producción'],['0','dependencia del dev para editar']],
  tech:'Next.js 15 · TypeScript · Supabase · Vercel · Make.com · Brevo · Facebook Lead Ads · GitHub Actions',
- links:[['Onboarding','https://onboarding.tuproximohorizonte.com'],['Agenda','https://agenda.tuproximohorizonte.com'],['Demo','https://demo.tuproximohorizonte.com']],
+ links:[],
  cover:'01-onboarding-inicio.webp',
  shots:[['01-onboarding-inicio.webp','El onboarding de afiliados: el plan de siete pasos, el paso en curso con su video y la agenda de capacitaciones al costado. Un solo link, sin registro.'],['02-onboarding-paso.webp','Un paso abierto: video, PDFs descargables y enlaces a herramientas. El cliente edita todo esto desde su panel, sin tocar código.'],['06-agenda-publica.webp','La agenda semanal de capacitaciones, con inscripción abierta. El selector de zona horaria convierte los horarios al país de cada inscripto.'],['08-make-escenario.webp','La automatización que captura los leads de Facebook y dispara la secuencia de cuatro correos.']],
- nota:''}
+ nota:'El dominio del cliente ya no está activo, así que los tres sistemas no se pueden visitar en vivo. Las capturas son del sistema funcionando en producción.'}
 ];
 
 const OTHERS=[
@@ -254,6 +254,21 @@ const SHORT={
 const chips=p=>p.tech.split(' · ').slice(0,4);
 
 /* ---------- helpers ---------- */
+const TECHC=[
+ [/openai|gpt|llm|agentes|whisper|tts|ffmpeg|opencv|yolo|whatsapp|twilio|asterisk|mercado pago|maps|make\.com|n8n|brevo|stripe|gemini|claude|lead ads|deepgram|elevenlabs|tesseract|ml kit|firebase cloud messaging/i,'c-ia'],
+ [/postgres|mysql|sql server|supabase|prisma|redis|firebase|mongo|sqlite|drizzle|kysely|typeorm|sequelize/i,'c-data'],
+ [/aws|terraform|docker|vercel|github actions|ci\/cd|turborepo|fargate|aurora|nginx|cloudflare|railway|render|s3|ecs|linux|traefik|kubernetes|pm2|hetzner|digitalocean/i,'c-infra'],
+ [/react|next\.js|angular|vue|flutter|astro|tailwind|vite|ionic|expo|blazor|streamlit|shopify|moodle/i,'c-front'],
+ [/node|nest|fastapi|asp\.net|laravel|express|django|\.net|graphql|trpc|fastify|rest|socket/i,'c-back'],
+ [/typescript|javascript|python|dart|c#|\bsql\b|mql5|kotlin|swift|php|java\b/i,'c-lang']];
+const CHIPC=[
+ [/\bia\b|inteligencia|agentes|ocr|rag|llm|visi[oó]n/i,'t-ia'],
+ [/app|m[oó]vil|escritorio|publicada|play|store/i,'t-app'],
+ [/saas|plataforma|multi-empresa|crm|punto de venta|\bbi\b|sistema|automatiz|cobranzas|sin c[oó]digo/i,'t-sys'],
+ [/producci[oó]n|en uso|tests|rescate|abierto|salud/i,'t-ok']];
+const chipc=t=>{for(const g of CHIPC){if(g[0].test(t))return ' '+g[1];}return '';};
+const tclass=t=>{for(const g of TECHC){if(g[0].test(t))return ' '+g[1];}return '';};
+
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const YEAR=new Date().getFullYear();
 const WA='https://wa.me/5493417824155';
@@ -342,6 +357,7 @@ return `<figure class="gitem"><div class="gitem-img">${shot(slug,f,c||'Captura',
 
 const foot=depth=>{const r=depth?'../':'';return `
 </main>
+${depth?'<div class="read-progress" id="read-progress"></div>':''}
 <footer class="py-12 px-6 bg-gray-800 bg-opacity-50 border-t border-gray-800">
   <div class="container mx-auto">
     <div class="flex flex-col md:flex-row justify-between items-center gap-6">
@@ -421,10 +437,11 @@ idx+=`
         </div>
         <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight"><span class="gradient-text">Branco </span>Blunda</h1>
         <h2 class="text-2xl md:text-3xl text-gray-300 mb-6 font-light">Software Engineer · Full Stack &amp; IA</h2>
-        <p class="text-lg md:text-xl text-gray-400 mb-6 max-w-2xl">
-          Construyo sistemas que <span class="text-green-400 font-semibold">llegan a producción</span> y usa gente real:
-          agentes de voz y de <span class="text-blue-400 font-semibold">WhatsApp</span>, SaaS multi-empresa y apps publicadas.
+        <p class="text-lg md:text-xl text-gray-400 mb-4 max-w-2xl">
+          Ayudo a empresas y a emprendedores a <span class="text-green-400 font-semibold">bajar costos</span>:
+          automatizo el trabajo repetitivo y pongo <span class="text-blue-400 font-semibold">IA</span> a atender lo que hoy atiende una persona.
         </p>
+        <p class="text-gray-400 mb-4 max-w-2xl">Agentes de voz y de WhatsApp, SaaS multi-empresa y apps publicadas. Todo en producción, usado por gente real.</p>
         <p class="text-gray-500 mb-8 max-w-2xl">Desarrollo software desde 2017. Rosario, Argentina · Trabajo remoto.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
           <a href="#portafolio" class="btn-primary"><i class="fas fa-folder-open mr-2"></i>Ver lo que construí</a>
@@ -457,6 +474,7 @@ idx+=`
       <div><strong>50.000</strong><span>llamadas por mes atendidas por un sistema que construí</span></div>
       <div><strong>Meta</strong><span>proveedor de tecnología verificado</span></div>
     </div>
+    <p class="criterio">Lo difícil no es escribir el código. Es decidir <strong>qué se construye, qué se descarta</strong> y qué va a seguir funcionando dentro de dos años.</p>
   </div>
 </section>
 
@@ -476,7 +494,7 @@ idx+=`
           <div class="text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">${esc(p.cliente)} · ${esc(p.pais)}</div>
           <h3 class="text-2xl font-bold mb-3">${esc(p.title)}</h3>
           <p class="text-gray-400 mb-4">${esc(SHORT[p.slug]||'')}</p>
-          <div class="flex flex-wrap gap-2 mb-4">${p.tipos.map(c=>`<span class="tipo-tag">${esc(c)}</span>`).join('')}</div>
+          <div class="flex flex-wrap gap-2 mb-4">${p.tipos.map(c=>`<span class="tipo-tag${chipc(c)}">${esc(c)}</span>`).join('')}</div>
           <a href="proyectos/${p.slug}.html" class="text-blue-400 hover:text-blue-300 transition font-semibold"><i class="fas fa-arrow-right mr-1"></i> Ver el caso completo</a>
         </div>
       </div>`).join('')}
@@ -558,11 +576,11 @@ idx+=`
       <p class="text-gray-400 max-w-2xl mx-auto">Elijo la herramienta según el problema, no al revés.</p>
     </div>
     <dl class="stack-rows">
-      ${STACK.map(g=>`<div><dt>${esc(g[0])}</dt><dd>${g[1].split('|').map(x=>`<span>${esc(x)}</span>`).join('')}</dd></div>`).join('')}
+      ${STACK.map(g=>`<div><dt>${esc(g[0])}</dt><dd>${g[1].split('|').map(x=>`<span class="${tclass(x).trim()}">${esc(x)}</span>`).join('')}</dd></div>`).join('')}
     </dl>
     <div class="marquee tech-marquee" aria-hidden="true">
       <div class="marquee-track">
-        ${(()=>{const all=STACK.flatMap(g=>g[1].split('|'));return [...all,...all].map(x=>`<span class="tm">${esc(x)}</span>`).join('');})()}
+        ${(()=>{const all=STACK.flatMap(g=>g[1].split('|'));return [...all,...all].map(x=>`<span class="tm${tclass(x)}">${esc(x)}</span>`).join('');})()}
       </div>
     </div>
   </div>
@@ -575,7 +593,7 @@ idx+=`
       <p class="text-gray-400 text-lg max-w-2xl mx-auto">Escribime por WhatsApp o por mail si querés algo rápido, o dejame el formulario y te contesto con una propuesta. En los tres casos respondo el mismo día.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="space-y-6">
+      <div class="contacto-col">
         <div class="glass-card p-6">
           <div class="flex items-center gap-4">
             <div class="w-12 h-12 bg-green-500 bg-opacity-20 rounded-lg flex items-center justify-center"><i class="fas fa-envelope text-green-400 text-xl"></i></div>
@@ -598,6 +616,20 @@ idx+=`
               <a href="${LINKEDIN}" target="_blank" rel="noopener" class="text-lg font-semibold hover:text-purple-400 transition">linkedin.com/in/brancoblunda</a></div>
           </div>
         </div>
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-cyan-500 bg-opacity-20 rounded-lg flex items-center justify-center"><i class="fas fa-briefcase text-cyan-400 text-xl"></i></div>
+            <div><p class="text-sm text-gray-500">Workana</p>
+              <a href="${WORKANA}" target="_blank" rel="noopener" class="text-lg font-semibold hover:text-cyan-400 transition">30+ reseñas públicas</a></div>
+          </div>
+        </div>
+        <div class="dispo">
+          <span class="dispo-dot"></span>
+          <div>
+            <p><strong>Disponible para proyectos nuevos</strong></p>
+            <p>Rosario, Argentina (GMT-3) · Trabajo remoto · Respondo el mismo día</p>
+          </div>
+        </div>
       </div>
       <div class="glass-card p-8 form-card">
         <h3 class="text-2xl font-bold mb-2">Contame tu proyecto</h3>
@@ -612,10 +644,10 @@ idx+=`
             <input type="text" name="nombre" required autocomplete="name" placeholder="Juan Pérez — Inmobiliaria del Sur">
           </label>
           <div class="form-row">
-            <label>Email
+            <label><span class="lbl">Email</span>
               <input type="email" name="email" required autocomplete="email" placeholder="juan@empresa.com">
             </label>
-            <label>WhatsApp <em>opcional</em>
+            <label><span class="lbl">WhatsApp <em>(opcional)</em></span>
               <input type="tel" name="whatsapp" autocomplete="tel" placeholder="+54 9 ...">
             </label>
           </div>
@@ -719,16 +751,16 @@ h+=`
 
 <section class="py-12 px-6 bg-gray-800 bg-opacity-50">
   <div class="container mx-auto max-w-5xl">
-    <div class="case-split">
+    <div class="case-tail${p.links.length?'':' solo'}">
       <div>
         <h2 class="case-h2 mb-5">Con qué está hecho</h2>
-        <div class="flex flex-wrap gap-2">${p.tech.split(' · ').map(t=>`<span class="tech-badge sm">${esc(t)}</span>`).join('')}</div>
+        <div class="flex flex-wrap gap-2">${p.tech.split(' · ').map(t=>`<span class="tech-badge sm${tclass(t)}">${esc(t)}</span>`).join('')}</div>
       </div>
-      ${p.links.length?`<div>
-        <h2 class="case-h2 mb-5">Verlo en vivo</h2>
-        <div class="flex flex-wrap gap-3">${p.links.map(l=>`<a href="${l[1]}" target="_blank" rel="noopener" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>${esc(l[0])}</a>`).join('')}</div>
-        <p class="case-nota">Los links apuntan al sistema real. Si alguno dejó de existir, las capturas de arriba quedan como registro.</p>
-      </div>`:''}
+      ${p.links.length?`<aside class="live-card">
+        <h2 class="case-h2 mb-4">Verlo en vivo</h2>
+        <div class="live-links">${p.links.map(l=>`<a href="${l[1]}" target="_blank" rel="noopener" class="live-btn"><i class="fas fa-external-link-alt"></i>${esc(l[0])}</a>`).join('')}</div>
+        <p class="case-nota">Sistema real, en producción hoy.</p>
+      </aside>`:''}
     </div>
   </div>
 </section>

@@ -32,7 +32,7 @@
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/styles.css?v=9b4e3c49">
+<link rel="stylesheet" href="../css/styles.css?v=8eb23502">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","@id":"https://brancoblunda.github.io/proyectos/infinity-book.html#caso","name":"Infinity Book","url":"https://brancoblunda.github.io/proyectos/infinity-book.html","description":"App de escaneo de cuadernos reutilizables con OCR e IA. La heredé de otro proveedor —sin control de versiones, con credenciales expuestas y todo a nombre de terceros— y desarrollé y publiqué la versión que está hoy en las tiendas.","image":"https://brancoblunda.github.io/assets/proyectos/infinity-book/05-app-store.webp","creator":{"@type":"Person","name":"Branco Blunda","url":"https://brancoblunda.github.io/"},"about":["Flutter / Dart","Kotlin con OpenCV y ML Kit","ASP.NET Core","SQL Server","Azure Document Intelligence","OpenAI","DigitalOcean","Docker","Codemagic"],"inLanguage":"es-AR"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://brancoblunda.github.io/"},{"@type":"ListItem","position":2,"name":"Proyectos","item":"https://brancoblunda.github.io/#portafolio"},{"@type":"ListItem","position":3,"name":"Infinity Book","item":"https://brancoblunda.github.io/proyectos/infinity-book.html"}]}]}</script>
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans">
@@ -129,16 +129,16 @@
 
 <section class="py-12 px-6 bg-gray-800 bg-opacity-50">
   <div class="container mx-auto max-w-5xl">
-    <div class="case-split">
+    <div class="case-tail">
       <div>
         <h2 class="case-h2 mb-5">Con qué está hecho</h2>
-        <div class="flex flex-wrap gap-2"><span class="tech-badge sm">Flutter / Dart</span><span class="tech-badge sm">Kotlin con OpenCV y ML Kit</span><span class="tech-badge sm">ASP.NET Core</span><span class="tech-badge sm">SQL Server</span><span class="tech-badge sm">Azure Document Intelligence</span><span class="tech-badge sm">OpenAI</span><span class="tech-badge sm">DigitalOcean</span><span class="tech-badge sm">Docker</span><span class="tech-badge sm">Codemagic</span></div>
+        <div class="flex flex-wrap gap-2"><span class="tech-badge sm c-front">Flutter / Dart</span><span class="tech-badge sm c-ia">Kotlin con OpenCV y ML Kit</span><span class="tech-badge sm c-back">ASP.NET Core</span><span class="tech-badge sm c-data">SQL Server</span><span class="tech-badge sm">Azure Document Intelligence</span><span class="tech-badge sm c-ia">OpenAI</span><span class="tech-badge sm c-infra">DigitalOcean</span><span class="tech-badge sm c-infra">Docker</span><span class="tech-badge sm">Codemagic</span></div>
       </div>
-      <div>
-        <h2 class="case-h2 mb-5">Verlo en vivo</h2>
-        <div class="flex flex-wrap gap-3"><a href="https://play.google.com/store/apps/details?id=com.infinitybook.infinitybook" target="_blank" rel="noopener" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>Google Play</a></div>
-        <p class="case-nota">Los links apuntan al sistema real. Si alguno dejó de existir, las capturas de arriba quedan como registro.</p>
-      </div>
+      <aside class="live-card">
+        <h2 class="case-h2 mb-4">Verlo en vivo</h2>
+        <div class="live-links"><a href="https://play.google.com/store/apps/details?id=com.infinitybook.infinitybook" target="_blank" rel="noopener" class="live-btn"><i class="fas fa-external-link-alt"></i>Google Play</a></div>
+        <p class="case-nota">Sistema real, en producción hoy.</p>
+      </aside>
     </div>
   </div>
 </section>
@@ -154,6 +154,7 @@
   </div>
 </section>
 </main>
+<div class="read-progress" id="read-progress"></div>
 <footer class="py-12 px-6 bg-gray-800 bg-opacity-50 border-t border-gray-800">
   <div class="container mx-auto">
     <div class="flex flex-col md:flex-row justify-between items-center gap-6">
@@ -182,6 +183,6 @@
   <i class="fab fa-whatsapp"></i><span>Escribime</span>
 </a>
 <button id="scroll-top" class="scroll-top-btn" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
-<script src="../js/main.js?v=e029aef2"></script>
+<script src="../js/main.js?v=b8d4cdcf"></script>
 </body>
 </html>
