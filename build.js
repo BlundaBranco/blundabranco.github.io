@@ -101,8 +101,8 @@ PROJECTS.push(
  stats:[['237','plantas'],['2.555','compromisos regulatorios'],['2.709','tests automatizados'],['82','decisiones de arquitectura documentadas']],
  tech:'Python 3.13 · Flet · SQLAlchemy 2 · MySQL 8 · PyInstaller · desarrollo dirigido por especificación',
  links:[],cover:'03-cronograma-anual.png',
- shots:[['02-dashboard.png','El tablero del gestor de reportes.'],['03-cronograma-anual.png','El cronograma anual de compromisos regulatorios.'],['04-matriz-servicios.png','La matriz de plantas por tipo de reporte.'],['09-rbac.png','La misma pantalla vista con un rol restringido: menú filtrado y solo lectura.']],
- nota:'Aplicación interna sobre red privada. Las capturas se toman sobre datos de prueba.'},
+ shots:[['03-cronograma-anual.png','El cronograma anual de compromisos regulatorios: 2.555 filas, filtrables por planta, tipo de reporte y estado.'],['04-matriz-servicios.png','La matriz de servicios: qué paquetes, módulos y submódulos aplican a cada planta.'],['01-planta-detalle.png','La ficha de una planta, con su información contractual, de gestión de activos y de soporte.'],['09-usuarios-roles.png','Usuarios internos con su rol y sus permisos de emisión y aprobación. El acceso se controla por rol sobre quince pantallas.']],
+ nota:'Aplicación interna sobre red privada. Los datos de clientes, plantas y personas están difuminados en las capturas.'},
 
 {slug:'comanda-central',title:'Comanda Central',cliente:'Producto propio',pais:'Argentina',
  rol:'Producto, arquitectura y operación',estado:'En producción en 8 negocios y 3 cadenas',
