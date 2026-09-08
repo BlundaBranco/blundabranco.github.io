@@ -1384,7 +1384,7 @@ body { overflow-x: clip; }
 .tech-badge.sm.c-ia:hover    { background:rgba(236,72,153,.24);  color:#fbcfe8; border-color:rgba(236,72,153,.7); }
 
 /* ============ cola de la página de caso: stack + verlo en vivo ============ */
-.case-tail { display: grid; grid-template-columns: 1fr 19rem; gap: 2.5rem; align-items: center; }
+.case-tail { display: grid; grid-template-columns: 1fr 21rem; gap: 2.5rem; align-items: center; }
 .case-tail.solo { grid-template-columns: 1fr; }
 .live-card {
     background: rgba(17, 24, 39, .55); border: 1px solid var(--glass-border);
@@ -1393,7 +1393,7 @@ body { overflow-x: clip; }
 .live-links { display: flex; flex-direction: column; gap: .6rem; }
 .live-btn {
     display: flex; align-items: center; gap: .6rem; justify-content: flex-start;
-    padding: .7rem 1rem; border-radius: 10px; font-weight: 600; font-size: .92rem;
+    padding: .7rem 1rem; border-radius: 10px; font-weight: 600; font-size: .88rem; white-space: nowrap;
     color: #d1fae5; background: rgba(16,185,129,.12); border: 1px solid rgba(16,185,129,.38);
     transition: background .2s ease, border-color .2s ease, transform .2s ease;
 }
@@ -1499,3 +1499,34 @@ section[id] { scroll-margin-top: 92px; }
     .contacto-col .w-12 { width: 2.5rem; height: 2.5rem; }
     .contacto-col .w-12 i { font-size: 1rem; }
 }
+
+/* ============ link a la copia archivada ============ */
+.live-par { display: flex; align-items: stretch; gap: .4rem; }
+.live-par .live-btn { flex: 1; }
+.live-copia {
+    display: flex; align-items: center; gap: .35rem;
+    padding: 0 .7rem; border-radius: 10px;
+    font-size: .72rem; font-weight: 600; color: #64748b;
+    background: rgba(148,163,184,.06); border: 1px solid var(--glass-border);
+    transition: color .2s ease, border-color .2s ease;
+}
+.live-copia:hover { color: #cbd5e1; border-color: rgba(148,163,184,.4); }
+.live-copia i { font-size: .7rem; }
+
+/* ============ la línea de criterio, más pegada a los números ============ */
+.criterio { margin: 1.1rem auto 0; }
+
+/* ============ botón de descarga del CV ============ */
+.btn-cv {
+    display: inline-flex; align-items: center; justify-content: center; white-space: nowrap;
+    padding: .85rem 1.5rem; border-radius: 12px; font-weight: 600;
+    color: #94a3b8; background: transparent; border: 1px solid var(--glass-border);
+    transition: color .2s ease, border-color .2s ease, background .2s ease;
+}
+.btn-cv:hover { color: #e2e8f0; border-color: rgba(148,163,184,.45); background: rgba(148,163,184,.06); }
+.dispo-cv {
+    display: inline-flex; align-items: center; gap: .45rem; margin-top: .6rem;
+    font-size: .84rem; font-weight: 600; color: #6ee7b7;
+}
+.dispo-cv:hover { color: #a7f3d0; text-decoration: underline; }
+.dispo-cv i { font-size: .78rem; }
