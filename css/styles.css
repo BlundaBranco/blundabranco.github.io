@@ -1189,3 +1189,69 @@ footer .brand-logo { height: 34px; }
 .btn-primary:active, .btn-secondary:active { transform: scale(.97); }
 .proof-bar > div strong { transition: transform .3s ease; display: block; }
 .proof-bar > div:hover strong { transform: scale(1.06); }
+
+
+/* antes y después */
+.ba {
+    display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: stretch;
+    margin-top: 1.75rem;
+}
+.ba > div:not(.ba-flecha) {
+    padding: 1rem 1.1rem; border-radius: 12px;
+    background: var(--glass-bg); border: 1px solid var(--glass-border);
+}
+.ba span {
+    display: block; margin-bottom: .45rem;
+    font-family: 'JetBrains Mono', monospace; font-size: .66rem;
+    letter-spacing: .1em; text-transform: uppercase;
+}
+.ba-antes span { color: #f87171; }
+.ba-despues span { color: var(--primary-green); }
+.ba-antes { opacity: .78; }
+.ba-despues { border-color: rgba(16, 185, 129, .3) !important; }
+.ba p { margin: 0; font-size: .88rem; line-height: 1.6; color: #cbd5e1; }
+.ba-flecha { display: flex; align-items: center; color: var(--primary-green); font-size: 1.1rem; }
+@media (max-width: 700px) {
+    .ba { grid-template-columns: 1fr; gap: .6rem; }
+    .ba-flecha { justify-content: center; transform: rotate(90deg); padding: .1rem 0; }
+}
+
+/* formulario */
+.form-contacto { display: flex; flex-direction: column; gap: 1rem; }
+.form-contacto label {
+    display: flex; flex-direction: column; gap: .4rem;
+    font-size: .82rem; color: var(--text-gray);
+    font-family: 'JetBrains Mono', monospace; letter-spacing: .02em;
+}
+.form-contacto input[type="text"], .form-contacto textarea {
+    width: 100%; padding: 12px 14px;
+    background: rgba(15, 23, 42, .6);
+    border: 1px solid var(--glass-border); border-radius: 10px;
+    color: var(--text-light); font-family: inherit; font-size: .95rem;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+.form-contacto input::placeholder, .form-contacto textarea::placeholder { color: #475569; }
+.form-contacto input:focus, .form-contacto textarea:focus {
+    outline: none; border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, .13);
+}
+.form-contacto textarea { resize: vertical; min-height: 96px; }
+.form-contacto .btn-primary { justify-content: center; text-align: center; margin-top: .25rem; }
+.form-alt { margin-top: 1rem; font-size: .84rem; color: var(--text-gray); text-align: center; }
+.form-alt a { color: var(--primary-green); font-weight: 600; }
+
+
+/* accesibilidad y páginas simples */
+.skip {
+    position: absolute; left: -9999px; top: 0; z-index: 200;
+    padding: 12px 20px; background: var(--primary-green); color: #04301a;
+    font-weight: 700; border-radius: 0 0 10px 0;
+}
+.skip:focus { left: 0; }
+:focus-visible { outline: 2px solid var(--primary-green); outline-offset: 3px; border-radius: 6px; }
+.ok-icon {
+    width: 76px; height: 76px; margin: 0 auto 1.5rem;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; font-size: 2rem; color: #04301a;
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
+}

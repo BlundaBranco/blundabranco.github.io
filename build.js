@@ -13,6 +13,8 @@ const PROJECTS=[
  rol:'Diseño, construcción y operación',estado:'En producción · mantenimiento continuo',
  tag:'Agente de voz con IA · Telefonía',
  desc:'Una empresa de taxis despachaba a mano todas las llamadas. Construí el sistema que atiende la llamada, entiende la dirección hablada del pasajero y asigna un conductor sin que intervenga un operador. También las dos apps móviles, la landing y el panel de operación.',
+ antes:'Cada llamada la atendía una persona: escuchaba la dirección, la ubicaba y llamaba por radio a un conductor.',
+ despues:'La llamada se atiende sola, entiende la dirección hablada y despacha. El operador solo mira.',
  problema:'La central recibía decenas de miles de llamadas por mes y cada una la atendía una persona: escuchaba la dirección, la ubicaba y llamaba por radio a un conductor. El cuello de botella era humano y no escalaba.',
  construido:['Endpoint en Node.js que recibe las llamadas y los audios desde Asterisk.',
  'Transcripción del audio con Whisper y extracción de la dirección con un modelo de lenguaje.',
@@ -34,6 +36,8 @@ const PROJECTS=[
  rol:'Diseño y construcción desde cero',estado:'En producción con clientes',
  tag:'SaaS multi-tenant · React + NestJS + AWS',
  desc:'SaaS para empresas de rotulación: reemplaza planillas y mensajes por un tablero de producción, un catálogo con recetas de fabricación, presupuestos calculados por fórmulas y un asistente de IA que consulta los datos reales del negocio.',
+ antes:'Proyectos, materiales y presupuestos entre planillas, mensajes y memoria. Nadie sabía cuánto costaba un trabajo hasta terminarlo.',
+ despues:'Un tablero con el estado real de cada proyecto y presupuestos calculados por fórmula antes de empezar.',
  problema:'Los talleres del rubro manejan proyectos, materiales y presupuestos entre planillas, mensajes y memoria. Nadie sabe con certeza cuánto cuesta un trabajo hasta que ya se hizo.',
  construido:['Tablero multi-empresa con cinco fases, subtableros por taller y descomposición automática del proyecto en tareas de producción.',
  'Motor de presupuestos con fórmulas, capítulos, tarifas de mano de obra y costes indirectos.',
@@ -53,6 +57,8 @@ const PROJECTS=[
  rol:'Diseño y construcción desde cero',estado:'v0.3.4 entregada · aplicación interna',
  tag:'Python · Flet · MySQL · Escritorio',
  desc:'Plataforma de gestión para el área de servicios de un grupo de energía renovable que opera remotamente cerca del 17% de la generación renovable del país. Centraliza plantas, contratos y compromisos regulatorios que vivían en planillas.',
+ antes:'237 plantas y 2.555 compromisos regulatorios en Excel y scripts sueltos, sin trazabilidad ni control de accesos.',
+ despues:'Todo en un sistema, con permisos por rol sobre quince pantallas y 2.709 tests que lo respaldan.',
  problema:'Clientes, plantas, cronogramas de reportes ante el organismo regulador y agendas se manejaban en Excel y scripts sueltos. No había trazabilidad ni control de quién podía ver o modificar qué.',
  construido:['Ingreso y control de acceso por rol: tres roles sobre quince pantallas, permisos por ruta, modo de solo lectura y menú filtrado.',
  'Alta, baja y modificación de clientes, plantas con versionado histórico de configuraciones, y usuarios internos y externos.',
@@ -71,6 +77,8 @@ const PROJECTS=[
  rol:'Desarrollo y publicación de la versión actual',estado:'En producción · mantenimiento mensual',
  tag:'Flutter · ASP.NET Core · OCR',
  desc:'App de escaneo de cuadernos reutilizables con OCR e IA. La heredé de otro proveedor —sin control de versiones, con credenciales expuestas y todo a nombre de terceros— y desarrollé y publiqué la versión que está hoy en las tiendas.',
+ antes:'El backend, las cuentas de tienda y las integraciones estaban a nombre del proveedor anterior. El cliente no era dueño de su propio producto.',
+ despues:'Todo migrado a cuentas del cliente, publicado en las dos tiendas, sin perder un solo registro de usuario.',
  problema:'El producto funcionaba pero no era del cliente: el backend, las cuentas de tienda y las integraciones estaban a nombre del proveedor anterior. La cámara de Android era inestable y había una fecha límite de Google para actualizar la app.',
  construido:['Refactor del pipeline de cámara en Android y corrección del procesamiento que truncaba las capturas.',
  'Migración completa del backend a infraestructura propia del cliente, con TLS.',
@@ -90,6 +98,8 @@ const PROJECTS=[
  rol:'Fundador · producto, arquitectura y operación',estado:'Activo, con clientes',
  tag:'Agentes de WhatsApp · Meta Cloud API',
  desc:'Mi propia plataforma: agentes conversacionales con IA y CRM para inmobiliarias, sobre la API oficial de WhatsApp. Califica leads, hace seguimiento y reactiva contactos las 24 horas. Proveedor de tecnología verificado por Meta.',
+ antes:'Las consultas entraban a toda hora y se respondían cuando se podía. El contacto que espera se enfría.',
+ despues:'Atención en segundos las 24 horas, con el lead ya calificado y cargado en el CRM.',
  problema:'Una inmobiliaria recibe consultas a toda hora y responde cuando puede. El contacto que no recibe respuesta en minutos se enfría, y después nadie tiene tiempo de reactivarlo.',
  construido:['Agente conversacional que califica al contacto durante la charla, sobre la API oficial de WhatsApp.',
  'CRM propio donde queda el historial y el estado de cada contacto.',
@@ -107,6 +117,8 @@ const PROJECTS=[
  rol:'Producto, arquitectura y operación',estado:'En producción en 8 negocios y 3 cadenas',
  tag:'SaaS gastronómico · Node.js + PostgreSQL',
  desc:'Nació para resolver el problema de mi propia pizzería y terminó siendo un SaaS con gestión centralizada de sucursales: toma de comandas, inventario, análisis de ventas y costeo real por producto con recetas anidadas.',
+ antes:'Sabían cuánto vendían, pero no cuánto ganaban: el costo real de un plato dependía de sub-recetas que cambiaban de precio.',
+ despues:'Costeo automático con recetas anidadas y ganancia neta por producto, al día.',
  problema:'Un negocio gastronómico sabe cuánto vendió, pero casi nunca cuánto ganó: el costo real de un plato depende de sub-recetas cuyos insumos cambian de precio todo el tiempo.',
  construido:['Punto de venta de tres paneles, operable por completo con el teclado, con impresión de ticket.',
  'Costeo con consultas recursivas en PostgreSQL, que resuelve recetas dentro de recetas.',
@@ -125,6 +137,8 @@ const PROJECTS=[
  rol:'Diseño, construcción y entrega',estado:'Tres sistemas en producción · uso diario',
  tag:'Next.js · Supabase · Automatización',
  desc:'Tres sistemas para una agencia de viajes, que el cliente opera solo: la agenda de capacitaciones semanales, la automatización de leads de Facebook y un onboarding de afiliados editable sin tocar código.',
+ antes:'Coordinaba capacitaciones a mano, perdía los leads de Facebook y mandaba siete PDFs sueltos a cada afiliado.',
+ despues:'Tres sistemas que el cliente opera solo, sin depender del desarrollador para cambiar nada.',
  problema:'Coordinaba capacitaciones semanales a mano, perdía los leads que entraban por Facebook y mandaba siete PDFs sueltos a cada afiliado nuevo. Necesitaba poder cambiar todo él, sin depender del desarrollador.',
  construido:['Agenda con panel para cargar la semana completa, inscripción pública, manejo estricto de zonas horarias y backups diarios con alarma de fallo.',
  'Duplicado de semana con borrado definitivo para sesiones vacías y borrado lógico para las que ya tienen inscriptos.',
@@ -144,6 +158,8 @@ const PROJECTS=[
  rol:'Diseño y construcción desde cero',estado:'En uso · mantenimiento continuo',
  tag:'Laravel · MySQL · Cobranzas',
  desc:'Sistema de cobranza para la venta de lotes en cuotas. Reemplazó planillas de Excel dispersas por un solo lugar donde vive el cliente, su lote, su plan de pago, cada cobro con folio y la mora calculada sola.',
+ antes:'La cobranza de lotes en cuotas vivía en planillas sueltas. Nadie sabía con certeza quién estaba al día.',
+ despues:'Un solo sistema con el plan de pago, cada cobro con folio y la mora calculada sola.',
  problema:'La cobranza de lotes vendidos en cuotas se llevaba en planillas de Excel sueltas. Nadie sabía con certeza quién estaba al día, cuánto se debía ni desde cuándo, y cada recibo se armaba a mano.',
  construido:['Alta, baja y modificación de clientes, lotes y loteos, con el estado de cada lote: disponible, vendido o liquidado.',
  'Planes de pago que generan las cuotas solos, en frecuencia mensual, bimestral o trimestral.',
@@ -164,6 +180,8 @@ const PROJECTS=[
  rol:'Diseño y construcción',estado:'Entregado · código abierto',
  tag:'Visión por computadora · Salud',
  desc:'Análisis biométrico asistido de radiografías dentales panorámicas: medición interactiva de las piezas y procesamiento de imagen para apoyar el diagnóstico.',
+ antes:'Medir corona y raíz sobre una panorámica era manual, lento y distinto según el profesional.',
+ despues:'Medición automática en milímetros, reproducible y exportable a CSV.',
  problema:'Medir corona y raíz sobre una radiografía panorámica es manual, lento y poco reproducible entre profesionales.',
  construido:['Detección automática de las piezas dentales sobre la radiografía panorámica.',
  'Medición de la longitud de cada pieza y de los reparos anatómicos: distancia entre cóndilos, altura de cada rama mandibular y longitud del cuerpo mandibular.',
@@ -187,7 +205,7 @@ const OTHERS=[
 ['The Argentino y Mosto','Canadá / EE.UU.','Dos tiendas de exportación creadas desde cero. Shopify.'],
 ['Tymonyz','Producto propio','Pipeline autónomo de noticias a video: guion, voz, edición y publicación. Python.'],
 ['Expert Advisor MetaTrader 5','Cliente vía Workana','Robot de trading construido según la especificación del cliente. MQL5.'],
-['25 trabajos con reseña pública','Varios países','Bots de WhatsApp, aulas virtuales, tiendas, tableros y frontends. Verificables en Workana.']];
+['30+ trabajos con reseña pública','Varios países','Bots de WhatsApp, aulas virtuales, tiendas, tableros y frontends. Verificables en Workana.']];
 
 const METHOD=[
 ['Primero el alcance','Antes de escribir código dejamos por escrito qué entra y qué no. Sin sorpresas después.'],
@@ -225,36 +243,46 @@ const YEAR=new Date().getFullYear();
 const WA='https://wa.me/5493417824155';
 const TEL='+54 9 3417 82-4155';
 
-const head=(title,desc,canonical,depth)=>{const r=depth?'../':'';const h=depth?'../index.html':'';return `<!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+const head=(title,desc,canonical,depth,jsonld)=>{const r=depth?'../':'';const h=depth?'../index.html':'';return `<!DOCTYPE html>
+<html lang="es-AR" class="scroll-smooth">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <meta name="author" content="Branco Blunda">
-<meta name="theme-color" content="#10b981">
-<title>${esc(title)}</title>
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#111827">
 <link rel="canonical" href="${canonical}">
 <link rel="icon" type="image/svg+xml" href="${r}favicon.svg">
 <link rel="icon" type="image/png" sizes="256x256" href="${r}favicon.png">
 <link rel="apple-touch-icon" href="${r}apple-touch-icon.png">
-<meta property="og:type" content="website">
+<meta property="og:type" content="${depth?'article':'website'}">
+<meta property="og:site_name" content="Branco Blunda">
+<meta property="og:locale" content="es_AR">
 <meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
-<meta property="og:image" content="${SITE}/assets/images/foto.webp">
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="${esc(title)}">
-<meta property="twitter:description" content="${esc(desc)}">
-<meta property="twitter:image" content="${SITE}/assets/images/foto.webp">
+<meta property="og:image" content="${SITE}/assets/images/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(desc)}">
+<meta name="twitter:image" content="${SITE}/assets/images/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${r}css/styles.css?v=${VCSS}">
+<script type="application/ld+json">${JSON.stringify(jsonld)}</script>
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans">
+
+<a class="skip" href="#main">Ir al contenido</a>
 
 <nav class="fixed top-0 w-full bg-gray-900 bg-opacity-95 backdrop-blur-md z-50 border-b border-gray-800">
   <div class="container mx-auto px-6 py-4">
@@ -268,7 +296,7 @@ const head=(title,desc,canonical,depth)=>{const r=depth?'../':'';const h=depth?'
         <a href="${h}#opiniones" class="nav-link">Opiniones</a>
         <a href="${h}#contacto" class="nav-link nav-cta">Contame tu proyecto</a>
       </div>
-      <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><i class="fas fa-bars"></i></button>
     </div>
     <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-4">
       <a href="${h}#portafolio" class="block nav-link-mobile">Proyectos</a>
@@ -277,9 +305,27 @@ const head=(title,desc,canonical,depth)=>{const r=depth?'../':'';const h=depth?'
       <a href="${h}#contacto" class="block nav-link-mobile">Contame tu proyecto</a>
     </div>
   </div>
-</nav>`;};
+</nav>
+<main id="main">`;};
+
+/* dimensiones: dims.json para webp; lector propio para png/jpg */
+const DIMS=(()=>{try{return JSON.parse(fs.readFileSync('assets/proyectos/dims.json','utf8'));}catch(e){return {};}})();
+const imgSize=f=>{const k=f.replace(/\\/g,'/');if(DIMS[k])return DIMS[k];try{const b=fs.readFileSync(f);
+ if(b[0]===0x89&&b[1]===0x50)return{w:b.readUInt32BE(16),h:b.readUInt32BE(20)};
+ if(b[0]===0xFF&&b[1]===0xD8){let i=2;while(i<b.length-9){if(b[i]!==0xFF){i++;continue;}const m=b[i+1];
+  if(m>=0xC0&&m<=0xCF&&m!==0xC4&&m!==0xC8&&m!==0xCC)return{h:b.readUInt16BE(i+5),w:b.readUInt16BE(i+7)};
+  i+=2+b.readUInt16BE(i+2);}}}catch(e){}return null;};
+
+/* imagen con placeholder si falta */
+const shot=(slug,file,alt,depth,cls,zoom)=>{const r=depth?'../':'';
+const rel='assets/proyectos/'+slug+'/'+file, d=imgSize(path.join('assets','proyectos',slug,file));
+const dim=d?` width="${d.w}" height="${d.h}"`:'';
+return `<img src="${r}${rel}" alt="${esc(alt)}" class="${cls}"${dim} loading="lazy" decoding="async"${zoom?' data-zoom="1"':''} data-file="${rel}" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">`;};
+const gitem=(slug,pair,depth)=>{const f=Array.isArray(pair)?pair[0]:pair, c=Array.isArray(pair)?pair[1]:'';
+return `<figure class="gitem"><div class="gitem-img">${shot(slug,f,c||'Captura',depth,'',true)}</div>${c?`<figcaption>${esc(c)}</figcaption>`:''}</figure>`;};
 
 const foot=depth=>{const r=depth?'../':'';return `
+</main>
 <footer class="py-12 px-6 bg-gray-800 bg-opacity-50 border-t border-gray-800">
   <div class="container mx-auto">
     <div class="flex flex-col md:flex-row justify-between items-center gap-6">
@@ -293,6 +339,7 @@ const foot=depth=>{const r=depth?'../':'';return `
       <div class="flex gap-6">
         <a href="${GITHUB}" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="GitHub"><i class="fab fa-github text-xl"></i></a>
         <a href="${LINKEDIN}" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="LinkedIn"><i class="fab fa-linkedin text-xl"></i></a>
+        <a href="${WORKANA}" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="Workana"><i class="fas fa-briefcase text-xl"></i></a>
         <a href="${WA}" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="WhatsApp"><i class="fab fa-whatsapp text-xl"></i></a>
         <a href="mailto:${MAIL}" class="social-icon-footer" aria-label="Email"><i class="fas fa-envelope text-xl"></i></a>
       </div>
@@ -312,22 +359,6 @@ const foot=depth=>{const r=depth?'../':'';return `
 </html>`;};
 
 
-/* dimensiones: dims.json para webp; lector propio para png/jpg */
-const DIMS=(()=>{try{return JSON.parse(fs.readFileSync('assets/proyectos/dims.json','utf8'));}catch(e){return {};}})();
-const imgSize=f=>{const k=f.replace(/\\/g,'/');if(DIMS[k])return DIMS[k];try{const b=fs.readFileSync(f);
- if(b[0]===0x89&&b[1]===0x50)return{w:b.readUInt32BE(16),h:b.readUInt32BE(20)};
- if(b[0]===0xFF&&b[1]===0xD8){let i=2;while(i<b.length-9){if(b[i]!==0xFF){i++;continue;}const m=b[i+1];
-  if(m>=0xC0&&m<=0xCF&&m!==0xC4&&m!==0xC8&&m!==0xCC)return{h:b.readUInt16BE(i+5),w:b.readUInt16BE(i+7)};
-  i+=2+b.readUInt16BE(i+2);}}}catch(e){}return null;};
-
-/* imagen con placeholder si falta */
-const shot=(slug,file,alt,depth,cls,zoom)=>{const r=depth?'../':'';
-const rel='assets/proyectos/'+slug+'/'+file, d=imgSize(path.join('assets','proyectos',slug,file));
-const dim=d?` width="${d.w}" height="${d.h}"`:'';
-return `<img src="${r}${rel}" alt="${esc(alt)}" class="${cls}"${dim} loading="lazy" decoding="async"${zoom?' data-zoom="1"':''} data-file="${rel}" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">`;};
-const gitem=(slug,pair,depth)=>{const f=Array.isArray(pair)?pair[0]:pair, c=Array.isArray(pair)?pair[1]:'';
-return `<figure class="gitem"><div class="gitem-img">${shot(slug,f,c||'Captura',depth,'',true)}</div>${c?`<figcaption>${esc(c)}</figcaption>`:''}</figure>`;};
-
 /* ---------- servicios ---------- */
 const SERVICIOS=[
 ['fas fa-robot','from-green-400 to-cyan-500','Agentes de IA y automatización',
@@ -341,9 +372,28 @@ const SERVICIOS=[
  ['Flutter y Android nativo','Publicación en Google Play y App Store','Migración de apps heredadas']]];
 
 /* ---------- index ---------- */
-let idx=head('Branco Blunda | Software Engineer & AI Specialist',
- 'Software Engineer. Construyo sistemas que llegan a produccion: agentes de voz y de WhatsApp, SaaS multi-tenant y apps moviles publicadas.',
- SITE+'/',0);
+const LD_HOME={'@context':'https://schema.org','@graph':[
+{'@type':'Person','@id':SITE+'/#branco','name':'Branco Blunda','jobTitle':'Software Engineer',
+ 'url':SITE+'/','image':SITE+'/assets/images/foto.webp','email':'mailto:'+MAIL,'telephone':'+5493417824155',
+ 'address':{'@type':'PostalAddress','addressLocality':'Rosario','addressRegion':'Santa Fe','addressCountry':'AR'},
+ 'sameAs':[GITHUB,LINKEDIN,WORKANA,'https://somosvertical.ar'],
+ 'knowsAbout':['Inteligencia artificial','Agentes conversacionales','WhatsApp Business API','SaaS multi-tenant','Node.js','Python','TypeScript','React','Next.js','NestJS','Flutter','PostgreSQL','AWS','Terraform'],
+ 'knowsLanguage':['es','en']},
+{'@type':'WebSite','@id':SITE+'/#web','url':SITE+'/','name':'Branco Blunda — Software Engineer',
+ 'inLanguage':'es-AR','publisher':{'@id':SITE+'/#branco'}},
+{'@type':'ProfessionalService','@id':SITE+'/#servicio','name':'Branco Blunda — Desarrollo de software a medida',
+ 'url':SITE+'/','image':SITE+'/assets/images/og.png','priceRange':'$$','telephone':'+5493417824155',
+ 'founder':{'@id':SITE+'/#branco'},
+ 'address':{'@type':'PostalAddress','addressLocality':'Rosario','addressCountry':'AR'},
+ 'areaServed':['AR','ES','MX','CO','US'],
+ 'description':'Desarrollo de software a medida: agentes de voz y de WhatsApp con IA, SaaS multi-empresa, apps móviles publicadas y automatización de procesos.',
+ 'hasOfferCatalog':{'@type':'OfferCatalog','name':'Servicios','itemListElement':SERVICIOS.map(x=>({'@type':'Offer','itemOffered':{'@type':'Service','name':x[2],'description':x[3]}}))}},
+{'@type':'ItemList','name':'Proyectos','itemListElement':PROJECTS.map((pr,i)=>({'@type':'ListItem','position':i+1,'url':SITE+'/proyectos/'+pr.slug+'.html','name':pr.title}))}
+]};
+
+let idx=head('Branco Blunda | Software Engineer — Agentes de IA, SaaS y apps a medida',
+ 'Software Engineer en Rosario. Construyo agentes de voz y de WhatsApp con IA, SaaS multi-empresa y apps publicadas. 55+ proyectos entregados, 30+ reseñas de clientes.',
+ SITE+'/',0,LD_HOME);
 
 idx+=`
 <section id="inicio" class="min-h-screen flex items-center justify-center pt-24 pb-16">
@@ -364,7 +414,7 @@ idx+=`
           <a href="#portafolio" class="btn-primary"><i class="fas fa-folder-open mr-2"></i>Ver lo que construí</a>
           <a href="${WA}?text=Hola%20Branco,%20te%20escribo%20por%20un%20proyecto" target="_blank" rel="noopener" class="btn-secondary"><i class="fab fa-whatsapp mr-2"></i>Contame tu proyecto</a>
         </div>
-        <p class="trust-line"><i class="fas fa-star"></i> 25 reseñas de clientes en Workana · #1 en Argentina · 55+ proyectos como freelancer</p>
+        <p class="trust-line"><i class="fas fa-star"></i> 30+ reseñas de clientes en Workana · #1 en Argentina</p>
         <div class="flex gap-6 mt-10 justify-center md:justify-start">
           <a href="${GITHUB}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fab fa-github text-2xl"></i></a>
           <a href="${LINKEDIN}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin text-2xl"></i></a>
@@ -385,6 +435,7 @@ idx+=`
 <section class="px-6 pb-16">
   <div class="container mx-auto">
     <div class="proof-bar">
+      <div><strong>55+</strong><span>proyectos entregados como freelancer</span></div>
       <div><strong>4</strong><span>apps publicadas en Google&nbsp;Play y App&nbsp;Store</span></div>
       <div><strong>8.900+</strong><span>usuarios en 177 países en una sola app</span></div>
       <div><strong>50.000</strong><span>llamadas por mes atendidas por un sistema que construí</span></div>
@@ -459,7 +510,7 @@ idx+=`
       </figure>`).join('')}
     </div>
     <div class="text-center mt-10">
-      <a href="${WORKANA}" target="_blank" rel="noopener" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>Ver las 25 reseñas en Workana</a>
+      <a href="${WORKANA}" target="_blank" rel="noopener" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>Ver todas las reseñas en Workana</a>
     </div>
   </div>
 </section>
@@ -525,17 +576,28 @@ idx+=`
           </div>
         </div>
       </div>
-      <div class="glass-card p-8 bg-gradient-to-br from-green-500 to-blue-600 bg-opacity-10">
-        <h3 class="text-2xl font-bold mb-4">¿Empezamos?</h3>
-        <p class="text-gray-300 mb-6">Contame el problema y te devuelvo una propuesta concreta en menos de 24 horas.</p>
-        <ul class="space-y-3 mb-8">
-          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i><span>Primera charla sin costo</span></li>
-          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i><span>Alcance y presupuesto por escrito</span></li>
-        </ul>
-        <a href="${WA}?text=Hola%20Branco,%20te%20escribo%20por%20un%20proyecto" target="_blank" rel="noopener"
-           class="inline-block w-full text-center px-8 py-4 bg-white text-gray-900 rounded-lg font-bold hover:bg-gray-100 transition">
-          <i class="fab fa-whatsapp mr-2"></i> Escribime por WhatsApp
-        </a>
+      <div class="glass-card p-8">
+        <h3 class="text-2xl font-bold mb-2">Contame tu proyecto</h3>
+        <p class="text-gray-400 mb-6 text-sm">Te respondo en menos de 24 horas. Sin compromiso.</p>
+        <form class="form-contacto" action="https://formsubmit.co/${MAIL}" method="POST">
+          <input type="hidden" name="_subject" value="Nueva consulta desde brancoblunda.github.io">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="${SITE}/gracias.html">
+          <input type="text" name="_honey" style="display:none">
+          <label>Tu nombre
+            <input type="text" name="nombre" required autocomplete="name" placeholder="Cómo te llamás">
+          </label>
+          <label>Email o WhatsApp
+            <input type="text" name="contacto" required placeholder="Por dónde te respondo">
+          </label>
+          <label>Qué necesitás
+            <textarea name="mensaje" rows="4" required placeholder="Contame el problema en dos líneas. No hace falta que sepas cómo se resuelve."></textarea>
+          </label>
+          <button type="submit" class="btn-primary w-full"><i class="fas fa-paper-plane mr-2"></i>Enviar</button>
+        </form>
+        <p class="form-alt">¿Preferís hablar directo? <a href="${WA}?text=Hola%20Branco,%20te%20escribo%20por%20un%20proyecto" target="_blank" rel="noopener">Escribime por WhatsApp</a></p>
+      </div>
       </div>
     </div>
   </div>
@@ -547,7 +609,17 @@ fs.writeFileSync('index.html',idx);
 /* ---------- paginas de caso ---------- */
 if(!fs.existsSync('proyectos'))fs.mkdirSync('proyectos');
 PROJECTS.forEach(p=>{
-let h=head(p.title+' | Branco Blunda',p.desc.slice(0,155),SITE+'/proyectos/'+p.slug+'.html',1);
+const url=SITE+'/proyectos/'+p.slug+'.html';
+const LD={'@context':'https://schema.org','@graph':[
+{'@type':'CreativeWork','@id':url+'#caso','name':p.title,'url':url,'description':p.desc,
+ 'image':SITE+'/assets/proyectos/'+p.slug+'/'+p.cover,
+ 'creator':{'@type':'Person','name':'Branco Blunda','url':SITE+'/'},
+ 'about':p.tech.split(' · '),'inLanguage':'es-AR'},
+{'@type':'BreadcrumbList','itemListElement':[
+ {'@type':'ListItem','position':1,'name':'Inicio','item':SITE+'/'},
+ {'@type':'ListItem','position':2,'name':'Proyectos','item':SITE+'/#portafolio'},
+ {'@type':'ListItem','position':3,'name':p.title,'item':url}]}]};
+let h=head(p.title+' — '+p.cliente+' | Branco Blunda',p.desc.slice(0,155),url,1,LD);
 h+=`
 <section class="case-hero px-6">
   <div class="container mx-auto max-w-5xl">
@@ -591,6 +663,11 @@ h+=`
       <div>
         <h2 class="case-h2 text-green-400">El problema</h2>
         <p class="case-p">${esc(p.problema)}</p>
+        <div class="ba">
+          <div class="ba-antes"><span>Antes</span><p>${esc(p.antes)}</p></div>
+          <div class="ba-flecha"><i class="fas fa-arrow-right"></i></div>
+          <div class="ba-despues"><span>Después</span><p>${esc(p.despues)}</p></div>
+        </div>
       </div>
       <div>
         <h2 class="case-h2 text-blue-400">Lo que construí</h2>
@@ -629,4 +706,37 @@ h+=`
 </section>`;
 h+=foot(1);
 fs.writeFileSync(path.join('proyectos',p.slug+'.html'),h);});
+
+/* ---------- SEO: sitemap, robots, gracias y 404 ---------- */
+const hoy=new Date().toISOString().slice(0,10);
+const urls=[{u:SITE+'/',p:'1.0'}].concat(PROJECTS.map(p=>({u:SITE+'/proyectos/'+p.slug+'.html',p:'0.8'})));
+fs.writeFileSync('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+
+ urls.map(x=>`  <url><loc>${x.u}</loc><lastmod>${hoy}</lastmod><changefreq>monthly</changefreq><priority>${x.p}</priority></url>`).join('\n')+'\n</urlset>\n');
+fs.writeFileSync('robots.txt',`User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
+
+const simple=(titulo,cuerpo,file)=>{
+ let g=head(titulo+' | Branco Blunda',titulo,SITE+'/'+file,0,{'@context':'https://schema.org','@type':'WebPage','name':titulo});
+ g=g.replace('<meta name="robots" content="index, follow, max-image-preview:large">','<meta name="robots" content="noindex, follow">');
+ g+=`<section class="pt-40 pb-32 px-6 text-center"><div class="container mx-auto max-w-2xl">${cuerpo}</div></section>`;
+ g+=foot(0); fs.writeFileSync(file,g);};
+
+simple('Mensaje enviado',`
+ <div class="ok-icon"><i class="fas fa-check"></i></div>
+ <h1 class="section-title" style="margin-bottom:1rem">Listo, me llegó</h1>
+ <p class="text-gray-400 text-lg mb-8">Te respondo en menos de 24 horas. Si es urgente, escribime por WhatsApp y lo vemos ahora.</p>
+ <div class="flex flex-col sm:flex-row gap-4 justify-center">
+   <a href="${WA}" target="_blank" rel="noopener" class="btn-primary"><i class="fab fa-whatsapp mr-2"></i>Escribime por WhatsApp</a>
+   <a href="index.html" class="btn-secondary"><i class="fas fa-arrow-left mr-2"></i>Volver al inicio</a>
+ </div>`,'gracias.html');
+
+simple('Página no encontrada',`
+ <p class="mono" style="color:var(--primary-green);font-size:.8rem;letter-spacing:.15em">ERROR 404</p>
+ <h1 class="section-title" style="margin:1rem 0">Esta página no existe</h1>
+ <p class="text-gray-400 text-lg mb-8">Puede que el link esté viejo. Los proyectos están todos acá.</p>
+ <div class="flex flex-col sm:flex-row gap-4 justify-center">
+   <a href="index.html#portafolio" class="btn-primary"><i class="fas fa-folder-open mr-2"></i>Ver los proyectos</a>
+   <a href="index.html" class="btn-secondary"><i class="fas fa-arrow-left mr-2"></i>Ir al inicio</a>
+ </div>`,'404.html');
+console.log('  + sitemap.xml, robots.txt, gracias.html, 404.html');
+
 console.log('OK — index.html + '+PROJECTS.length+' paginas de caso');
