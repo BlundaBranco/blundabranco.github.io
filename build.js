@@ -145,18 +145,18 @@ PROJECTS.push(
 {slug:'vertical',title:'Vertical',cliente:'Producto propio',pais:'Argentina',
  rol:'Fundador · producto, arquitectura y operación',estado:'Activo, con clientes',
  tag:'Agentes de WhatsApp · Meta Cloud API',
- desc:'Mi propia plataforma: agentes conversacionales con IA y CRM para inmobiliarias, sobre la API oficial de WhatsApp. Califica leads, hace seguimiento y reactiva contactos las 24 horas. Proveedor de tecnología verificado por Meta.',
+ desc:'Mi propia plataforma: agentes conversacionales con IA y CRM para inmobiliarias, sobre la API oficial de WhatsApp. Califica leads, hace seguimiento y reactiva contactos las 24 horas. Negocio verificado por Meta, con plantillas aprobadas por WhatsApp.',
  problema:'Una inmobiliaria recibe consultas a toda hora y responde cuando puede. El contacto que no recibe respuesta en minutos se enfría, y después nadie tiene tiempo de reactivarlo.',
  construido:['Agente conversacional que califica al contacto durante la charla, sobre la API oficial de WhatsApp.',
  'CRM propio donde queda el historial y el estado de cada contacto.',
  'Seguimiento y reactivación automáticos.',
  'Configuración del comportamiento del agente por cliente.',
  'Infraestructura y operación diaria de la plataforma.'],
- stats:[['Meta','proveedor verificado'],['24/7','atención']],
+ stats:[['Meta','negocio verificado'],['24/7','atención']],
  tech:'Meta WhatsApp Cloud API · modelos de lenguaje con uso de herramientas · Python',
  links:[['Sitio','https://somosvertical.ar']],
  cover:'02-bandeja-chat.png',
- shots:[['02-bandeja-chat.png','La bandeja: el agente conversa por WhatsApp y va dejando arriba lo que averiguó — intención, presupuesto, zona y, si se cae, el motivo.'],['03-etapas-crm.png','El CRM por etapas, de lead frío a cerrado. Cada contacto se mueve solo según cómo va la conversación.'],['04-ficha-contacto.png','La ficha del contacto: lo que contó, cuántas veces se lo siguió, cómo terminó y la nota del vendedor.'],['05-seguimiento.png','El seguimiento automático: a las 20 horas, al día 3 y al día 6, con plantillas aprobadas por WhatsApp. Si contesta, se corta solo.'],['06-reactivacion.png','La reactivación de contactos viejos, con tope diario y baja automática. Si WhatsApp baja la calidad del número, se frena sola.'],['01-web-home.png','El sitio de Vertical.']],
+ shots:[['02-bandeja-chat.png','La bandeja: el agente conversa por WhatsApp y va dejando arriba lo que averiguó — intención, presupuesto, zona y, si se cae, el motivo.'],['03-etapas-crm.png','El CRM por etapas, de lead frío a cerrado. Cada contacto se mueve solo según cómo va la conversación.'],['04-ficha-contacto.png','La ficha del contacto: lo que contó, cuántas veces se lo siguió, cómo terminó y la nota del vendedor.'],['05-seguimiento.png','El seguimiento automático: a las 20 horas, al día 3 y al día 6, con plantillas aprobadas por WhatsApp. Si contesta, se corta solo.'],['06-reactivacion.png','La reactivación de contactos viejos, con tope diario y baja automática. Si WhatsApp baja la calidad del número, se frena sola.'],['07-meta-verificado.png','La verificación del negocio en Meta, requisito para operar sobre la API oficial de WhatsApp.'],['01-web-home.png','El sitio de Vertical.']],
  nota:''},
 
 {slug:'deltan-scan',title:'Deltan Scan IA',cliente:'Carlos Vargas',pais:'Latinoamérica',
@@ -174,7 +174,7 @@ PROJECTS.push(
  tech:'Python · OpenCV · YOLOv8 · Streamlit',
  links:[['Código','https://github.com/BlundaBranco/Deltan-Scan-AI']],
  cover:'01-analisis-medicion.png',
- shots:[['01-analisis-medicion.png','La radiografía analizada: cada pieza detectada y medida, con ancho, alto, corona, raíz y el nivel de confianza de cada medición.'],['02-reparos-anatomicos.png','Los reparos anatómicos marcados sobre la placa: cóndilos, senos maxilares y conducto mandibular.'],['03-app-carga.png','La carga del estudio y las herramientas de marcado manual, para corregir o completar lo que detecta el modelo.']],
+ shots:[['01-analisis-medicion.png','La radiografía analizada: cada pieza detectada y medida — ancho, alto, corona y raíz — con el nivel de confianza, los reparos anatómicos marcados y la calibración de píxeles a milímetros.']],
  nota:''});
 
 const OTHERS=[
@@ -371,7 +371,7 @@ idx+=`
       <div><strong>#1</strong><span>Workana Argentina 2026</span></div>
       <div><strong>4</strong><span>apps en tiendas</span></div>
       <div><strong>8.900+</strong><span>usuarios</span></div>
-      <div><strong>Meta</strong><span>proveedor verificado</span></div>
+      <div><strong>Meta</strong><span>negocio verificado</span></div>
     </div>
   </div>
 </section>
