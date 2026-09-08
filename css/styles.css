@@ -1147,3 +1147,45 @@ footer .brand-logo { height: 34px; }
 @media (max-width: 400px) { .btn-primary, .btn-secondary { white-space: normal; } }
 
 @media (max-width: 768px) { .hero-grid { gap: 1.1rem; } .hero-txt > h1 { margin-bottom: .5rem; } }
+
+
+/* stack en filas: ocupa 4 veces menos y se lee de un vistazo */
+.stack-rows { margin: 0; }
+.stack-rows > div {
+    display: grid; grid-template-columns: 190px 1fr; gap: 1.5rem;
+    padding: 1.1rem 0; border-top: 1px solid var(--glass-border);
+}
+.stack-rows > div:last-child { border-bottom: 1px solid var(--glass-border); }
+.stack-rows dt {
+    font-family: 'JetBrains Mono', monospace; font-size: .74rem;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--primary-green);
+    padding-top: 5px;
+}
+.stack-rows dd { margin: 0; display: flex; flex-wrap: wrap; gap: .45rem; }
+.stack-rows dd span {
+    padding: 4px 11px; border-radius: 7px; font-size: .82rem;
+    color: #cbd5e1; background: var(--glass-bg); border: 1px solid var(--glass-border);
+}
+@media (max-width: 700px) {
+    .stack-rows > div { grid-template-columns: 1fr; gap: .65rem; padding: .95rem 0; }
+    .stack-rows dt { padding-top: 0; }
+    .stack-rows dd span { font-size: .76rem; padding: 3px 9px; }
+}
+
+/* aparición al scrollear, con red de seguridad: si el observer falla, se ve igual */
+.anim { opacity: 0; transform: translateY(22px); }
+.js-anim .anim { transition: opacity .55s cubic-bezier(.16,1,.3,1), transform .55s cubic-bezier(.16,1,.3,1); }
+.anim.in, .no-anim .anim { opacity: 1; transform: none; }
+.anim.d1 { transition-delay: .07s; } .anim.d2 { transition-delay: .14s; }
+.anim.d3 { transition-delay: .21s; } .anim.d4 { transition-delay: .28s; }
+@media (prefers-reduced-motion: reduce) { .anim { opacity: 1 !important; transform: none !important; } }
+
+/* microinteracciones */
+.project-card { transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .35s ease, box-shadow .35s ease; }
+.project-card:hover { transform: translateY(-6px); border-color: rgba(16,185,129,.35); box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+.service-card { transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .35s ease; }
+.service-card:hover { transform: translateY(-4px); }
+.btn-primary, .btn-secondary { transition: transform .2s ease, box-shadow .25s ease, background .25s ease; }
+.btn-primary:active, .btn-secondary:active { transform: scale(.97); }
+.proof-bar > div strong { transition: transform .3s ease; display: block; }
+.proof-bar > div:hover strong { transform: scale(1.06); }

@@ -190,10 +190,10 @@ const OTHERS=[
 ['25 trabajos con reseña pública','Varios países','Bots de WhatsApp, aulas virtuales, tiendas, tableros y frontends. Verificables en Workana.']];
 
 const METHOD=[
-['Arquitectura primero','Defino qué se construye y qué no antes de escribir código.'],
-['Entregas por hitos','El cliente ve algo andando temprano y seguido.'],
-['Tests como condición','Un hito no está entregado si no está cubierto.'],
-['Desarrollo con IA','Agentes de código sobre especificaciones. El criterio sigue siendo mío.']];
+['Primero el alcance','Antes de escribir código dejamos por escrito qué entra y qué no. Sin sorpresas después.'],
+['Ves avances desde la semana 1','Entrego por hitos. No desaparezco dos meses para volver con algo que no era.'],
+['Tests como condición de entrega','Un hito no está entregado si no está cubierto. Por eso los sistemas siguen andando años después.'],
+['Todo queda a tu nombre','Código, cuentas, dominios e infraestructura. No quedás atado a mí.']];
 
 const STACK=[
 ['Lenguajes','Python|TypeScript|SQL|Dart|C#'],
@@ -364,7 +364,7 @@ idx+=`
           <a href="#portafolio" class="btn-primary"><i class="fas fa-folder-open mr-2"></i>Ver lo que construí</a>
           <a href="${WA}?text=Hola%20Branco,%20te%20escribo%20por%20un%20proyecto" target="_blank" rel="noopener" class="btn-secondary"><i class="fab fa-whatsapp mr-2"></i>Contame tu proyecto</a>
         </div>
-        <p class="trust-line"><i class="fas fa-star"></i> 25 reseñas en Workana · #1 en Argentina · 55+ proyectos</p>
+        <p class="trust-line"><i class="fas fa-star"></i> 25 reseñas de clientes en Workana · #1 en Argentina · 55+ proyectos como freelancer</p>
         <div class="flex gap-6 mt-10 justify-center md:justify-start">
           <a href="${GITHUB}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fab fa-github text-2xl"></i></a>
           <a href="${LINKEDIN}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin text-2xl"></i></a>
@@ -385,11 +385,9 @@ idx+=`
 <section class="px-6 pb-16">
   <div class="container mx-auto">
     <div class="proof-bar">
-      <div><strong>55+</strong><span>proyectos entregados</span></div>
-      <div><strong>25</strong><span>reseñas de clientes en Workana</span></div>
-      <div><strong>#1</strong><span>Workana Argentina 2026</span></div>
-      <div><strong>4</strong><span>apps publicadas en tiendas</span></div>
-      <div><strong>8.900+</strong><span>usuarios de una sola app</span></div>
+      <div><strong>4</strong><span>apps publicadas en Google&nbsp;Play y App&nbsp;Store</span></div>
+      <div><strong>8.900+</strong><span>usuarios en 177 países en una sola app</span></div>
+      <div><strong>50.000</strong><span>llamadas por mes atendidas por un sistema que construí</span></div>
       <div><strong>Meta</strong><span>proveedor de tecnología verificado</span></div>
     </div>
   </div>
@@ -398,8 +396,8 @@ idx+=`
 <section id="portafolio" class="py-20 px-6">
   <div class="container mx-auto">
     <div class="text-center mb-16">
-      <h2 class="section-title">Proyectos destacados</h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Nueve de más de cincuenta. Entrá a cualquiera y vas a ver qué problema resolvía, qué construí y capturas del sistema andando. Los que son públicos tienen el link.</p>
+      <h2 class="section-title">Trabajo</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Nueve de más de cincuenta. Todos en producción, con capturas del sistema real.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
       ${PROJECTS.map(p=>`<div class="project-card">
@@ -432,8 +430,8 @@ idx+=`
 <section id="servicios" class="py-20 px-6 bg-gray-800 bg-opacity-50">
   <div class="container mx-auto">
     <div class="text-center mb-16">
-      <h2 class="section-title">Qué hago</h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Para negocios que viven del WhatsApp o del teléfono, empresas que todavía operan en Excel y equipos que necesitan una app publicada. Software que resuelve un problema concreto y queda funcionando.</p>
+      <h2 class="section-title">En qué te puedo ayudar</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Tres cosas, y las tres las tengo funcionando hoy para clientes que pagan.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       ${SERVICIOS.map(s=>`<div class="service-card">
@@ -451,7 +449,7 @@ idx+=`
   <div class="container mx-auto max-w-5xl">
     <div class="text-center mb-12">
       <h2 class="section-title">Lo que dicen los clientes</h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Reseñas públicas en Workana. Tres de esos clientes me volvieron a contratar.</p>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Reseñas públicas, con nombre y proyecto. Cualquiera las puede verificar.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       ${TESTIMONIOS.map(t=>`<figure class="testi glass-card">
@@ -472,7 +470,7 @@ idx+=`
   <div class="container mx-auto">
     <div class="text-center mb-16">
       <h2 class="section-title">Cómo trabajo</h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Sin sorpresas: se define, se entrega por partes y se prueba.</p>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Lo que suele salir mal en un proyecto de software, y cómo lo evito.</p>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
       ${METHOD.map((m,i)=>`<div class="glass-card p-6">
@@ -484,16 +482,15 @@ idx+=`
   </div>
 </section>
 
-<section id="tecnologias" class="py-20 px-6">
-  <div class="container mx-auto">
-    <div class="text-center mb-16">
-      <h2 class="section-title">Stack tecnológico</h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Lo que uso todos los días para construir y sostener estos sistemas.</p>
+<section id="tecnologias" class="py-16 px-6">
+  <div class="container mx-auto max-w-5xl">
+    <div class="text-center mb-10">
+      <h2 class="section-title">Stack</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">Elijo la herramienta según el problema, no al revés.</p>
     </div>
-    ${STACK.map((s,i)=>`<div class="mb-10">
-      <h3 class="text-xl font-bold mb-5 text-center ${['text-green-400','text-blue-400','text-purple-400'][i%3]}">${esc(s[0])}</h3>
-      <div class="flex flex-wrap justify-center gap-4">${s[1].split('|').map(c=>`<span class="tech-badge">${esc(c)}</span>`).join('')}</div>
-    </div>`).join('')}
+    <dl class="stack-rows">
+      ${STACK.map(g=>`<div><dt>${esc(g[0])}</dt><dd>${g[1].split('|').map(x=>`<span>${esc(x)}</span>`).join('')}</dd></div>`).join('')}
+    </dl>
   </div>
 </section>
 

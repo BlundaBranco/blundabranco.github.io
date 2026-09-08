@@ -117,6 +117,36 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && box.classList.contains('open')) close(); });
   }
 
+  // Aparición al scrollear. Regla: si algo falla, todo se ve igual.
+  (function () {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || !('IntersectionObserver' in window)) { document.documentElement.classList.add('no-anim'); return; }
+    var sel = '.project-card, .service-card, .glass-card, .testi, .proof-bar > div, .stack-rows > div, .section-title, .carousel, .case-list li, .case-kpis li';
+    var els = Array.prototype.slice.call(document.querySelectorAll(sel));
+    if (!els.length) return;
+    document.documentElement.classList.add('js-anim');
+    els.forEach(function (el, k) {
+      el.classList.add('anim');
+      var sib = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+      if (sib > 0 && sib < 5) el.classList.add('d' + sib);
+    });
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); obs.unobserve(en.target); }
+      });
+    }, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function (el) { obs.observe(el); });
+    // red de seguridad: pase lo que pase, a los 2,5 s se ve todo
+    setTimeout(function () { document.documentElement.classList.add('no-anim'); }, 2500);
+    // lo que ya está en pantalla al cargar, sin esperar
+    requestAnimationFrame(function () {
+      els.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight && r.bottom > 0) el.classList.add('in');
+      });
+    });
+  })();
+
   // Carrusel de capturas
   document.querySelectorAll('[data-carousel]').forEach(function (car) {
     var slides = car.querySelectorAll('.carousel-slide');
