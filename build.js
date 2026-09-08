@@ -61,7 +61,7 @@ const PROJECTS=[
  stats:[['8.900+','usuarios registrados'],['177','países'],['0','registros perdidos en la migración']],
  tech:'Flutter / Dart · Kotlin con OpenCV y ML Kit · ASP.NET Core · SQL Server · Azure Document Intelligence · OpenAI · DigitalOcean · Docker · Codemagic',
  links:[['Google Play','https://play.google.com/store/apps/details?id=com.infinitybook.infinitybook']],
- cover:'01-app-escaneo.png',
+ cover:'05-app-store.png',
  shots:[['01-app-escaneo.png','La cámara detectando la hoja del cuaderno para escanearla.'],['02-app-nuevo-escaneo.png','El escaneo listo, con el módulo de IA: transcripción del documento, resumen inteligente y resolución de matemática.'],['03-cloud-destinos.png','Las integraciones en la nube: Google Drive, Dropbox, OneNote, OneDrive, correo y Trello.'],['04-cloud-configurado.png','Cada uno de los seis íconos impresos en la hoja se asocia a un destino: el usuario marca el ícono y el escaneo se guarda solo donde corresponde.'],['05-app-store.png','La app publicada en la App Store bajo la cuenta del cliente.']],
  nota:''},
 
@@ -217,7 +217,7 @@ const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'
 const YEAR=new Date().getFullYear();
 const WA='https://wa.me/5493412714751';
 
-const head=(title,desc,canonical,depth)=>{const r=depth?'../':'';const h=depth?'index.html':'';return `<!DOCTYPE html>
+const head=(title,desc,canonical,depth)=>{const r=depth?'../':'';const h=depth?'../index.html':'';return `<!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
 <meta charset="UTF-8">
