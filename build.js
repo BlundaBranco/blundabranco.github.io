@@ -195,12 +195,9 @@ const METHOD=[
 
 const STACK=[
 ['Lenguajes','Python|TypeScript|SQL|Dart|C#'],
-['Backend','Node.js|NestJS|FastAPI|ASP.NET Core|Laravel'],
-['Frontend','React|Next.js|Angular|Flutter|Astro|Tailwind'],
-['Datos','PostgreSQL|MySQL|SQL Server|Supabase|Prisma'],
-['Infra','AWS|Terraform|Docker|Vercel|Netlify|CI/CD'],
-['IA','LLMs con herramientas|Agentes en producción|Whisper|TTS|OpenCV'],
-['Integraciones','WhatsApp Cloud API|Google Maps|Mercado Pago|Twilio|Asterisk|n8n']];
+['Backend y frontend','Node.js|NestJS|FastAPI|ASP.NET Core|Laravel|React|Next.js|Angular|Flutter|Astro|Tailwind'],
+['Datos e infraestructura','PostgreSQL|MySQL|SQL Server|Supabase|Prisma|AWS|Terraform|Docker|Vercel|CI/CD'],
+['IA e integraciones','LLMs con herramientas|Agentes en producción|Whisper|TTS|OpenCV|WhatsApp Cloud API|Google Maps|Mercado Pago|Twilio|Asterisk|n8n']];
 
 
 const SHORT={
@@ -220,7 +217,7 @@ const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'
 const YEAR=new Date().getFullYear();
 const WA='https://wa.me/5493412714751';
 
-const head=(title,desc,canonical,depth)=>{const r=depth?'../':'';return `<!DOCTYPE html>
+const head=(title,desc,canonical,depth)=>{const r=depth?'../':'';const h=depth?'index.html':'';return `<!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
 <meta charset="UTF-8">
@@ -257,20 +254,20 @@ const head=(title,desc,canonical,depth)=>{const r=depth?'../':'';return `<!DOCTY
         <span class="text-xl font-bold">Branco Blunda</span>
       </a>
       <div class="hidden md:flex space-x-8">
-        <a href="${r}index.html#inicio" class="nav-link">Inicio</a>
-        <a href="${r}index.html#servicios" class="nav-link">Servicios</a>
-        <a href="${r}index.html#portafolio" class="nav-link">Portafolio</a>
-        <a href="${r}index.html#tecnologias" class="nav-link">Stack</a>
-        <a href="${r}index.html#contacto" class="nav-link">Contacto</a>
+        <a href="${h}#inicio" class="nav-link">Inicio</a>
+        <a href="${h}#servicios" class="nav-link">Servicios</a>
+        <a href="${h}#portafolio" class="nav-link">Portafolio</a>
+        <a href="${h}#tecnologias" class="nav-link">Stack</a>
+        <a href="${h}#contacto" class="nav-link">Contacto</a>
       </div>
       <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none" aria-label="Menu"><i class="fas fa-bars"></i></button>
     </div>
     <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-4">
-      <a href="${r}index.html#inicio" class="block nav-link-mobile">Inicio</a>
-      <a href="${r}index.html#servicios" class="block nav-link-mobile">Servicios</a>
-      <a href="${r}index.html#portafolio" class="block nav-link-mobile">Portafolio</a>
-      <a href="${r}index.html#tecnologias" class="block nav-link-mobile">Stack</a>
-      <a href="${r}index.html#contacto" class="block nav-link-mobile">Contacto</a>
+      <a href="${h}#inicio" class="block nav-link-mobile">Inicio</a>
+      <a href="${h}#servicios" class="block nav-link-mobile">Servicios</a>
+      <a href="${h}#portafolio" class="block nav-link-mobile">Portafolio</a>
+      <a href="${h}#tecnologias" class="block nav-link-mobile">Stack</a>
+      <a href="${h}#contacto" class="block nav-link-mobile">Contacto</a>
     </div>
   </div>
 </nav>`;};
@@ -304,23 +301,33 @@ const foot=depth=>{const r=depth?'../':'';return `
 </body>
 </html>`;};
 
+
+/* lee ancho/alto de PNG y JPEG sin dependencias, para reservar el espacio de cada imagen */
+const imgSize=f=>{try{const b=fs.readFileSync(f);
+ if(b[0]===0x89&&b[1]===0x50)return{w:b.readUInt32BE(16),h:b.readUInt32BE(20)};
+ if(b[0]===0xFF&&b[1]===0xD8){let i=2;while(i<b.length-9){if(b[i]!==0xFF){i++;continue;}const m=b[i+1];
+  if(m>=0xC0&&m<=0xCF&&m!==0xC4&&m!==0xC8&&m!==0xCC)return{h:b.readUInt16BE(i+5),w:b.readUInt16BE(i+7)};
+  i+=2+b.readUInt16BE(i+2);}}}catch(e){}return null;};
+
 /* imagen con placeholder si falta */
-const shot=(slug,file,alt,depth,cls)=>{const r=depth?'../':'';
-return `<img src="${r}assets/proyectos/${slug}/${file}" alt="${esc(alt)}" class="${cls}" loading="lazy" decoding="async" data-file="assets/proyectos/${slug}/${file}" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">`;};
+const shot=(slug,file,alt,depth,cls,zoom)=>{const r=depth?'../':'';
+const rel='assets/proyectos/'+slug+'/'+file, d=imgSize(path.join('assets','proyectos',slug,file));
+const dim=d?` width="${d.w}" height="${d.h}"`:'';
+return `<img src="${r}${rel}" alt="${esc(alt)}" class="${cls}"${dim} loading="lazy" decoding="async"${zoom?' data-zoom="1"':''} data-file="${rel}" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">`;};
 const gitem=(slug,pair,depth)=>{const f=Array.isArray(pair)?pair[0]:pair, c=Array.isArray(pair)?pair[1]:'';
-return `<figure class="gitem"><div class="gitem-img">${shot(slug,f,c||'Captura',depth,'')}</div>${c?`<figcaption>${esc(c)}</figcaption>`:''}</figure>`;};
+return `<figure class="gitem"><div class="gitem-img">${shot(slug,f,c||'Captura',depth,'',true)}</div>${c?`<figcaption>${esc(c)}</figcaption>`:''}</figure>`;};
 
 /* ---------- servicios ---------- */
 const SERVICIOS=[
 ['fas fa-robot','from-green-400 to-cyan-500','Agentes de IA y automatización',
- 'Sistemas que atienden, entienden y resuelven solos: voz por teléfono, WhatsApp y flujos internos. En producción, no en demo.',
- ['Agentes de voz sobre telefonía','Agentes de WhatsApp con API oficial','Automatización de procesos','LLMs con acceso a datos del negocio']],
+ 'Sistemas que atienden y resuelven solos, por teléfono o WhatsApp. En producción, no en demo.',
+ ['Agentes de voz sobre telefonía','Agentes de WhatsApp con API oficial','LLMs con acceso a los datos del negocio']],
 ['fas fa-layer-group','from-blue-500 to-purple-600','SaaS y plataformas a medida',
- 'Del problema al producto: arquitectura multi-empresa, paneles de operación, APIs e infraestructura que aguanta.',
- ['Arquitectura multi-tenant','Paneles y tableros de operación','APIs y motores de cálculo','AWS, Docker y CI/CD']],
+ 'Del problema al producto, con la infraestructura que lo sostiene.',
+ ['Arquitectura multi-empresa','Paneles y motores de cálculo','AWS, Docker y CI/CD']],
 ['fas fa-mobile-screen','from-yellow-400 to-orange-500','Apps móviles y publicación',
- 'Apps Android e iOS construidas, publicadas y mantenidas. Incluye la parte que nadie quiere hacer: tiendas, cuentas y migraciones.',
- ['Flutter y Android nativo','Publicación en Google Play y App Store','Migración de apps heredadas','Mantenimiento y versiones']]];
+ 'Apps construidas, publicadas y mantenidas. Incluida la parte que nadie quiere hacer: tiendas y cuentas.',
+ ['Flutter y Android nativo','Publicación en Google Play y App Store','Migración de apps heredadas']]];
 
 /* ---------- index ---------- */
 let idx=head('Branco Blunda | Software Engineer & AI Specialist',
@@ -397,9 +404,9 @@ idx+=`
   <div class="container mx-auto">
     <div class="text-center mb-16">
       <h2 class="section-title">Proyectos destacados</h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Ocho de más de cuarenta. Cada uno con el problema, lo que construí y capturas del sistema real.</p>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Nueve de más de cuarenta. Cada uno con el problema, lo que construí y capturas del sistema real.</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8">
       ${PROJECTS.map(p=>`<div class="project-card">
         <a href="proyectos/${p.slug}.html" class="project-image-container">
           ${shot(p.slug,p.cover,p.title,0,'project-image')}
@@ -434,7 +441,7 @@ idx+=`
       <h2 class="section-title">Cómo trabajo</h2>
       <p class="text-gray-400 text-lg max-w-2xl mx-auto">Sin sorpresas: se define, se entrega por partes y se prueba.</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
       ${METHOD.map((m,i)=>`<div class="glass-card p-6">
         <div class="text-3xl font-bold gradient-text mb-3">0${i+1}</div>
         <h3 class="text-lg font-bold mb-2">${esc(m[0])}</h3>
@@ -492,8 +499,7 @@ idx+=`
         <p class="text-gray-300 mb-6">Contame el problema y te devuelvo una propuesta concreta en menos de 24 horas.</p>
         <ul class="space-y-3 mb-8">
           <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i><span>Primera charla sin costo</span></li>
-          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i><span>Propuesta técnica y alcance por escrito</span></li>
-          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i><span>Entregas por hitos, ves avances desde el principio</span></li>
+          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i><span>Alcance y presupuesto por escrito</span></li>
         </ul>
         <a href="${WA}?text=Hola%20Branco,%20te%20escribo%20por%20un%20proyecto" target="_blank" rel="noopener"
            class="inline-block w-full text-center px-8 py-4 bg-white text-gray-900 rounded-lg font-bold hover:bg-gray-100 transition">

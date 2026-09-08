@@ -87,6 +87,36 @@
     });
   }
 
+  // Ampliar capturas (lightbox)
+  var zoomables = document.querySelectorAll('img[data-zoom]');
+  if (zoomables.length) {
+    var box = document.createElement('div');
+    box.className = 'lightbox';
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-modal', 'true');
+    box.innerHTML = '<button class="lightbox-close" aria-label="Cerrar">&times;</button><div class="lightbox-scroll"><img alt=""></div>';
+    document.body.appendChild(box);
+    var boxImg = box.querySelector('img');
+    function open(src, alt) {
+      boxImg.src = src; boxImg.alt = alt || '';
+      box.classList.add('open');
+      document.body.classList.add('lightbox-open');
+      document.body.style.overflow = 'hidden';
+    }
+    function close() {
+      box.classList.remove('open');
+      document.body.classList.remove('lightbox-open');
+      document.body.style.overflow = '';
+      setTimeout(function () { boxImg.removeAttribute('src'); }, 250);
+    }
+    zoomables.forEach(function (img) {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', function () { open(img.currentSrc || img.src, img.alt); });
+    });
+    box.addEventListener('click', function () { close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && box.classList.contains('open')) close(); });
+  }
+
   // Año actual
   var y = document.getElementById('current-year');
   if (y) y.textContent = new Date().getFullYear();
