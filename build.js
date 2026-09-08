@@ -104,6 +104,26 @@ PROJECTS.push(
  shots:[['03-cronograma-anual.png','El cronograma anual de compromisos regulatorios: 2.555 filas, filtrables por planta, tipo de reporte y estado.'],['10-roles-permisos.png','El control de acceso: nivel de permiso de cada rol sobre cada pantalla, de lectura y escritura a sin visibilidad.'],['04-matriz-servicios.png','La matriz de servicios: qué paquetes, módulos y submódulos aplican a cada planta.'],['01-planta-detalle.png','La ficha de una planta, con su información contractual, de gestión de activos y de soporte.'],['09-usuarios-roles.png','Usuarios internos con su rol y sus permisos de emisión y aprobación.']],
  nota:'Aplicación interna sobre red privada. Los datos de clientes, plantas y personas están difuminados en las capturas.'},
 
+{slug:'lomas-del-pacifico',title:'Lomas del Pacífico',cliente:'Desarrollador inmobiliario',pais:'México',
+ rol:'Diseño y construcción desde cero',estado:'En uso · mantenimiento continuo',
+ tag:'Laravel · MySQL · Cobranzas',
+ desc:'Sistema de cobranza para la venta de lotes en cuotas. Reemplazó planillas de Excel dispersas por un solo lugar donde vive el cliente, su lote, su plan de pago, cada cobro con folio y la mora calculada sola.',
+ problema:'La cobranza de lotes vendidos en cuotas se llevaba en planillas de Excel sueltas. Nadie sabía con certeza quién estaba al día, cuánto se debía ni desde cuándo, y cada recibo se armaba a mano.',
+ construido:['Alta, baja y modificación de clientes, lotes y loteos, con el estado de cada lote: disponible, vendido o liquidado.',
+ 'Planes de pago que generan las cuotas solos, en frecuencia mensual, bimestral o trimestral.',
+ 'Registro de cobros con folio único, pagos parciales y validación de sobrepago.',
+ 'Recibos y estados de cuenta en PDF.',
+ 'Interés por mora con tasa y días de gracia configurables, y condonación.',
+ 'Reportes de ingresos y de morosidad, con filtros y exportación a PDF.',
+ 'Comando de migración desde las planillas de Excel existentes, transaccional y con registro de errores.',
+ 'Avisos automáticos por WhatsApp: recordatorio de vencimiento y confirmación de pago, con su panel de configuración.'],
+ stats:[],
+ tech:'PHP 8.1 · Laravel 11 · Blade · Alpine.js · Tailwind · MySQL 8 · dompdf · PhpSpreadsheet · Twilio · Chart.js',
+ links:[],
+ cover:'02-plan-de-pagos.png',
+ shots:[['02-plan-de-pagos.png','Un plan de pago con sus cuotas generadas automáticamente.'],['01-clientes-lotes.png','Clientes y lotes, con el estado de cada lote.'],['03-recibo-pdf.png','El recibo con folio que emite el sistema.'],['04-reporte-morosidad.png','El reporte de morosidad, con la deuda y los días de atraso de cada cliente.']],
+ nota:'Sistema privado del cliente. Las capturas se toman sobre datos de prueba.'},
+
 {slug:'comanda-central',title:'Comanda Central',cliente:'Producto propio',pais:'Argentina',
  rol:'Producto, arquitectura y operación',estado:'En producción en 8 negocios y 3 cadenas',
  tag:'SaaS gastronómico · Node.js + PostgreSQL',
@@ -155,7 +175,6 @@ PROJECTS.push(
  nota:''});
 
 const OTHERS=[
-['Lomas del Pacífico','México','Cobranza de lotes en cuotas: planes de pago, recibos con folio, mora y morosidad. Laravel.'],
 ['Luseo','EE.UU. / Colombia','Colaboración dentro del equipo del cliente sobre módulos de gestión de proyectos en Angular.'],
 ['SatManager','España','Servicio técnico en campo: avisos con mapa y ruteo, albaranes con firma, facturación. Ionic.'],
 ['Cortex','Producto propio','Asistente personal por WhatsApp con recordatorios, gastos y notas por audio. FastAPI.'],
@@ -186,6 +205,7 @@ const SHORT={
 'tu-proximo-horizonte':'Tres sistemas en producción que el cliente opera solo: agenda, captación de leads y onboarding.',
 'infinity-book':'App de escaneo con OCR e IA. Rehice y publiqué la versión que está hoy en las tiendas.',
 'signfloow':'SaaS para empresas de rotulación: tablero de producción, presupuestos por fórmulas y asistente de IA.',
+'lomas-del-pacifico':'Cobranza de lotes en cuotas: planes de pago, recibos con folio, mora y morosidad.',
 'blc-one':'Centraliza 237 plantas de energía renovable y sus compromisos regulatorios.',
 'comanda-central':'Punto de venta, inventario y costeo real de recetas anidadas para gastronomía.',
 'vertical':'Mi plataforma: agentes de WhatsApp con IA para inmobiliarias. Verificada por Meta.',
