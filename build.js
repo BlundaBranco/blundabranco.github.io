@@ -155,9 +155,9 @@ const PROJECTS=[
  'Editor del sitio público de cada negocio, con vista previa en vivo.'],
  stats:[['8','negocios'],['3','cadenas'],['15','sucursales']],
  tech:'Node.js · Express · PostgreSQL · JavaScript · Chart.js · Cloudinary · Render · Vercel',
- links:[['Código','https://github.com/BrancoBlunda/Comanda-Central'],['Sitio de ejemplo','https://monat.ar']],
+ links:[['Código','https://github.com/BrancoBlunda/Comanda-Central']],
  cover:'02-dashboard-bi.webp',
- shots:[['01-pos.webp','El punto de venta de tres paneles: menú, datos del pedido y la comanda en curso. Se opera entero con el teclado.'],['02-dashboard-bi.webp','El tablero del negocio: ventas por día, pedidos, alertas de stock bajo y actividad reciente. Los importes están difuminados.'],['08-sitio-publico.webp','El sitio público que la plataforma genera para cada negocio, con su menú y su marca.']],
+ shots:[['01-pos.webp','El punto de venta de tres paneles: menú, datos del pedido y la comanda en curso. Se opera entero con el teclado.'],['02-dashboard-bi.webp','El tablero del negocio: ventas por día, pedidos, alertas de stock bajo y actividad reciente. Los importes están difuminados.'],['08-sitio-publico.webp','El sitio público que la plataforma genera para cada negocio, con su menú y su marca. Cada local queda con su propia web sin tocar código.']],
  nota:''},
 
 {slug:'lomas-del-pacifico',title:'Cobranza de lotes',cliente:'Lomas del Pacífico',pais:'México',
@@ -572,7 +572,7 @@ idx+=`
   <div class="container mx-auto max-w-4xl">
     <div class="text-center mb-16">
       <h2 class="section-title">Hablemos de tu proyecto</h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">¿Tenés un problema que se resuelve con software? Contame y lo charlamos.</p>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Escribime por WhatsApp o por mail si querés algo rápido, o dejame el formulario y te contesto con una propuesta. En los tres casos respondo el mismo día.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div class="space-y-6">
@@ -599,27 +599,43 @@ idx+=`
           </div>
         </div>
       </div>
-      <div class="glass-card p-8">
+      <div class="glass-card p-8 form-card">
         <h3 class="text-2xl font-bold mb-2">Contame tu proyecto</h3>
-        <p class="text-gray-400 mb-6 text-sm">Te respondo en menos de 24 horas. Sin compromiso.</p>
+        <p class="text-gray-400 mb-6 text-sm">Cuatro datos y listo. Te respondo el mismo día con una propuesta concreta, sin compromiso.</p>
         <form class="form-contacto" action="https://formsubmit.co/${MAIL}" method="POST">
           <input type="hidden" name="_subject" value="Nueva consulta desde brancoblunda.github.io">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_next" value="${SITE}/gracias.html">
-          <input type="text" name="_honey" style="display:none">
-          <label>Tu nombre
-            <input type="text" name="nombre" required autocomplete="name" placeholder="Cómo te llamás">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <label>Nombre y empresa
+            <input type="text" name="nombre" required autocomplete="name" placeholder="Juan Pérez — Inmobiliaria del Sur">
           </label>
-          <label>Email o WhatsApp
-            <input type="text" name="contacto" required placeholder="Por dónde te respondo">
-          </label>
+          <div class="form-row">
+            <label>Email
+              <input type="email" name="email" required autocomplete="email" placeholder="juan@empresa.com">
+            </label>
+            <label>WhatsApp <em>opcional</em>
+              <input type="tel" name="whatsapp" autocomplete="tel" placeholder="+54 9 ...">
+            </label>
+          </div>
           <label>Qué necesitás
-            <textarea name="mensaje" rows="4" required placeholder="Contame el problema en dos líneas. No hace falta que sepas cómo se resuelve."></textarea>
+            <select name="tipo" required>
+              <option value="">Elegí una opción</option>
+              <option>Agente de IA (voz o WhatsApp)</option>
+              <option>Sistema o SaaS a medida</option>
+              <option>App móvil</option>
+              <option>Automatizar un proceso</option>
+              <option>Arreglar o retomar algo que ya existe</option>
+              <option>Todavía no sé, lo charlamos</option>
+            </select>
+          </label>
+          <label>Contame el problema
+            <textarea name="mensaje" rows="4" required placeholder="En dos líneas: qué hacen hoy a mano, o qué querés que el sistema resuelva. No hace falta que sepas cómo."></textarea>
           </label>
           <button type="submit" class="btn-primary w-full"><i class="fas fa-paper-plane mr-2"></i>Enviar</button>
+          <p class="form-nota">Te respondo el mismo día. Tus datos no van a ningún lado más que a mi correo.</p>
         </form>
-        <p class="form-alt">¿Preferís hablar directo? <a href="${WA}?text=Hola%20Branco,%20te%20escribo%20por%20un%20proyecto" target="_blank" rel="noopener">Escribime por WhatsApp</a></p>
       </div>
       </div>
     </div>

@@ -1223,7 +1223,7 @@ footer .brand-logo { height: 34px; }
     font-size: .82rem; color: var(--text-gray);
     font-family: 'JetBrains Mono', monospace; letter-spacing: .02em;
 }
-.form-contacto input[type="text"], .form-contacto textarea {
+.form-contacto input[type="text"], .form-contacto input[type="email"], .form-contacto input[type="tel"], .form-contacto textarea {
     width: 100%; padding: 12px 14px;
     background: rgba(15, 23, 42, .6);
     border: 1px solid var(--glass-border); border-radius: 10px;
@@ -1231,14 +1231,34 @@ footer .brand-logo { height: 34px; }
     transition: border-color .2s ease, box-shadow .2s ease;
 }
 .form-contacto input::placeholder, .form-contacto textarea::placeholder { color: #475569; }
-.form-contacto input:focus, .form-contacto textarea:focus {
+.form-contacto input:focus, .form-contacto textarea:focus, .form-contacto select:focus {
     outline: none; border-color: var(--primary-green);
     box-shadow: 0 0 0 3px rgba(16, 185, 129, .13);
 }
 .form-contacto textarea { resize: vertical; min-height: 96px; }
 .form-contacto .btn-primary { justify-content: center; text-align: center; margin-top: .25rem; }
-.form-alt { margin-top: 1rem; font-size: .84rem; color: var(--text-gray); text-align: center; }
-.form-alt a { color: var(--primary-green); font-weight: 600; }
+.form-nota { margin-top: .5rem; font-size: .74rem; color: #64748b; text-align: center; line-height: 1.5; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-contacto label em { font-style: normal; color: #475569; text-transform: none; }
+.form-contacto select {
+    width: 100%; padding: 12px 14px;
+    background: rgba(15, 23, 42, .6);
+    border: 1px solid var(--glass-border); border-radius: 10px;
+    color: var(--text-light); font-family: inherit; font-size: .95rem;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 12px center; background-size: 18px;
+    padding-right: 38px; cursor: pointer;
+}
+.form-contacto select:focus { outline: none; border-color: var(--primary-green); box-shadow: 0 0 0 3px rgba(16,185,129,.13); }
+.form-contacto select option { background: #0f172a; }
+@media (max-width: 520px) { .form-row { grid-template-columns: 1fr; } }
+
+/* la columna de contacto y el formulario, del mismo alto */
+#contacto .grid { align-items: stretch; }
+#contacto .space-y-6 { display: flex; flex-direction: column; }
+#contacto .space-y-6 > .glass-card { flex: 1; display: flex; align-items: center; }
+.form-card { display: flex; flex-direction: column; }
 
 
 /* accesibilidad y páginas simples */
@@ -1301,3 +1321,30 @@ footer .brand-logo { height: 34px; }
     background: var(--glass-bg); border: 1px solid var(--glass-border);
     color: #cbd5e1; font-size: .85rem; white-space: nowrap;
 }
+
+
+/* ---- fondo: orbes muy difuminados con los colores de la marca ---- */
+body { position: relative; }
+body::before {
+    content: ""; position: fixed; inset: 0; z-index: -2; pointer-events: none;
+    background:
+      radial-gradient(46rem 46rem at 12% 8%,  rgba(16, 185, 129, .11), transparent 62%),
+      radial-gradient(40rem 40rem at 88% 22%, rgba(59, 130, 246, .10), transparent 62%),
+      radial-gradient(38rem 38rem at 70% 78%, rgba(34, 179, 162, .085), transparent 62%),
+      radial-gradient(34rem 34rem at 18% 92%, rgba(90, 155, 216, .075), transparent 62%);
+}
+body::after {
+    content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .35;
+    background-image:
+      linear-gradient(rgba(148, 163, 184, .045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, .045) 1px, transparent 1px);
+    background-size: 72px 72px;
+    -webkit-mask-image: radial-gradient(120% 80% at 50% 0%, #000 30%, transparent 75%);
+    mask-image: radial-gradient(120% 80% at 50% 0%, #000 30%, transparent 75%);
+}
+/* las secciones con fondo propio dejan ver los orbes */
+section.bg-gray-800.bg-opacity-50, footer.bg-gray-800.bg-opacity-50 { background-color: rgba(30, 41, 59, .38) !important; }
+nav { background-color: rgba(17, 24, 39, .82) !important; }
+
+.form-contacto input { color-scheme: dark; }
+.form-contacto input:-webkit-autofill { -webkit-text-fill-color: var(--text-light); -webkit-box-shadow: 0 0 0 40px #0f172a inset; }
