@@ -1,60 +1,158 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tu Próximo Horizonte — Branco Blunda</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Tres sistemas para una agencia de viajes, que el cliente opera solo: la agenda de capacitaciones semanales, la automatización de leads de Facebook y un onb">
+<meta name="author" content="Branco Blunda">
+<meta name="theme-color" content="#10b981">
+<title>Tu Próximo Horizonte | Branco Blunda</title>
 <link rel="canonical" href="https://blundabranco.github.io/proyectos/tu-proximo-horizonte.html">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Tu Próximo Horizonte — Branco Blunda">
-<meta property="og:description" content="Tres sistemas para una agencia de viajes, que el cliente opera solo: la agenda de capacitaciones semanales, la automatización de leads de Facebook y un onb">
 <meta property="og:url" content="https://blundabranco.github.io/proyectos/tu-proximo-horizonte.html">
-<meta property="og:image" content="'+SITE+'/assets/images/profile.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#FBFAF8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#100F0D" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Tu Próximo Horizonte | Branco Blunda">
+<meta property="og:description" content="Tres sistemas para una agencia de viajes, que el cliente opera solo: la agenda de capacitaciones semanales, la automatización de leads de Facebook y un onb">
+<meta property="og:image" content="https://blundabranco.github.io/assets/images/foto.jpg">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Tu Próximo Horizonte | Branco Blunda">
+<meta property="twitter:description" content="Tres sistemas para una agencia de viajes, que el cliente opera solo: la agenda de capacitaciones semanales, la automatización de leads de Facebook y un onb">
+<meta property="twitter:image" content="https://blundabranco.github.io/assets/images/foto.jpg">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/site.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
-<header class="site"><div class="wrap">
-<a class="brand" href="../index.html"><b>Branco Blunda</b></a>
-<nav class="site">
-<a href="../index.html#trabajo">Trabajo</a>
-<a href="../index.html#metodo">Método</a>
-<a href="../index.html#stack">Stack</a>
-<a href="../index.html#contacto">Contacto</a>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+<nav class="fixed top-0 w-full bg-gray-900 bg-opacity-95 backdrop-blur-md z-50 border-b border-gray-800">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+      <a href="../index.html" class="flex items-center space-x-2">
+        <span class="w-8 h-8 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center font-bold text-gray-900">B</span>
+        <span class="text-xl font-bold">Branco Blunda</span>
+      </a>
+      <div class="hidden md:flex space-x-8">
+        <a href="../index.html#inicio" class="nav-link">Inicio</a>
+        <a href="../index.html#servicios" class="nav-link">Servicios</a>
+        <a href="../index.html#portafolio" class="nav-link">Portafolio</a>
+        <a href="../index.html#tecnologias" class="nav-link">Stack</a>
+        <a href="../index.html#contacto" class="nav-link">Contacto</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-4">
+      <a href="../index.html#inicio" class="block nav-link-mobile">Inicio</a>
+      <a href="../index.html#servicios" class="block nav-link-mobile">Servicios</a>
+      <a href="../index.html#portafolio" class="block nav-link-mobile">Portafolio</a>
+      <a href="../index.html#tecnologias" class="block nav-link-mobile">Stack</a>
+      <a href="../index.html#contacto" class="block nav-link-mobile">Contacto</a>
+    </div>
+  </div>
 </nav>
-</div></header>
-<div class="wrap">
-<div class="crumb"><a href="../index.html">← Todo el trabajo</a></div>
-<section class="p-hero">
-<div class="mono" style="margin-bottom:20px">Next.js · Supabase · Automatización</div>
-<h1>Tu Próximo Horizonte</h1>
-<p class="lede">Tres sistemas para una agencia de viajes, que el cliente opera solo: la agenda de capacitaciones semanales, la automatización de leads de Facebook y un onboarding de afiliados editable sin tocar código.</p>
-<div class="p-meta">
-<div><span>Cliente</span><b>Leo Cerdeira</b></div>
-<div><span>País</span><b>Argentina</b></div>
-<div><span>Rol</span><b>Diseño, construcción y entrega</b></div>
-<div><span>Estado</span><b>Tres sistemas en producción · uso diario</b></div>
-</div>
+<section class="pt-32 pb-12 px-6">
+  <div class="container mx-auto max-w-5xl">
+    <a href="../index.html#portafolio" class="text-gray-400 hover:text-green-400 transition text-sm font-mono"><i class="fas fa-arrow-left mr-2"></i>Todo el trabajo</a>
+    <div class="mt-8">
+      <span class="px-4 py-2 bg-green-500 bg-opacity-10 border border-green-500 rounded-full text-green-400 text-xs font-mono">Next.js · Supabase · Automatización</span>
+      <h1 class="text-4xl md:text-6xl font-bold mt-6 mb-6"><span class="gradient-text">Tu Próximo Horizonte</span></h1>
+      <p class="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">Tres sistemas para una agencia de viajes, que el cliente opera solo: la agenda de capacitaciones semanales, la automatización de leads de Facebook y un onboarding de afiliados editable sin tocar código.</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+      <div class="glass-card p-5">
+        <p class="text-xs text-gray-500 font-mono uppercase tracking-wider mb-2">Cliente</p>
+        <p class="font-semibold text-sm">Leo Cerdeira</p></div><div class="glass-card p-5">
+        <p class="text-xs text-gray-500 font-mono uppercase tracking-wider mb-2">País</p>
+        <p class="font-semibold text-sm">Argentina</p></div><div class="glass-card p-5">
+        <p class="text-xs text-gray-500 font-mono uppercase tracking-wider mb-2">Rol</p>
+        <p class="font-semibold text-sm">Diseño, construcción y entrega</p></div><div class="glass-card p-5">
+        <p class="text-xs text-gray-500 font-mono uppercase tracking-wider mb-2">Estado</p>
+        <p class="font-semibold text-sm">Tres sistemas en producción · uso diario</p></div>
+    </div>
+  </div>
 </section>
-<section class="block"><h2>El problema</h2><p class="lede">Coordinaba capacitaciones semanales a mano, perdía los leads que entraban por Facebook y mandaba siete PDFs sueltos a cada afiliado nuevo. Necesitaba poder cambiar todo él, sin depender del desarrollador.</p></section>
-<section class="block"><h2>Lo que construí</h2><ul><li>Agenda con panel para cargar la semana completa, inscripción pública, manejo estricto de zonas horarias y backups diarios con alarma de fallo.</li><li>Duplicado de semana con borrado definitivo para sesiones vacías y borrado lógico para las que ya tienen inscriptos.</li><li>Seguridad a nivel de fila en la base y revocación del acceso anónimo a los enlaces y claves de reunión.</li><li>Captura automática de leads de Facebook y secuencia de cuatro correos a las 0, 24, 48 y 72 horas, con dominio de envío propio autenticado.</li><li>Onboarding público paso a paso, sin registro, que refleja al instante lo que el administrador cambia.</li><li>Panel de administración con sesión firmada y escrituras por lote a prueba de pérdida de datos.</li><li>Sitio mellizo de demostración en un esquema separado, con aislamiento verificado.</li></ul></section>
-<section class="block"><h2>Resultado</h2><ul class="result" style="margin-top:6px"><li><b>3</b>sistemas en producción</li><li><b>0</b>dependencia del dev para editar</li></ul></section>
-<section class="block"><h2>Capturas</h2><div class="gallery"><div class="gitem"><figure class="shot"><img src="../assets/proyectos/tu-proximo-horizonte/01-onboarding-inicio.png" alt="El onboarding público de afiliados: un solo link, sin registro." loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/tu-proximo-horizonte/01-onboarding-inicio.png</figcaption></figure><p class="cap">El onboarding público de afiliados: un solo link, sin registro.</p></div><div class="gitem"><figure class="shot"><img src="../assets/proyectos/tu-proximo-horizonte/02-onboarding-paso.png" alt="Un paso con sus recursos: video, PDF y enlaces." loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/tu-proximo-horizonte/02-onboarding-paso.png</figcaption></figure><p class="cap">Un paso con sus recursos: video, PDF y enlaces.</p></div><div class="gitem"><figure class="shot"><img src="../assets/proyectos/tu-proximo-horizonte/06-agenda-publica.png" alt="La agenda semanal de capacitaciones, con inscripción abierta." loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/tu-proximo-horizonte/06-agenda-publica.png</figcaption></figure><p class="cap">La agenda semanal de capacitaciones, con inscripción abierta.</p></div><div class="gitem"><figure class="shot"><img src="../assets/proyectos/tu-proximo-horizonte/08-make-escenario.png" alt="La automatización que captura los leads de Facebook y dispara la secuencia de correos." loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/tu-proximo-horizonte/08-make-escenario.png</figcaption></figure><p class="cap">La automatización que captura los leads de Facebook y dispara la secuencia de correos.</p></div></div></section>
-<section class="block"><h2>Stack</h2>
-<p class="mono" style="text-transform:none;letter-spacing:0;font-size:.86rem;line-height:2;color:var(--muted)">Next.js 15 · TypeScript · Supabase · Vercel · Make.com · Brevo · Facebook Lead Ads · GitHub Actions</p>
-<div class="case-links" style="margin-top:26px"><a href="https://onboarding.tuproximohorizonte.com" target="_blank" rel="noopener">Onboarding</a><a href="https://agenda.tuproximohorizonte.com" target="_blank" rel="noopener">Agenda</a><a href="https://demo.tuproximohorizonte.com" target="_blank" rel="noopener">Demo</a></div>
+
+<section class="py-16 px-6 bg-gray-800 bg-opacity-50">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-3xl font-bold mb-6 text-green-400">El problema</h2>
+    <p class="text-lg text-gray-300 leading-relaxed max-w-3xl">Coordinaba capacitaciones semanales a mano, perdía los leads que entraban por Facebook y mandaba siete PDFs sueltos a cada afiliado nuevo. Necesitaba poder cambiar todo él, sin depender del desarrollador.</p>
+  </div>
 </section>
-<section style="padding:56px 0"><a class="btn" href="../index.html">← Volver a todo el trabajo</a></section>
-</div><footer class="site"><div class="wrap" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;width:100%">
-<span class="mono">© 2026 Branco Blunda · Rosario, Argentina</span>
-<span class="links-row"><a href="https://linkedin.com/in/brancoblunda">LinkedIn</a><a href="https://github.com/BlundaBranco">GitHub</a><a href="mailto:brancoadrianblunda@gmail.com">Email</a></span>
-</div></footer>
-<script src="../js/site.js"></script>
-</body></html>
+
+<section class="py-16 px-6">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-3xl font-bold mb-8 text-blue-400">Lo que construí</h2>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <li class="glass-card p-5 flex gap-3 items-start"><i class="fas fa-check text-green-400 mt-1"></i><span class="text-gray-300">Agenda con panel para cargar la semana completa, inscripción pública, manejo estricto de zonas horarias y backups diarios con alarma de fallo.</span></li><li class="glass-card p-5 flex gap-3 items-start"><i class="fas fa-check text-green-400 mt-1"></i><span class="text-gray-300">Duplicado de semana con borrado definitivo para sesiones vacías y borrado lógico para las que ya tienen inscriptos.</span></li><li class="glass-card p-5 flex gap-3 items-start"><i class="fas fa-check text-green-400 mt-1"></i><span class="text-gray-300">Seguridad a nivel de fila en la base y revocación del acceso anónimo a los enlaces y claves de reunión.</span></li><li class="glass-card p-5 flex gap-3 items-start"><i class="fas fa-check text-green-400 mt-1"></i><span class="text-gray-300">Captura automática de leads de Facebook y secuencia de cuatro correos a las 0, 24, 48 y 72 horas, con dominio de envío propio autenticado.</span></li><li class="glass-card p-5 flex gap-3 items-start"><i class="fas fa-check text-green-400 mt-1"></i><span class="text-gray-300">Onboarding público paso a paso, sin registro, que refleja al instante lo que el administrador cambia.</span></li><li class="glass-card p-5 flex gap-3 items-start"><i class="fas fa-check text-green-400 mt-1"></i><span class="text-gray-300">Panel de administración con sesión firmada y escrituras por lote a prueba de pérdida de datos.</span></li><li class="glass-card p-5 flex gap-3 items-start"><i class="fas fa-check text-green-400 mt-1"></i><span class="text-gray-300">Sitio mellizo de demostración en un esquema separado, con aislamiento verificado.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="py-16 px-6 bg-gray-800 bg-opacity-50">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-3xl font-bold mb-8 text-purple-400">Resultado</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="glass-card p-6 text-center">
+        <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">3</div>
+        <p class="text-gray-400 text-sm">sistemas en producción</p></div><div class="glass-card p-6 text-center">
+        <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">0</div>
+        <p class="text-gray-400 text-sm">dependencia del dev para editar</p></div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="py-16 px-6">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-3xl font-bold mb-8">Capturas</h2>
+    <div class="gallery"><figure class="gitem"><div class="gitem-img"><img src="../assets/proyectos/tu-proximo-horizonte/01-onboarding-inicio.png" alt="El onboarding público de afiliados: un solo link, sin registro." class="" loading="lazy" decoding="async" data-file="assets/proyectos/tu-proximo-horizonte/01-onboarding-inicio.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div><figcaption>El onboarding público de afiliados: un solo link, sin registro.</figcaption></figure><figure class="gitem"><div class="gitem-img"><img src="../assets/proyectos/tu-proximo-horizonte/02-onboarding-paso.png" alt="Un paso con sus recursos: video, PDF y enlaces." class="" loading="lazy" decoding="async" data-file="assets/proyectos/tu-proximo-horizonte/02-onboarding-paso.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div><figcaption>Un paso con sus recursos: video, PDF y enlaces.</figcaption></figure><figure class="gitem"><div class="gitem-img"><img src="../assets/proyectos/tu-proximo-horizonte/06-agenda-publica.png" alt="La agenda semanal de capacitaciones, con inscripción abierta." class="" loading="lazy" decoding="async" data-file="assets/proyectos/tu-proximo-horizonte/06-agenda-publica.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div><figcaption>La agenda semanal de capacitaciones, con inscripción abierta.</figcaption></figure><figure class="gitem"><div class="gitem-img"><img src="../assets/proyectos/tu-proximo-horizonte/08-make-escenario.png" alt="La automatización que captura los leads de Facebook y dispara la secuencia de correos." class="" loading="lazy" decoding="async" data-file="assets/proyectos/tu-proximo-horizonte/08-make-escenario.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div><figcaption>La automatización que captura los leads de Facebook y dispara la secuencia de correos.</figcaption></figure></div>
+  </div>
+</section>
+
+<section class="py-16 px-6 bg-gray-800 bg-opacity-50">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-3xl font-bold mb-8">Stack</h2>
+    <div class="flex flex-wrap gap-3"><span class="tech-badge">Next.js 15</span><span class="tech-badge">TypeScript</span><span class="tech-badge">Supabase</span><span class="tech-badge">Vercel</span><span class="tech-badge">Make.com</span><span class="tech-badge">Brevo</span><span class="tech-badge">Facebook Lead Ads</span><span class="tech-badge">GitHub Actions</span></div>
+    <div class="flex flex-wrap gap-4 mt-10"><a href="https://onboarding.tuproximohorizonte.com" target="_blank" rel="noopener" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>Onboarding</a><a href="https://agenda.tuproximohorizonte.com" target="_blank" rel="noopener" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>Agenda</a><a href="https://demo.tuproximohorizonte.com" target="_blank" rel="noopener" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>Demo</a></div>
+  </div>
+</section>
+
+<section class="py-20 px-6 text-center">
+  <div class="container mx-auto max-w-3xl">
+    <h2 class="text-3xl font-bold mb-4">¿Tenés algo parecido entre manos?</h2>
+    <p class="text-gray-400 mb-8">Contame el problema y lo charlamos.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://wa.me/5493412714751?text=Hola%20Branco,%20vi%20el%20caso%20de%20Tu%20Pr%C3%B3ximo%20Horizonte" target="_blank" rel="noopener" class="btn-primary"><i class="fab fa-whatsapp mr-2"></i>Escribime</a>
+      <a href="../index.html#portafolio" class="btn-secondary"><i class="fas fa-arrow-left mr-2"></i>Ver otros proyectos</a>
+    </div>
+  </div>
+</section>
+<footer class="py-12 px-6 bg-gray-800 bg-opacity-50 border-t border-gray-800">
+  <div class="container mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-center md:text-left">
+        <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+          <div class="w-8 h-8 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center font-bold text-gray-900">B</div>
+          <span class="text-lg font-bold">Branco Blunda</span>
+        </div>
+        <p class="text-gray-500 text-sm">Software Engineer · Rosario, Argentina</p>
+      </div>
+      <div class="flex gap-6">
+        <a href="https://github.com/BlundaBranco" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="GitHub"><i class="fab fa-github text-xl"></i></a>
+        <a href="https://linkedin.com/in/brancoblunda" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="LinkedIn"><i class="fab fa-linkedin text-xl"></i></a>
+        <a href="https://wa.me/5493412714751" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="WhatsApp"><i class="fab fa-whatsapp text-xl"></i></a>
+        <a href="mailto:brancoadrianblunda@gmail.com" class="social-icon-footer" aria-label="Email"><i class="fas fa-envelope text-xl"></i></a>
+      </div>
+      <div class="text-center md:text-right">
+        <p class="text-gray-500 text-sm">© <span id="current-year">2026</span> Branco Blunda</p>
+        <p class="text-gray-600 text-xs mt-1">Hecho con <i class="fas fa-heart text-red-500"></i> y mucho código</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<button id="scroll-top" class="scroll-top-btn" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+<script src="../js/main.js"></script>
+</body>
+</html>

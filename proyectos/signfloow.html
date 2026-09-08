@@ -1,60 +1,160 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SignFloow — Branco Blunda</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="SaaS para empresas de rotulación: reemplaza planillas y mensajes por un tablero de producción, un catálogo con recetas de fabricación, presupuestos calcula">
+<meta name="author" content="Branco Blunda">
+<meta name="theme-color" content="#10b981">
+<title>SignFloow | Branco Blunda</title>
 <link rel="canonical" href="https://blundabranco.github.io/proyectos/signfloow.html">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="SignFloow — Branco Blunda">
-<meta property="og:description" content="SaaS para empresas de rotulación: reemplaza planillas y mensajes por un tablero de producción, un catálogo con recetas de fabricación, presupuestos calcula">
 <meta property="og:url" content="https://blundabranco.github.io/proyectos/signfloow.html">
-<meta property="og:image" content="'+SITE+'/assets/images/profile.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#FBFAF8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#100F0D" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="SignFloow | Branco Blunda">
+<meta property="og:description" content="SaaS para empresas de rotulación: reemplaza planillas y mensajes por un tablero de producción, un catálogo con recetas de fabricación, presupuestos calcula">
+<meta property="og:image" content="https://blundabranco.github.io/assets/images/foto.jpg">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="SignFloow | Branco Blunda">
+<meta property="twitter:description" content="SaaS para empresas de rotulación: reemplaza planillas y mensajes por un tablero de producción, un catálogo con recetas de fabricación, presupuestos calcula">
+<meta property="twitter:image" content="https://blundabranco.github.io/assets/images/foto.jpg">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/site.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
-<header class="site"><div class="wrap">
-<a class="brand" href="../index.html"><b>Branco Blunda</b></a>
-<nav class="site">
-<a href="../index.html#trabajo">Trabajo</a>
-<a href="../index.html#metodo">Método</a>
-<a href="../index.html#stack">Stack</a>
-<a href="../index.html#contacto">Contacto</a>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+<nav class="fixed top-0 w-full bg-gray-900 bg-opacity-95 backdrop-blur-md z-50 border-b border-gray-800">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+      <a href="../index.html" class="flex items-center space-x-2">
+        <span class="w-8 h-8 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center font-bold text-gray-900">B</span>
+        <span class="text-xl font-bold">Branco Blunda</span>
+      </a>
+      <div class="hidden md:flex space-x-8">
+        <a href="../index.html#inicio" class="nav-link">Inicio</a>
+        <a href="../index.html#servicios" class="nav-link">Servicios</a>
+        <a href="../index.html#portafolio" class="nav-link">Portafolio</a>
+        <a href="../index.html#tecnologias" class="nav-link">Stack</a>
+        <a href="../index.html#contacto" class="nav-link">Contacto</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-4">
+      <a href="../index.html#inicio" class="block nav-link-mobile">Inicio</a>
+      <a href="../index.html#servicios" class="block nav-link-mobile">Servicios</a>
+      <a href="../index.html#portafolio" class="block nav-link-mobile">Portafolio</a>
+      <a href="../index.html#tecnologias" class="block nav-link-mobile">Stack</a>
+      <a href="../index.html#contacto" class="block nav-link-mobile">Contacto</a>
+    </div>
+  </div>
 </nav>
-</div></header>
-<div class="wrap">
-<div class="crumb"><a href="../index.html">← Todo el trabajo</a></div>
-<section class="p-hero">
-<div class="mono" style="margin-bottom:20px">SaaS multi-tenant · React + NestJS + AWS</div>
-<h1>SignFloow</h1>
-<p class="lede">SaaS para empresas de rotulación: reemplaza planillas y mensajes por un tablero de producción, un catálogo con recetas de fabricación, presupuestos calculados por fórmulas y un asistente de IA que consulta los datos reales del negocio.</p>
-<div class="p-meta">
-<div><span>Cliente</span><b>Cliente directo</b></div>
-<div><span>País</span><b>España</b></div>
-<div><span>Rol</span><b>Diseño y construcción desde cero</b></div>
-<div><span>Estado</span><b>En producción con clientes</b></div>
-</div>
+<section class="pt-32 pb-12 px-6">
+  <div class="container mx-auto max-w-5xl">
+    <a href="../index.html#portafolio" class="text-gray-400 hover:text-green-400 transition text-sm font-mono"><i class="fas fa-arrow-left mr-2"></i>Todo el trabajo</a>
+    <div class="mt-8">
+      <span class="px-4 py-2 bg-green-500 bg-opacity-10 border border-green-500 rounded-full text-green-400 text-xs font-mono">SaaS multi-tenant · React + NestJS + AWS</span>
+      <h1 class="text-4xl md:text-6xl font-bold mt-6 mb-6"><span class="gradient-text">SignFloow</span></h1>
+      <p class="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">SaaS para empresas de rotulación: reemplaza planillas y mensajes por un tablero de producción, un catálogo con recetas de fabricación, presupuestos calculados por fórmulas y un asistente de IA que consulta los datos reales del negocio.</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+      <div class="glass-card p-5">
+        <p class="text-xs text-gray-500 font-mono uppercase tracking-wider mb-2">Cliente</p>
+        <p class="font-semibold text-sm">Cliente directo</p></div><div class="glass-card p-5">
+        <p class="text-xs text-gray-500 font-mono uppercase tracking-wider mb-2">País</p>
+        <p class="font-semibold text-sm">España</p></div><div class="glass-card p-5">
+        <p class="text-xs text-gray-500 font-mono uppercase tracking-wider mb-2">Rol</p>
+        <p class="font-semibold text-sm">Diseño y construcción desde cero</p></div><div class="glass-card p-5">
+        <p class="text-xs text-gray-500 font-mono uppercase tracking-wider mb-2">Estado</p>
+        <p class="font-semibold text-sm">En producción con clientes</p></div>
+    </div>
+  </div>
 </section>
-<section class="block"><h2>El problema</h2><p class="lede">Los talleres del rubro manejan proyectos, materiales y presupuestos entre planillas, mensajes y memoria. Nadie sabe con certeza cuánto cuesta un trabajo hasta que ya se hizo.</p></section>
-<section class="block"><h2>Lo que construí</h2><ul><li>Tablero multi-empresa con cinco fases, subtableros por taller y descomposición automática del proyecto en tareas de producción.</li><li>Motor de presupuestos con fórmulas, capítulos, tarifas de mano de obra y costes indirectos.</li><li>Enlace público de aceptación que, al aceptarse, crea el proyecto en el tablero.</li><li>Catálogo con lista de materiales por dimensión y 91 materiales preconfigurados del rubro.</li><li>Asistente de IA con acceso a herramientas sobre los datos de cada empresa, con dos proveedores y conmutación automática.</li><li>Control de acceso por rol y aislamiento total entre empresas.</li><li>Infraestructura como código y despliegue automatizado sin credenciales estáticas.</li></ul></section>
-<section class="block"><h2>Resultado</h2><ul class="result" style="margin-top:6px"><li><b>1.551+</b>tests automatizados</li><li><b>~90%</b>de cobertura</li><li><b>~130</b>pull requests</li></ul></section>
-<section class="block"><h2>Capturas</h2><div class="gallery"><div class="gitem"><figure class="shot"><img src="../assets/proyectos/signfloow/01-floow-kanban.png" alt="El tablero de producción con las cinco fases del proyecto." loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/signfloow/01-floow-kanban.png</figcaption></figure><p class="cap">El tablero de producción con las cinco fases del proyecto.</p></div><div class="gitem"><figure class="shot"><img src="../assets/proyectos/signfloow/03-quote-engine.png" alt="El presupuestador: capítulos, líneas y fórmulas de cálculo." loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/signfloow/03-quote-engine.png</figcaption></figure><p class="cap">El presupuestador: capítulos, líneas y fórmulas de cálculo.</p></div><div class="gitem"><figure class="shot"><img src="../assets/proyectos/signfloow/06-catalogo-bom.png" alt="Un producto del catálogo con su lista de materiales por dimensión." loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/signfloow/06-catalogo-bom.png</figcaption></figure><p class="cap">Un producto del catálogo con su lista de materiales por dimensión.</p></div><div class="gitem"><figure class="shot"><img src="../assets/proyectos/signfloow/07-floowy-chat.png" alt="El asistente de IA respondiendo con datos reales de la empresa." loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/signfloow/07-floowy-chat.png</figcaption></figure><p class="cap">El asistente de IA respondiendo con datos reales de la empresa.</p></div></div></section>
-<section class="block"><h2>Stack</h2>
-<p class="mono" style="text-transform:none;letter-spacing:0;font-size:.86rem;line-height:2;color:var(--muted)">TypeScript · React 19 · Vite · Tailwind · NestJS 11 · PostgreSQL 16 · Prisma · Turborepo · AWS ECS Fargate y Aurora · Terraform · Vercel</p>
-<div class="case-links" style="margin-top:26px"><a href="https://app.signfloow.ai" target="_blank" rel="noopener">Aplicación</a></div>
+
+<section class="py-16 px-6 bg-gray-800 bg-opacity-50">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-3xl font-bold mb-6 text-green-400">El problema</h2>
+    <p class="text-lg text-gray-300 leading-relaxed max-w-3xl">Los talleres del rubro manejan proyectos, materiales y presupuestos entre planillas, mensajes y memoria. Nadie sabe con certeza cuánto cuesta un trabajo hasta que ya se hizo.</p>
+  </div>
 </section>
-<section style="padding:56px 0"><a class="btn" href="../index.html">← Volver a todo el trabajo</a></section>
-</div><footer class="site"><div class="wrap" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;width:100%">
-<span class="mono">© 2026 Branco Blunda · Rosario, Argentina</span>
-<span class="links-row"><a href="https://linkedin.com/in/brancoblunda">LinkedIn</a><a href="https://github.com/BlundaBranco">GitHub</a><a href="mailto:brancoadrianblunda@gmail.com">Email</a></span>
-</div></footer>
-<script src="../js/site.js"></script>
-</body></html>
+
+<section class="py-16 px-6">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-3xl font-bold mb-8 text-blue-400">Lo que construí</h2>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <li class="glass-card p-5 flex gap-3 items-start"><i class="fas fa-check text-green-400 mt-1"></i><span class="text-gray-300">Tablero multi-empresa con cinco fases, subtableros por taller y descomposición automática del proyecto en tareas de producción.</span></li><li class="glass-card p-5 flex gap-3 items-start"><i class="fas fa-check text-green-400 mt-1"></i><span class="text-gray-300">Motor de presupuestos con fórmulas, capítulos, tarifas de mano de obra y costes indirectos.</span></li><li class="glass-card p-5 flex gap-3 items-start"><i class="fas fa-check text-green-400 mt-1"></i><span class="text-gray-300">Enlace público de aceptación que, al aceptarse, crea el proyecto en el tablero.</span></li><li class="glass-card p-5 flex gap-3 items-start"><i class="fas fa-check text-green-400 mt-1"></i><span class="text-gray-300">Catálogo con lista de materiales por dimensión y 91 materiales preconfigurados del rubro.</span></li><li class="glass-card p-5 flex gap-3 items-start"><i class="fas fa-check text-green-400 mt-1"></i><span class="text-gray-300">Asistente de IA con acceso a herramientas sobre los datos de cada empresa, con dos proveedores y conmutación automática.</span></li><li class="glass-card p-5 flex gap-3 items-start"><i class="fas fa-check text-green-400 mt-1"></i><span class="text-gray-300">Control de acceso por rol y aislamiento total entre empresas.</span></li><li class="glass-card p-5 flex gap-3 items-start"><i class="fas fa-check text-green-400 mt-1"></i><span class="text-gray-300">Infraestructura como código y despliegue automatizado sin credenciales estáticas.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="py-16 px-6 bg-gray-800 bg-opacity-50">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-3xl font-bold mb-8 text-purple-400">Resultado</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="glass-card p-6 text-center">
+        <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">1.551+</div>
+        <p class="text-gray-400 text-sm">tests automatizados</p></div><div class="glass-card p-6 text-center">
+        <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">~90%</div>
+        <p class="text-gray-400 text-sm">de cobertura</p></div><div class="glass-card p-6 text-center">
+        <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">~130</div>
+        <p class="text-gray-400 text-sm">pull requests</p></div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="py-16 px-6">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-3xl font-bold mb-8">Capturas</h2>
+    <div class="gallery"><figure class="gitem"><div class="gitem-img"><img src="../assets/proyectos/signfloow/01-floow-kanban.png" alt="El tablero de producción: cinco fases, una tarjeta por proyecto y el avance de cada tarea." class="" loading="lazy" decoding="async" data-file="assets/proyectos/signfloow/01-floow-kanban.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div><figcaption>El tablero de producción: cinco fases, una tarjeta por proyecto y el avance de cada tarea.</figcaption></figure><figure class="gitem"><div class="gitem-img"><img src="../assets/proyectos/signfloow/02-panel.png" alt="El panel de inicio: proyectos por fase, prioridades del día y presupuestos pendientes de enviar." class="" loading="lazy" decoding="async" data-file="assets/proyectos/signfloow/02-panel.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div><figcaption>El panel de inicio: proyectos por fase, prioridades del día y presupuestos pendientes de enviar.</figcaption></figure><figure class="gitem"><div class="gitem-img"><img src="../assets/proyectos/signfloow/03-quote-engine.png" alt="Detalle de un presupuesto: líneas, impuestos y análisis interno de costes y margen." class="" loading="lazy" decoding="async" data-file="assets/proyectos/signfloow/03-quote-engine.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div><figcaption>Detalle de un presupuesto: líneas, impuestos y análisis interno de costes y margen.</figcaption></figure><figure class="gitem"><div class="gitem-img"><img src="../assets/proyectos/signfloow/08-detalle-proyecto.png" alt="Ficha de proyecto: tareas de producción, archivos, notas internas y un resumen generado por IA." class="" loading="lazy" decoding="async" data-file="assets/proyectos/signfloow/08-detalle-proyecto.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div><figcaption>Ficha de proyecto: tareas de producción, archivos, notas internas y un resumen generado por IA.</figcaption></figure><figure class="gitem"><div class="gitem-img"><img src="../assets/proyectos/signfloow/06-catalogo.png" alt="El catálogo: familias, subfamilias y productos con herencia de materiales y reglas. Cada producto puede ser de precio fijo o calculable." class="" loading="lazy" decoding="async" data-file="assets/proyectos/signfloow/06-catalogo.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div><figcaption>El catálogo: familias, subfamilias y productos con herencia de materiales y reglas. Cada producto puede ser de precio fijo o calculable.</figcaption></figure><figure class="gitem"><div class="gitem-img"><img src="../assets/proyectos/signfloow/04-crm-pipeline.png" alt="El embudo comercial, desde la consulta nueva hasta el cobro pendiente." class="" loading="lazy" decoding="async" data-file="assets/proyectos/signfloow/04-crm-pipeline.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div><figcaption>El embudo comercial, desde la consulta nueva hasta el cobro pendiente.</figcaption></figure><figure class="gitem"><div class="gitem-img"><img src="../assets/proyectos/signfloow/05-presupuestos-lista.png" alt="El listado de presupuestos, con el estado y el margen de cada uno." class="" loading="lazy" decoding="async" data-file="assets/proyectos/signfloow/05-presupuestos-lista.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div><figcaption>El listado de presupuestos, con el estado y el margen de cada uno.</figcaption></figure><figure class="gitem"><div class="gitem-img"><img src="../assets/proyectos/signfloow/07-floowy-chat.png" alt="Floowy, el asistente de IA: propone acciones concretas sobre los datos del taller." class="" loading="lazy" decoding="async" data-file="assets/proyectos/signfloow/07-floowy-chat.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()"></div><figcaption>Floowy, el asistente de IA: propone acciones concretas sobre los datos del taller.</figcaption></figure></div>
+  </div>
+</section>
+
+<section class="py-16 px-6 bg-gray-800 bg-opacity-50">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-3xl font-bold mb-8">Stack</h2>
+    <div class="flex flex-wrap gap-3"><span class="tech-badge">TypeScript</span><span class="tech-badge">React 19</span><span class="tech-badge">Vite</span><span class="tech-badge">Tailwind</span><span class="tech-badge">NestJS 11</span><span class="tech-badge">PostgreSQL 16</span><span class="tech-badge">Prisma</span><span class="tech-badge">Turborepo</span><span class="tech-badge">AWS ECS Fargate y Aurora</span><span class="tech-badge">Terraform</span><span class="tech-badge">Vercel</span></div>
+    <div class="flex flex-wrap gap-4 mt-10"><a href="https://app.signfloow.ai" target="_blank" rel="noopener" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>Aplicación</a></div>
+  </div>
+</section>
+
+<section class="py-20 px-6 text-center">
+  <div class="container mx-auto max-w-3xl">
+    <h2 class="text-3xl font-bold mb-4">¿Tenés algo parecido entre manos?</h2>
+    <p class="text-gray-400 mb-8">Contame el problema y lo charlamos.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://wa.me/5493412714751?text=Hola%20Branco,%20vi%20el%20caso%20de%20SignFloow" target="_blank" rel="noopener" class="btn-primary"><i class="fab fa-whatsapp mr-2"></i>Escribime</a>
+      <a href="../index.html#portafolio" class="btn-secondary"><i class="fas fa-arrow-left mr-2"></i>Ver otros proyectos</a>
+    </div>
+  </div>
+</section>
+<footer class="py-12 px-6 bg-gray-800 bg-opacity-50 border-t border-gray-800">
+  <div class="container mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-center md:text-left">
+        <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+          <div class="w-8 h-8 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center font-bold text-gray-900">B</div>
+          <span class="text-lg font-bold">Branco Blunda</span>
+        </div>
+        <p class="text-gray-500 text-sm">Software Engineer · Rosario, Argentina</p>
+      </div>
+      <div class="flex gap-6">
+        <a href="https://github.com/BlundaBranco" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="GitHub"><i class="fab fa-github text-xl"></i></a>
+        <a href="https://linkedin.com/in/brancoblunda" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="LinkedIn"><i class="fab fa-linkedin text-xl"></i></a>
+        <a href="https://wa.me/5493412714751" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="WhatsApp"><i class="fab fa-whatsapp text-xl"></i></a>
+        <a href="mailto:brancoadrianblunda@gmail.com" class="social-icon-footer" aria-label="Email"><i class="fas fa-envelope text-xl"></i></a>
+      </div>
+      <div class="text-center md:text-right">
+        <p class="text-gray-500 text-sm">© <span id="current-year">2026</span> Branco Blunda</p>
+        <p class="text-gray-600 text-xs mt-1">Hecho con <i class="fas fa-heart text-red-500"></i> y mucho código</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<button id="scroll-top" class="scroll-top-btn" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+<script src="../js/main.js"></script>
+</body>
+</html>

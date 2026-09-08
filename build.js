@@ -81,7 +81,7 @@ const PROJECTS=[
  tech:'TypeScript · React 19 · Vite · Tailwind · NestJS 11 · PostgreSQL 16 · Prisma · Turborepo · AWS ECS Fargate y Aurora · Terraform · Vercel',
  links:[['Aplicación','https://app.signfloow.ai']],
  cover:'01-floow-kanban.png',
- shots:[['01-floow-kanban.png','El tablero de producción con las cinco fases del proyecto.'],['03-quote-engine.png','El presupuestador: capítulos, líneas y fórmulas de cálculo.'],['06-catalogo-bom.png','Un producto del catálogo con su lista de materiales por dimensión.'],['07-floowy-chat.png','El asistente de IA respondiendo con datos reales de la empresa.']],
+ shots:[['01-floow-kanban.png','El tablero de producción: cinco fases, una tarjeta por proyecto y el avance de cada tarea.'],['02-panel.png','El panel de inicio: proyectos por fase, prioridades del día y presupuestos pendientes de enviar.'],['03-quote-engine.png','Detalle de un presupuesto: líneas, impuestos y análisis interno de costes y margen.'],['08-detalle-proyecto.png','Ficha de proyecto: tareas de producción, archivos, notas internas y un resumen generado por IA.'],['06-catalogo.png','El catálogo: familias, subfamilias y productos con herencia de materiales y reglas. Cada producto puede ser de precio fijo o calculable.'],['04-crm-pipeline.png','El embudo comercial, desde la consulta nueva hasta el cobro pendiente.'],['05-presupuestos-lista.png','El listado de presupuestos, con el estado y el margen de cada uno.'],['07-floowy-chat.png','Floowy, el asistente de IA: propone acciones concretas sobre los datos del taller.']],
  nota:''}
 ];
 
@@ -192,147 +192,372 @@ const SHORT={
 'deltan-scan':'Medición asistida de radiografías dentales con visión por computadora.'};
 const chips=p=>p.tech.split(' · ').slice(0,4);
 
+/* ---------- helpers ---------- */
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const YEAR=new Date().getFullYear();
+const WA='https://wa.me/5493412714751';
+
 const head=(title,desc,canonical,depth)=>{const r=depth?'../':'';return `<!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${esc(title)}</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="${esc(desc)}">
+<meta name="author" content="Branco Blunda">
+<meta name="theme-color" content="#10b981">
+<title>${esc(title)}</title>
 <link rel="canonical" href="${canonical}">
+<link rel="icon" type="image/svg+xml" href="${r}favicon.svg">
 <meta property="og:type" content="website">
+<meta property="og:url" content="${canonical}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
-<meta property="og:url" content="${canonical}">
-<meta property="og:image" content="'+SITE+'/assets/images/profile.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#FBFAF8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#100F0D" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="${r}favicon.svg" type="image/svg+xml">
+<meta property="og:image" content="${SITE}/assets/images/foto.jpg">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="${esc(title)}">
+<meta property="twitter:description" content="${esc(desc)}">
+<meta property="twitter:image" content="${SITE}/assets/images/foto.jpg">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="${r}css/site.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="${r}css/styles.css">
 </head>
-<body>
-<header class="site"><div class="wrap">
-<a class="brand" href="${r}index.html"><b>Branco Blunda</b></a>
-<nav class="site">
-<a href="${r}index.html#trabajo">Trabajo</a>
-<a href="${r}index.html#metodo">Método</a>
-<a href="${r}index.html#stack">Stack</a>
-<a href="${r}index.html#contacto">Contacto</a>
-</nav>
-</div></header>`;};
+<body class="bg-gray-900 text-gray-100 font-sans">
 
-const shot=(slug,file,alt,depth)=>{const r=depth?'../':'';
-return `<figure class="shot"><img src="${r}assets/proyectos/${slug}/${file}" alt="${esc(alt)}" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/${slug}/${file}</figcaption></figure>`;};
+<nav class="fixed top-0 w-full bg-gray-900 bg-opacity-95 backdrop-blur-md z-50 border-b border-gray-800">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+      <a href="${r}index.html" class="flex items-center space-x-2">
+        <span class="w-8 h-8 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center font-bold text-gray-900">B</span>
+        <span class="text-xl font-bold">Branco Blunda</span>
+      </a>
+      <div class="hidden md:flex space-x-8">
+        <a href="${r}index.html#inicio" class="nav-link">Inicio</a>
+        <a href="${r}index.html#servicios" class="nav-link">Servicios</a>
+        <a href="${r}index.html#portafolio" class="nav-link">Portafolio</a>
+        <a href="${r}index.html#tecnologias" class="nav-link">Stack</a>
+        <a href="${r}index.html#contacto" class="nav-link">Contacto</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-4">
+      <a href="${r}index.html#inicio" class="block nav-link-mobile">Inicio</a>
+      <a href="${r}index.html#servicios" class="block nav-link-mobile">Servicios</a>
+      <a href="${r}index.html#portafolio" class="block nav-link-mobile">Portafolio</a>
+      <a href="${r}index.html#tecnologias" class="block nav-link-mobile">Stack</a>
+      <a href="${r}index.html#contacto" class="block nav-link-mobile">Contacto</a>
+    </div>
+  </div>
+</nav>`;};
+
+const foot=depth=>{const r=depth?'../':'';return `
+<footer class="py-12 px-6 bg-gray-800 bg-opacity-50 border-t border-gray-800">
+  <div class="container mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-center md:text-left">
+        <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+          <div class="w-8 h-8 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center font-bold text-gray-900">B</div>
+          <span class="text-lg font-bold">Branco Blunda</span>
+        </div>
+        <p class="text-gray-500 text-sm">Software Engineer · Rosario, Argentina</p>
+      </div>
+      <div class="flex gap-6">
+        <a href="${GITHUB}" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="GitHub"><i class="fab fa-github text-xl"></i></a>
+        <a href="${LINKEDIN}" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="LinkedIn"><i class="fab fa-linkedin text-xl"></i></a>
+        <a href="${WA}" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="WhatsApp"><i class="fab fa-whatsapp text-xl"></i></a>
+        <a href="mailto:${MAIL}" class="social-icon-footer" aria-label="Email"><i class="fas fa-envelope text-xl"></i></a>
+      </div>
+      <div class="text-center md:text-right">
+        <p class="text-gray-500 text-sm">© <span id="current-year">${YEAR}</span> Branco Blunda</p>
+        <p class="text-gray-600 text-xs mt-1">Hecho con <i class="fas fa-heart text-red-500"></i> y mucho código</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<button id="scroll-top" class="scroll-top-btn" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+<script src="${r}js/main.js"></script>
+</body>
+</html>`;};
+
+/* imagen con placeholder si falta */
+const shot=(slug,file,alt,depth,cls)=>{const r=depth?'../':'';
+return `<img src="${r}assets/proyectos/${slug}/${file}" alt="${esc(alt)}" class="${cls}" loading="lazy" decoding="async" data-file="assets/proyectos/${slug}/${file}" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">`;};
 const gitem=(slug,pair,depth)=>{const f=Array.isArray(pair)?pair[0]:pair, c=Array.isArray(pair)?pair[1]:'';
-return `<div class="gitem">${shot(slug,f,c||'captura',depth)}${c?`<p class="cap">${esc(c)}</p>`:''}</div>`;};
+return `<figure class="gitem"><div class="gitem-img">${shot(slug,f,c||'Captura',depth,'')}</div>${c?`<figcaption>${esc(c)}</figcaption>`:''}</figure>`;};
 
-const foot=depth=>{const r=depth?'../':'';return `<footer class="site"><div class="wrap" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;width:100%">
-<span class="mono">© ${new Date().getFullYear()} Branco Blunda · Rosario, Argentina</span>
-<span class="links-row"><a href="${LINKEDIN}">LinkedIn</a><a href="${GITHUB}">GitHub</a><a href="mailto:${MAIL}">Email</a></span>
-</div></footer>
-<script src="${r}js/site.js"></script>
-</body></html>`;};
+/* ---------- servicios ---------- */
+const SERVICIOS=[
+['fas fa-robot','from-green-400 to-cyan-500','Agentes de IA y automatización',
+ 'Sistemas que atienden, entienden y resuelven solos: voz por teléfono, WhatsApp y flujos internos. En producción, no en demo.',
+ ['Agentes de voz sobre telefonía','Agentes de WhatsApp con API oficial','Automatización de procesos','LLMs con acceso a datos del negocio']],
+['fas fa-layer-group','from-blue-500 to-purple-600','SaaS y plataformas a medida',
+ 'Del problema al producto: arquitectura multi-empresa, paneles de operación, APIs e infraestructura que aguanta.',
+ ['Arquitectura multi-tenant','Paneles y tableros de operación','APIs y motores de cálculo','AWS, Docker y CI/CD']],
+['fas fa-mobile-screen','from-yellow-400 to-orange-500','Apps móviles y publicación',
+ 'Apps Android e iOS construidas, publicadas y mantenidas. Incluye la parte que nadie quiere hacer: tiendas, cuentas y migraciones.',
+ ['Flutter y Android nativo','Publicación en Google Play y App Store','Migración de apps heredadas','Mantenimiento y versiones']]];
 
-let idx=head('Branco Blunda — Software Engineer','Software Engineer. Construyo sistemas que llegan a producción: agentes de voz y de WhatsApp, SaaS multi-tenant y apps móviles publicadas.',SITE+'/',0);
+/* ---------- index ---------- */
+let idx=head('Branco Blunda | Software Engineer & AI Specialist',
+ 'Software Engineer. Construyo sistemas que llegan a produccion: agentes de voz y de WhatsApp, SaaS multi-tenant y apps moviles publicadas.',
+ SITE+'/',0);
+
 idx+=`
-<div class="wrap">
-<section class="hero">
-<div class="hero-grid">
-<div>
-<div class="mono kicker">Software Engineer · Rosario, Argentina · Remoto</div>
-<h1>Construyo sistemas que <em>llegan a producción</em> y los usa gente real.</h1>
-<p class="lede">Agentes de voz y de WhatsApp, SaaS multi-tenant, apps móviles publicadas y automatización de procesos. Desarrollo software desde 2017.</p>
-<div class="cta"><a class="btn" href="#trabajo">Ver el trabajo</a><a class="btn ghost" href="mailto:${MAIL}">Escribime</a></div>
-</div>
-<img class="foto" src="assets/images/foto.jpg" alt="Branco Blunda" width="800" height="800">
-</div>
+<section id="inicio" class="min-h-screen flex items-center justify-center pt-24 pb-16">
+  <div class="container mx-auto px-6 md:px-12 lg:px-24">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+      <div class="flex-1 text-center md:text-left">
+        <div class="inline-block mb-4">
+          <span class="px-4 py-2 bg-green-500 bg-opacity-10 border border-green-500 rounded-full text-green-400 text-sm font-mono">🚀 Disponible para proyectos</span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight"><span class="gradient-text">Branco </span>Blunda</h1>
+        <h2 class="text-2xl md:text-3xl text-gray-300 mb-6 font-light">Software Engineer | Full Stack &amp; IA</h2>
+        <p class="text-lg md:text-xl text-gray-400 mb-6 max-w-2xl">
+          Construyo sistemas que <span class="text-green-400 font-semibold">llegan a producción</span> y usa gente real:
+          agentes de voz y de <span class="text-blue-400 font-semibold">WhatsApp</span>, SaaS multi-empresa y apps móviles publicadas.
+        </p>
+        <p class="text-gray-500 mb-10 max-w-2xl">Desarrollo software desde 2017. Rosario, Argentina · Trabajo remoto.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="#portafolio" class="btn-primary"><i class="fas fa-folder-open mr-2"></i>Ver proyectos</a>
+          <a href="#contacto" class="btn-secondary"><i class="fas fa-comments mr-2"></i>Hablemos</a>
+        </div>
+        <div class="flex gap-6 mt-10 justify-center md:justify-start">
+          <a href="${GITHUB}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fab fa-github text-2xl"></i></a>
+          <a href="${LINKEDIN}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin text-2xl"></i></a>
+          <a href="${WA}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp text-2xl"></i></a>
+          <a href="mailto:${MAIL}" class="social-icon" aria-label="Email"><i class="fas fa-envelope text-2xl"></i></a>
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center">
+        <div class="profile-container">
+          <img src="assets/images/foto.jpg" alt="Branco Blunda - Software Engineer" class="profile-image" loading="eager" width="800" height="800">
+          <div class="profile-glow"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="proof">
-<ul>
-<li><strong>40+</strong><span>proyectos</span></li>
-<li><strong>25</strong><span>reseñas de clientes</span></li>
-<li><strong>#1</strong><span>Workana Argentina 2026</span></li>
-<li><strong>4</strong><span>apps en tiendas</span></li>
-<li><strong>8.900+</strong><span>usuarios</span></li>
-<li><strong>Meta</strong><span>proveedor verificado</span></li>
-</ul>
+
+<section class="px-6 pb-16">
+  <div class="container mx-auto">
+    <div class="proof-bar">
+      <div><strong>40+</strong><span>proyectos</span></div>
+      <div><strong>25</strong><span>reseñas de clientes</span></div>
+      <div><strong>#1</strong><span>Workana Argentina 2026</span></div>
+      <div><strong>4</strong><span>apps en tiendas</span></div>
+      <div><strong>8.900+</strong><span>usuarios</span></div>
+      <div><strong>Meta</strong><span>proveedor verificado</span></div>
+    </div>
+  </div>
 </section>
-<section id="trabajo">
-<div class="sec-head"><h2>Trabajo</h2><span class="mono">Ocho de más de cuarenta</span></div>
-<div class="grid-cases">`;
-PROJECTS.forEach(p=>{
+
+<section id="servicios" class="py-20 px-6 bg-gray-800 bg-opacity-50">
+  <div class="container mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="section-title">Qué hago</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Software que resuelve un problema concreto del negocio y queda funcionando.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      ${SERVICIOS.map(s=>`<div class="service-card">
+        <div class="service-icon bg-gradient-to-br ${s[1]}"><i class="${s[0]} text-3xl"></i></div>
+        <h3 class="text-2xl font-bold mb-4">${esc(s[2])}</h3>
+        <p class="text-gray-400 mb-6">${esc(s[3])}</p>
+        <ul class="space-y-2 text-sm text-gray-500">${s[4].map(i=>`<li><i class="fas fa-check text-green-400 mr-2"></i>${esc(i)}</li>`).join('')}</ul>
+      </div>`).join('')}
+    </div>
+  </div>
+</section>
+
+<section id="portafolio" class="py-20 px-6">
+  <div class="container mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="section-title">Proyectos destacados</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Ocho de más de cuarenta. Cada uno con el problema, lo que construí y capturas del sistema real.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      ${PROJECTS.map(p=>`<div class="project-card">
+        <a href="proyectos/${p.slug}.html" class="project-image-container">
+          ${shot(p.slug,p.cover,p.title,0,'project-image')}
+          <div class="project-overlay"><i class="fas fa-arrow-right text-3xl"></i></div>
+        </a>
+        <div class="p-6">
+          <div class="text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">${esc(p.cliente)} · ${esc(p.pais)}</div>
+          <h3 class="text-2xl font-bold mb-3">${esc(p.title)}</h3>
+          <p class="text-gray-400 mb-4">${esc(SHORT[p.slug]||'')}</p>
+          <div class="flex flex-wrap gap-2 mb-4">${chips(p).map(c=>`<span class="tech-tag">${esc(c)}</span>`).join('')}</div>
+          <a href="proyectos/${p.slug}.html" class="text-blue-400 hover:text-blue-300 transition font-semibold"><i class="fas fa-arrow-right mr-1"></i> Ver el caso completo</a>
+        </div>
+      </div>`).join('')}
+    </div>
+    <div class="mt-12 text-center">
+      <button class="btn-secondary" id="toggle-otros" aria-expanded="false" aria-controls="otros-list"><i class="fas fa-plus mr-2"></i>Ver otros trabajos</button>
+      <div id="otros-list" hidden class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 text-left">
+        ${OTHERS.map(o=>`<div class="glass-card p-6">
+          <h4 class="text-lg font-bold mb-1">${esc(o[0])}</h4>
+          <p class="text-xs font-mono text-gray-500 mb-3">${esc(o[1])}</p>
+          <p class="text-gray-400 text-sm">${esc(o[2])}</p>
+        </div>`).join('')}
+      </div>
+    </div>
+  </div>
+</section>`;
+
 idx+=`
-<article class="card">
-<a href="proyectos/${p.slug}.html">
-${shot(p.slug,p.cover,p.title,0)}
-<div class="card-body">
-<div class="mono card-meta">${esc(p.cliente)} · ${esc(p.pais)}</div>
-<h3>${esc(p.title)}</h3>
-<p>${esc(SHORT[p.slug]||'')}</p>
-<div class="chips">${chips(p).map(c=>`<span>${esc(c)}</span>`).join('')}</div>
-</div>
-</a>
-</article>`;});
-idx+=`
-</div>
+<section id="metodo" class="py-20 px-6 bg-gray-800 bg-opacity-50">
+  <div class="container mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="section-title">Cómo trabajo</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Sin sorpresas: se define, se entrega por partes y se prueba.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      ${METHOD.map((m,i)=>`<div class="glass-card p-6">
+        <div class="text-3xl font-bold gradient-text mb-3">0${i+1}</div>
+        <h3 class="text-lg font-bold mb-2">${esc(m[0])}</h3>
+        <p class="text-gray-400 text-sm">${esc(m[1])}</p>
+      </div>`).join('')}
+    </div>
+  </div>
 </section>
-<section id="otros" style="padding-top:0">
-<div class="others">
-<div class="sec-head" style="margin-bottom:24px"><h2 style="font-size:1.4rem">Otros trabajos</h2>
-<button class="toggle" id="toggle-otros" aria-expanded="false" aria-controls="otros-list">Ver</button></div>
-<ol id="otros-list" hidden>${OTHERS.map(o=>`<li><h4>${esc(o[0])}<br><span class="mono" style="text-transform:none">${esc(o[1])}</span></h4><p>${esc(o[2])}</p></li>`).join('')}</ol>
-</div>
+
+<section id="tecnologias" class="py-20 px-6">
+  <div class="container mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="section-title">Stack tecnológico</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Lo que uso todos los días para construir y sostener estos sistemas.</p>
+    </div>
+    ${STACK.map((s,i)=>`<div class="mb-10">
+      <h3 class="text-xl font-bold mb-5 text-center ${['text-green-400','text-blue-400','text-purple-400'][i%3]}">${esc(s[0])}</h3>
+      <div class="flex flex-wrap justify-center gap-4">${s[1].split('|').map(c=>`<span class="tech-badge">${esc(c)}</span>`).join('')}</div>
+    </div>`).join('')}
+  </div>
 </section>
-<section id="metodo">
-<div class="sec-head"><h2>Cómo trabajo</h2></div>
-<div class="cols">${METHOD.map(m=>`<div><h3>${esc(m[0])}</h3><p>${esc(m[1])}</p></div>`).join('')}</div>
-</section>
-<section id="stack">
-<div class="sec-head"><h2>Stack</h2></div>
-${STACK.map(s=>`<div class="stack-group"><h3 style="font-size:.95rem">${esc(s[0])}</h3><div class="chips">${s[1].split('|').map(c=>`<span>${esc(c)}</span>`).join('')}</div></div>`).join('')}
-</section>
-<section class="contact" id="contacto" style="border-bottom:0">
-<h2>¿Tenés un problema que se resuelve con software?</h2>
-<p class="lede">Escribime y lo charlamos.</p>
-<p><a class="big" href="mailto:${MAIL}">${MAIL}</a></p>
-<div class="links-row" style="margin-top:26px"><a href="${LINKEDIN}" class="small">LinkedIn</a><a href="${GITHUB}" class="small">GitHub</a><a href="https://somosvertical.ar" class="small">Vertical</a></div>
-</section>
-</div>`;
+
+<section id="contacto" class="py-20 px-6 bg-gray-800 bg-opacity-50">
+  <div class="container mx-auto max-w-4xl">
+    <div class="text-center mb-16">
+      <h2 class="section-title">Hablemos de tu proyecto</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">¿Tenés un problema que se resuelve con software? Contame y lo charlamos.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="space-y-6">
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-green-500 bg-opacity-20 rounded-lg flex items-center justify-center"><i class="fas fa-envelope text-green-400 text-xl"></i></div>
+            <div><p class="text-sm text-gray-500">Email</p>
+              <a href="mailto:${MAIL}" class="text-base font-semibold hover:text-green-400 transition break-all">${MAIL}</a></div>
+          </div>
+        </div>
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-blue-500 bg-opacity-20 rounded-lg flex items-center justify-center"><i class="fab fa-whatsapp text-blue-400 text-xl"></i></div>
+            <div><p class="text-sm text-gray-500">WhatsApp</p>
+              <a href="${WA}" target="_blank" rel="noopener" class="text-lg font-semibold hover:text-blue-400 transition">+54 341 271-4751</a></div>
+          </div>
+        </div>
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-purple-500 bg-opacity-20 rounded-lg flex items-center justify-center"><i class="fab fa-linkedin text-purple-400 text-xl"></i></div>
+            <div><p class="text-sm text-gray-500">LinkedIn</p>
+              <a href="${LINKEDIN}" target="_blank" rel="noopener" class="text-lg font-semibold hover:text-purple-400 transition">linkedin.com/in/brancoblunda</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="glass-card p-8 bg-gradient-to-br from-green-500 to-blue-600 bg-opacity-10">
+        <h3 class="text-2xl font-bold mb-4">¿Empezamos?</h3>
+        <p class="text-gray-300 mb-6">Contame el problema y te devuelvo una propuesta concreta en menos de 24 horas.</p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i><span>Primera charla sin costo</span></li>
+          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i><span>Propuesta técnica y alcance por escrito</span></li>
+          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i><span>Entregas por hitos, ves avances desde el principio</span></li>
+        </ul>
+        <a href="${WA}?text=Hola%20Branco,%20te%20escribo%20por%20un%20proyecto" target="_blank" rel="noopener"
+           class="inline-block w-full text-center px-8 py-4 bg-white text-gray-900 rounded-lg font-bold hover:bg-gray-100 transition">
+          <i class="fab fa-whatsapp mr-2"></i> Escribime por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>`;
+
 idx+=foot(0);
 fs.writeFileSync('index.html',idx);
 
+/* ---------- paginas de caso ---------- */
 if(!fs.existsSync('proyectos'))fs.mkdirSync('proyectos');
 PROJECTS.forEach(p=>{
-let h=head(p.title+' — Branco Blunda',p.desc.slice(0,155),SITE+'/proyectos/'+p.slug+'.html',1);
+let h=head(p.title+' | Branco Blunda',p.desc.slice(0,155),SITE+'/proyectos/'+p.slug+'.html',1);
 h+=`
-<div class="wrap">
-<div class="crumb"><a href="../index.html">← Todo el trabajo</a></div>
-<section class="p-hero">
-<div class="mono" style="margin-bottom:20px">${esc(p.tag)}</div>
-<h1>${esc(p.title)}</h1>
-<p class="lede">${esc(p.desc)}</p>
-<div class="p-meta">
-<div><span>Cliente</span><b>${esc(p.cliente)}</b></div>
-<div><span>País</span><b>${esc(p.pais)}</b></div>
-<div><span>Rol</span><b>${esc(p.rol)}</b></div>
-<div><span>Estado</span><b>${esc(p.estado)}</b></div>
-</div>
+<section class="pt-32 pb-12 px-6">
+  <div class="container mx-auto max-w-5xl">
+    <a href="../index.html#portafolio" class="text-gray-400 hover:text-green-400 transition text-sm font-mono"><i class="fas fa-arrow-left mr-2"></i>Todo el trabajo</a>
+    <div class="mt-8">
+      <span class="px-4 py-2 bg-green-500 bg-opacity-10 border border-green-500 rounded-full text-green-400 text-xs font-mono">${esc(p.tag)}</span>
+      <h1 class="text-4xl md:text-6xl font-bold mt-6 mb-6"><span class="gradient-text">${esc(p.title)}</span></h1>
+      <p class="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">${esc(p.desc)}</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+      ${[['Cliente',p.cliente],['País',p.pais],['Rol',p.rol],['Estado',p.estado]].map(m=>`<div class="glass-card p-5">
+        <p class="text-xs text-gray-500 font-mono uppercase tracking-wider mb-2">${esc(m[0])}</p>
+        <p class="font-semibold text-sm">${esc(m[1])}</p></div>`).join('')}
+    </div>
+  </div>
 </section>
-<section class="block"><h2>El problema</h2><p class="lede">${esc(p.problema)}</p></section>
-<section class="block"><h2>Lo que construí</h2><ul>${p.construido.map(c=>`<li>${esc(c)}</li>`).join('')}</ul></section>
-${p.stats.length?`<section class="block"><h2>Resultado</h2><ul class="result" style="margin-top:6px">${p.stats.map(s=>`<li><b>${esc(s[0])}</b>${esc(s[1])}</li>`).join('')}</ul>${p.nota?`<div class="note">${esc(p.nota)}</div>`:''}</section>`:''}
-<section class="block"><h2>Capturas</h2><div class="gallery">${p.shots.map(s=>gitem(p.slug,s,1)).join('')}</div></section>
-<section class="block"><h2>Stack</h2>
-<p class="mono" style="text-transform:none;letter-spacing:0;font-size:.86rem;line-height:2;color:var(--muted)">${esc(p.tech)}</p>
-${p.links.length?`<div class="case-links" style="margin-top:26px">${p.links.map(l=>`<a href="${l[1]}" target="_blank" rel="noopener">${esc(l[0])}</a>`).join('')}</div>`:''}
+
+<section class="py-16 px-6 bg-gray-800 bg-opacity-50">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-3xl font-bold mb-6 text-green-400">El problema</h2>
+    <p class="text-lg text-gray-300 leading-relaxed max-w-3xl">${esc(p.problema)}</p>
+  </div>
 </section>
-<section style="padding:56px 0"><a class="btn" href="../index.html">← Volver a todo el trabajo</a></section>
-</div>`;
+
+<section class="py-16 px-6">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-3xl font-bold mb-8 text-blue-400">Lo que construí</h2>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      ${p.construido.map(c=>`<li class="glass-card p-5 flex gap-3 items-start"><i class="fas fa-check text-green-400 mt-1"></i><span class="text-gray-300">${esc(c)}</span></li>`).join('')}
+    </ul>
+  </div>
+</section>
+
+${p.stats.length?`<section class="py-16 px-6 bg-gray-800 bg-opacity-50">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-3xl font-bold mb-8 text-purple-400">Resultado</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      ${p.stats.map(s=>`<div class="glass-card p-6 text-center">
+        <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">${esc(s[0])}</div>
+        <p class="text-gray-400 text-sm">${esc(s[1])}</p></div>`).join('')}
+    </div>
+    ${p.nota?`<p class="text-gray-500 text-sm mt-6 font-mono">${esc(p.nota)}</p>`:''}
+  </div>
+</section>`:''}
+
+<section class="py-16 px-6">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-3xl font-bold mb-8">Capturas</h2>
+    <div class="gallery">${p.shots.map(s=>gitem(p.slug,s,1)).join('')}</div>
+  </div>
+</section>
+
+<section class="py-16 px-6 bg-gray-800 bg-opacity-50">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-3xl font-bold mb-8">Stack</h2>
+    <div class="flex flex-wrap gap-3">${p.tech.split(' · ').map(t=>`<span class="tech-badge">${esc(t)}</span>`).join('')}</div>
+    ${p.links.length?`<div class="flex flex-wrap gap-4 mt-10">${p.links.map(l=>`<a href="${l[1]}" target="_blank" rel="noopener" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>${esc(l[0])}</a>`).join('')}</div>`:''}
+  </div>
+</section>
+
+<section class="py-20 px-6 text-center">
+  <div class="container mx-auto max-w-3xl">
+    <h2 class="text-3xl font-bold mb-4">¿Tenés algo parecido entre manos?</h2>
+    <p class="text-gray-400 mb-8">Contame el problema y lo charlamos.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="${WA}?text=Hola%20Branco,%20vi%20el%20caso%20de%20${encodeURIComponent(p.title)}" target="_blank" rel="noopener" class="btn-primary"><i class="fab fa-whatsapp mr-2"></i>Escribime</a>
+      <a href="../index.html#portafolio" class="btn-secondary"><i class="fas fa-arrow-left mr-2"></i>Ver otros proyectos</a>
+    </div>
+  </div>
+</section>`;
 h+=foot(1);
 fs.writeFileSync(path.join('proyectos',p.slug+'.html'),h);});
-console.log('OK — index.html + '+PROJECTS.length+' paginas');
+console.log('OK — index.html + '+PROJECTS.length+' paginas de caso');

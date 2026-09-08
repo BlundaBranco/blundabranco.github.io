@@ -1,174 +1,410 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Branco Blunda — Software Engineer</title>
-<meta name="description" content="Software Engineer. Construyo sistemas que llegan a producción: agentes de voz y de WhatsApp, SaaS multi-tenant y apps móviles publicadas.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Software Engineer. Construyo sistemas que llegan a produccion: agentes de voz y de WhatsApp, SaaS multi-tenant y apps moviles publicadas.">
+<meta name="author" content="Branco Blunda">
+<meta name="theme-color" content="#10b981">
+<title>Branco Blunda | Software Engineer &amp; AI Specialist</title>
 <link rel="canonical" href="https://blundabranco.github.io/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Branco Blunda — Software Engineer">
-<meta property="og:description" content="Software Engineer. Construyo sistemas que llegan a producción: agentes de voz y de WhatsApp, SaaS multi-tenant y apps móviles publicadas.">
 <meta property="og:url" content="https://blundabranco.github.io/">
-<meta property="og:image" content="'+SITE+'/assets/images/profile.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#FBFAF8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#100F0D" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Branco Blunda | Software Engineer &amp; AI Specialist">
+<meta property="og:description" content="Software Engineer. Construyo sistemas que llegan a produccion: agentes de voz y de WhatsApp, SaaS multi-tenant y apps moviles publicadas.">
+<meta property="og:image" content="https://blundabranco.github.io/assets/images/foto.jpg">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Branco Blunda | Software Engineer &amp; AI Specialist">
+<meta property="twitter:description" content="Software Engineer. Construyo sistemas que llegan a produccion: agentes de voz y de WhatsApp, SaaS multi-tenant y apps moviles publicadas.">
+<meta property="twitter:image" content="https://blundabranco.github.io/assets/images/foto.jpg">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-<header class="site"><div class="wrap">
-<a class="brand" href="index.html"><b>Branco Blunda</b></a>
-<nav class="site">
-<a href="index.html#trabajo">Trabajo</a>
-<a href="index.html#metodo">Método</a>
-<a href="index.html#stack">Stack</a>
-<a href="index.html#contacto">Contacto</a>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+<nav class="fixed top-0 w-full bg-gray-900 bg-opacity-95 backdrop-blur-md z-50 border-b border-gray-800">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2">
+        <span class="w-8 h-8 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center font-bold text-gray-900">B</span>
+        <span class="text-xl font-bold">Branco Blunda</span>
+      </a>
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html#inicio" class="nav-link">Inicio</a>
+        <a href="index.html#servicios" class="nav-link">Servicios</a>
+        <a href="index.html#portafolio" class="nav-link">Portafolio</a>
+        <a href="index.html#tecnologias" class="nav-link">Stack</a>
+        <a href="index.html#contacto" class="nav-link">Contacto</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-4">
+      <a href="index.html#inicio" class="block nav-link-mobile">Inicio</a>
+      <a href="index.html#servicios" class="block nav-link-mobile">Servicios</a>
+      <a href="index.html#portafolio" class="block nav-link-mobile">Portafolio</a>
+      <a href="index.html#tecnologias" class="block nav-link-mobile">Stack</a>
+      <a href="index.html#contacto" class="block nav-link-mobile">Contacto</a>
+    </div>
+  </div>
 </nav>
-</div></header>
-<div class="wrap">
-<section class="hero">
-<div class="hero-grid">
-<div>
-<div class="mono kicker">Software Engineer · Rosario, Argentina · Remoto</div>
-<h1>Construyo sistemas que <em>llegan a producción</em> y los usa gente real.</h1>
-<p class="lede">Agentes de voz y de WhatsApp, SaaS multi-tenant, apps móviles publicadas y automatización de procesos. Desarrollo software desde 2017.</p>
-<div class="cta"><a class="btn" href="#trabajo">Ver el trabajo</a><a class="btn ghost" href="mailto:brancoadrianblunda@gmail.com">Escribime</a></div>
-</div>
-<img class="foto" src="assets/images/foto.jpg" alt="Branco Blunda" width="800" height="800">
-</div>
+<section id="inicio" class="min-h-screen flex items-center justify-center pt-24 pb-16">
+  <div class="container mx-auto px-6 md:px-12 lg:px-24">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+      <div class="flex-1 text-center md:text-left">
+        <div class="inline-block mb-4">
+          <span class="px-4 py-2 bg-green-500 bg-opacity-10 border border-green-500 rounded-full text-green-400 text-sm font-mono">🚀 Disponible para proyectos</span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight"><span class="gradient-text">Branco </span>Blunda</h1>
+        <h2 class="text-2xl md:text-3xl text-gray-300 mb-6 font-light">Software Engineer | Full Stack &amp; IA</h2>
+        <p class="text-lg md:text-xl text-gray-400 mb-6 max-w-2xl">
+          Construyo sistemas que <span class="text-green-400 font-semibold">llegan a producción</span> y usa gente real:
+          agentes de voz y de <span class="text-blue-400 font-semibold">WhatsApp</span>, SaaS multi-empresa y apps móviles publicadas.
+        </p>
+        <p class="text-gray-500 mb-10 max-w-2xl">Desarrollo software desde 2017. Rosario, Argentina · Trabajo remoto.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="#portafolio" class="btn-primary"><i class="fas fa-folder-open mr-2"></i>Ver proyectos</a>
+          <a href="#contacto" class="btn-secondary"><i class="fas fa-comments mr-2"></i>Hablemos</a>
+        </div>
+        <div class="flex gap-6 mt-10 justify-center md:justify-start">
+          <a href="https://github.com/BlundaBranco" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fab fa-github text-2xl"></i></a>
+          <a href="https://linkedin.com/in/brancoblunda" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin text-2xl"></i></a>
+          <a href="https://wa.me/5493412714751" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp text-2xl"></i></a>
+          <a href="mailto:brancoadrianblunda@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope text-2xl"></i></a>
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center">
+        <div class="profile-container">
+          <img src="assets/images/foto.jpg" alt="Branco Blunda - Software Engineer" class="profile-image" loading="eager" width="800" height="800">
+          <div class="profile-glow"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="proof">
-<ul>
-<li><strong>40+</strong><span>proyectos</span></li>
-<li><strong>25</strong><span>reseñas de clientes</span></li>
-<li><strong>#1</strong><span>Workana Argentina 2026</span></li>
-<li><strong>4</strong><span>apps en tiendas</span></li>
-<li><strong>8.900+</strong><span>usuarios</span></li>
-<li><strong>Meta</strong><span>proveedor verificado</span></li>
-</ul>
+
+<section class="px-6 pb-16">
+  <div class="container mx-auto">
+    <div class="proof-bar">
+      <div><strong>40+</strong><span>proyectos</span></div>
+      <div><strong>25</strong><span>reseñas de clientes</span></div>
+      <div><strong>#1</strong><span>Workana Argentina 2026</span></div>
+      <div><strong>4</strong><span>apps en tiendas</span></div>
+      <div><strong>8.900+</strong><span>usuarios</span></div>
+      <div><strong>Meta</strong><span>proveedor verificado</span></div>
+    </div>
+  </div>
 </section>
-<section id="trabajo">
-<div class="sec-head"><h2>Trabajo</h2><span class="mono">Ocho de más de cuarenta</span></div>
-<div class="grid-cases">
-<article class="card">
-<a href="proyectos/taxi-ai.html">
-<figure class="shot"><img src="assets/proyectos/taxi-ai/08-panel-despacho.png" alt="Taxi AI" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/taxi-ai/08-panel-despacho.png</figcaption></figure>
-<div class="card-body">
-<div class="mono card-meta">Taxi Call Group S.A.S. · Colombia</div>
-<h3>Taxi AI</h3>
-<p>Atiende la llamada, entiende la dirección hablada y despacha el taxi sin operador.</p>
-<div class="chips"><span>Node.js</span><span>Fastify</span><span>tRPC</span><span>PostgreSQL</span></div>
-</div>
-</a>
-</article>
-<article class="card">
-<a href="proyectos/tu-proximo-horizonte.html">
-<figure class="shot"><img src="assets/proyectos/tu-proximo-horizonte/01-onboarding-inicio.png" alt="Tu Próximo Horizonte" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/tu-proximo-horizonte/01-onboarding-inicio.png</figcaption></figure>
-<div class="card-body">
-<div class="mono card-meta">Leo Cerdeira · Argentina</div>
-<h3>Tu Próximo Horizonte</h3>
-<p>Tres sistemas en producción que el cliente opera solo: agenda, captación de leads y onboarding.</p>
-<div class="chips"><span>Next.js 15</span><span>TypeScript</span><span>Supabase</span><span>Vercel</span></div>
-</div>
-</a>
-</article>
-<article class="card">
-<a href="proyectos/infinity-book.html">
-<figure class="shot"><img src="assets/proyectos/infinity-book/03-app-escaneo.png" alt="Infinity Book" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/infinity-book/03-app-escaneo.png</figcaption></figure>
-<div class="card-body">
-<div class="mono card-meta">Elfinbook S.R.L. · Argentina</div>
-<h3>Infinity Book</h3>
-<p>App de escaneo con OCR e IA. Rehice y publiqué la versión que está hoy en las tiendas.</p>
-<div class="chips"><span>Flutter / Dart</span><span>Kotlin con OpenCV y ML Kit</span><span>ASP.NET Core</span><span>SQL Server</span></div>
-</div>
-</a>
-</article>
-<article class="card">
-<a href="proyectos/signfloow.html">
-<figure class="shot"><img src="assets/proyectos/signfloow/01-floow-kanban.png" alt="SignFloow" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/signfloow/01-floow-kanban.png</figcaption></figure>
-<div class="card-body">
-<div class="mono card-meta">Cliente directo · España</div>
-<h3>SignFloow</h3>
-<p>SaaS para empresas de rotulación: tablero de producción, presupuestos por fórmulas y asistente de IA.</p>
-<div class="chips"><span>TypeScript</span><span>React 19</span><span>Vite</span><span>Tailwind</span></div>
-</div>
-</a>
-</article>
-<article class="card">
-<a href="proyectos/blc-one.html">
-<figure class="shot"><img src="assets/proyectos/blc-one/03-cronograma-anual.png" alt="BLC One" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/blc-one/03-cronograma-anual.png</figcaption></figure>
-<div class="card-body">
-<div class="mono card-meta">BLC Power Generation · Argentina</div>
-<h3>BLC One</h3>
-<p>Centraliza 237 plantas de energía renovable y sus compromisos regulatorios.</p>
-<div class="chips"><span>Python 3.13</span><span>Flet</span><span>SQLAlchemy 2</span><span>MySQL 8</span></div>
-</div>
-</a>
-</article>
-<article class="card">
-<a href="proyectos/comanda-central.html">
-<figure class="shot"><img src="assets/proyectos/comanda-central/01-pos.png" alt="Comanda Central" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/comanda-central/01-pos.png</figcaption></figure>
-<div class="card-body">
-<div class="mono card-meta">Producto propio · Argentina</div>
-<h3>Comanda Central</h3>
-<p>Punto de venta, inventario y costeo real de recetas anidadas para gastronomía.</p>
-<div class="chips"><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>JavaScript</span></div>
-</div>
-</a>
-</article>
-<article class="card">
-<a href="proyectos/vertical.html">
-<figure class="shot"><img src="assets/proyectos/vertical/03-chat-mati.png" alt="Vertical" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/vertical/03-chat-mati.png</figcaption></figure>
-<div class="card-body">
-<div class="mono card-meta">Producto propio · Argentina</div>
-<h3>Vertical</h3>
-<p>Mi plataforma: agentes de WhatsApp con IA para inmobiliarias. Verificada por Meta.</p>
-<div class="chips"><span>Meta WhatsApp Cloud API</span><span>modelos de lenguaje con uso de herramientas</span><span>Python</span></div>
-</div>
-</a>
-</article>
-<article class="card">
-<a href="proyectos/deltan-scan.html">
-<figure class="shot"><img src="assets/proyectos/deltan-scan/03-app-analisis.png" alt="Deltan Scan IA" loading="lazy" onerror="this.closest('.shot').classList.add('missing');this.remove()"><figcaption>Falta la captura<br>assets/proyectos/deltan-scan/03-app-analisis.png</figcaption></figure>
-<div class="card-body">
-<div class="mono card-meta">Carlos Vargas · Latinoamérica</div>
-<h3>Deltan Scan IA</h3>
-<p>Medición asistida de radiografías dentales con visión por computadora.</p>
-<div class="chips"><span>Python</span><span>OpenCV</span><span>Streamlit</span></div>
-</div>
-</a>
-</article>
-</div>
+
+<section id="servicios" class="py-20 px-6 bg-gray-800 bg-opacity-50">
+  <div class="container mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="section-title">Qué hago</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Software que resuelve un problema concreto del negocio y queda funcionando.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="service-card">
+        <div class="service-icon bg-gradient-to-br from-green-400 to-cyan-500"><i class="fas fa-robot text-3xl"></i></div>
+        <h3 class="text-2xl font-bold mb-4">Agentes de IA y automatización</h3>
+        <p class="text-gray-400 mb-6">Sistemas que atienden, entienden y resuelven solos: voz por teléfono, WhatsApp y flujos internos. En producción, no en demo.</p>
+        <ul class="space-y-2 text-sm text-gray-500"><li><i class="fas fa-check text-green-400 mr-2"></i>Agentes de voz sobre telefonía</li><li><i class="fas fa-check text-green-400 mr-2"></i>Agentes de WhatsApp con API oficial</li><li><i class="fas fa-check text-green-400 mr-2"></i>Automatización de procesos</li><li><i class="fas fa-check text-green-400 mr-2"></i>LLMs con acceso a datos del negocio</li></ul>
+      </div><div class="service-card">
+        <div class="service-icon bg-gradient-to-br from-blue-500 to-purple-600"><i class="fas fa-layer-group text-3xl"></i></div>
+        <h3 class="text-2xl font-bold mb-4">SaaS y plataformas a medida</h3>
+        <p class="text-gray-400 mb-6">Del problema al producto: arquitectura multi-empresa, paneles de operación, APIs e infraestructura que aguanta.</p>
+        <ul class="space-y-2 text-sm text-gray-500"><li><i class="fas fa-check text-green-400 mr-2"></i>Arquitectura multi-tenant</li><li><i class="fas fa-check text-green-400 mr-2"></i>Paneles y tableros de operación</li><li><i class="fas fa-check text-green-400 mr-2"></i>APIs y motores de cálculo</li><li><i class="fas fa-check text-green-400 mr-2"></i>AWS, Docker y CI/CD</li></ul>
+      </div><div class="service-card">
+        <div class="service-icon bg-gradient-to-br from-yellow-400 to-orange-500"><i class="fas fa-mobile-screen text-3xl"></i></div>
+        <h3 class="text-2xl font-bold mb-4">Apps móviles y publicación</h3>
+        <p class="text-gray-400 mb-6">Apps Android e iOS construidas, publicadas y mantenidas. Incluye la parte que nadie quiere hacer: tiendas, cuentas y migraciones.</p>
+        <ul class="space-y-2 text-sm text-gray-500"><li><i class="fas fa-check text-green-400 mr-2"></i>Flutter y Android nativo</li><li><i class="fas fa-check text-green-400 mr-2"></i>Publicación en Google Play y App Store</li><li><i class="fas fa-check text-green-400 mr-2"></i>Migración de apps heredadas</li><li><i class="fas fa-check text-green-400 mr-2"></i>Mantenimiento y versiones</li></ul>
+      </div>
+    </div>
+  </div>
 </section>
-<section id="otros" style="padding-top:0">
-<div class="others">
-<div class="sec-head" style="margin-bottom:24px"><h2 style="font-size:1.4rem">Otros trabajos</h2>
-<button class="toggle" id="toggle-otros" aria-expanded="false" aria-controls="otros-list">Ver</button></div>
-<ol id="otros-list" hidden><li><h4>Lomas del Pacífico<br><span class="mono" style="text-transform:none">México</span></h4><p>Cobranza de lotes en cuotas: planes de pago, recibos con folio, mora y morosidad. Laravel.</p></li><li><h4>Luseo<br><span class="mono" style="text-transform:none">EE.UU. / Colombia</span></h4><p>Colaboración dentro del equipo del cliente sobre módulos de gestión de proyectos en Angular.</p></li><li><h4>SatManager<br><span class="mono" style="text-transform:none">España</span></h4><p>Servicio técnico en campo: avisos con mapa y ruteo, albaranes con firma, facturación. Ionic.</p></li><li><h4>Cortex<br><span class="mono" style="text-transform:none">Producto propio</span></h4><p>Asistente personal por WhatsApp con recordatorios, gastos y notas por audio. FastAPI.</p></li><li><h4>Academia Thales<br><span class="mono" style="text-transform:none">Perú</span></h4><p>Aula virtual en Moodle y reemplazo de un WordPress comprometido por un sitio estático. Astro.</p></li><li><h4>The Argentino y Mosto<br><span class="mono" style="text-transform:none">Canadá / EE.UU.</span></h4><p>Dos tiendas de exportación creadas desde cero. Shopify.</p></li><li><h4>Tymonyz<br><span class="mono" style="text-transform:none">Producto propio</span></h4><p>Pipeline autónomo de noticias a video: guion, voz, edición y publicación. Python.</p></li><li><h4>Expert Advisor MetaTrader 5<br><span class="mono" style="text-transform:none">Cliente vía Workana</span></h4><p>Robot de trading construido según la especificación del cliente. MQL5.</p></li><li><h4>25+ trabajos con reseña pública<br><span class="mono" style="text-transform:none">Varios países</span></h4><p>Bots de WhatsApp, aulas virtuales, tiendas, tableros y frontends. Verificables en Workana.</p></li></ol>
-</div>
+
+<section id="portafolio" class="py-20 px-6">
+  <div class="container mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="section-title">Proyectos destacados</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Ocho de más de cuarenta. Cada uno con el problema, lo que construí y capturas del sistema real.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="project-card">
+        <a href="proyectos/taxi-ai.html" class="project-image-container">
+          <img src="assets/proyectos/taxi-ai/08-panel-despacho.png" alt="Taxi AI" class="project-image" loading="lazy" decoding="async" data-file="assets/proyectos/taxi-ai/08-panel-despacho.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">
+          <div class="project-overlay"><i class="fas fa-arrow-right text-3xl"></i></div>
+        </a>
+        <div class="p-6">
+          <div class="text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">Taxi Call Group S.A.S. · Colombia</div>
+          <h3 class="text-2xl font-bold mb-3">Taxi AI</h3>
+          <p class="text-gray-400 mb-4">Atiende la llamada, entiende la dirección hablada y despacha el taxi sin operador.</p>
+          <div class="flex flex-wrap gap-2 mb-4"><span class="tech-tag">Node.js</span><span class="tech-tag">Fastify</span><span class="tech-tag">tRPC</span><span class="tech-tag">PostgreSQL</span></div>
+          <a href="proyectos/taxi-ai.html" class="text-blue-400 hover:text-blue-300 transition font-semibold"><i class="fas fa-arrow-right mr-1"></i> Ver el caso completo</a>
+        </div>
+      </div><div class="project-card">
+        <a href="proyectos/tu-proximo-horizonte.html" class="project-image-container">
+          <img src="assets/proyectos/tu-proximo-horizonte/01-onboarding-inicio.png" alt="Tu Próximo Horizonte" class="project-image" loading="lazy" decoding="async" data-file="assets/proyectos/tu-proximo-horizonte/01-onboarding-inicio.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">
+          <div class="project-overlay"><i class="fas fa-arrow-right text-3xl"></i></div>
+        </a>
+        <div class="p-6">
+          <div class="text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">Leo Cerdeira · Argentina</div>
+          <h3 class="text-2xl font-bold mb-3">Tu Próximo Horizonte</h3>
+          <p class="text-gray-400 mb-4">Tres sistemas en producción que el cliente opera solo: agenda, captación de leads y onboarding.</p>
+          <div class="flex flex-wrap gap-2 mb-4"><span class="tech-tag">Next.js 15</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Supabase</span><span class="tech-tag">Vercel</span></div>
+          <a href="proyectos/tu-proximo-horizonte.html" class="text-blue-400 hover:text-blue-300 transition font-semibold"><i class="fas fa-arrow-right mr-1"></i> Ver el caso completo</a>
+        </div>
+      </div><div class="project-card">
+        <a href="proyectos/infinity-book.html" class="project-image-container">
+          <img src="assets/proyectos/infinity-book/03-app-escaneo.png" alt="Infinity Book" class="project-image" loading="lazy" decoding="async" data-file="assets/proyectos/infinity-book/03-app-escaneo.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">
+          <div class="project-overlay"><i class="fas fa-arrow-right text-3xl"></i></div>
+        </a>
+        <div class="p-6">
+          <div class="text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">Elfinbook S.R.L. · Argentina</div>
+          <h3 class="text-2xl font-bold mb-3">Infinity Book</h3>
+          <p class="text-gray-400 mb-4">App de escaneo con OCR e IA. Rehice y publiqué la versión que está hoy en las tiendas.</p>
+          <div class="flex flex-wrap gap-2 mb-4"><span class="tech-tag">Flutter / Dart</span><span class="tech-tag">Kotlin con OpenCV y ML Kit</span><span class="tech-tag">ASP.NET Core</span><span class="tech-tag">SQL Server</span></div>
+          <a href="proyectos/infinity-book.html" class="text-blue-400 hover:text-blue-300 transition font-semibold"><i class="fas fa-arrow-right mr-1"></i> Ver el caso completo</a>
+        </div>
+      </div><div class="project-card">
+        <a href="proyectos/signfloow.html" class="project-image-container">
+          <img src="assets/proyectos/signfloow/01-floow-kanban.png" alt="SignFloow" class="project-image" loading="lazy" decoding="async" data-file="assets/proyectos/signfloow/01-floow-kanban.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">
+          <div class="project-overlay"><i class="fas fa-arrow-right text-3xl"></i></div>
+        </a>
+        <div class="p-6">
+          <div class="text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">Cliente directo · España</div>
+          <h3 class="text-2xl font-bold mb-3">SignFloow</h3>
+          <p class="text-gray-400 mb-4">SaaS para empresas de rotulación: tablero de producción, presupuestos por fórmulas y asistente de IA.</p>
+          <div class="flex flex-wrap gap-2 mb-4"><span class="tech-tag">TypeScript</span><span class="tech-tag">React 19</span><span class="tech-tag">Vite</span><span class="tech-tag">Tailwind</span></div>
+          <a href="proyectos/signfloow.html" class="text-blue-400 hover:text-blue-300 transition font-semibold"><i class="fas fa-arrow-right mr-1"></i> Ver el caso completo</a>
+        </div>
+      </div><div class="project-card">
+        <a href="proyectos/blc-one.html" class="project-image-container">
+          <img src="assets/proyectos/blc-one/03-cronograma-anual.png" alt="BLC One" class="project-image" loading="lazy" decoding="async" data-file="assets/proyectos/blc-one/03-cronograma-anual.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">
+          <div class="project-overlay"><i class="fas fa-arrow-right text-3xl"></i></div>
+        </a>
+        <div class="p-6">
+          <div class="text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">BLC Power Generation · Argentina</div>
+          <h3 class="text-2xl font-bold mb-3">BLC One</h3>
+          <p class="text-gray-400 mb-4">Centraliza 237 plantas de energía renovable y sus compromisos regulatorios.</p>
+          <div class="flex flex-wrap gap-2 mb-4"><span class="tech-tag">Python 3.13</span><span class="tech-tag">Flet</span><span class="tech-tag">SQLAlchemy 2</span><span class="tech-tag">MySQL 8</span></div>
+          <a href="proyectos/blc-one.html" class="text-blue-400 hover:text-blue-300 transition font-semibold"><i class="fas fa-arrow-right mr-1"></i> Ver el caso completo</a>
+        </div>
+      </div><div class="project-card">
+        <a href="proyectos/comanda-central.html" class="project-image-container">
+          <img src="assets/proyectos/comanda-central/01-pos.png" alt="Comanda Central" class="project-image" loading="lazy" decoding="async" data-file="assets/proyectos/comanda-central/01-pos.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">
+          <div class="project-overlay"><i class="fas fa-arrow-right text-3xl"></i></div>
+        </a>
+        <div class="p-6">
+          <div class="text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">Producto propio · Argentina</div>
+          <h3 class="text-2xl font-bold mb-3">Comanda Central</h3>
+          <p class="text-gray-400 mb-4">Punto de venta, inventario y costeo real de recetas anidadas para gastronomía.</p>
+          <div class="flex flex-wrap gap-2 mb-4"><span class="tech-tag">Node.js</span><span class="tech-tag">Express</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">JavaScript</span></div>
+          <a href="proyectos/comanda-central.html" class="text-blue-400 hover:text-blue-300 transition font-semibold"><i class="fas fa-arrow-right mr-1"></i> Ver el caso completo</a>
+        </div>
+      </div><div class="project-card">
+        <a href="proyectos/vertical.html" class="project-image-container">
+          <img src="assets/proyectos/vertical/03-chat-mati.png" alt="Vertical" class="project-image" loading="lazy" decoding="async" data-file="assets/proyectos/vertical/03-chat-mati.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">
+          <div class="project-overlay"><i class="fas fa-arrow-right text-3xl"></i></div>
+        </a>
+        <div class="p-6">
+          <div class="text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">Producto propio · Argentina</div>
+          <h3 class="text-2xl font-bold mb-3">Vertical</h3>
+          <p class="text-gray-400 mb-4">Mi plataforma: agentes de WhatsApp con IA para inmobiliarias. Verificada por Meta.</p>
+          <div class="flex flex-wrap gap-2 mb-4"><span class="tech-tag">Meta WhatsApp Cloud API</span><span class="tech-tag">modelos de lenguaje con uso de herramientas</span><span class="tech-tag">Python</span></div>
+          <a href="proyectos/vertical.html" class="text-blue-400 hover:text-blue-300 transition font-semibold"><i class="fas fa-arrow-right mr-1"></i> Ver el caso completo</a>
+        </div>
+      </div><div class="project-card">
+        <a href="proyectos/deltan-scan.html" class="project-image-container">
+          <img src="assets/proyectos/deltan-scan/03-app-analisis.png" alt="Deltan Scan IA" class="project-image" loading="lazy" decoding="async" data-file="assets/proyectos/deltan-scan/03-app-analisis.png" onerror="this.parentElement.classList.add('img-missing');this.parentElement.setAttribute('data-missing',this.dataset.file);this.remove()">
+          <div class="project-overlay"><i class="fas fa-arrow-right text-3xl"></i></div>
+        </a>
+        <div class="p-6">
+          <div class="text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">Carlos Vargas · Latinoamérica</div>
+          <h3 class="text-2xl font-bold mb-3">Deltan Scan IA</h3>
+          <p class="text-gray-400 mb-4">Medición asistida de radiografías dentales con visión por computadora.</p>
+          <div class="flex flex-wrap gap-2 mb-4"><span class="tech-tag">Python</span><span class="tech-tag">OpenCV</span><span class="tech-tag">Streamlit</span></div>
+          <a href="proyectos/deltan-scan.html" class="text-blue-400 hover:text-blue-300 transition font-semibold"><i class="fas fa-arrow-right mr-1"></i> Ver el caso completo</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-12 text-center">
+      <button class="btn-secondary" id="toggle-otros" aria-expanded="false" aria-controls="otros-list"><i class="fas fa-plus mr-2"></i>Ver otros trabajos</button>
+      <div id="otros-list" hidden class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 text-left">
+        <div class="glass-card p-6">
+          <h4 class="text-lg font-bold mb-1">Lomas del Pacífico</h4>
+          <p class="text-xs font-mono text-gray-500 mb-3">México</p>
+          <p class="text-gray-400 text-sm">Cobranza de lotes en cuotas: planes de pago, recibos con folio, mora y morosidad. Laravel.</p>
+        </div><div class="glass-card p-6">
+          <h4 class="text-lg font-bold mb-1">Luseo</h4>
+          <p class="text-xs font-mono text-gray-500 mb-3">EE.UU. / Colombia</p>
+          <p class="text-gray-400 text-sm">Colaboración dentro del equipo del cliente sobre módulos de gestión de proyectos en Angular.</p>
+        </div><div class="glass-card p-6">
+          <h4 class="text-lg font-bold mb-1">SatManager</h4>
+          <p class="text-xs font-mono text-gray-500 mb-3">España</p>
+          <p class="text-gray-400 text-sm">Servicio técnico en campo: avisos con mapa y ruteo, albaranes con firma, facturación. Ionic.</p>
+        </div><div class="glass-card p-6">
+          <h4 class="text-lg font-bold mb-1">Cortex</h4>
+          <p class="text-xs font-mono text-gray-500 mb-3">Producto propio</p>
+          <p class="text-gray-400 text-sm">Asistente personal por WhatsApp con recordatorios, gastos y notas por audio. FastAPI.</p>
+        </div><div class="glass-card p-6">
+          <h4 class="text-lg font-bold mb-1">Academia Thales</h4>
+          <p class="text-xs font-mono text-gray-500 mb-3">Perú</p>
+          <p class="text-gray-400 text-sm">Aula virtual en Moodle y reemplazo de un WordPress comprometido por un sitio estático. Astro.</p>
+        </div><div class="glass-card p-6">
+          <h4 class="text-lg font-bold mb-1">The Argentino y Mosto</h4>
+          <p class="text-xs font-mono text-gray-500 mb-3">Canadá / EE.UU.</p>
+          <p class="text-gray-400 text-sm">Dos tiendas de exportación creadas desde cero. Shopify.</p>
+        </div><div class="glass-card p-6">
+          <h4 class="text-lg font-bold mb-1">Tymonyz</h4>
+          <p class="text-xs font-mono text-gray-500 mb-3">Producto propio</p>
+          <p class="text-gray-400 text-sm">Pipeline autónomo de noticias a video: guion, voz, edición y publicación. Python.</p>
+        </div><div class="glass-card p-6">
+          <h4 class="text-lg font-bold mb-1">Expert Advisor MetaTrader 5</h4>
+          <p class="text-xs font-mono text-gray-500 mb-3">Cliente vía Workana</p>
+          <p class="text-gray-400 text-sm">Robot de trading construido según la especificación del cliente. MQL5.</p>
+        </div><div class="glass-card p-6">
+          <h4 class="text-lg font-bold mb-1">25+ trabajos con reseña pública</h4>
+          <p class="text-xs font-mono text-gray-500 mb-3">Varios países</p>
+          <p class="text-gray-400 text-sm">Bots de WhatsApp, aulas virtuales, tiendas, tableros y frontends. Verificables en Workana.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-<section id="metodo">
-<div class="sec-head"><h2>Cómo trabajo</h2></div>
-<div class="cols"><div><h3>Arquitectura primero</h3><p>Defino qué se construye y qué no antes de escribir código.</p></div><div><h3>Entregas por hitos</h3><p>El cliente ve algo andando temprano y seguido.</p></div><div><h3>Tests como condición</h3><p>Un hito no está entregado si no está cubierto.</p></div><div><h3>Desarrollo con IA</h3><p>Agentes de código sobre especificaciones. El criterio sigue siendo mío.</p></div></div>
+<section id="metodo" class="py-20 px-6 bg-gray-800 bg-opacity-50">
+  <div class="container mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="section-title">Cómo trabajo</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Sin sorpresas: se define, se entrega por partes y se prueba.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div class="glass-card p-6">
+        <div class="text-3xl font-bold gradient-text mb-3">01</div>
+        <h3 class="text-lg font-bold mb-2">Arquitectura primero</h3>
+        <p class="text-gray-400 text-sm">Defino qué se construye y qué no antes de escribir código.</p>
+      </div><div class="glass-card p-6">
+        <div class="text-3xl font-bold gradient-text mb-3">02</div>
+        <h3 class="text-lg font-bold mb-2">Entregas por hitos</h3>
+        <p class="text-gray-400 text-sm">El cliente ve algo andando temprano y seguido.</p>
+      </div><div class="glass-card p-6">
+        <div class="text-3xl font-bold gradient-text mb-3">03</div>
+        <h3 class="text-lg font-bold mb-2">Tests como condición</h3>
+        <p class="text-gray-400 text-sm">Un hito no está entregado si no está cubierto.</p>
+      </div><div class="glass-card p-6">
+        <div class="text-3xl font-bold gradient-text mb-3">04</div>
+        <h3 class="text-lg font-bold mb-2">Desarrollo con IA</h3>
+        <p class="text-gray-400 text-sm">Agentes de código sobre especificaciones. El criterio sigue siendo mío.</p>
+      </div>
+    </div>
+  </div>
 </section>
-<section id="stack">
-<div class="sec-head"><h2>Stack</h2></div>
-<div class="stack-group"><h3 style="font-size:.95rem">Lenguajes</h3><div class="chips"><span>Python</span><span>TypeScript</span><span>SQL</span><span>Dart</span><span>C#</span></div></div><div class="stack-group"><h3 style="font-size:.95rem">Backend</h3><div class="chips"><span>Node.js</span><span>NestJS</span><span>FastAPI</span><span>ASP.NET Core</span><span>Laravel</span></div></div><div class="stack-group"><h3 style="font-size:.95rem">Frontend</h3><div class="chips"><span>React</span><span>Next.js</span><span>Angular</span><span>Flutter</span><span>Astro</span><span>Tailwind</span></div></div><div class="stack-group"><h3 style="font-size:.95rem">Datos</h3><div class="chips"><span>PostgreSQL</span><span>MySQL</span><span>SQL Server</span><span>Supabase</span><span>Prisma</span></div></div><div class="stack-group"><h3 style="font-size:.95rem">Infra</h3><div class="chips"><span>AWS</span><span>Terraform</span><span>Docker</span><span>Vercel</span><span>Netlify</span><span>CI/CD</span></div></div><div class="stack-group"><h3 style="font-size:.95rem">IA</h3><div class="chips"><span>LLMs con herramientas</span><span>Agentes en producción</span><span>Whisper</span><span>TTS</span><span>OpenCV</span></div></div><div class="stack-group"><h3 style="font-size:.95rem">Integraciones</h3><div class="chips"><span>WhatsApp Cloud API</span><span>Google Maps</span><span>Mercado Pago</span><span>Twilio</span><span>Asterisk</span><span>n8n</span></div></div>
+
+<section id="tecnologias" class="py-20 px-6">
+  <div class="container mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="section-title">Stack tecnológico</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Lo que uso todos los días para construir y sostener estos sistemas.</p>
+    </div>
+    <div class="mb-10">
+      <h3 class="text-xl font-bold mb-5 text-center text-green-400">Lenguajes</h3>
+      <div class="flex flex-wrap justify-center gap-4"><span class="tech-badge">Python</span><span class="tech-badge">TypeScript</span><span class="tech-badge">SQL</span><span class="tech-badge">Dart</span><span class="tech-badge">C#</span></div>
+    </div><div class="mb-10">
+      <h3 class="text-xl font-bold mb-5 text-center text-blue-400">Backend</h3>
+      <div class="flex flex-wrap justify-center gap-4"><span class="tech-badge">Node.js</span><span class="tech-badge">NestJS</span><span class="tech-badge">FastAPI</span><span class="tech-badge">ASP.NET Core</span><span class="tech-badge">Laravel</span></div>
+    </div><div class="mb-10">
+      <h3 class="text-xl font-bold mb-5 text-center text-purple-400">Frontend</h3>
+      <div class="flex flex-wrap justify-center gap-4"><span class="tech-badge">React</span><span class="tech-badge">Next.js</span><span class="tech-badge">Angular</span><span class="tech-badge">Flutter</span><span class="tech-badge">Astro</span><span class="tech-badge">Tailwind</span></div>
+    </div><div class="mb-10">
+      <h3 class="text-xl font-bold mb-5 text-center text-green-400">Datos</h3>
+      <div class="flex flex-wrap justify-center gap-4"><span class="tech-badge">PostgreSQL</span><span class="tech-badge">MySQL</span><span class="tech-badge">SQL Server</span><span class="tech-badge">Supabase</span><span class="tech-badge">Prisma</span></div>
+    </div><div class="mb-10">
+      <h3 class="text-xl font-bold mb-5 text-center text-blue-400">Infra</h3>
+      <div class="flex flex-wrap justify-center gap-4"><span class="tech-badge">AWS</span><span class="tech-badge">Terraform</span><span class="tech-badge">Docker</span><span class="tech-badge">Vercel</span><span class="tech-badge">Netlify</span><span class="tech-badge">CI/CD</span></div>
+    </div><div class="mb-10">
+      <h3 class="text-xl font-bold mb-5 text-center text-purple-400">IA</h3>
+      <div class="flex flex-wrap justify-center gap-4"><span class="tech-badge">LLMs con herramientas</span><span class="tech-badge">Agentes en producción</span><span class="tech-badge">Whisper</span><span class="tech-badge">TTS</span><span class="tech-badge">OpenCV</span></div>
+    </div><div class="mb-10">
+      <h3 class="text-xl font-bold mb-5 text-center text-green-400">Integraciones</h3>
+      <div class="flex flex-wrap justify-center gap-4"><span class="tech-badge">WhatsApp Cloud API</span><span class="tech-badge">Google Maps</span><span class="tech-badge">Mercado Pago</span><span class="tech-badge">Twilio</span><span class="tech-badge">Asterisk</span><span class="tech-badge">n8n</span></div>
+    </div>
+  </div>
 </section>
-<section class="contact" id="contacto" style="border-bottom:0">
-<h2>¿Tenés un problema que se resuelve con software?</h2>
-<p class="lede">Escribime y lo charlamos.</p>
-<p><a class="big" href="mailto:brancoadrianblunda@gmail.com">brancoadrianblunda@gmail.com</a></p>
-<div class="links-row" style="margin-top:26px"><a href="https://linkedin.com/in/brancoblunda" class="small">LinkedIn</a><a href="https://github.com/BlundaBranco" class="small">GitHub</a><a href="https://somosvertical.ar" class="small">Vertical</a></div>
+
+<section id="contacto" class="py-20 px-6 bg-gray-800 bg-opacity-50">
+  <div class="container mx-auto max-w-4xl">
+    <div class="text-center mb-16">
+      <h2 class="section-title">Hablemos de tu proyecto</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">¿Tenés un problema que se resuelve con software? Contame y lo charlamos.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="space-y-6">
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-green-500 bg-opacity-20 rounded-lg flex items-center justify-center"><i class="fas fa-envelope text-green-400 text-xl"></i></div>
+            <div><p class="text-sm text-gray-500">Email</p>
+              <a href="mailto:brancoadrianblunda@gmail.com" class="text-base font-semibold hover:text-green-400 transition break-all">brancoadrianblunda@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-blue-500 bg-opacity-20 rounded-lg flex items-center justify-center"><i class="fab fa-whatsapp text-blue-400 text-xl"></i></div>
+            <div><p class="text-sm text-gray-500">WhatsApp</p>
+              <a href="https://wa.me/5493412714751" target="_blank" rel="noopener" class="text-lg font-semibold hover:text-blue-400 transition">+54 341 271-4751</a></div>
+          </div>
+        </div>
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-purple-500 bg-opacity-20 rounded-lg flex items-center justify-center"><i class="fab fa-linkedin text-purple-400 text-xl"></i></div>
+            <div><p class="text-sm text-gray-500">LinkedIn</p>
+              <a href="https://linkedin.com/in/brancoblunda" target="_blank" rel="noopener" class="text-lg font-semibold hover:text-purple-400 transition">linkedin.com/in/brancoblunda</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="glass-card p-8 bg-gradient-to-br from-green-500 to-blue-600 bg-opacity-10">
+        <h3 class="text-2xl font-bold mb-4">¿Empezamos?</h3>
+        <p class="text-gray-300 mb-6">Contame el problema y te devuelvo una propuesta concreta en menos de 24 horas.</p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i><span>Primera charla sin costo</span></li>
+          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i><span>Propuesta técnica y alcance por escrito</span></li>
+          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i><span>Entregas por hitos, ves avances desde el principio</span></li>
+        </ul>
+        <a href="https://wa.me/5493412714751?text=Hola%20Branco,%20te%20escribo%20por%20un%20proyecto" target="_blank" rel="noopener"
+           class="inline-block w-full text-center px-8 py-4 bg-white text-gray-900 rounded-lg font-bold hover:bg-gray-100 transition">
+          <i class="fab fa-whatsapp mr-2"></i> Escribime por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
-</div><footer class="site"><div class="wrap" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;width:100%">
-<span class="mono">© 2026 Branco Blunda · Rosario, Argentina</span>
-<span class="links-row"><a href="https://linkedin.com/in/brancoblunda">LinkedIn</a><a href="https://github.com/BlundaBranco">GitHub</a><a href="mailto:brancoadrianblunda@gmail.com">Email</a></span>
-</div></footer>
-<script src="js/site.js"></script>
-</body></html>
+<footer class="py-12 px-6 bg-gray-800 bg-opacity-50 border-t border-gray-800">
+  <div class="container mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-center md:text-left">
+        <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+          <div class="w-8 h-8 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center font-bold text-gray-900">B</div>
+          <span class="text-lg font-bold">Branco Blunda</span>
+        </div>
+        <p class="text-gray-500 text-sm">Software Engineer · Rosario, Argentina</p>
+      </div>
+      <div class="flex gap-6">
+        <a href="https://github.com/BlundaBranco" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="GitHub"><i class="fab fa-github text-xl"></i></a>
+        <a href="https://linkedin.com/in/brancoblunda" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="LinkedIn"><i class="fab fa-linkedin text-xl"></i></a>
+        <a href="https://wa.me/5493412714751" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="WhatsApp"><i class="fab fa-whatsapp text-xl"></i></a>
+        <a href="mailto:brancoadrianblunda@gmail.com" class="social-icon-footer" aria-label="Email"><i class="fas fa-envelope text-xl"></i></a>
+      </div>
+      <div class="text-center md:text-right">
+        <p class="text-gray-500 text-sm">© <span id="current-year">2026</span> Branco Blunda</p>
+        <p class="text-gray-600 text-xs mt-1">Hecho con <i class="fas fa-heart text-red-500"></i> y mucho código</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<button id="scroll-top" class="scroll-top-btn" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+<script src="js/main.js"></script>
+</body>
+</html>
