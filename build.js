@@ -121,7 +121,7 @@ PROJECTS.push(
  tech:'PHP 8.1 · Laravel 11 · Blade · Alpine.js · Tailwind · MySQL 8 · dompdf · PhpSpreadsheet · Twilio · Chart.js',
  links:[],
  cover:'01-dashboard.png',
- shots:[['01-dashboard.png','El tablero del sistema: clientes, lotes por estado, cuotas vencidas y accesos rápidos a las operaciones del día.'],['02-plan-de-pagos.png','Un plan de pago con sus cuotas generadas automáticamente.'],['03-recibo-pdf.png','El recibo con folio que emite el sistema.'],['04-reporte-morosidad.png','El reporte de morosidad, con la deuda y los días de atraso de cada cliente.']],
+ shots:[['01-dashboard.png','El tablero del sistema: clientes, lotes por estado, cuotas vencidas y accesos rápidos a las operaciones del día.'],['02-plan-de-pagos.png','Un plan de pago con sus doce cuotas generadas automáticamente, cada una con su vencimiento, su interés y su aviso por WhatsApp.'],['03-recibo-pdf.png','El recibo con folio único que emite el sistema, con el número de cuota sobre el total del plan.'],['05-lote-detalle.png','La ficha de un lote: socio propietario, estado y cliente asignado, con sus planes de pago debajo.']],
  nota:'Sistema privado del cliente. Las capturas se toman sobre datos de prueba.'},
 
 {slug:'comanda-central',title:'Comanda Central',cliente:'Producto propio',pais:'Argentina',
