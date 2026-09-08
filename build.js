@@ -61,8 +61,8 @@ const PROJECTS=[
  stats:[['8.900+','usuarios registrados'],['177','países'],['0','registros perdidos en la migración']],
  tech:'Flutter / Dart · Kotlin con OpenCV y ML Kit · ASP.NET Core · SQL Server · Azure Document Intelligence · OpenAI · DigitalOcean · Docker · Codemagic',
  links:[['Google Play','https://play.google.com/store/apps/details?id=com.infinitybook.infinitybook']],
- cover:'03-app-escaneo.png',
- shots:[['03-app-escaneo.png','La cámara escaneando una página del cuaderno.'],['04-app-resultado-ocr.png','El texto reconocido por OCR sobre la página escaneada.'],['05-app-editor-libre.png','El módulo de IA para editar el texto reconocido.'],['01-play-ficha.png','La app publicada en Google Play, bajo la cuenta del cliente.']],
+ cover:'01-app-escaneo.png',
+ shots:[['01-app-escaneo.png','La cámara detectando la hoja del cuaderno para escanearla.'],['02-app-nuevo-escaneo.png','El escaneo listo, con el módulo de IA: transcripción del documento, resumen inteligente y resolución de matemática.'],['03-cloud-destinos.png','Las integraciones en la nube: Google Drive, Dropbox, OneNote, OneDrive, correo y Trello.'],['04-cloud-configurado.png','Cada uno de los seis íconos impresos en la hoja se asocia a un destino: el usuario marca el ícono y el escaneo se guarda solo donde corresponde.'],['05-app-store.png','La app publicada en la App Store bajo la cuenta del cliente.']],
  nota:''},
 
 {slug:'signfloow',title:'SignFloow',cliente:'Cliente directo',pais:'España',
