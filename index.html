@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=45b7d8bd">
+<link rel="stylesheet" href="css/styles.css?v=cbfdd9d4">
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans">
 
@@ -33,7 +33,7 @@
   <div class="container mx-auto px-6 py-4">
     <div class="flex justify-between items-center">
       <a href="index.html" class="flex items-center space-x-2">
-        <img src="assets/images/logo.svg" alt="" class="brand-logo" width="178" height="225">
+        <img src="assets/images/logo-dark.svg" alt="" class="brand-logo" width="178" height="225">
         <span class="text-xl font-bold">Branco Blunda</span>
       </a>
       <div class="hidden md:flex space-x-8">
@@ -70,12 +70,12 @@
         <p class="text-gray-500 mb-10 max-w-2xl">Desarrollo software desde 2017. Rosario, Argentina · Trabajo remoto.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
           <a href="#portafolio" class="btn-primary"><i class="fas fa-folder-open mr-2"></i>Ver proyectos</a>
-          <a href="#contacto" class="btn-secondary"><i class="fas fa-comments mr-2"></i>Hablemos</a>
+          <a href="https://wa.me/5493417824155?text=Hola%20Branco,%20te%20escribo%20por%20un%20proyecto" target="_blank" rel="noopener" class="btn-secondary"><i class="fab fa-whatsapp mr-2"></i>Hablemos por WhatsApp</a>
         </div>
         <div class="flex gap-6 mt-10 justify-center md:justify-start">
           <a href="https://github.com/BlundaBranco" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fab fa-github text-2xl"></i></a>
           <a href="https://linkedin.com/in/brancoblunda" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin text-2xl"></i></a>
-          <a href="https://wa.me/5493412714751" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp text-2xl"></i></a>
+          <a href="https://wa.me/5493417824155" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp text-2xl"></i></a>
           <a href="mailto:brancoadrianblunda@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope text-2xl"></i></a>
         </div>
       </div>
@@ -133,7 +133,7 @@
   <div class="container mx-auto">
     <div class="text-center mb-16">
       <h2 class="section-title">Proyectos destacados</h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Nueve de más de cuarenta. Cada uno con el problema, lo que construí y capturas del sistema real.</p>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Nueve de más de cuarenta. Entrá a cualquiera y vas a ver qué problema resolvía, qué construí y capturas del sistema andando. Los que son públicos tienen el link.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
       <div class="project-card">
@@ -154,7 +154,7 @@
           <div class="project-overlay"><i class="fas fa-arrow-right text-3xl"></i></div>
         </a>
         <div class="p-6">
-          <div class="text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">Cliente directo · España</div>
+          <div class="text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">RotulMarket · España</div>
           <h3 class="text-2xl font-bold mb-3">SignFloow</h3>
           <p class="text-gray-400 mb-4">SaaS para empresas de rotulación: tablero de producción, presupuestos por fórmulas y asistente de IA.</p>
           <div class="flex flex-wrap gap-2 mb-4"><span class="tech-tag">TypeScript</span><span class="tech-tag">React 19</span><span class="tech-tag">Vite</span><span class="tech-tag">Tailwind</span></div>
@@ -348,14 +348,15 @@
           <div class="flex items-center gap-4">
             <div class="w-12 h-12 bg-green-500 bg-opacity-20 rounded-lg flex items-center justify-center"><i class="fas fa-envelope text-green-400 text-xl"></i></div>
             <div><p class="text-sm text-gray-500">Email</p>
-              <a href="mailto:brancoadrianblunda@gmail.com" class="text-base font-semibold hover:text-green-400 transition break-all">brancoadrianblunda@gmail.com</a></div>
+              <a href="mailto:brancoadrianblunda@gmail.com" class="text-base font-semibold hover:text-green-400 transition break-all">brancoadrianblunda@gmail.com</a>
+              <button class="copy-mail" data-copy="brancoadrianblunda@gmail.com" type="button"><i class="far fa-copy"></i> Copiar</button></div>
           </div>
         </div>
         <div class="glass-card p-6">
           <div class="flex items-center gap-4">
             <div class="w-12 h-12 bg-blue-500 bg-opacity-20 rounded-lg flex items-center justify-center"><i class="fab fa-whatsapp text-blue-400 text-xl"></i></div>
             <div><p class="text-sm text-gray-500">WhatsApp</p>
-              <a href="https://wa.me/5493412714751" target="_blank" rel="noopener" class="text-lg font-semibold hover:text-blue-400 transition">+54 341 271-4751</a></div>
+              <a href="https://wa.me/5493417824155" target="_blank" rel="noopener" class="text-lg font-semibold hover:text-blue-400 transition">+54 9 3417 82-4155</a></div>
           </div>
         </div>
         <div class="glass-card p-6">
@@ -373,7 +374,7 @@
           <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i><span>Primera charla sin costo</span></li>
           <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i><span>Alcance y presupuesto por escrito</span></li>
         </ul>
-        <a href="https://wa.me/5493412714751?text=Hola%20Branco,%20te%20escribo%20por%20un%20proyecto" target="_blank" rel="noopener"
+        <a href="https://wa.me/5493417824155?text=Hola%20Branco,%20te%20escribo%20por%20un%20proyecto" target="_blank" rel="noopener"
            class="inline-block w-full text-center px-8 py-4 bg-white text-gray-900 rounded-lg font-bold hover:bg-gray-100 transition">
           <i class="fab fa-whatsapp mr-2"></i> Escribime por WhatsApp
         </a>
@@ -386,7 +387,7 @@
     <div class="flex flex-col md:flex-row justify-between items-center gap-6">
       <div class="text-center md:text-left">
         <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
-          <img src="assets/images/logo.svg" alt="" class="brand-logo" width="178" height="225">
+          <img src="assets/images/logo-dark.svg" alt="" class="brand-logo" width="178" height="225">
           <span class="text-lg font-bold">Branco Blunda</span>
         </div>
         <p class="text-gray-500 text-sm">Software Engineer · Rosario, Argentina</p>
@@ -394,7 +395,7 @@
       <div class="flex gap-6">
         <a href="https://github.com/BlundaBranco" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="GitHub"><i class="fab fa-github text-xl"></i></a>
         <a href="https://linkedin.com/in/brancoblunda" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="LinkedIn"><i class="fab fa-linkedin text-xl"></i></a>
-        <a href="https://wa.me/5493412714751" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="WhatsApp"><i class="fab fa-whatsapp text-xl"></i></a>
+        <a href="https://wa.me/5493417824155" target="_blank" rel="noopener noreferrer" class="social-icon-footer" aria-label="WhatsApp"><i class="fab fa-whatsapp text-xl"></i></a>
         <a href="mailto:brancoadrianblunda@gmail.com" class="social-icon-footer" aria-label="Email"><i class="fas fa-envelope text-xl"></i></a>
       </div>
       <div class="text-center md:text-right">
@@ -404,7 +405,10 @@
     </div>
   </div>
 </footer>
+<a class="wa-float" href="https://wa.me/5493417824155?text=Hola%20Branco,%20te%20escribo%20por%20un%20proyecto" target="_blank" rel="noopener" aria-label="Escribime por WhatsApp">
+  <i class="fab fa-whatsapp"></i><span>Escribime</span>
+</a>
 <button id="scroll-top" class="scroll-top-btn" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
-<script src="js/main.js?v=6b6e9f78"></script>
+<script src="js/main.js?v=0ba0dfc7"></script>
 </body>
 </html>

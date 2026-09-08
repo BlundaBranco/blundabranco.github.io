@@ -117,6 +117,27 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && box.classList.contains('open')) close(); });
   }
 
+  // Copiar el correo al portapapeles
+  document.querySelectorAll('.copy-mail').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var mail = btn.getAttribute('data-copy');
+      var listo = function () {
+        var antes = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-check"></i> Copiado';
+        btn.classList.add('copiado');
+        setTimeout(function () { btn.innerHTML = antes; btn.classList.remove('copiado'); }, 2000);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(mail).then(listo, function () {});
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = mail; document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); listo(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    });
+  });
+
   // Año actual
   var y = document.getElementById('current-year');
   if (y) y.textContent = new Date().getFullYear();

@@ -30,7 +30,7 @@ const PROJECTS=[
  shots:[['08-panel-despacho.png','Panel de despacho: llamadas y viajes del día, solicitudes activas, la flota en el mapa y el detalle del viaje en curso.'],['01-landing-hero.png','La landing pública del servicio.'],['02-landing-tres-formas.png','Los tres canales de pedido: WhatsApp, llamada telefónica y app.'],['06-app-seguimiento.png','Seguimiento del viaje en tiempo real, con la ruta y el chat con el conductor.'],['05-app-solicitar.png','Pedido desde la app. El círculo es el radio de búsqueda de conductores en hora pico.'],['07-app-historial.png','Historial de viajes del pasajero, con el estado de cada uno.'],['03-play-pasajero.png','La app de pasajero, publicada en Google Play.'],['04-play-conductor.png','La app de conductor, publicada en Google Play.']],
  nota:'Las cifras de operación son datos informados por el cliente.'},
 
-{slug:'signfloow',title:'SignFloow',cliente:'Cliente directo',pais:'España',
+{slug:'signfloow',title:'SignFloow',cliente:'RotulMarket',pais:'España',
  rol:'Diseño y construcción desde cero',estado:'En producción con clientes',
  tag:'SaaS multi-tenant · React + NestJS + AWS',
  desc:'SaaS para empresas de rotulación: reemplaza planillas y mensajes por un tablero de producción, un catálogo con recetas de fabricación, presupuestos calculados por fórmulas y un asistente de IA que consulta los datos reales del negocio.',
@@ -217,7 +217,8 @@ const chips=p=>p.tech.split(' · ').slice(0,4);
 /* ---------- helpers ---------- */
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const YEAR=new Date().getFullYear();
-const WA='https://wa.me/5493412714751';
+const WA='https://wa.me/5493417824155';
+const TEL='+54 9 3417 82-4155';
 
 const head=(title,desc,canonical,depth)=>{const r=depth?'../':'';const h=depth?'../index.html':'';return `<!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
@@ -254,7 +255,7 @@ const head=(title,desc,canonical,depth)=>{const r=depth?'../':'';const h=depth?'
   <div class="container mx-auto px-6 py-4">
     <div class="flex justify-between items-center">
       <a href="${r}index.html" class="flex items-center space-x-2">
-        <img src="${r}assets/images/logo.svg" alt="" class="brand-logo" width="178" height="225">
+        <img src="${r}assets/images/logo-dark.svg" alt="" class="brand-logo" width="178" height="225">
         <span class="text-xl font-bold">Branco Blunda</span>
       </a>
       <div class="hidden md:flex space-x-8">
@@ -282,7 +283,7 @@ const foot=depth=>{const r=depth?'../':'';return `
     <div class="flex flex-col md:flex-row justify-between items-center gap-6">
       <div class="text-center md:text-left">
         <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
-          <img src="${r}assets/images/logo.svg" alt="" class="brand-logo" width="178" height="225">
+          <img src="${r}assets/images/logo-dark.svg" alt="" class="brand-logo" width="178" height="225">
           <span class="text-lg font-bold">Branco Blunda</span>
         </div>
         <p class="text-gray-500 text-sm">Software Engineer · Rosario, Argentina</p>
@@ -300,6 +301,9 @@ const foot=depth=>{const r=depth?'../':'';return `
     </div>
   </div>
 </footer>
+<a class="wa-float" href="${WA}?text=Hola%20Branco,%20te%20escribo%20por%20un%20proyecto" target="_blank" rel="noopener" aria-label="Escribime por WhatsApp">
+  <i class="fab fa-whatsapp"></i><span>Escribime</span>
+</a>
 <button id="scroll-top" class="scroll-top-btn" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
 <script src="${r}js/main.js?v=${VJS}"></script>
 </body>
@@ -355,7 +359,7 @@ idx+=`
         <p class="text-gray-500 mb-10 max-w-2xl">Desarrollo software desde 2017. Rosario, Argentina · Trabajo remoto.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
           <a href="#portafolio" class="btn-primary"><i class="fas fa-folder-open mr-2"></i>Ver proyectos</a>
-          <a href="#contacto" class="btn-secondary"><i class="fas fa-comments mr-2"></i>Hablemos</a>
+          <a href="${WA}?text=Hola%20Branco,%20te%20escribo%20por%20un%20proyecto" target="_blank" rel="noopener" class="btn-secondary"><i class="fab fa-whatsapp mr-2"></i>Hablemos por WhatsApp</a>
         </div>
         <div class="flex gap-6 mt-10 justify-center md:justify-start">
           <a href="${GITHUB}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fab fa-github text-2xl"></i></a>
@@ -408,7 +412,7 @@ idx+=`
   <div class="container mx-auto">
     <div class="text-center mb-16">
       <h2 class="section-title">Proyectos destacados</h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Nueve de más de cuarenta. Cada uno con el problema, lo que construí y capturas del sistema real.</p>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Nueve de más de cuarenta. Entrá a cualquiera y vas a ver qué problema resolvía, qué construí y capturas del sistema andando. Los que son públicos tienen el link.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
       ${PROJECTS.map(p=>`<div class="project-card">
@@ -480,14 +484,15 @@ idx+=`
           <div class="flex items-center gap-4">
             <div class="w-12 h-12 bg-green-500 bg-opacity-20 rounded-lg flex items-center justify-center"><i class="fas fa-envelope text-green-400 text-xl"></i></div>
             <div><p class="text-sm text-gray-500">Email</p>
-              <a href="mailto:${MAIL}" class="text-base font-semibold hover:text-green-400 transition break-all">${MAIL}</a></div>
+              <a href="mailto:${MAIL}" class="text-base font-semibold hover:text-green-400 transition break-all">${MAIL}</a>
+              <button class="copy-mail" data-copy="${MAIL}" type="button"><i class="far fa-copy"></i> Copiar</button></div>
           </div>
         </div>
         <div class="glass-card p-6">
           <div class="flex items-center gap-4">
             <div class="w-12 h-12 bg-blue-500 bg-opacity-20 rounded-lg flex items-center justify-center"><i class="fab fa-whatsapp text-blue-400 text-xl"></i></div>
             <div><p class="text-sm text-gray-500">WhatsApp</p>
-              <a href="${WA}" target="_blank" rel="noopener" class="text-lg font-semibold hover:text-blue-400 transition">+54 341 271-4751</a></div>
+              <a href="${WA}" target="_blank" rel="noopener" class="text-lg font-semibold hover:text-blue-400 transition">${TEL}</a></div>
           </div>
         </div>
         <div class="glass-card p-6">
