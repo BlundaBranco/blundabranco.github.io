@@ -139,7 +139,7 @@ PROJECTS.push(
  tech:'Node.js · Express · PostgreSQL · JavaScript · Chart.js · Cloudinary · Render · Vercel',
  links:[['Código','https://github.com/BlundaBranco/Comanda-Central'],['Sitio de ejemplo','https://monat.ar']],
  cover:'01-pos.png',
- shots:[['01-pos.png','El punto de venta de tres paneles, operable por completo con el teclado.'],['02-dashboard-bi.png','El tablero de ventas, ganancia y horario pico.'],['03-costeo-receta.png','El costeo de un producto, resolviendo las recetas anidadas.'],['08-sitio-publico.png','El sitio público que genera la plataforma para cada negocio.']],
+ shots:[['01-pos.png','El punto de venta de tres paneles: menú, datos del pedido y la comanda en curso. Se opera entero con el teclado.'],['02-dashboard-bi.png','El tablero del negocio: ventas por día, pedidos, alertas de stock bajo y actividad reciente. Los importes están difuminados.'],['08-sitio-publico.png','El sitio público que la plataforma genera para cada negocio, con su menú y su marca.']],
  nota:''},
 
 {slug:'vertical',title:'Vertical',cliente:'Producto propio',pais:'Argentina',
