@@ -12,7 +12,8 @@ const PROJECTS=[
 {slug:'taxi-ai',title:'Taxi AI',cliente:'Taxi Call Group S.A.S.',pais:'Colombia',
  rol:'Diseño, construcción y operación',estado:'En producción · mantenimiento continuo',
  tag:'Agente de voz con IA · Telefonía',
- desc:'Una empresa de taxis despachaba a mano todas las llamadas. Construí el sistema que atiende la llamada, entiende la dirección hablada del pasajero y asigna un conductor sin que intervenga un operador. También las dos apps móviles, la landing y el panel de operación.',
+ tipos:['IA de voz','App móvil','Producción'],
+ desc:'Una empresa de taxis despachaba a mano decenas de miles de llamadas por mes. Construí la IA que atiende el teléfono, entiende la dirección hablada del pasajero y asigna el conductor sola, sin que intervenga una persona. También las dos apps móviles publicadas, la landing y el panel de operación.',
  antes:'Cada llamada la atendía una persona: escuchaba la dirección, la ubicaba y llamaba por radio a un conductor.',
  despues:'La llamada se atiende sola, entiende la dirección hablada y despacha. El operador solo mira.',
  problema:'La central recibía decenas de miles de llamadas por mes y cada una la atendía una persona: escuchaba la dirección, la ubicaba y llamaba por radio a un conductor. El cuello de botella era humano y no escalaba.',
@@ -35,6 +36,7 @@ const PROJECTS=[
 {slug:'signfloow',title:'SignFloow',cliente:'RotulMarket',pais:'España',
  rol:'Diseño y construcción desde cero',estado:'En producción con clientes',
  tag:'SaaS multi-tenant · React + NestJS + AWS',
+ tipos:['SaaS multi-empresa','IA','AWS'],
  desc:'SaaS para empresas de rotulación: reemplaza planillas y mensajes por un tablero de producción, un catálogo con recetas de fabricación, presupuestos calculados por fórmulas y un asistente de IA que consulta los datos reales del negocio.',
  antes:'Proyectos, materiales y presupuestos entre planillas, mensajes y memoria. Nadie sabía cuánto costaba un trabajo hasta terminarlo.',
  despues:'Un tablero con el estado real de cada proyecto y presupuestos calculados por fórmula antes de empezar.',
@@ -56,6 +58,7 @@ const PROJECTS=[
 {slug:'blc-one',title:'BLC One',cliente:'BLC Power Generation',pais:'Argentina y Colombia',
  rol:'Diseño y construcción desde cero',estado:'v0.3.4 entregada · aplicación interna',
  tag:'Python · Flet · MySQL · Escritorio',
+ tipos:['App de escritorio','Sistema interno','2.709 tests'],
  desc:'Plataforma de gestión para el área de servicios de un grupo de energía renovable que opera remotamente cerca del 17% de la generación renovable del país. Centraliza plantas, contratos y compromisos regulatorios que vivían en planillas.',
  antes:'237 plantas y 2.555 compromisos regulatorios en Excel y scripts sueltos, sin trazabilidad ni control de accesos.',
  despues:'Todo en un sistema, con permisos por rol sobre quince pantallas y 2.709 tests que lo respaldan.',
@@ -76,6 +79,7 @@ const PROJECTS=[
 {slug:'infinity-book',title:'Infinity Book',cliente:'Elfinbook S.R.L.',pais:'Argentina',
  rol:'Desarrollo y publicación de la versión actual',estado:'En producción · mantenimiento mensual',
  tag:'Flutter · ASP.NET Core · OCR',
+ tipos:['App publicada','OCR + IA','Rescate de producto'],
  desc:'App de escaneo de cuadernos reutilizables con OCR e IA. La heredé de otro proveedor —sin control de versiones, con credenciales expuestas y todo a nombre de terceros— y desarrollé y publiqué la versión que está hoy en las tiendas.',
  antes:'El backend, las cuentas de tienda y las integraciones estaban a nombre del proveedor anterior. El cliente no era dueño de su propio producto.',
  despues:'Todo migrado a cuentas del cliente, publicado en las dos tiendas, sin perder un solo registro de usuario.',
@@ -96,7 +100,8 @@ const PROJECTS=[
 
 {slug:'vertical',title:'Vertical',cliente:'Producto propio',pais:'Argentina',
  rol:'Fundador · producto, arquitectura y operación',estado:'Activo, con clientes',
- tag:'Agentes de WhatsApp · Meta Cloud API',
+ tag:'SaaS propio · Agentes de IA en WhatsApp',
+ tipos:['SaaS propio','Agentes de IA','CRM'],
  desc:'Mi propia plataforma: agentes conversacionales con IA y CRM para inmobiliarias, sobre la API oficial de WhatsApp. Califica leads, hace seguimiento y reactiva contactos las 24 horas. Proveedor de tecnología verificado por Meta.',
  antes:'Las consultas entraban a toda hora y se respondían cuando se podía. El contacto que espera se enfría.',
  despues:'Atención en segundos las 24 horas, con el lead ya calificado y cargado en el CRM.',
@@ -109,13 +114,35 @@ const PROJECTS=[
  stats:[['Meta','proveedor de tecnología verificado'],['24/7','atención']],
  tech:'Meta WhatsApp Cloud API · modelos de lenguaje con uso de herramientas · Python',
  links:[['Sitio','https://somosvertical.ar']],
- cover:'02-bandeja-chat.webp',
+ cover:'03-etapas-crm.webp',
  shots:[['02-bandeja-chat.webp','La bandeja: el agente conversa por WhatsApp y va dejando arriba lo que averiguó — intención, presupuesto, zona y, si se cae, el motivo.'],['03-etapas-crm.webp','El CRM por etapas, de lead frío a cerrado. Cada contacto se mueve solo según cómo va la conversación.'],['04-ficha-contacto.webp','La ficha del contacto: lo que contó, cuántas veces se lo siguió, cómo terminó y la nota del vendedor.'],['05-seguimiento.webp','El seguimiento automático: a las 20 horas, al día 3 y al día 6, con plantillas aprobadas por WhatsApp. Si contesta, se corta solo.'],['06-reactivacion.webp','La reactivación de contactos viejos, con tope diario y baja automática. Si WhatsApp baja la calidad del número, se frena sola.'],['07-meta-verificado.webp','El estado en Meta: negocio verificado y verificación de acceso como proveedor de tecnología (Tech Provider), que es lo que habilita a operar sobre las cuentas de WhatsApp de otras empresas.'],['01-web-home.webp','El sitio de Vertical.']],
+ nota:''},
+
+{slug:'deltan-scan',title:'Deltan Scan IA',cliente:'Clínica odontológica',pais:'Latinoamérica',
+ rol:'Diseño y construcción',estado:'Entregado · código abierto',
+ tag:'IA de visión por computadora · Salud',
+ tipos:['IA de visión','Salud','Código abierto'],
+ desc:'Una IA analiza la radiografía panorámica, detecta cada pieza dental y la mide en milímetros. Lo que a un odontólogo le lleva veinte minutos con regla, el modelo lo resuelve en segundos y sin variar entre profesionales.',
+ antes:'Medir corona y raíz sobre una panorámica era manual, lento y distinto según el profesional.',
+ despues:'Medición automática en milímetros, reproducible y exportable a CSV.',
+ problema:'Medir corona y raíz sobre una radiografía panorámica es manual, lento y poco reproducible entre profesionales.',
+ construido:['Detección automática de las piezas dentales sobre la radiografía panorámica.',
+ 'Medición de la longitud de cada pieza y de los reparos anatómicos: distancia entre cóndilos, altura de cada rama mandibular y longitud del cuerpo mandibular.',
+ 'Calibración de píxeles a milímetros, para que las medidas sean reales y comparables entre estudios.',
+ 'Flujo guiado en cuatro pasos: carga, procesamiento, análisis y resultados.',
+ 'Historial de análisis, con la posibilidad de volver a abrir o descargar cada estudio procesado.',
+ 'Exportación de las mediciones a CSV y descarga de la radiografía marcada.'],
+ stats:[],
+ tech:'Python · OpenCV · YOLOv8 · Streamlit',
+ links:[['Código','https://github.com/BrancoBlunda/Deltan-Scan-AI']],
+ cover:'03-resultados.webp',
+ shots:[['03-resultados.webp','El resultado del análisis: las piezas detectadas, los reparos anatómicos y las mediciones en milímetros sobre la propia radiografía.'],['02-analizar.webp','La radiografía cargada, lista para procesar. El flujo va guiado en cuatro pasos.'],['04-historial.webp','El historial de análisis, para volver a abrir o descargar cualquier estudio anterior.'],['01-inicio.webp','La pantalla de inicio: se arrastra la radiografía y el análisis arranca solo.']],
  nota:''},
 
 {slug:'comanda-central',title:'Comanda Central',cliente:'Producto propio',pais:'Argentina',
  rol:'Producto, arquitectura y operación',estado:'En producción en 8 negocios y 3 cadenas',
  tag:'SaaS gastronómico · Node.js + PostgreSQL',
+ tipos:['SaaS propio','Punto de venta','BI'],
  desc:'Nació para resolver el problema de mi propia pizzería y terminó siendo un SaaS con gestión centralizada de sucursales: toma de comandas, inventario, análisis de ventas y costeo real por producto con recetas anidadas.',
  antes:'Sabían cuánto vendían, pero no cuánto ganaban: el costo real de un plato dependía de sub-recetas que cambiaban de precio.',
  despues:'Costeo automático con recetas anidadas y ganancia neta por producto, al día.',
@@ -129,34 +156,14 @@ const PROJECTS=[
  stats:[['8','negocios'],['3','cadenas'],['15','sucursales']],
  tech:'Node.js · Express · PostgreSQL · JavaScript · Chart.js · Cloudinary · Render · Vercel',
  links:[['Código','https://github.com/BrancoBlunda/Comanda-Central'],['Sitio de ejemplo','https://monat.ar']],
- cover:'01-pos.webp',
+ cover:'02-dashboard-bi.webp',
  shots:[['01-pos.webp','El punto de venta de tres paneles: menú, datos del pedido y la comanda en curso. Se opera entero con el teclado.'],['02-dashboard-bi.webp','El tablero del negocio: ventas por día, pedidos, alertas de stock bajo y actividad reciente. Los importes están difuminados.'],['08-sitio-publico.webp','El sitio público que la plataforma genera para cada negocio, con su menú y su marca.']],
- nota:''},
-
-{slug:'tu-proximo-horizonte',title:'Tu Próximo Horizonte',cliente:'Leo Cerdeira',pais:'Argentina',
- rol:'Diseño, construcción y entrega',estado:'Tres sistemas en producción · uso diario',
- tag:'Next.js · Supabase · Automatización',
- desc:'Tres sistemas para una agencia de viajes, que el cliente opera solo: la agenda de capacitaciones semanales, la automatización de leads de Facebook y un onboarding de afiliados editable sin tocar código.',
- antes:'Coordinaba capacitaciones a mano, perdía los leads de Facebook y mandaba siete PDFs sueltos a cada afiliado.',
- despues:'Tres sistemas que el cliente opera solo, sin depender del desarrollador para cambiar nada.',
- problema:'Coordinaba capacitaciones semanales a mano, perdía los leads que entraban por Facebook y mandaba siete PDFs sueltos a cada afiliado nuevo. Necesitaba poder cambiar todo él, sin depender del desarrollador.',
- construido:['Agenda con panel para cargar la semana completa, inscripción pública, manejo estricto de zonas horarias y backups diarios con alarma de fallo.',
- 'Duplicado de semana con borrado definitivo para sesiones vacías y borrado lógico para las que ya tienen inscriptos.',
- 'Seguridad a nivel de fila en la base y revocación del acceso anónimo a los enlaces y claves de reunión.',
- 'Captura automática de leads de Facebook y secuencia de cuatro correos a las 0, 24, 48 y 72 horas, con dominio de envío propio autenticado.',
- 'Onboarding público paso a paso, sin registro, que refleja al instante lo que el administrador cambia.',
- 'Panel de administración con sesión firmada y escrituras por lote a prueba de pérdida de datos.',
- 'Sitio mellizo de demostración en un esquema separado, con aislamiento verificado.'],
- stats:[['3','sistemas en producción'],['0','dependencia del dev para editar']],
- tech:'Next.js 15 · TypeScript · Supabase · Vercel · Make.com · Brevo · Facebook Lead Ads · GitHub Actions',
- links:[['Onboarding','https://onboarding.tuproximohorizonte.com'],['Agenda','https://agenda.tuproximohorizonte.com'],['Demo','https://demo.tuproximohorizonte.com']],
- cover:'01-onboarding-inicio.webp',
- shots:[['01-onboarding-inicio.webp','El onboarding de afiliados: el plan de siete pasos, el paso en curso con su video y la agenda de capacitaciones al costado. Un solo link, sin registro.'],['02-onboarding-paso.webp','Un paso abierto: video, PDFs descargables y enlaces a herramientas. El cliente edita todo esto desde su panel, sin tocar código.'],['06-agenda-publica.webp','La agenda semanal de capacitaciones, con inscripción abierta. El selector de zona horaria convierte los horarios al país de cada inscripto.'],['08-make-escenario.webp','La automatización que captura los leads de Facebook y dispara la secuencia de cuatro correos.']],
  nota:''},
 
 {slug:'lomas-del-pacifico',title:'Cobranza de lotes',cliente:'Lomas del Pacífico',pais:'México',
  rol:'Diseño y construcción desde cero',estado:'En uso · mantenimiento continuo',
  tag:'Laravel · MySQL · Cobranzas',
+ tipos:['Sistema de cobranzas','Laravel','En uso'],
  desc:'Sistema de cobranza para la venta de lotes en cuotas. Reemplazó planillas de Excel dispersas por un solo lugar donde vive el cliente, su lote, su plan de pago, cada cobro con folio y la mora calculada sola.',
  antes:'La cobranza de lotes en cuotas vivía en planillas sueltas. Nadie sabía con certeza quién estaba al día.',
  despues:'Un solo sistema con el plan de pago, cada cobro con folio y la mora calculada sola.',
@@ -176,24 +183,26 @@ const PROJECTS=[
  shots:[['01-dashboard.webp','El tablero del sistema: clientes, lotes por estado, cuotas vencidas y accesos rápidos a las operaciones del día.'],['02-plan-de-pagos.webp','Un plan de pago con sus doce cuotas generadas automáticamente, cada una con su vencimiento, su interés y su aviso por WhatsApp.'],['03-recibo-pdf.webp','El recibo con folio único que emite el sistema, con el número de cuota sobre el total del plan.'],['05-lote-detalle.webp','La ficha de un lote: socio propietario, estado y cliente asignado, con sus planes de pago debajo.']],
  nota:'Sistema privado del cliente. Las capturas se toman sobre datos de prueba.'},
 
-{slug:'deltan-scan',title:'Deltan Scan IA',cliente:'Carlos Vargas',pais:'Latinoamérica',
- rol:'Diseño y construcción',estado:'Entregado · código abierto',
- tag:'Visión por computadora · Salud',
- desc:'Análisis biométrico asistido de radiografías dentales panorámicas: medición interactiva de las piezas y procesamiento de imagen para apoyar el diagnóstico.',
- antes:'Medir corona y raíz sobre una panorámica era manual, lento y distinto según el profesional.',
- despues:'Medición automática en milímetros, reproducible y exportable a CSV.',
- problema:'Medir corona y raíz sobre una radiografía panorámica es manual, lento y poco reproducible entre profesionales.',
- construido:['Detección automática de las piezas dentales sobre la radiografía panorámica.',
- 'Medición de la longitud de cada pieza y de los reparos anatómicos: distancia entre cóndilos, altura de cada rama mandibular y longitud del cuerpo mandibular.',
- 'Calibración de píxeles a milímetros, para que las medidas sean reales y comparables entre estudios.',
- 'Flujo guiado en cuatro pasos: carga, procesamiento, análisis y resultados.',
- 'Historial de análisis, con la posibilidad de volver a abrir o descargar cada estudio procesado.',
- 'Exportación de las mediciones a CSV y descarga de la radiografía marcada.'],
- stats:[],
- tech:'Python · OpenCV · YOLOv8 · Streamlit',
- links:[['Código','https://github.com/BrancoBlunda/Deltan-Scan-AI']],
- cover:'03-resultados.webp',
- shots:[['03-resultados.webp','El resultado del análisis: las piezas detectadas, los reparos anatómicos y las mediciones en milímetros sobre la propia radiografía.'],['02-analizar.webp','La radiografía cargada, lista para procesar. El flujo va guiado en cuatro pasos.'],['04-historial.webp','El historial de análisis, para volver a abrir o descargar cualquier estudio anterior.'],['01-inicio.webp','La pantalla de inicio: se arrastra la radiografía y el análisis arranca solo.']],
+{slug:'tu-proximo-horizonte',title:'Tu Próximo Horizonte',cliente:'Leo Cerdeira',pais:'Argentina',
+ rol:'Diseño, construcción y entrega',estado:'Tres sistemas en producción · uso diario',
+ tag:'Next.js · Supabase · Automatización',
+ tipos:['3 sistemas','Automatización','Sin código para el cliente'],
+ desc:'Tres sistemas para una agencia de viajes, que el cliente opera solo: la agenda de capacitaciones semanales, la automatización de leads de Facebook y un onboarding de afiliados editable sin tocar código.',
+ antes:'Coordinaba capacitaciones a mano, perdía los leads de Facebook y mandaba siete PDFs sueltos a cada afiliado.',
+ despues:'Tres sistemas que el cliente opera solo, sin depender del desarrollador para cambiar nada.',
+ problema:'Coordinaba capacitaciones semanales a mano, perdía los leads que entraban por Facebook y mandaba siete PDFs sueltos a cada afiliado nuevo. Necesitaba poder cambiar todo él, sin depender del desarrollador.',
+ construido:['Agenda con panel para cargar la semana completa, inscripción pública, manejo estricto de zonas horarias y backups diarios con alarma de fallo.',
+ 'Duplicado de semana con borrado definitivo para sesiones vacías y borrado lógico para las que ya tienen inscriptos.',
+ 'Seguridad a nivel de fila en la base y revocación del acceso anónimo a los enlaces y claves de reunión.',
+ 'Captura automática de leads de Facebook y secuencia de cuatro correos a las 0, 24, 48 y 72 horas, con dominio de envío propio autenticado.',
+ 'Onboarding público paso a paso, sin registro, que refleja al instante lo que el administrador cambia.',
+ 'Panel de administración con sesión firmada y escrituras por lote a prueba de pérdida de datos.',
+ 'Sitio mellizo de demostración en un esquema separado, con aislamiento verificado.'],
+ stats:[['3','sistemas en producción'],['0','dependencia del dev para editar']],
+ tech:'Next.js 15 · TypeScript · Supabase · Vercel · Make.com · Brevo · Facebook Lead Ads · GitHub Actions',
+ links:[['Onboarding','https://onboarding.tuproximohorizonte.com'],['Agenda','https://agenda.tuproximohorizonte.com'],['Demo','https://demo.tuproximohorizonte.com']],
+ cover:'01-onboarding-inicio.webp',
+ shots:[['01-onboarding-inicio.webp','El onboarding de afiliados: el plan de siete pasos, el paso en curso con su video y la agenda de capacitaciones al costado. Un solo link, sin registro.'],['02-onboarding-paso.webp','Un paso abierto: video, PDFs descargables y enlaces a herramientas. El cliente edita todo esto desde su panel, sin tocar código.'],['06-agenda-publica.webp','La agenda semanal de capacitaciones, con inscripción abierta. El selector de zona horaria convierte los horarios al país de cada inscripto.'],['08-make-escenario.webp','La automatización que captura los leads de Facebook y dispara la secuencia de cuatro correos.']],
  nota:''}
 ];
 
@@ -222,19 +231,26 @@ const STACK=[
 
 const WORKANA='https://www.workana.com/freelancer/a47899bad3b852d35ff4ca118b9b2d45';
 const TESTIMONIOS=[
-['Vargasmatos','Buen programador y buena persona, seguiré contratándolo para mis demás proyectos y mantenimientos mensuales. 10/10',5,'Plataforma de video bajo demanda · Latinoamérica'],
-['Alfredo Falcon','Good quality of work in developing deliverables. It was possible to clearly define milestones and deliverables, communication was clear and all the milestones were met.',4,'Interfaces de plataforma web · Angular']];
+['Vargasmatos','Buen programador y buena persona, seguiré contratándolo para mis demás proyectos y mantenimientos mensuales. 10/10',5,'Plataforma de video bajo demanda'],
+['larcam2018','Es un excelente profesional, me dio soluciones más allá de lo esperado. Es bueno trabajar con personas que le agregan un plus a tu proyecto. ¡Recomendado!',5,'Web app con Firebase'],
+['Yenireth Salazar','Excelente profesional, buena comunicación, muy amable y empático, y brinda soluciones. Lo recomiendo al 100%.',5,'Sistema de inteligencia artificial'],
+['Mario Antonio Muñoz','Excelente trabajo. Muy profesional, rápido y claro en todo el proceso. Configuró todo correctamente y explicó cada paso de forma sencilla.',5,'Web profesional con pagos'],
+['María José Taboada','Es una persona muy profesional y cumple con lo pactado y con las fechas de entrega. Se adapta perfectamente a cualquier trabajo y lo desarrolla sin problemas.',5,'Sistema de gestión de alumnos'],
+['Natalia Gómez','Se adaptó a mí desde el principio y fue profesional en todo momento, aportando ideas de valor para que mi web se viera acorde a mi esencia y con buen posicionamiento.',5,'Sitio web con SEO'],
+['Jaime Santos de Araújo','Gostei muito de trabalhar com Branco, ele é um ótimo profissional, muito ágil nas entregas, além de ter uma boa e rápida comunicação.',5,'App web con JWT y CRUD · Brasil'],
+['Jesús Rojas','Muy buen trabajo, todo quedó excelente tal como lo pedí. Si había un cambio que hacer, se hacía de inmediato. 100% recomendado.',5,'Tienda digital'],
+['Alfredo Falcón','Good quality of work in developing deliverables. Communication was clear and all the milestones were met.',4,'Interfaces de plataforma web · Angular']];
 
 const SHORT={
-'taxi-ai':'Atiende la llamada, entiende la dirección hablada y despacha el taxi sin operador.',
+'taxi-ai':'Una IA atiende la llamada, entiende la dirección hablada y despacha el taxi. Sin operador humano.',
 'tu-proximo-horizonte':'Tres sistemas en producción que el cliente opera solo: agenda, captación de leads y onboarding.',
-'infinity-book':'App de escaneo con OCR e IA. Rehice y publiqué la versión que está hoy en las tiendas.',
-'signfloow':'SaaS para empresas de rotulación: tablero de producción, presupuestos por fórmulas y asistente de IA.',
+'infinity-book':'App de escaneo con OCR e IA en 177 países. Rescaté el producto y publiqué la versión que está hoy en las tiendas.',
+'signfloow':'SaaS multi-empresa con asistente de IA que consulta los datos reales del taller. 1.551 tests, en AWS.',
 'lomas-del-pacifico':'Sistema de cobranza de lotes en cuotas: planes de pago, recibos con folio, mora y morosidad.',
 'blc-one':'Centraliza 237 plantas de energía renovable y sus compromisos regulatorios.',
 'comanda-central':'Punto de venta, inventario y costeo real de recetas anidadas para gastronomía.',
-'vertical':'Mi plataforma: agentes de WhatsApp con IA para inmobiliarias. Verificada por Meta.',
-'deltan-scan':'Medición asistida de radiografías dentales con visión por computadora.'};
+'vertical':'Mi SaaS: agentes de IA que atienden WhatsApp las 24 horas, califican al contacto y lo cargan en el CRM.',
+'deltan-scan':'Una IA detecta y mide cada pieza dental sobre la radiografía. Segundos en vez de veinte minutos.'};
 const chips=p=>p.tech.split(' · ').slice(0,4);
 
 /* ---------- helpers ---------- */
@@ -362,13 +378,13 @@ const foot=depth=>{const r=depth?'../':'';return `
 /* ---------- servicios ---------- */
 const SERVICIOS=[
 ['fas fa-robot','from-green-400 to-cyan-500','Agentes de IA y automatización',
- 'Sistemas que atienden y resuelven solos, por teléfono o WhatsApp. En producción, no en demo.',
- ['Agentes de voz sobre telefonía','Agentes de WhatsApp con API oficial','LLMs con acceso a los datos del negocio']],
+ 'IA que atiende el teléfono y el WhatsApp, entiende lo que le piden y resuelve sola. Ya está corriendo: 50.000 llamadas por mes.',
+ ['Agentes de voz sobre telefonía','Agentes de WhatsApp con API oficial','Sistemas RAG: la IA responde con tus documentos','LLMs con acceso a los datos del negocio']],
 ['fas fa-layer-group','from-blue-500 to-purple-600','SaaS y plataformas a medida',
- 'Del problema al producto, con la infraestructura que lo sostiene.',
+ 'Plataformas multi-empresa que aguantan clientes reales, con tests y despliegue automatizado.',
  ['Arquitectura multi-empresa','Paneles y motores de cálculo','AWS, Docker y CI/CD']],
 ['fas fa-mobile-screen','from-yellow-400 to-orange-500','Apps móviles y publicación',
- 'Apps construidas, publicadas y mantenidas. Incluida la parte que nadie quiere hacer: tiendas y cuentas.',
+ 'Apps en Google Play y App Store, con 8.900+ usuarios en 177 países. Incluida la parte que nadie quiere hacer: tiendas y cuentas.',
  ['Flutter y Android nativo','Publicación en Google Play y App Store','Migración de apps heredadas']]];
 
 /* ---------- index ---------- */
@@ -460,7 +476,7 @@ idx+=`
           <div class="text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">${esc(p.cliente)} · ${esc(p.pais)}</div>
           <h3 class="text-2xl font-bold mb-3">${esc(p.title)}</h3>
           <p class="text-gray-400 mb-4">${esc(SHORT[p.slug]||'')}</p>
-          <div class="flex flex-wrap gap-2 mb-4">${chips(p).map(c=>`<span class="tech-tag">${esc(c)}</span>`).join('')}</div>
+          <div class="flex flex-wrap gap-2 mb-4">${p.tipos.map(c=>`<span class="tipo-tag">${esc(c)}</span>`).join('')}</div>
           <a href="proyectos/${p.slug}.html" class="text-blue-400 hover:text-blue-300 transition font-semibold"><i class="fas fa-arrow-right mr-1"></i> Ver el caso completo</a>
         </div>
       </div>`).join('')}
@@ -499,15 +515,17 @@ idx+=`
 <section id="opiniones" class="py-20 px-6">
   <div class="container mx-auto max-w-5xl">
     <div class="text-center mb-12">
-      <h2 class="section-title">Lo que dicen los clientes</h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Reseñas públicas, con nombre y proyecto. Cualquiera las puede verificar.</p>
+      <h2 class="section-title">30+ clientes, 4,9 de 5</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Reseñas públicas en Workana, con nombre y proyecto. Todas verificables.</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      ${TESTIMONIOS.map(t=>`<figure class="testi glass-card">
-        <div class="stars" aria-label="${t[2]} de 5">${'<i class="fas fa-star"></i>'.repeat(Math.round(t[2]))}</div>
-        <blockquote>“${esc(t[1])}”</blockquote>
-        <figcaption><b>${esc(t[0])}</b><span>${esc(t[3])}</span></figcaption>
-      </figure>`).join('')}
+    <div class="marquee" aria-label="Reseñas de clientes">
+      <div class="marquee-track">
+        ${[...TESTIMONIOS,...TESTIMONIOS].map((t,i)=>`<figure class="testi glass-card"${i>=TESTIMONIOS.length?' aria-hidden="true"':''}>
+          <div class="stars">${'<i class="fas fa-star"></i>'.repeat(Math.round(t[2]))}</div>
+          <blockquote>“${esc(t[1])}”</blockquote>
+          <figcaption><b>${esc(t[0])}</b><span>${esc(t[3])}</span></figcaption>
+        </figure>`).join('')}
+      </div>
     </div>
     <div class="text-center mt-10">
       <a href="${WORKANA}" target="_blank" rel="noopener" class="btn-secondary"><i class="fas fa-external-link-alt mr-2"></i>Ver todas las reseñas en Workana</a>
@@ -542,6 +560,11 @@ idx+=`
     <dl class="stack-rows">
       ${STACK.map(g=>`<div><dt>${esc(g[0])}</dt><dd>${g[1].split('|').map(x=>`<span>${esc(x)}</span>`).join('')}</dd></div>`).join('')}
     </dl>
+    <div class="marquee tech-marquee" aria-hidden="true">
+      <div class="marquee-track">
+        ${(()=>{const all=STACK.flatMap(g=>g[1].split('|'));return [...all,...all].map(x=>`<span class="tm">${esc(x)}</span>`).join('');})()}
+      </div>
+    </div>
   </div>
 </section>
 
