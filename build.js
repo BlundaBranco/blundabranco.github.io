@@ -230,7 +230,8 @@ const head=(title,desc,canonical,depth)=>{const r=depth?'../':'';const h=depth?'
 <meta name="theme-color" content="#10b981">
 <title>${esc(title)}</title>
 <link rel="canonical" href="${canonical}">
-<link rel="icon" type="image/png" href="${r}favicon.png">
+<link rel="icon" type="image/svg+xml" href="${r}favicon.svg">
+<link rel="icon" type="image/png" sizes="256x256" href="${r}favicon.png">
 <link rel="apple-touch-icon" href="${r}apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="${canonical}">
@@ -254,7 +255,7 @@ const head=(title,desc,canonical,depth)=>{const r=depth?'../':'';const h=depth?'
   <div class="container mx-auto px-6 py-4">
     <div class="flex justify-between items-center">
       <a href="${r}index.html" class="flex items-center space-x-2">
-        <img src="${r}assets/images/logo.png" alt="" class="brand-logo" width="176" height="223">
+        <img src="${r}assets/images/logo.svg" alt="" class="brand-logo" width="178" height="225">
         <span class="text-xl font-bold">Branco Blunda</span>
       </a>
       <div class="hidden md:flex space-x-8">
@@ -282,7 +283,7 @@ const foot=depth=>{const r=depth?'../':'';return `
     <div class="flex flex-col md:flex-row justify-between items-center gap-6">
       <div class="text-center md:text-left">
         <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
-          <img src="${r}assets/images/logo.png" alt="" class="brand-logo" width="176" height="223">
+          <img src="${r}assets/images/logo.svg" alt="" class="brand-logo" width="178" height="225">
           <span class="text-lg font-bold">Branco Blunda</span>
         </div>
         <p class="text-gray-500 text-sm">Software Engineer · Rosario, Argentina</p>
